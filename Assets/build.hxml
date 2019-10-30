@@ -1,0 +1,11 @@
+# options
+-D no-root
+#haxe-positions
+
+# required
+classpaths.hxml
+-lib unihx
+-cs ../Temp/Unihx/stash
+
+# Add your own compiler parameters after this line: 
+

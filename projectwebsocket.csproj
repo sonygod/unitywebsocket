@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C56C767-5E72-6C54-B3BB-6295791314FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>5.6.3p4</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_3;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_3;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Program Files/Unity5.3.8p2/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\TestWebSocket.cs" />
+    <Compile Include="Assets\libs\hx\src\Array.cs" />
+    <Compile Include="Assets\libs\hx\src\Client.cs" />
+    <Compile Include="Assets\libs\hx\src\Comments.cs" />
+    <Compile Include="Assets\libs\hx\src\Date.cs" />
+    <Compile Include="Assets\libs\hx\src\EReg.cs" />
+    <Compile Include="Assets\libs\hx\src\EnumValue.cs" />
+    <Compile Include="Assets\libs\hx\src\IntIterator.cs" />
+    <Compile Include="Assets\libs\hx\src\Lambda.cs" />
+    <Compile Include="Assets\libs\hx\src\Math.cs" />
+    <Compile Include="Assets\libs\hx\src\Reflect.cs" />
+    <Compile Include="Assets\libs\hx\src\Std.cs" />
+    <Compile Include="Assets\libs\hx\src\StringBuf.cs" />
+    <Compile Include="Assets\libs\hx\src\StringTools.cs" />
+    <Compile Include="Assets\libs\hx\src\Sys.cs" />
+    <Compile Include="Assets\libs\hx\src\TestPackBuilder.cs" />
+    <Compile Include="Assets\libs\hx\src\Type.cs" />
+    <Compile Include="Assets\libs\hx\src\UInt.cs" />
+    <Compile Include="Assets\libs\hx\src\binary128\internal\Leb128.cs" />
+    <Compile Include="Assets\libs\hx\src\binary128\internal\cs\Leb128.cs" />
+    <Compile Include="Assets\libs\hx\src\client\TimerHelper.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\Boot.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\Flags.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\Lib.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\NativeArray.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\internal\Exceptions.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\internal\FieldLookup.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\internal\Function.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\internal\HxObject.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\internal\Runtime.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\internal\StringExt.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\io\NativeInput.cs" />
+    <Compile Include="Assets\libs\hx\src\cs\io\NativeOutput.cs" />
+    <Compile Include="Assets\libs\hx\src\gameLogic\CardType.cs" />
+    <Compile Include="Assets\libs\hx\src\gameLogic\IGameLogic.cs" />
+    <Compile Include="Assets\libs\hx\src\gameRoom\Hall.cs" />
+    <Compile Include="Assets\libs\hx\src\gameRoom\Player.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Constraints.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\EntryPoint.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Int32.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Int64.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Int64Helper.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Json.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Log.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\MainLoop.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\SysTools.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\Timer.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\crypto\Adler32.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\crypto\Base64.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\crypto\BaseCode.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\crypto\Sha1.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\BalancedTree.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\EnumValueMap.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\HashMap.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\IntMap.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\List.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\Map.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\ObjectMap.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\ReadOnlyArray.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\StringMap.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\Vector.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\ds\WeakMap.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\format\JsonParser.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\format\JsonPrinter.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Bytes.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\BytesBuffer.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\BytesInput.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\BytesOutput.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Encoding.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Eof.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Error.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\FPHelper.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Input.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Output.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\io\Path.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\iterators\MapKeyValueIterator.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\iterators\StringIterator.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\iterators\StringIteratorUnicode.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\iterators\StringKeyValueIterator.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\lang\DceNo.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\macro\Context.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\macro\Expr.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\macro\Type.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\zip\Compress.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\zip\FlushMode.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\zip\Huffman.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\zip\InflateImpl.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\zip\Uncompress.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\BinaryType.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\Buffer.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\HttpHeader.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\HttpRequest.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\HttpResponse.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\Log.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\OpCode.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\State.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\Utf8Encoder.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\WebSocket.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\WebSocketCommon.cs" />
+    <Compile Include="Assets\libs\hx\src\hx\ws\cs\NonBlockingSocket.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\_internal\utils\ObjectPool.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\events\ErrorEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\events\Event.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\events\EventDispatcher.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\events\EventType.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\events\IEventDispatcher.cs" />
+    <Compile Include="Assets\libs\hx\src\openfl\events\TextEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\org\msgpack\Decoder.cs" />
+    <Compile Include="Assets\libs\hx\src\org\msgpack\Encoder.cs" />
+    <Compile Include="Assets\libs\hx\src\org\msgpack\MsgPack.cs" />
+    <Compile Include="Assets\libs\hx\src\server\IHander.cs" />
+    <Compile Include="Assets\libs\hx\src\server\SocketEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\FileSystem.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\io\FileSeek.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\io\Process.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\net\Host.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\net\Socket.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\thread\Deque.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\thread\Lock.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\thread\Mutex.cs" />
+    <Compile Include="Assets\libs\hx\src\sys\thread\Thread.cs" />
+    <Compile Include="Assets\libs\hx\src\utils\CustomTrace.cs" />
+    <Compile Include="Assets\libs\hx\src\utils\SQLRex.cs" />
+    <Compile Include="Assets\libs\hx\src\web\GameSetting.cs" />
+    <Compile Include="Assets\libs\hx\src\web\SocketAsync.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\CMDEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\ChatEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\ClubEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\ErrorEventCS.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\GameEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\HallEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\PacketBuilder.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\PlayerEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\ResultEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\RoomEvent.cs" />
+    <Compile Include="Assets\libs\hx\src\web\proto\WebEventDispatch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\libs\hx\hxcs_build.txt" />
+    <None Include="Assets\libs\readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

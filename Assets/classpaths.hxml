@@ -1,0 +1,5 @@
+# Add any paths that may contain .hx files in here
+# This file should be manually maintained
+
+-cp Scripts
+-cp Standard Assets
