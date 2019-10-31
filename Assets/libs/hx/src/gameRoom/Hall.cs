@@ -104,7 +104,7 @@ namespace gameRoom {
 				#line 795 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tiny_pay = ((object) (2) );
 				#line 795 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-				object tiny_owerID = ((object) (global::haxe.lang.Runtime.getField_f(player, "id", 23515, true)) );
+				object tiny_owerID = global::haxe.lang.Runtime.getField(player, "id", 23515, true);
 				#line 795 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tiny_playType = ((object) (0) );
 				#line 795 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"

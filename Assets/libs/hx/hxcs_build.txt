@@ -235,6 +235,7 @@ M System.ComponentModel.IContainer
 M web.proto.PlayerEvent
 C web.proto.PlayerEvent
 M cs.system.net.sockets.SocketInformationOptions
+M cs.system.Func_1
 M System.Runtime.InteropServices._Exception
 M System.Enum
 M System.Text.Encoder
@@ -271,6 +272,7 @@ M System.Threading.HostExecutionContextManager
 M cs.system.Predicate_1
 M System.Reflection.MethodBase
 M System.ComponentModel.Component
+M unitythreading.TaskSortingSystem
 M System.IEquatable`1
 M System.IConvertible
 M System.MissingMemberException
@@ -361,6 +363,7 @@ M System.Reflection.Emit.PropertyToken
 M Lambda
 C haxe.root.Lambda
 M Any
+M cs.system.Action_3
 M System.IDisposable
 M System.Collections.Generic.IComparer`1
 M System.Security.AccessControl.DirectorySecurity
@@ -546,6 +549,7 @@ C haxe.Timer___hx_ctor_haxe_Timer_128__Fun
 C haxe.Timer___hx_ctor_haxe_Timer_74__Fun
 C haxe.Timer_delay_141__Fun
 M cs.system.diagnostics.symbolstore.SymAddressKind
+M cs.system.Func_2
 M System.Runtime.InteropServices._CustomAttributeBuilder
 M cs.system.diagnostics.ThreadPriorityLevel
 M System.Reflection.Emit.ParameterToken
@@ -557,10 +561,12 @@ C haxe.MainLoop
 M org.msgpack.Encoder
 C org.msgpack.Encoder
 M System.Collections.ReadOnlyCollectionBase
+M cs.system.collections.generic.Queue_1
 M IntIterator
 C haxe.root.IntIterator
 M System.Reflection.LocalVariableInfo
 M web.TinyPlayer
+C web.TinyPlayerCS
 M System.Text.StringBuilder
 M System.Security.AccessControl.EventWaitHandleAuditRule
 M cs.internal.FieldLookup
@@ -580,6 +586,7 @@ M haxe.crypto.Sha1
 C haxe.crypto.Sha1
 M cs.system.CrossAppDomainDelegate
 M System.Globalization.CultureInfo
+M unitythreading.Dispatcher
 M web.TinyChat
 M haxe.zip.Uncompress
 C haxe.zip.Uncompress
@@ -615,6 +622,7 @@ C haxe.zip.FlushMode_SYNC
 C haxe.zip.FlushMode_FULL
 C haxe.zip.FlushMode_FINISH
 C haxe.zip.FlushMode_BLOCK
+M unitythreading.Task_1
 M System.Collections.ObjectModel.ReadOnlyCollection`1
 M System.Diagnostics.SymbolStore.ISymbolWriter
 M web.proto.HallEvent
@@ -644,6 +652,7 @@ M System.Reflection.Emit.ParameterBuilder
 M System.Collections.ICollection
 M cs.system.Comparison_1
 M System.Runtime.Remoting.IEnvoyInfo
+M unitythreading.Task
 M web.proto.ErrorEventCS
 C web.proto.ErrorEventCS
 M cs.system.reflection.EventInfo
@@ -662,11 +671,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_511__Fun
-C web.SocketAsync_installSocket_526__Fun
-C web.SocketAsync_installSocket_529__Fun
-C web.SocketAsync_installSocket_550__Fun
-C web.SocketAsync_installSocket_556__Fun
+C web.SocketAsync_reConnectSocket_518__Fun
+C web.SocketAsync_installSocket_533__Fun
+C web.SocketAsync_installSocket_536__Fun
+C web.SocketAsync_installSocket_557__Fun
+C web.SocketAsync_installSocket_563__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64
@@ -678,6 +687,7 @@ M hx.ws.Utf8Encoder
 C hx.ws.Utf8Encoder
 M UnityEngine.Vector2
 M System.Reflection.InterfaceMapping
+M unitythreading.TaskEndedEventHandler
 M haxe.Log
 C haxe.Log
 C haxe.Log_Anon_62__Fun
@@ -1182,6 +1192,7 @@ M System.ComponentModel.ISite
 M cs.system.runtime.interopservices.LayoutKind
 M cs.system.reflection.ImageFileMachine
 M cs.system.runtime.serialization.StreamingContextStates
+M UnityThreading.DispatcherBase
 M System.ApplicationIdentity
 M System.Runtime.InteropServices._Thread
 M sys.net.Host
@@ -1208,6 +1219,7 @@ end main
 begin resources
 end resources
 begin libs
+mscro/../unity/UnityThread.dll
 mscro/../unity/System.Core.dll
 mscro/../unity/System.dll
 mscro/../unity/mscorlib.dll

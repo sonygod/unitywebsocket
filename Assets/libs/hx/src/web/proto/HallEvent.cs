@@ -14,6 +14,8 @@ namespace web.proto {
 			global::web.proto.HallEvent.JOIN_GAME = ((string) ("join_game") );
 			#line 28 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			global::web.proto.HallEvent.GET_ROOM_LIST = ((string) ("get_room_list") );
+			#line 30 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			global::web.proto.HallEvent.OnReg = ((string) ("hall_Reg") );
 		}
 		#line default
 		
@@ -22,21 +24,21 @@ namespace web.proto {
 		
 		
 		public HallEvent(string type, object player, global::server.IHander hander, global::haxe.root.Array roomList, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 39 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 40 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			global::web.proto.HallEvent.__hx_ctor_web_proto_HallEvent(this, type, player, hander, roomList, bubbles, cancelable);
 		}
 		#line default
 		
 		private static void __hx_ctor_web_proto_HallEvent(global::web.proto.HallEvent __hx_this, string type, object player, global::server.IHander hander, global::haxe.root.Array roomList, object bubbles, object cancelable) {
-			#line 38 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 39 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-			#line 38 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 39 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-			#line 41 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 42 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			__hx_this.player = player;
 			__hx_this.hander = hander;
-			#line 43 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 44 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			__hx_this.roomList = roomList;
 		}
 		#line default
@@ -49,6 +51,8 @@ namespace web.proto {
 		
 		public static string GET_ROOM_LIST;
 		
+		public static string OnReg;
+		
 		public object player;
 		
 		public global::server.IHander hander;
@@ -56,16 +60,16 @@ namespace web.proto {
 		public global::haxe.root.Array roomList;
 		
 		public override global::openfl.events.Event clone() {
-			#line 48 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 49 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			global::web.proto.HallEvent @event = new global::web.proto.HallEvent(this.type, this.player, this.hander, this.roomList, this.bubbles, this.cancelable);
 			@event.target = this.target;
-			#line 50 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 51 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			@event.currentTarget = this.currentTarget;
 			@event.eventPhase = this.eventPhase;
-			#line 52 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 53 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			@event.player = this.player;
 			@event.hander = this.hander;
-			#line 54 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
+			#line 55 "D:\\project\\sangong\\sangong\\src\\web\\proto\\HallEvent.hx"
 			@event.roomList = this.roomList;
 			return @event;
 		}

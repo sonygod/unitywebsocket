@@ -21,17 +21,23 @@ namespace utils {
 		
 		public static bool checkSQL(string content) {
 			unchecked {
-				#line 16 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
-				global::haxe.root.EReg r = new global::haxe.root.EReg("(delete)|(drop)|(;)|(--)|(insert)|(drop)|(count)|(\\*)|(select)|(where)|(when)|(\\s+)|(\\()|(\\))|(\")|(0x)|(,)|(offset)|(<)|(>)|(=)|(&)|(\\|)|(ike)|(%)|(!)|(CHAR)|(#)", "");
-				#line 18 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
-				bool result = r.match(content);
-				#line 20 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
-				if (result) {
-					#line 21 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("warning content\u6709\u6f0f\u6d1e", content), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"checkSQL", "utils.SQLRex", "src/utils/SQLRex.hx"}, new int[]{1981972957}, new double[]{((double) (21) )}));
+				#line 14 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+				if (( content == null )) {
+					#line 15 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+					return false;
 				}
 				
-				#line 23 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+				global::haxe.root.EReg r = new global::haxe.root.EReg("(delete)|(drop)|(;)|(--)|(insert)|(drop)|(count)|(\\*)|(select)|(where)|(when)|(\\s+)|(\\()|(\\))|(\")|(0x)|(,)|(offset)|(<)|(>)|(=)|(&)|(\\|)|(ike)|(%)|(!)|(CHAR)|(#)", "");
+				#line 22 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+				bool result = r.match(content);
+				#line 24 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+				if (result) {
+					#line 25 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("warning content\u6709\u6f0f\u6d1e", content), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"checkSQL", "utils.SQLRex", "src/utils/SQLRex.hx"}, new int[]{1981972957}, new double[]{((double) (25) )}));
+				}
+				
+				#line 27 "D:\\project\\sangong\\sangong\\src\\utils\\SQLRex.hx"
 				return result;
 			}
 			#line default
