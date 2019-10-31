@@ -13,14 +13,12 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.3p4</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -81,7 +79,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\libs\data\ConvertTool.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
     <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -558,6 +555,7 @@
     <Compile Include="Assets\libs\UnityThreading\Thread.cs" />
     <Compile Include="Assets\libs\UnityThreading\UnityThreadHelper.cs" />
     <Compile Include="Assets\libs\UnityThreading\WaitOneExtension.cs" />
+    <Compile Include="Assets\libs\data\ConvertTool.cs" />
     <Compile Include="Assets\libs\hx\src\Array.cs" />
     <Compile Include="Assets\libs\hx\src\Client.cs" />
     <Compile Include="Assets\libs\hx\src\Comments.cs" />
@@ -607,6 +605,7 @@
     <Compile Include="Assets\libs\hx\src\haxe\crypto\Adler32.cs" />
     <Compile Include="Assets\libs\hx\src\haxe\crypto\Base64.cs" />
     <Compile Include="Assets\libs\hx\src\haxe\crypto\BaseCode.cs" />
+    <Compile Include="Assets\libs\hx\src\haxe\crypto\Md5.cs" />
     <Compile Include="Assets\libs\hx\src\haxe\crypto\Sha1.cs" />
     <Compile Include="Assets\libs\hx\src\haxe\ds\BalancedTree.cs" />
     <Compile Include="Assets\libs\hx\src\haxe\ds\EnumValueMap.cs" />

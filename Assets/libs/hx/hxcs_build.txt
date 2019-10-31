@@ -305,6 +305,8 @@ M System.Security.AccessControl.FileSystemSecurity
 M System.Reflection.ManifestResourceInfo
 M System.Collections.IList
 M System.Threading.ExecutionContext
+M haxe.crypto.Md5
+C haxe.crypto.Md5
 M System.Reflection.ICustomAttributeProvider
 M System.Resources.IResourceWriter
 M System.Reflection.Emit.TypeToken

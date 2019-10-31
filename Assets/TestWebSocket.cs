@@ -36,8 +36,10 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        client.connectWithIP("192.168.1.134", 9001);
-    }
+        client.connectWithIP("192.168.1.134", 9001);//这里改成你自己的ip
+
+
+    } 
 
     //socket错误
     private void onSocketError(object obj)
@@ -53,9 +55,36 @@ public class TestWebSocket : MonoBehaviour
 
         //尝试登陆。
 
-        Debug.Log("尝试登陆");
+        Debug.Log("尝试登陆"); //这里可以正式开始了
 
-        client.Login("o3-Lq5rodJ5LmZdNTZac8mHVvp48");
+        //reg();
+        loginWithPass();
+
+
+
+    }
+    //注册
+
+    void reg()
+    {
+      bool can=  client.regist("13060669789878","123456");
+
+      if (!can)
+      {
+          Debug.Log("注册账号不合法");
+      }
+    }
+
+    //用openid登陆
+    void login()
+    {
+        client.LoginWithOpenID("o3-Lq5rodJ5LmZdNTZac8mHVvp48"); //用openid登陆。
+    }
+
+
+    void loginWithPass()
+    {
+        client.Login("13060669337","123456");
     }
     //socket关闭
 
@@ -67,7 +96,11 @@ public class TestWebSocket : MonoBehaviour
     //注册成功
     private void onReg(HallEvent HallEvent)
     {
-        Debug.Log("注册成功");
+        Debug.Log("注册发回消息");
+
+        haxe.Json.stringify(HallEvent, null, null);
+
+
     }
 
     //登陆成功
