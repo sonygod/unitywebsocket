@@ -8,8 +8,7 @@ using gameRoom;
 using haxe.lang;
 using UnityEngine;
 using haxe.root;
-using UnityEditor.Callbacks;
-using UnityEngine.UI;
+
 using web.proto;
 using Event = openfl.events.Event;
 using UnityThreading;
