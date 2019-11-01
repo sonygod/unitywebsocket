@@ -28,7 +28,7 @@ public class CEventDispatcher {
 
     public void dispatchEvent (CEvent evt, object obj) {
 
-        if (eventListenerDic.ContainsKey(evt.eventName))
+        if (!eventListenerDic.ContainsKey(evt.eventName))
         {
             return;
         }
