@@ -16,28 +16,28 @@ namespace web.proto {
 		
 		
 		public ErrorEventCS(string type, string text, object playerID, object bubbles, object cancelable, object id) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+			#line 22 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 			global::web.proto.ErrorEventCS.__hx_ctor_web_proto_ErrorEventCS(this, type, text, playerID, bubbles, cancelable, id);
 		}
 		#line default
 		
 		protected static void __hx_ctor_web_proto_ErrorEventCS(global::web.proto.ErrorEventCS __hx_this, string type, string text, object playerID, object bubbles, object cancelable, object id) {
 			unchecked {
-				#line 20 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+				#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 				int id1 = ( (( id == default(object) )) ? (0) : (((int) (global::haxe.lang.Runtime.toInt(id)) )) );
-				#line 20 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+				#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 				bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-				#line 20 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+				#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 				bool bubbles1 = ( (( bubbles == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(bubbles)) );
-				#line 20 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+				#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 				int playerID1 = ( (( playerID == default(object) )) ? (-1) : (((int) (global::haxe.lang.Runtime.toInt(playerID)) )) );
-				#line 20 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+				#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 				if (( text == null )) {
-					#line 20 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+					#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 					text = "";
 				}
 				
-				#line 21 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
+				#line 22 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ErrorEventCS.hx"
 				global::openfl.events.ErrorEvent.__hx_ctor_openfl_events_ErrorEvent(__hx_this, type, bubbles1, cancelable1, text, id1);
 				__hx_this.playerID = playerID1;
 			}

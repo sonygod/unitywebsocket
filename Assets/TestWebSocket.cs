@@ -40,9 +40,15 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketErrorCS = onSocketError;
         client.connectWithIP("144.48.4.186", 9002);//这里改成你自己的ip
 
-
+        client.onGlobalError = onGlobalError;
         client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
+    }
+
+    private void onGlobalError(ErrorEventCS obj)
+    {
+      
+        Debug.Log("服务器返回错误"+obj.text);//你需要在这里switch 一下各种事件的处理。
     }
 
     private void onCSOpen(CEvent evt)
