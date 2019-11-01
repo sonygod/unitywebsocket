@@ -410,6 +410,7 @@ M haxe.ds.Vector
 C haxe.ds._Vector.Vector_Impl_
 M Class
 M System.UIntPtr
+M CEventListener
 M cs.system.net.sockets.TransmitFileOptions
 M hx.ws.BinaryType
 C hx.ws._BinaryType.BinaryType_Impl_
@@ -441,6 +442,8 @@ M cs.system.security.policy.Evidence
 M gameRoom.Player
 C gameRoom.Player
 M haxe.PosInfos
+M client.PlayerCS
+C client.PlayerCS
 M cs.Flags
 C cs._Flags.EnumUnderlying
 M cs.system.net.sockets.SocketOptionName
@@ -490,6 +493,7 @@ M System.Globalization.NumberFormatInfo
 M System.CharEnumerator
 M System.IO.FileInfo
 M System.Runtime.Remoting.ObjRef
+M System.Collections.Generic.IDictionary`2
 M System.Runtime.Hosting.ActivationArguments
 M System.Net.Sockets.SocketInformation
 M System.Net.IPEndPoint
@@ -578,6 +582,7 @@ C haxe.lang.FieldHashConflict
 C haxe.lang.FieldLookup
 M System.Runtime.Serialization.SerializationInfoEnumerator
 M System.Reflection.MethodBody
+M System.Collections.Generic.KeyValuePair`2
 M System.Security.Policy.PolicyLevel
 M System.Runtime.InteropServices._Assembly
 M System.Runtime.InteropServices._EnumBuilder
@@ -603,6 +608,7 @@ M cs.system.globalization.TextInfo
 M cs.system.reflection.GenericParameterAttributes
 M System.Net.Sockets.IPPacketInformation
 M System.Runtime.InteropServices._ConstructorBuilder
+M cs.system.collections.generic.Dictionary_2
 M cs.system.globalization.NumberStyles
 M System.Runtime.InteropServices._FieldBuilder
 M haxe.lang.DceNo
@@ -648,6 +654,7 @@ M System.Reflection.Emit.FieldBuilder
 M System.Text.RegularExpressions.CaptureCollection
 M haxe.io.BytesInput
 C haxe.io.BytesInput
+M CEvent
 M client.TimerHelper
 C client.TimerHelper
 M cs.system.reflection.ProcessorArchitecture
@@ -795,6 +802,7 @@ M System.Runtime.Remoting.IObjectHandle
 M System.ComponentModel.Win32Exception
 M System.Security.AccessControl.AuthorizationRuleCollection
 M I32
+M CEventDispatcher
 M haxe.io.BytesData
 M cs.system.Action
 M cs.system.reflection.CallingConventions
@@ -966,6 +974,7 @@ C sys.io.FileSeek_SeekBegin
 C sys.io.FileSeek_SeekCur
 C sys.io.FileSeek_SeekEnd
 M System.Collections.IDictionary
+M System.Collections.Generic.IEqualityComparer`1
 M web.TinyBling
 M cs.system.collections.ArrayList
 M System.Text.RegularExpressions.Group
@@ -1223,6 +1232,7 @@ end main
 begin resources
 end resources
 begin libs
+mscro/../unity/EventDispather.dll
 mscro/../unity/ThreadLink.dll
 mscro/../unity/UnityThread.dll
 mscro/../unity/System.Core.dll

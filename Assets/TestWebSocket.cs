@@ -27,19 +27,13 @@ public class TestWebSocket : MonoBehaviour
     void Start()
     {
 
-       var ips= Dns.GetHostAddresses("144.48.4.186");
-
-       for (int i = 0; i < ips.Length; i++)
-       {
-           Debug.Log(ips[i]);
-
-       }
+     
         TestPackBuilder.main(); //初始化
         UnityThreadHelper.EnsureHelper(); //线程初始化，这个必须要在开始定义。
 
         client = new Client();
 
-
+        client.testPlayer.addEventListener("onOpen", onCSOpen);
         client.onLoginCS = onLogin;
         client.onRegCS = onReg;
         client.onSocketCloseCS = onSocketClose;
@@ -48,7 +42,16 @@ public class TestWebSocket : MonoBehaviour
         client.connectWithIP("144.48.4.186", 9002);//这里改成你自己的ip
 
 
-    } 
+        client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
+
+    }
+
+    private void onCSOpen(CEvent evt)
+    {
+        var ps = evt.eventParams;
+
+        Debug.Log("事件听到了？"+ps);
+    }
 
     //socket错误
     private void onSocketError(object obj)

@@ -17,10 +17,10 @@ namespace sys.net {
 		
 		protected static void __hx_ctor_sys_net_Host(global::sys.net.Host __hx_this, string name) {
 			unchecked {
-				#line 49 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("host name=", name), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "sys.net.Host", "sys/net/Host.hx"}, new int[]{1981972957}, new double[]{((double) (49) )}));
+				#line 48 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("host name=", name), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "sys.net.Host", "sys/net/Host.hx"}, new int[]{1981972957}, new double[]{((double) (48) )}));
 				__hx_this.host = name;
-				#line 59 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
+				#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
 				global::System.Net.IPAddress[] ips = global::System.Net.Dns.GetHostAddresses(((string) (name) ));
 				__hx_this.ipAddress = ((global::System.Net.IPAddress) (ips[0]) );
 			}
@@ -29,7 +29,7 @@ namespace sys.net {
 		
 		
 		public static string localhost() {
-			#line 75 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
 			return global::System.Net.Dns.GetHostName();
 		}
 		#line default
@@ -49,13 +49,13 @@ namespace sys.net {
 		#line default
 		
 		public virtual string toString() {
-			#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
+			#line 63 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
 			return this.ipAddress.ToString();
 		}
 		#line default
 		
 		public virtual string reverse() {
-			#line 71 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
+			#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\net\\Host.hx"
 			return this.hostEntry.HostName;
 		}
 		#line default
