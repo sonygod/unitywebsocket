@@ -32,7 +32,7 @@ public class TestWebSocket : MonoBehaviour
 
         client = new Client();
 
-        client.testPlayer.addEventListener("onOpen", onCSOpen);
+        //client.testPlayer.addEventListener("onOpen", onCSOpen);
         client.onLoginCS = onLogin;
         client.onRegCS = onReg;
         client.onSocketCloseCS = onSocketClose;
@@ -41,7 +41,7 @@ public class TestWebSocket : MonoBehaviour
         client.connectWithIP("144.48.4.186", 9002);//这里改成你自己的ip
 
         client.onGlobalError = onGlobalError;
-        client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
+       // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
     }
 

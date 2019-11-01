@@ -15,8 +15,6 @@ public class Client {
 			object c = global::org.msgpack.MsgPack.decode(b, null);
 			#line 51 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.getField(c, "a", 97, true), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (51) )}));
-			#line 54 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			this.testPlayer = new global::client.PlayerCS(default(object));
 			#line 60 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.lang.Function replacer = null;
 			#line 60 "D:\\project\\sangong\\sangong\\src\\Client.hx"
@@ -74,8 +72,7 @@ public class Client {
 		unchecked {
 			#line 87 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u63e1\u624b", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onOpen", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (87) )}));
-			#line 96 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			( this.testPlayer as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent("onOpen", "")) ), ((object) (this) ));
+			#line 97 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			this.onSocketOpenCS.Invoke();
 		}
 		#line default
