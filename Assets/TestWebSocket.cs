@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using System.Reflection;
 using com.huaqian;
 using gameRoom;
@@ -25,6 +26,14 @@ public class TestWebSocket : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+       var ips= Dns.GetHostAddresses("144.48.4.186");
+
+       for (int i = 0; i < ips.Length; i++)
+       {
+           Debug.Log(ips[i]);
+
+       }
         TestPackBuilder.main(); //初始化
         UnityThreadHelper.EnsureHelper(); //线程初始化，这个必须要在开始定义。
 
@@ -36,7 +45,7 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        client.connectWithIP("192.168.1.134", 9001);//这里改成你自己的ip
+        client.connectWithIP("144.48.4.186", 9002);//这里改成你自己的ip
 
 
     } 

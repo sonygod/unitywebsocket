@@ -569,6 +569,8 @@ C haxe.root.IntIterator
 M System.Reflection.LocalVariableInfo
 M web.TinyPlayer
 C web.TinyPlayerCS
+C web.MiniDispatchPlayerCS
+C web.MiniResultPlayerCS
 M System.Text.StringBuilder
 M System.Security.AccessControl.EventWaitHandleAuditRule
 M cs.internal.FieldLookup
@@ -1221,6 +1223,7 @@ end main
 begin resources
 end resources
 begin libs
+mscro/../unity/ThreadLink.dll
 mscro/../unity/UnityThread.dll
 mscro/../unity/System.Core.dll
 mscro/../unity/System.dll
