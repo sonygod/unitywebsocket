@@ -122,7 +122,7 @@ namespace hx.ws {
 					 ++ i;
 					ws.process();
 					#line 187 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-					if (( i < 2 )) {
+					if (( i < 3 )) {
 						#line 188 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 						global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6d4b\u8bd5\u6d4b\u8bd5\u3002\u3002\u3002\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"processThread", "hx.ws.WebSocket", "src/hx/ws/WebSocket.hx"}, new int[]{1981972957}, new double[]{((double) (188) )}));
 					}
@@ -166,60 +166,66 @@ namespace hx.ws {
 		#line default
 		
 		public override void handleData() {
-			#line 216 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-			if (( this.state._hx_index == 0 )) {
-				#line 218 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-				global::hx.ws.HttpResponse httpResponse = this.recvHttpResponse();
-				if (( httpResponse == null )) {
-					#line 220 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-					return;
+			unchecked {
+				#line 216 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+				if (( this.state._hx_index == 0 )) {
+					#line 218 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					global::hx.ws.HttpResponse httpResponse = this.recvHttpResponse();
+					if (( httpResponse == null )) {
+						#line 220 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+						return;
+					}
+					
+					#line 223 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					this.handshake(httpResponse);
+					this.handleData();
+				}
+				else {
+					#line 227 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "handdata?", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"handleData", "hx.ws.WebSocket", "src/hx/ws/WebSocket.hx"}, new int[]{1981972957}, new double[]{((double) (227) )}));
+					base.handleData();
 				}
 				
-				#line 223 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-				this.handshake(httpResponse);
-				this.handleData();
 			}
-			else {
-				#line 226 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-				base.handleData();
-			}
-			
+			#line default
 		}
-		#line default
+		
 		
 		public virtual void handshake(global::hx.ws.HttpResponse httpResponse) {
 			unchecked {
-				#line 231 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), httpResponse.toString(), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"handshake", "hx.ws.WebSocket", "src/hx/ws/WebSocket.hx"}, new int[]{1981972957}, new double[]{((double) (231) )}));
+				#line 233 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), httpResponse.toString(), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"handshake", "hx.ws.WebSocket", "src/hx/ws/WebSocket.hx"}, new int[]{1981972957}, new double[]{((double) (233) )}));
 				if (( httpResponse.code != 101 )) {
-					#line 233 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					#line 235 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 					if (( this.onerror != null )) {
-						#line 234 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+						#line 236 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 						this.onerror.__hx_invoke1_o(default(double), global::haxe.lang.Runtime.toString(((global::haxe.ds.StringMap) (((global::haxe.IMap) (httpResponse.headers) )) ).@get(((string) ("X-WebSocket-Reject-Reason") ))));
 					}
 					
-					#line 236 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					#line 238 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 					this.close();
 					return;
 				}
 				
-				#line 240 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+				#line 242 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 				string secKey = global::haxe.lang.Runtime.toString(((global::haxe.ds.StringMap) (((global::haxe.IMap) (httpResponse.headers) )) ).@get(((string) ("Sec-WebSocket-Accept") )));
 				if (( secKey != global::haxe.crypto.Base64.encode(global::haxe.crypto.Sha1.make(global::haxe.io.Bytes.ofString(global::haxe.lang.Runtime.concat(this._encodedKey, "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"), null)), null) )) {
-					#line 242 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					#line 244 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 					if (( this.onerror != null )) {
-						#line 243 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+						#line 245 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 						this.onerror.__hx_invoke1_o(default(double), "Error during WebSocket handshake: Incorrect \'Sec-WebSocket-Accept\' header value");
 					}
 					
-					#line 245 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+					#line 247 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 					this.close();
 					return;
 				}
 				
-				#line 249 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+				#line 251 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
 				this._onopenCalled = false;
 				this.state = global::hx.ws.State.Head;
+				#line 253 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocket.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "get head ok", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"handshake", "hx.ws.WebSocket", "src/hx/ws/WebSocket.hx"}, new int[]{1981972957}, new double[]{((double) (253) )}));
 			}
 			#line default
 		}
