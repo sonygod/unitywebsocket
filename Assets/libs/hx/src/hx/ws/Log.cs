@@ -51,11 +51,11 @@ namespace hx.ws {
 				#line 15 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( id != default(object) )) {
 					#line 16 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("INFO  :: ID-", global::haxe.lang.Runtime.toString(id)), " :: "), data), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"info", "hx.ws.Log", "src/hx/ws/Log.hx"}, new int[]{1981972957}, new double[]{((double) (16) )}));
+					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("INFO  :: ID-", global::haxe.lang.Runtime.toString(id)), " :: "), data)) ));
 				}
 				else {
 					#line 18 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("INFO  :: ", data), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"info", "hx.ws.Log", "src/hx/ws/Log.hx"}, new int[]{1981972957}, new double[]{((double) (18) )}));
+					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat("INFO  :: ", data)) ));
 				}
 				
 			}
@@ -74,11 +74,11 @@ namespace hx.ws {
 				#line 27 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( id != default(object) )) {
 					#line 28 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("DEBUG :: ID-", global::haxe.lang.Runtime.toString(id)), " :: "), data), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"debug", "hx.ws.Log", "src/hx/ws/Log.hx"}, new int[]{1981972957}, new double[]{((double) (28) )}));
+					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("DEBUG :: ID-", global::haxe.lang.Runtime.toString(id)), " :: "), data)) ));
 				}
 				else {
 					#line 30 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("DEBUG :: ", data), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"debug", "hx.ws.Log", "src/hx/ws/Log.hx"}, new int[]{1981972957}, new double[]{((double) (30) )}));
+					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat("DEBUG :: ", data)) ));
 				}
 				
 			}
@@ -97,11 +97,11 @@ namespace hx.ws {
 				#line 39 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( id != default(object) )) {
 					#line 40 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("DATA  :: ID-", global::haxe.lang.Runtime.toString(id)), "\n------------------------------\n"), data), "\n------------------------------"), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"data", "hx.ws.Log", "src/hx/ws/Log.hx"}, new int[]{1981972957}, new double[]{((double) (40) )}));
+					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("DATA  :: ID-", global::haxe.lang.Runtime.toString(id)), "\n------------------------------\n"), data), "\n------------------------------")) ));
 				}
 				else {
 					#line 42 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("", data), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"data", "hx.ws.Log", "src/hx/ws/Log.hx"}, new int[]{1981972957}, new double[]{((double) (42) )}));
+					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat("", data)) ));
 				}
 				
 			}

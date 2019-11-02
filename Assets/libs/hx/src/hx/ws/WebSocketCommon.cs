@@ -509,94 +509,85 @@ namespace hx.ws {
 					#line 222 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					this._onopenCalled = true;
 					if (( this.onopen != null )) {
-						#line 226 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "223", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (226) )}));
+						#line 224 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						this.onopen.__hx_invoke0_o();
 					}
 					
 				}
 				
-				#line 231 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 228 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				if (( this._lastError != null )) {
-					#line 232 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 229 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					object error = this._lastError;
 					this._lastError = null;
-					#line 234 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 231 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					if (( this.onerror != null )) {
-						#line 235 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 232 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						this.onerror.__hx_invoke1_o(default(double), error);
 					}
 					
 				}
 				
-				#line 239 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 236 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				bool needClose = false;
 				object result = null;
-				#line 242 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "239", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (242) )}));
+				#line 239 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				try {
-					#line 244 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 239 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					result = global::hx.ws.cs.NonBlockingSocket.@select(((global::haxe.root.Array) (new global::haxe.root.Array(new object[]{this._socket})) ), default(global::haxe.root.Array), default(global::haxe.root.Array), ((object) (0.01) ));
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "242", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (245) )}));
 				}
 				catch (global::System.Exception catchallException){
-					#line 243 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 238 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					global::haxe.lang.Exceptions.exception = catchallException;
-					#line 246 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 240 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					{
-						#line 246 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 240 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						object e = ( (( catchallException is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException) ).obj) : ((object) (catchallException) ) );
 						global::hx.ws.Log.debug(global::haxe.lang.Runtime.concat("Error selecting socket: ", global::haxe.root.Std.@string(e)), null);
-						#line 248 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 242 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						needClose = true;
 					}
 					
 				}
 				
 				
-				#line 251 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 245 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				if (( ( result != null ) && ( needClose == false ) )) {
-					#line 252 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 246 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					if (( ((global::haxe.root.Array) (global::haxe.lang.Runtime.getField(result, "read", 1269254998, true)) ).length > 0 )) {
-						#line 254 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 248 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						try {
-							#line 254 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							#line 248 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							while (true) {
-								#line 255 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-								global::haxe.Log.trace.__hx_invoke2_o(default(double), "252", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (255) )}));
+								#line 249 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								global::haxe.io.Bytes data = global::haxe.io.Bytes.alloc(1024);
-								#line 257 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-								global::haxe.Log.trace.__hx_invoke2_o(default(double), "257", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (257) )}));
 								int read = this._socket.input.readBytes(data, 0, data.length);
-								#line 259 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-								global::haxe.Log.trace.__hx_invoke2_o(default(double), "259", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (259) )}));
+								#line 251 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								if (( read <= 0 )) {
-									#line 261 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+									#line 252 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 									break;
 								}
 								
-								#line 263 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+								#line 254 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								global::hx.ws.Log.debug(global::haxe.lang.Runtime.concat("Bytes read: ", global::haxe.lang.Runtime.toString(read)), this.id);
 								this._buffer.writeBytes(data.sub(0, read));
 							}
 							
 						}
 						catch (global::System.Exception catchallException1){
-							#line 253 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							#line 247 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							global::haxe.lang.Exceptions.exception = catchallException1;
-							#line 266 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							#line 257 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							{
-								#line 266 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+								#line 257 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								object e1 = ( (( catchallException1 is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException1) ).obj) : ((object) (catchallException1) ) );
-								#line 268 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-								global::haxe.Log.trace.__hx_invoke2_o(default(double), "262", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (268) )}));
+								#line 260 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								needClose = true;
-								#line 270 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								if (( e1 is global::System.IO.IOException )) {
-									#line 271 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+									#line 262 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 									global::System.IO.IOException ioex = ((global::System.IO.IOException) (e1) );
 									if (( ( ioex as global::System.Exception ).GetBaseException() is global::System.Net.Sockets.SocketException )) {
-										#line 273 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+										#line 264 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 										global::System.Net.Sockets.SocketException sockex = ((global::System.Net.Sockets.SocketException) (( ioex as global::System.Exception ).GetBaseException()) );
 										needClose = ( sockex.SocketErrorCode != global::System.Net.Sockets.SocketError.WouldBlock );
 									}
@@ -608,50 +599,39 @@ namespace hx.ws {
 						}
 						
 						
-						#line 284 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 275 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						if (( needClose == false )) {
-							#line 285 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-							global::haxe.Log.trace.__hx_invoke2_o(default(double), "285", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (285) )}));
+							#line 276 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							this.handleData();
-							#line 287 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-							global::haxe.Log.trace.__hx_invoke2_o(default(double), "287", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (287) )}));
 						}
 						
 					}
 					
 				}
 				
-				#line 291 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "283", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (291) )}));
+				#line 281 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				if (( needClose == true )) {
-					#line 293 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 282 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					if (( this.state != global::hx.ws.State.Closed )) {
-						#line 294 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 283 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						try {
-							#line 295 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							#line 284 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							global::hx.ws.Log.debug("Closed", this.id);
-							global::haxe.Log.trace.__hx_invoke2_o(default(double), "Closed", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (296) )}));
-							#line 297 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							this.state = global::hx.ws.State.Closed;
+							#line 286 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							this._socket.close();
 						}
 						catch (global::System.Exception catchallException2){
-							#line 294 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							#line 283 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							global::haxe.lang.Exceptions.exception = catchallException2;
-							#line 301 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-							{
-								#line 301 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-								object e2 = ( (( catchallException2 is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException2) ).obj) : ((object) (catchallException2) ) );
-								#line 301 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
-								global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("socket error ", global::haxe.root.Std.@string(e2)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (301) )}));
-							}
-							
+							#line 287 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							object e2 = ( (( catchallException2 is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException2) ).obj) : ((object) (catchallException2) ) );
 						}
 						
 						
-						#line 304 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 289 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						if (( this.onclose != null )) {
-							#line 305 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+							#line 290 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 							this.onclose.__hx_invoke0_o();
 						}
 						
@@ -665,29 +645,29 @@ namespace hx.ws {
 		
 		
 		public virtual void sendHttpRequest(global::hx.ws.HttpRequest httpRequest) {
-			#line 312 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 297 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			string data = httpRequest.build();
-			#line 314 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 299 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::hx.ws.Log.data(data, this.id);
-			#line 316 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 301 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			try {
-				#line 317 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 302 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				this._socket.output.write(global::haxe.io.Bytes.ofString(data, null));
 				this._socket.output.flush();
 			}
 			catch (global::System.Exception catchallException){
-				#line 316 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 301 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				global::haxe.lang.Exceptions.exception = catchallException;
-				#line 319 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 304 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				{
-					#line 319 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 304 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					object e = ( (( catchallException is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException) ).obj) : ((object) (catchallException) ) );
 					if (( this.onerror != null )) {
-						#line 321 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 306 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						this.onerror.__hx_invoke1_o(default(double), global::haxe.root.Std.@string(e));
 					}
 					
-					#line 323 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 308 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					this.close();
 				}
 				
@@ -698,84 +678,84 @@ namespace hx.ws {
 		#line default
 		
 		public virtual void sendHttpResponse(global::hx.ws.HttpResponse httpResponse) {
-			#line 328 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 313 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			string data = httpResponse.build();
-			#line 330 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 315 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::hx.ws.Log.data(data, this.id);
-			#line 332 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 317 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			this._socket.output.write(global::haxe.io.Bytes.ofString(data, null));
 			this._socket.output.flush();
 		}
 		#line default
 		
 		public virtual global::hx.ws.HttpRequest recvHttpRequest() {
-			#line 337 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 322 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			if ( ! (this._buffer.endsWith("\r\n\r\n")) ) {
-				#line 338 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 323 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				return null;
 			}
 			
-			#line 341 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 326 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::hx.ws.HttpRequest httpRequest = new global::hx.ws.HttpRequest();
 			while (true) {
-				#line 343 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 328 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				string line = this._buffer.readLine();
 				if (( ( line == null ) || ( line == "" ) )) {
-					#line 345 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 330 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					break;
 				}
 				
-				#line 347 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 332 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				httpRequest.addLine(line);
 			}
 			
-			#line 351 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 336 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::hx.ws.Log.data(httpRequest.toString(), this.id);
-			#line 353 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 338 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			return httpRequest;
 		}
 		#line default
 		
 		public virtual global::hx.ws.HttpResponse recvHttpResponse() {
-			#line 357 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 342 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::haxe.root.Array response = this._buffer.readLinesUntil("\r\n\r\n");
-			#line 359 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 344 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			if (( response == null )) {
-				#line 360 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 345 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				return null;
 			}
 			
-			#line 363 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 348 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::hx.ws.HttpResponse httpResponse = new global::hx.ws.HttpResponse();
 			{
-				#line 364 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 349 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				int _g = 0;
-				#line 364 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+				#line 349 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 				while (( _g < response.length )) {
-					#line 364 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 349 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					string line = global::haxe.lang.Runtime.toString(response.__get(_g));
-					#line 364 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 349 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					 ++ _g;
 					if (( ( line == null ) || ( line == "" ) )) {
-						#line 366 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+						#line 351 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 						break;
 					}
 					
-					#line 368 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+					#line 353 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 					httpResponse.addLine(line);
 				}
 				
 			}
 			
-			#line 372 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 357 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			global::hx.ws.Log.data(httpResponse.toString(), this.id);
-			#line 374 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 359 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			return httpResponse;
 		}
 		#line default
 		
 		public string makeWSKey(string key) {
-			#line 378 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+			#line 363 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 			return global::haxe.crypto.Base64.encode(global::haxe.crypto.Sha1.make(global::haxe.io.Bytes.ofString(global::haxe.lang.Runtime.concat(key, "258EAFA5-E914-47DA-95CA-C5AB0DC85B11"), null)), null);
 		}
 		#line default
