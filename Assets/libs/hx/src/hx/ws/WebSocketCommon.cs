@@ -581,8 +581,10 @@ namespace hx.ws {
 							{
 								#line 257 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								object e1 = ( (( catchallException1 is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException1) ).obj) : ((object) (catchallException1) ) );
-								#line 260 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+								#line 259 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
+								global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("error  ", global::haxe.root.Std.@string(e1)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"process", "hx.ws.WebSocketCommon", "src/hx/ws/WebSocketCommon.hx"}, new int[]{1981972957}, new double[]{((double) (259) )}));
 								needClose = true;
+								#line 261 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 								if (( e1 is global::System.IO.IOException )) {
 									#line 262 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\WebSocketCommon.hx"
 									global::System.IO.IOException ioex = ((global::System.IO.IOException) (e1) );

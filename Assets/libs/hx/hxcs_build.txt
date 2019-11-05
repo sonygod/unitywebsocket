@@ -1119,6 +1119,7 @@ M System.Security.AccessControl.ObjectSecurity
 M cs.system.runtime.interopservices.UnmanagedType
 M hx.ws.WebSocket
 C hx.ws.WebSocket
+C hx.ws.WebSocket___hx_ctor_hx_ws_WebSocket_170__Fun
 M org.msgpack.MsgPack
 C org.msgpack.MsgPack
 M openfl.events.EventPhase
