@@ -508,7 +508,10 @@ M cs.system.reflection.emit.ILGenerator
 M cs.system.reflection.ResourceAttributes
 M Client
 C Client
-C Client_connectWithIP_80__Fun
+C Client_connectWithIP_109__Fun
+C Client_testThread_82__Fun
+C Client_testThread_94__Fun
+C Client_new_71__Fun
 M System.Runtime.Serialization.SerializationEntry
 M haxe.iterators.StringIterator
 C haxe.iterators.StringIterator
@@ -683,11 +686,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_518__Fun
+C web.SocketAsync_reConnectSocket_516__Fun
+C web.SocketAsync_installSocket_530__Fun
 C web.SocketAsync_installSocket_533__Fun
-C web.SocketAsync_installSocket_536__Fun
-C web.SocketAsync_installSocket_557__Fun
-C web.SocketAsync_installSocket_563__Fun
+C web.SocketAsync_installSocket_549__Fun
+C web.SocketAsync_installSocket_555__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64
@@ -723,6 +726,8 @@ M Array
 C haxe.root.Array
 C haxe.root._Array.ArrayIterator
 M cs.system.text.regularexpressions.MatchEvaluator
+M Random
+C haxe.root.Random
 M System.Runtime.InteropServices.ExternalException
 M cs.system.EnvironmentVariableTarget
 M String

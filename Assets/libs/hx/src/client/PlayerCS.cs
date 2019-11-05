@@ -15,7 +15,7 @@ namespace client {
 		
 		public virtual void dispath() {
 			unchecked {
-				#line 17 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 18 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent("1", 1)) ), ((object) (1) ));
 			}
 			#line default
@@ -23,17 +23,17 @@ namespace client {
 		
 		
 		public virtual object __hx_lookupField(string field, int hash, bool throwErrors, bool isCheck) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			if (isCheck) {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return global::haxe.lang.Runtime.undefined;
 			}
 			else if (throwErrors) {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				throw new global::System.MemberAccessException("Field not found.");
 			}
 			else {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return null;
 			}
 			
@@ -41,13 +41,13 @@ namespace client {
 		#line default
 		
 		public virtual double __hx_lookupField_f(string field, int hash, bool throwErrors) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			if (throwErrors) {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				throw new global::System.MemberAccessException("Field not found or incompatible field type.");
 			}
 			else {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return default(double);
 			}
 			
@@ -55,23 +55,23 @@ namespace client {
 		#line default
 		
 		public virtual object __hx_lookupSetField(string field, int hash, object @value) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			throw new global::System.MemberAccessException("Cannot access field for writing.");
 		}
 		#line default
 		
 		public virtual double __hx_lookupSetField_f(string field, int hash, double @value) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			throw new global::System.MemberAccessException("Cannot access field for writing or incompatible type.");
 		}
 		#line default
 		
 		public virtual double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			switch (hash) {
 				default:
 				{
-					#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					return this.__hx_lookupSetField_f(field, hash, @value);
 				}
 				
@@ -82,20 +82,20 @@ namespace client {
 		
 		public virtual object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				switch (hash) {
 					case 2012391216:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						this.eventListenerDic = ((global::System.Collections.Generic.Dictionary<string, global::CEventListener>) (@value) );
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return this.__hx_lookupSetField(field, hash, @value);
 					}
 					
@@ -108,53 +108,53 @@ namespace client {
 		
 		public virtual object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				switch (hash) {
 					case 183035374:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasListener", 183035374)) );
 					}
 					
 					
 					case 1181009664:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "dispatchEvent", 1181009664)) );
 					}
 					
 					
 					case 1433765834:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeEventListener", 1433765834)) );
 					}
 					
 					
 					case 1902382029:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addEventListener", 1902382029)) );
 					}
 					
 					
 					case 2012391216:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return this.eventListenerDic;
 					}
 					
 					
 					case 994173427:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "dispath", 994173427)) );
 					}
 					
 					
 					default:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return this.__hx_lookupField(field, hash, throwErrors, isCheck);
 					}
 					
@@ -166,11 +166,11 @@ namespace client {
 		
 		
 		public virtual double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			switch (hash) {
 				default:
 				{
-					#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					return this.__hx_lookupField_f(field, hash, throwErrors);
 				}
 				
@@ -181,36 +181,36 @@ namespace client {
 		
 		public virtual object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				switch (hash) {
 					case 1902382029:
 					case 1433765834:
 					case 1181009664:
 					case 183035374:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return global::haxe.lang.Runtime.slowCallField(this, field, dynargs);
 					}
 					
 					
 					case 994173427:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						this.dispath();
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						break;
 					}
 					
 					
 					default:
 					{
-						#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 						return ((global::haxe.lang.Function) (this.__hx_getField(field, hash, true, false, false)) ).__hx_invokeDynamic(dynargs);
 					}
 					
 				}
 				
-				#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return null;
 			}
 			#line default
@@ -218,7 +218,7 @@ namespace client {
 		
 		
 		public virtual void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 6 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			baseArr.push("eventListenerDic");
 		}
 		#line default
