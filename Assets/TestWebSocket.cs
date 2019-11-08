@@ -125,66 +125,16 @@ public class TestWebSocket : MonoBehaviour
 
 
         self.Login("13060669789878", "123456");
+
+      //  self.regist()注册
+      // self.forgotpassWord()忘记密码
+      //self.changeUserInfo()//换头像
     }
 
     private void onSocketClose()
     {
         Debug.Log("被远程关闭 ");
     }
-//注册
-
-    //    void reg()
-    //    {
-    //      bool can=  client.regist("13060669789878","123456");
-    //
-    //      if (!can)
-    //      {
-    //          Debug.Log("注册账号不合法");
-    //      }
-    //    }
-    //
-    //    //用openid登陆
-    //    void login()
-    //    {
-    //        client.LoginWithOpenID("o3-Lq5rodJ5LmZdNTZac8mHVvp48"); //用openid登陆。
-    //    }
-    //
-    //
-    //    void loginWithPass()
-    //    {
-    //        client.Login("13060669337","123456");
-    //    }
-    //    //socket关闭
-    //
-    //   
-    //
-    //    //注册成功
-    //    private void onReg(HallEvent HallEvent)
-    //    {
-    //        Debug.Log("注册发回消息");
-    //
-    //        haxe.Json.stringify(HallEvent, null, null);
-    //
-    //
-    //    }
-    //
-    //    //登陆成功
-    //    private void onLogin(HallEvent HallEvent)
-    //    {
-    //        // UnityThreadHelper.ma.Dispatch(() =>
-    //        //切换到主线程才可以调用unity的函数。
-    //        UnityThreadHelper.Dispatcher.Dispatch(() =>
-    //        {
-    //            Debug.Log("登陆成功");
-    //            Debug.Log(HallEvent);
-    //
-    //
-    //            TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(HallEvent.player);
-    //
-    //
-    //            Debug.Log(JsonConvert.SerializeObject(pp));
-    //        });
-    //    }
 
     void OnApplicationQuit()
     {
