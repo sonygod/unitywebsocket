@@ -2,6 +2,7 @@ D:\project\sangong\sangong
 begin defines
 NET_20
 binary128
+crypto
 cs
 dce
 ds
@@ -40,6 +41,7 @@ end defines
 begin defines_data
 NET_20=1
 binary128=0.0.1
+crypto=0.3.0
 cs=1
 dce=no
 ds=2.0.1
@@ -245,6 +247,8 @@ M System.Runtime.Remoting.Messaging.IMessage
 M UnityEngine.Vector4
 M System.Collections.Generic.IEnumerable`1
 M cs.system.diagnostics.DataReceivedEventHandler
+M haxe.crypto.Aes
+C haxe.crypto.Aes
 M cs.system.StringComparison
 M cs.system.reflection.AssemblyNameFlags
 M System.ComponentModel.ComponentCollection
@@ -279,17 +283,21 @@ M System.MissingMemberException
 M cs.Ref
 M System.Text.EncoderFallback
 M System.Runtime.InteropServices.SafeHandle
+M haxe.crypto.padding.Padding
 M System.Reflection.Emit.PropertyBuilder
 M cs.system.globalization.DateTimeStyles
 M System.Reflection.Emit.Label
 M sys.thread.Mutex
 C sys.thread.Mutex
+M haxe.crypto.padding.BitPadding
+C haxe.crypto.padding.BitPadding
 M cs.system.threading.ContextCallback
 M System.Runtime.InteropServices._SignatureHelper
 M System.Threading.HostExecutionContext
 M System.Security.Policy.TrustManagerContext
 M System.Runtime.InteropServices._MethodBuilder
 M cs.system.PlatformID
+M haxe.crypto.mode.Mode
 M System.ArraySegment`1
 M cs.system.AsyncCallback
 M haxe.format.JsonParser
@@ -362,6 +370,8 @@ M binary128.internal.Leb128
 C binary128.@internal.Leb128
 M cs.system.threading.ThreadPriority
 M System.Reflection.Emit.PropertyToken
+M haxe.crypto.mode.PCBC
+C haxe.crypto.mode.PCBC
 M Lambda
 C haxe.root.Lambda
 M Any
@@ -432,6 +442,8 @@ C sys.io.Process
 M System.Text.RegularExpressions.RegexRunnerFactory
 M cs.system.net.sockets.SocketType
 M cs.system.text.regularexpressions.RegexOptions
+M haxe.crypto.mode.CBC
+C haxe.crypto.mode.CBC
 M System.Threading.Mutex
 M System.Globalization.Calendar
 M cs.system.security.accesscontrol.AccessControlSections
@@ -508,10 +520,10 @@ M cs.system.reflection.emit.ILGenerator
 M cs.system.reflection.ResourceAttributes
 M Client
 C Client
-C Client_connectWithIP_109__Fun
-C Client_testThread_82__Fun
-C Client_testThread_94__Fun
-C Client_new_71__Fun
+C Client_connectWithIP_113__Fun
+C Client_testThread_86__Fun
+C Client_testThread_98__Fun
+C Client_new_75__Fun
 M System.Runtime.Serialization.SerializationEntry
 M haxe.iterators.StringIterator
 C haxe.iterators.StringIterator
@@ -611,8 +623,12 @@ C hx.ws.HttpHeader
 M cs.system.globalization.TextInfo
 M cs.system.reflection.GenericParameterAttributes
 M System.Net.Sockets.IPPacketInformation
+M haxe.crypto.padding.ISO10126
+C haxe.crypto.padding.ISO10126
 M System.Runtime.InteropServices._ConstructorBuilder
 M cs.system.collections.generic.Dictionary_2
+M utils.AES_Test
+C utils.AES_Test
 M cs.system.globalization.NumberStyles
 M System.Runtime.InteropServices._FieldBuilder
 M haxe.lang.DceNo
@@ -642,6 +658,8 @@ M System.Diagnostics.SymbolStore.ISymbolWriter
 M web.proto.HallEvent
 C web.proto.HallEvent
 M System.Reflection.Emit.FieldToken
+M haxe.crypto.padding.TBC
+C haxe.crypto.padding.TBC
 M cs.system.security.HostSecurityManagerOptions
 M System.Runtime.Serialization.ISerializable
 M System.Globalization.CompareInfo
@@ -671,6 +689,10 @@ M unitythreading.Task
 M web.proto.ErrorEventCS
 C web.proto.ErrorEventCS
 M cs.system.reflection.EventInfo
+M haxe.crypto.mode.CTR
+C haxe.crypto.mode.CTR
+M haxe.crypto.padding.NullPadding
+C haxe.crypto.padding.NullPadding
 M cs.types.UInt64
 M cs.system.reflection.ExceptionHandlingClauseOptions
 M haxe.io.Input
@@ -686,11 +708,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_516__Fun
-C web.SocketAsync_installSocket_530__Fun
-C web.SocketAsync_installSocket_533__Fun
-C web.SocketAsync_installSocket_549__Fun
-C web.SocketAsync_installSocket_555__Fun
+C web.SocketAsync_reConnectSocket_520__Fun
+C web.SocketAsync_installSocket_534__Fun
+C web.SocketAsync_installSocket_537__Fun
+C web.SocketAsync_installSocket_553__Fun
+C web.SocketAsync_installSocket_559__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64
@@ -756,6 +778,8 @@ M System.Security.AccessControl.MutexSecurity
 M System.Net.SocketAddress
 M System.Reflection.ConstructorInfo
 M cs.system.reflection.TypeFilter
+M haxe.crypto.mode.ECB
+C haxe.crypto.mode.ECB
 M cs.system.security.cryptography.x509certificates.X509ContentType
 M System.Collections.DictionaryEntry
 M System.Security.AccessControl.FileSecurity
@@ -779,6 +803,8 @@ M System.RuntimeMethodHandle
 M cs.system.ConsoleCancelEventHandler
 M cs.system.collections.Hashtable
 M cs.system.text.Encoding
+M haxe.crypto.padding.SpacePadding
+C haxe.crypto.padding.SpacePadding
 M cs.system.MidpointRounding
 M haxe.io.Encoding
 E haxe.io.Encoding
@@ -814,6 +840,8 @@ M cs.system.Action
 M cs.system.reflection.CallingConventions
 M cs.system.globalization.CultureTypes
 M cs.system.configuration.assemblies.AssemblyHashAlgorithm
+M haxe.crypto.padding.PKCS7
+C haxe.crypto.padding.PKCS7
 M System.Reflection.Emit.OpCode
 M haxe.macro.Type
 E haxe.macro.Type
@@ -1022,6 +1050,8 @@ M utils.SQLRex
 C utils.SQLRex
 M cs.system.reflection.emit.AssemblyBuilderAccess
 M System.Security.Permissions.StrongNamePublicKeyBlob
+M haxe.crypto.mode.OFB
+C haxe.crypto.mode.OFB
 M cs.system.TypeCode
 M System.Reflection.ParameterModifier
 M System.Reflection.FieldInfo
@@ -1100,6 +1130,8 @@ M haxe.EnumTools
 M cs.system.reflection.TypeAttributes
 M openfl.events.EventType
 C openfl.events._EventType.EventType_Impl_
+M haxe.crypto.mode.CFB
+C haxe.crypto.mode.CFB
 M cs.Lib
 C cs.Lib
 M web.TinyCMD
@@ -1119,7 +1151,7 @@ M System.Security.AccessControl.ObjectSecurity
 M cs.system.runtime.interopservices.UnmanagedType
 M hx.ws.WebSocket
 C hx.ws.WebSocket
-C hx.ws.WebSocket___hx_ctor_hx_ws_WebSocket_170__Fun
+C hx.ws.WebSocket___hx_ctor_hx_ws_WebSocket_182__Fun
 M org.msgpack.MsgPack
 C org.msgpack.MsgPack
 M openfl.events.EventPhase
@@ -1210,8 +1242,12 @@ M Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid
 M cs.system.UriFormat
 M System.ComponentModel.ISite
 M cs.system.runtime.interopservices.LayoutKind
+M haxe.crypto.padding.AnsiX923
+C haxe.crypto.padding.AnsiX923
 M cs.system.reflection.ImageFileMachine
 M cs.system.runtime.serialization.StreamingContextStates
+M haxe.crypto.padding.NoPadding
+C haxe.crypto.padding.NoPadding
 M UnityThreading.DispatcherBase
 M System.ApplicationIdentity
 M System.Runtime.InteropServices._Thread

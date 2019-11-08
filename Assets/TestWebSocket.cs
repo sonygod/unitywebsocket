@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
+using client;
 using com.huaqian;
 using gameRoom;
 using haxe.lang;
@@ -43,6 +44,26 @@ public class TestWebSocket : MonoBehaviour
         client.onGlobalError = onGlobalError;
        // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
+
+
+
+       TestEventDispathFromHaxe();
+
+    }
+
+    private void  TestEventDispathFromHaxe()
+    {
+        var p = new PlayerCS(null);
+
+        p.addEventListener("1",onTestEventList);
+
+        p.dispath();
+
+    }
+
+    private void onTestEventList(CEvent evt)
+    {
+        Debug.Log("收到事件拉。"+evt.eventParams);
     }
 
     private void onGlobalError(ErrorEventCS obj)
@@ -75,7 +96,7 @@ public class TestWebSocket : MonoBehaviour
         Debug.Log("尝试登陆"); //这里可以正式开始了
 
         //reg();
-        loginWithPass();
+       // loginWithPass();
 
 
 
@@ -136,5 +157,11 @@ public class TestWebSocket : MonoBehaviour
 
             Debug.Log(JsonConvert.SerializeObject(pp));
         });
+    }
+
+    void OnApplicationQuit()
+    {
+
+        client.quit();//退出登录，退出socket,切换账号。
     }
 }

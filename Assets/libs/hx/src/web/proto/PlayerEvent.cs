@@ -31,6 +31,8 @@ namespace web.proto {
 			global::web.proto.PlayerEvent.REGIST = ((string) ("player_REGIST") );
 			#line 50 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.FORGOT_PASSWORD = ((string) ("player_forgot_passord") );
+			#line 53 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			global::web.proto.PlayerEvent.MOD_USER_INFO = ((string) ("player_MOD_USER_INFO") );
 		}
 		#line default
 		
@@ -39,24 +41,24 @@ namespace web.proto {
 		
 		
 		public PlayerEvent(string type, object player, object bling, global::server.IHander hander, object key, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 64 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 67 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.__hx_ctor_web_proto_PlayerEvent(this, type, player, bling, hander, key, bubbles, cancelable);
 		}
 		#line default
 		
 		private static void __hx_ctor_web_proto_PlayerEvent(global::web.proto.PlayerEvent __hx_this, string type, object player, object bling, global::server.IHander hander, object key, object bubbles, object cancelable) {
 			unchecked {
-				#line 63 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 66 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-				#line 63 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 66 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
-				#line 63 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 66 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				int key1 = ( (( key == default(object) )) ? (-1) : (((int) (global::haxe.lang.Runtime.toInt(key)) )) );
 				global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-				#line 66 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 69 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				__hx_this.player = player;
 				__hx_this.bling = bling;
-				#line 68 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 71 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				__hx_this.hander = hander;
 				__hx_this.key = key1;
 			}
@@ -90,6 +92,8 @@ namespace web.proto {
 		
 		public static string FORGOT_PASSWORD;
 		
+		public static string MOD_USER_INFO;
+		
 		public object player;
 		
 		public object bling;
@@ -99,13 +103,13 @@ namespace web.proto {
 		public int key;
 		
 		public override global::openfl.events.Event clone() {
-			#line 73 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 76 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent @event = new global::web.proto.PlayerEvent(this.type, this.player, this.bling, this.hander, null, this.bubbles, this.cancelable);
 			@event.target = this.target;
-			#line 75 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 78 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			@event.currentTarget = this.currentTarget;
 			@event.eventPhase = this.eventPhase;
-			#line 77 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 80 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			@event.hander = this.hander;
 			return @event;
 		}
