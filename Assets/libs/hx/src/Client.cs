@@ -6,36 +6,29 @@ public class Client {
 	
 	public Client() {
 		unchecked {
-			#line 48 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::Client _gthis = this;
+			#line 49 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u662f\u5426\u6211\u7684\u7248\u672c\uff1f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (49) )}));
 			#line 51 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u662f\u5426\u6211\u7684\u7248\u672c\uff1f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (51) )}));
-			#line 53 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::utils.AES_Test.test();
 			object a = new global::haxe.lang.DynamicObject(new int[]{97}, new object[]{"\u4e2d\u6587\u6d4b\u8bd5"}, new int[]{}, new double[]{});
-			#line 56 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 54 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::Client.testThread();
-			#line 58 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 56 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.io.Bytes b = global::org.msgpack.MsgPack.encode(a);
 			object c = global::org.msgpack.MsgPack.decode(b, null);
-			#line 61 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.getField(c, "a", 97, true), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (61) )}));
-			#line 65 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 59 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.getField(c, "a", 97, true), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (59) )}));
+			#line 63 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.lang.Function replacer = null;
-			#line 65 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 63 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			string space = null;
-			#line 65 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 63 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			string a1 = global::haxe.format.JsonPrinter.print(((object) (a) ), replacer, space);
 			object b1 = new global::haxe.format.JsonParser(((string) (a1) )).doParse();
-			#line 68 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::web.proto.WebEventDispatch.getInstance().addEventListener(((string) ("login") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onLogin", 254900170)) ), default(object), default(object), default(object));
-			global::web.proto.WebEventDispatch.getInstance().addEventListener(((string) ("hall_Reg") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onReg", 846097781)) ), default(object), default(object), default(object));
-			#line 71 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 67 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::web.proto.WebEventDispatch.getInstance().addEventListener(((string) ("error") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onErrorFromServer", 1415277398)) ), default(object), default(object), default(object));
-			#line 73 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 69 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			this.code = global::haxe.root.Random.@string(32, null);
-			#line 75 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.MainLoop.addThread(new global::Client_new_75__Fun(_gthis));
 		}
 		#line default
 	}
@@ -49,22 +42,22 @@ public class Client {
 	
 	public static void testThread() {
 		unchecked {
-			#line 85 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 73 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::sys.thread._Thread.HaxeThread this1 = global::sys.thread._Thread.HaxeThread.@get(global::System.Threading.Thread.CurrentThread);
-			#line 85 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 73 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::sys.thread._Thread.HaxeThread me = ((global::sys.thread._Thread.HaxeThread) (this1) );
-			global::sys.thread._Thread.Thread_Impl_.create(new global::Client_testThread_86__Fun(me));
-			#line 91 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::sys.thread._Thread.Thread_Impl_.create(new global::Client_testThread_74__Fun(me));
+			#line 79 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			string result = global::haxe.lang.Runtime.toString(global::sys.thread._Thread.Thread_Impl_.readMessage(true));
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u7ebf\u7a0b", result), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testThread", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (92) )}));
-			#line 94 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u7ebf\u7a0b", result), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testThread", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (80) )}));
+			#line 82 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			if (( result == null )) {
-				#line 95 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+				#line 83 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 				throw global::haxe.lang.HaxeException.wrap("\u4e0d\u652f\u6301\u7ebf\u7a0b");
 			}
 			
-			#line 98 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.MainLoop.addThread(( (( global::Client_testThread_98__Fun.__hx_current != null )) ? (global::Client_testThread_98__Fun.__hx_current) : (global::Client_testThread_98__Fun.__hx_current = ((global::Client_testThread_98__Fun) (new global::Client_testThread_98__Fun()) )) ));
+			#line 86 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.MainLoop.addThread(( (( global::Client_testThread_86__Fun.__hx_current != null )) ? (global::Client_testThread_86__Fun.__hx_current) : (global::Client_testThread_86__Fun.__hx_current = ((global::Client_testThread_86__Fun) (new global::Client_testThread_86__Fun()) )) ));
 		}
 		#line default
 	}
@@ -87,25 +80,25 @@ public class Client {
 	public string code;
 	
 	public virtual void onErrorFromServer(global::web.proto.ErrorEventCS e) {
-		#line 107 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 95 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		this.onGlobalError.Invoke(((global::web.proto.ErrorEventCS) (e) ));
 	}
 	#line default
 	
 	public virtual void connectWithIP(string ip, int port) {
 		unchecked {
-			#line 110 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 98 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::Client _gthis = this;
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("", ip), ":"), global::haxe.lang.Runtime.toString(port)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"connectWithIP", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (111) )}));
-			#line 113 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.MainLoop.addThread(new global::Client_connectWithIP_113__Fun(port, ip, _gthis));
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("", ip), ":"), global::haxe.lang.Runtime.toString(port)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"connectWithIP", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (99) )}));
+			#line 101 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.MainLoop.addThread(new global::Client_connectWithIP_101__Fun(port, ip, _gthis));
 		}
 		#line default
 	}
 	
 	
 	public virtual void quit() {
-		#line 122 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 110 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		global::web.SocketAsync.socket.close();
 		global::web.SocketAsync.socket = null;
 	}
@@ -113,114 +106,10 @@ public class Client {
 	
 	public virtual void onOpen() {
 		unchecked {
-			#line 132 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u63e1\u624b", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onOpen", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (132) )}));
-			#line 142 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 120 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u63e1\u624b", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onOpen", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (120) )}));
+			#line 130 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			this.onSocketOpenCS.Invoke();
-		}
-		#line default
-	}
-	
-	
-	public virtual void LoginWithOpenID(string openid) {
-		unchecked {
-			#line 151 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			object tp = new global::haxe.lang.DynamicObject(new int[]{23515, 563366437}, new object[]{((object) (-1) ), openid}, new int[]{}, new double[]{});
-			global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (8) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
-		}
-		#line default
-	}
-	
-	
-	public virtual void Login(string mobile, string password) {
-		unchecked {
-			#line 161 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			object tp = null;
-			#line 161 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			{
-				#line 161 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-				string __temp_odecl1 = global::haxe.crypto.Md5.encode(password);
-				#line 161 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-				tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027}, new object[]{mobile, __temp_odecl1}, new int[]{}, new double[]{});
-			}
-			
-			#line 162 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (8) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
-		}
-		#line default
-	}
-	
-	
-	public virtual bool forgotpassWord(string mobile, string password, string verificationCode) {
-		#line 166 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-		if (( verificationCode != this.code )) {
-			#line 167 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			return false;
-		}
-		
-		#line 170 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-		return true;
-	}
-	#line default
-	
-	public virtual bool regist(string mobile, string ps) {
-		#line 180 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-		return this.regist(mobile, ps, 0);
-	}
-	#line default
-	
-	public virtual bool regist(string mobile, string ps, object refID) {
-		unchecked {
-			#line 180 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			int refID1 = ( (( refID == default(object) )) ? (0) : (((int) (global::haxe.lang.Runtime.toInt(refID)) )) );
-			global::haxe.root.EReg r = new global::haxe.root.EReg("1\\d{10}", "");
-			#line 183 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			bool b = r.match(mobile);
-			if (( ( ( ( ( ps == null ) || ( mobile == null ) ) || ( mobile.Length != 11 ) ) || ( ps.Length < 6 ) ) ||  ! (b)  )) {
-				#line 185 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6ce8\u518c\u8d26\u53f7\u6216\u8005\u5bc6\u7801\u4e0d\u7b26\u5408\u6761\u4ef6", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"regist", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (185) )}));
-				return false;
-			}
-			
-			#line 189 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			string password = global::haxe.crypto.Md5.encode(ps);
-			object tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027, 1542393958}, new object[]{mobile, password, ((object) (refID1) )}, new int[]{}, new double[]{});
-			#line 192 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (9) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
-			#line 194 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			return true;
-		}
-		#line default
-	}
-	
-	
-	public virtual void onReg(global::web.proto.HallEvent e) {
-		unchecked {
-			#line 198 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.lang.Function replacer = null;
-			#line 198 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			string space = null;
-			#line 198 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u6ce8\u518c\u6210\u529f ", global::haxe.format.JsonPrinter.print(((object) (e.player) ), replacer, space)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onReg", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (198) )}));
-			this.onRegCS.Invoke(((global::web.proto.HallEvent) (e) ));
-		}
-		#line default
-	}
-	
-	
-	public virtual void onLogin(global::web.proto.HallEvent e) {
-		unchecked {
-			#line 203 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.lang.Function replacer = null;
-			#line 203 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			string space = null;
-			#line 203 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u767b\u9646\u6210\u529f ", global::haxe.format.JsonPrinter.print(((object) (e.player) ), replacer, space)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onLogin", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (203) )}));
-			#line 205 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			object p = e.player;
-			#line 207 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.root.Array k = global::haxe.root.Reflect.fields(p);
-			this.onLoginCS.Invoke(((global::web.proto.HallEvent) (e) ));
 		}
 		#line default
 	}
@@ -228,8 +117,8 @@ public class Client {
 	
 	public virtual void onClose() {
 		unchecked {
-			#line 212 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), "oncloese", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onClose", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (212) )}));
+			#line 139 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), "oncloese", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onClose", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (139) )}));
 			this.onSocketCloseCS.Invoke();
 		}
 		#line default
@@ -238,9 +127,9 @@ public class Client {
 	
 	public virtual void onError(string e) {
 		unchecked {
-			#line 217 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), "onError", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onError", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (217) )}));
-			#line 219 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 144 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), "onError", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onError", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (144) )}));
+			#line 146 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			this.onSocketErrorCS.Invoke(((object) (e) ));
 		}
 		#line default
@@ -252,22 +141,22 @@ public class Client {
 
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
-public class Client_connectWithIP_113__Fun : global::haxe.lang.Function {
+public class Client_connectWithIP_101__Fun : global::haxe.lang.Function {
 	
-	public Client_connectWithIP_113__Fun(int port, string ip, global::Client _gthis) : base(0, 0) {
-		#line 114 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+	public Client_connectWithIP_101__Fun(int port, string ip, global::Client _gthis) : base(0, 0) {
+		#line 102 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		this.port = port;
-		#line 114 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 102 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		this.ip = ip;
-		#line 114 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 102 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		this._gthis = _gthis;
 	}
 	#line default
 	
 	public override object __hx_invoke0_o() {
-		#line 114 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 102 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		global::web.SocketAsync.installSocket(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("", this.ip), ":"), global::haxe.lang.Runtime.toString(this.port)), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this._gthis, "onOpen", 1816005769)) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this._gthis, "onClose", 1587590681)) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this._gthis, "onError", 157772329)) ), null);
-		#line 114 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 102 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		return null;
 	}
 	#line default
@@ -283,28 +172,28 @@ public class Client_connectWithIP_113__Fun : global::haxe.lang.Function {
 
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
-public class Client_testThread_86__Fun : global::haxe.lang.Function {
+public class Client_testThread_74__Fun : global::haxe.lang.Function {
 	
-	public Client_testThread_86__Fun(global::sys.thread._Thread.HaxeThread me) : base(0, 0) {
-		#line 86 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+	public Client_testThread_74__Fun(global::sys.thread._Thread.HaxeThread me) : base(0, 0) {
+		#line 74 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		this.me = me;
 	}
 	#line default
 	
 	public override object __hx_invoke0_o() {
-		#line 88 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		{
-			#line 88 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.lang.Function replacer = null;
-			#line 88 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			string space = null;
-			#line 88 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			global::haxe.format.JsonPrinter.print(((object) ("xxxxx") ), replacer, space);
 		}
 		
-		#line 89 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 77 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		((global::sys.thread._Thread.HaxeThread) (this.me) ).sendMessage(((object) ("Done") ));
-		#line 86 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+		#line 74 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 		return null;
 	}
 	#line default
@@ -316,66 +205,34 @@ public class Client_testThread_86__Fun : global::haxe.lang.Function {
 
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
-public class Client_testThread_98__Fun : global::haxe.lang.Function {
+public class Client_testThread_86__Fun : global::haxe.lang.Function {
 	
-	public Client_testThread_98__Fun() : base(0, 0) {
+	public Client_testThread_86__Fun() : base(0, 0) {
 	}
 	
 	
-	public static global::Client_testThread_98__Fun __hx_current;
+	public static global::Client_testThread_86__Fun __hx_current;
 	
 	public override object __hx_invoke0_o() {
 		unchecked {
-			#line 99 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 87 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			{
-				#line 99 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+				#line 87 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 				global::haxe.lang.Function replacer1 = null;
-				#line 99 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+				#line 87 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 				string space1 = null;
-				#line 99 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+				#line 87 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 				global::haxe.format.JsonPrinter.print(((object) ("xxxxx") ), replacer1, space1);
 			}
 			
-			#line 101 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u652f\u6301\u7ebf\u7a0b\u5417\uff1f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testThread", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (101) )}));
-			#line 98 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			#line 89 "D:\\project\\sangong\\sangong\\src\\Client.hx"
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u652f\u6301\u7ebf\u7a0b\u5417\uff1f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testThread", "Client", "src/Client.hx"}, new int[]{1981972957}, new double[]{((double) (89) )}));
+			#line 86 "D:\\project\\sangong\\sangong\\src\\Client.hx"
 			return null;
 		}
 		#line default
 	}
 	
-	
-}
-
-
-
-#pragma warning disable 109, 114, 219, 429, 168, 162
-public class Client_new_75__Fun : global::haxe.lang.Function {
-	
-	public Client_new_75__Fun(global::Client _gthis) : base(0, 0) {
-		#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-		this._gthis = _gthis;
-	}
-	#line default
-	
-	public override object __hx_invoke0_o() {
-		unchecked {
-			#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			while (true) {
-				#line 77 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-				global::System.Threading.Thread.Sleep(((int) (((double) (30000) )) ));
-				#line 79 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-				this._gthis.code = global::haxe.root.Random.@string(32, null);
-			}
-			
-			#line 76 "D:\\project\\sangong\\sangong\\src\\Client.hx"
-			return null;
-		}
-		#line default
-	}
-	
-	
-	public global::Client _gthis;
 	
 }
 

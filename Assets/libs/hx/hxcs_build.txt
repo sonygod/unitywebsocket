@@ -520,10 +520,9 @@ M cs.system.reflection.emit.ILGenerator
 M cs.system.reflection.ResourceAttributes
 M Client
 C Client
-C Client_connectWithIP_113__Fun
+C Client_connectWithIP_101__Fun
+C Client_testThread_74__Fun
 C Client_testThread_86__Fun
-C Client_testThread_98__Fun
-C Client_new_75__Fun
 M System.Runtime.Serialization.SerializationEntry
 M haxe.iterators.StringIterator
 C haxe.iterators.StringIterator
