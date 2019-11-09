@@ -6,32 +6,32 @@ namespace web.proto {
 	public sealed class PlayerEvent : global::openfl.events.Event {
 		
 		static PlayerEvent() {
-			#line 17 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 19 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.ADD_BET = ((string) ("add_bet") );
-			#line 22 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 24 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.STATIC_CHANGE = ((string) ("static_change") );
-			#line 27 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
-			global::web.proto.PlayerEvent.BE_BANKER = ((string) ("be_banker") );
 			#line 29 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
-			global::web.proto.PlayerEvent.TRY_TOBE_BANKER = ((string) ("try_tobe_banker") );
+			global::web.proto.PlayerEvent.BE_BANKER = ((string) ("be_banker") );
 			#line 31 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
-			global::web.proto.PlayerEvent.UPDATE = ((string) ("update") );
+			global::web.proto.PlayerEvent.TRY_TOBE_BANKER = ((string) ("try_tobe_banker") );
 			#line 33 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			global::web.proto.PlayerEvent.UPDATE = ((string) ("update") );
+			#line 35 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.GET_USER_INFO = ((string) ("getuserInfo") );
 			global::web.proto.PlayerEvent.Playerevent_socket_close = ((string) ("playerevent_socket_close") );
-			#line 36 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
-			global::web.proto.PlayerEvent.GET_BASE_USER_INFO = ((string) ("get_base_user_Info") );
 			#line 38 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
-			global::web.proto.PlayerEvent.SearchGameResult = ((string) ("player_SearchGameResult") );
+			global::web.proto.PlayerEvent.GET_BASE_USER_INFO = ((string) ("get_base_user_Info") );
 			#line 40 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			global::web.proto.PlayerEvent.SearchGameResult = ((string) ("player_SearchGameResult") );
+			#line 42 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.KILL_BANK = ((string) ("player_Kill_bank") );
-			#line 43 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 45 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.RE_CONNECT = ((string) ("player_RE_CONNECT") );
-			#line 46 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 48 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.REGIST = ((string) ("player_REGIST") );
 			#line 50 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.FORGOT_PASSWORD = ((string) ("player_forgot_passord") );
-			#line 53 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 52 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.MOD_USER_INFO = ((string) ("player_MOD_USER_INFO") );
 		}
 		#line default
@@ -117,38 +117,38 @@ namespace web.proto {
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				switch (hash) {
 					case 5343647:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.key = ((int) (@value) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					case 888664408:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.bling = ((object) (@value) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					case 934865761:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.player = ((object) (@value) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -161,47 +161,47 @@ namespace web.proto {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				switch (hash) {
 					case 5343647:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.key = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					case 939359644:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.hander = ((global::server.IHander) (@value) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					case 888664408:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.bling = ((object) (@value) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					case 934865761:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						this.player = ((object) (@value) );
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -214,46 +214,46 @@ namespace web.proto {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				switch (hash) {
 					case 1214452573:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clone", 1214452573)) );
 					}
 					
 					
 					case 5343647:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return this.key;
 					}
 					
 					
 					case 939359644:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return this.hander;
 					}
 					
 					
 					case 888664408:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return this.bling;
 					}
 					
 					
 					case 934865761:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return this.player;
 					}
 					
 					
 					default:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -266,32 +266,32 @@ namespace web.proto {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				switch (hash) {
 					case 5343647:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return ((double) (this.key) );
 					}
 					
 					
 					case 888664408:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.bling)) );
 					}
 					
 					
 					case 934865761:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.player)) );
 					}
 					
 					
 					default:
 					{
-						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+						#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -303,15 +303,15 @@ namespace web.proto {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			baseArr.push("key");
-			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			baseArr.push("hander");
-			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			baseArr.push("bling");
-			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			baseArr.push("player");
-			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 15 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default

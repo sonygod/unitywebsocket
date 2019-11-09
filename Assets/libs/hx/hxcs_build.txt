@@ -520,9 +520,9 @@ M cs.system.reflection.emit.ILGenerator
 M cs.system.reflection.ResourceAttributes
 M Client
 C Client
-C Client_connectWithIP_101__Fun
-C Client_testThread_74__Fun
-C Client_testThread_86__Fun
+C Client_connectWithIP_103__Fun
+C Client_testThread_76__Fun
+C Client_testThread_88__Fun
 M System.Runtime.Serialization.SerializationEntry
 M haxe.iterators.StringIterator
 C haxe.iterators.StringIterator
@@ -1045,6 +1045,8 @@ M System.MulticastDelegate
 M System.Activator
 M System.Runtime.InteropServices._Module
 M System.Type
+M client.RoomCS
+C client.RoomCS
 M utils.SQLRex
 C utils.SQLRex
 M cs.system.reflection.emit.AssemblyBuilderAccess
