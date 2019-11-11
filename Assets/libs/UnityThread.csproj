@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5859B457-0543-4A9E-878B-585F441D773D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnityThread</RootNamespace>
+    <AssemblyName>UnityThread</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Users\Administrator\Desktop\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\project\sangong\sangong\unity\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EventDispathcer-master\src\CEvent.cs" />
+    <Compile Include="EventDispathcer-master\src\CEventDispatcher.cs" />
+    <Compile Include="EventDispathcer-master\src\CEventDispatcherObj.cs" />
+    <Compile Include="EventDispathcer-master\src\CEventListener.cs" />
+    <Compile Include="EventDispathcer-master\src\CEventName.cs" />
+    <Compile Include="hx\src\Array.cs" />
+    <Compile Include="hx\src\binary128\internal\cs\Leb128.cs" />
+    <Compile Include="hx\src\binary128\internal\Leb128.cs" />
+    <Compile Include="hx\src\Client.cs" />
+    <Compile Include="hx\src\client\PlayerCS.cs" />
+    <Compile Include="hx\src\client\RoomCS.cs" />
+    <Compile Include="hx\src\client\TimerHelper.cs" />
+    <Compile Include="hx\src\Comments.cs" />
+    <Compile Include="hx\src\cs\Boot.cs" />
+    <Compile Include="hx\src\cs\Flags.cs" />
+    <Compile Include="hx\src\cs\internal\Exceptions.cs" />
+    <Compile Include="hx\src\cs\internal\FieldLookup.cs" />
+    <Compile Include="hx\src\cs\internal\Function.cs" />
+    <Compile Include="hx\src\cs\internal\HxObject.cs" />
+    <Compile Include="hx\src\cs\internal\Runtime.cs" />
+    <Compile Include="hx\src\cs\internal\StringExt.cs" />
+    <Compile Include="hx\src\cs\io\NativeInput.cs" />
+    <Compile Include="hx\src\cs\io\NativeOutput.cs" />
+    <Compile Include="hx\src\cs\Lib.cs" />
+    <Compile Include="hx\src\cs\NativeArray.cs" />
+    <Compile Include="hx\src\Date.cs" />
+    <Compile Include="hx\src\EnumValue.cs" />
+    <Compile Include="hx\src\EReg.cs" />
+    <Compile Include="hx\src\gameLogic\CardType.cs" />
+    <Compile Include="hx\src\gameLogic\IGameLogic.cs" />
+    <Compile Include="hx\src\gameRoom\Hall.cs" />
+    <Compile Include="hx\src\gameRoom\Player.cs" />
+    <Compile Include="hx\src\haxe\Constraints.cs" />
+    <Compile Include="hx\src\haxe\crypto\Adler32.cs" />
+    <Compile Include="hx\src\haxe\crypto\Aes.cs" />
+    <Compile Include="hx\src\haxe\crypto\Base64.cs" />
+    <Compile Include="hx\src\haxe\crypto\BaseCode.cs" />
+    <Compile Include="hx\src\haxe\crypto\Md5.cs" />
+    <Compile Include="hx\src\haxe\crypto\mode\CBC.cs" />
+    <Compile Include="hx\src\haxe\crypto\mode\CFB.cs" />
+    <Compile Include="hx\src\haxe\crypto\mode\CTR.cs" />
+    <Compile Include="hx\src\haxe\crypto\mode\ECB.cs" />
+    <Compile Include="hx\src\haxe\crypto\mode\OFB.cs" />
+    <Compile Include="hx\src\haxe\crypto\mode\PCBC.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\AnsiX923.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\BitPadding.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\ISO10126.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\NoPadding.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\NullPadding.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\PKCS7.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\SpacePadding.cs" />
+    <Compile Include="hx\src\haxe\crypto\padding\TBC.cs" />
+    <Compile Include="hx\src\haxe\crypto\Sha1.cs" />
+    <Compile Include="hx\src\haxe\ds\BalancedTree.cs" />
+    <Compile Include="hx\src\haxe\ds\EnumValueMap.cs" />
+    <Compile Include="hx\src\haxe\ds\HashMap.cs" />
+    <Compile Include="hx\src\haxe\ds\IntMap.cs" />
+    <Compile Include="hx\src\haxe\ds\List.cs" />
+    <Compile Include="hx\src\haxe\ds\Map.cs" />
+    <Compile Include="hx\src\haxe\ds\ObjectMap.cs" />
+    <Compile Include="hx\src\haxe\ds\ReadOnlyArray.cs" />
+    <Compile Include="hx\src\haxe\ds\StringMap.cs" />
+    <Compile Include="hx\src\haxe\ds\Vector.cs" />
+    <Compile Include="hx\src\haxe\ds\WeakMap.cs" />
+    <Compile Include="hx\src\haxe\EntryPoint.cs" />
+    <Compile Include="hx\src\haxe\format\JsonParser.cs" />
+    <Compile Include="hx\src\haxe\format\JsonPrinter.cs" />
+    <Compile Include="hx\src\haxe\Int32.cs" />
+    <Compile Include="hx\src\haxe\Int64.cs" />
+    <Compile Include="hx\src\haxe\Int64Helper.cs" />
+    <Compile Include="hx\src\haxe\io\Bytes.cs" />
+    <Compile Include="hx\src\haxe\io\BytesBuffer.cs" />
+    <Compile Include="hx\src\haxe\io\BytesInput.cs" />
+    <Compile Include="hx\src\haxe\io\BytesOutput.cs" />
+    <Compile Include="hx\src\haxe\io\Encoding.cs" />
+    <Compile Include="hx\src\haxe\io\Eof.cs" />
+    <Compile Include="hx\src\haxe\io\Error.cs" />
+    <Compile Include="hx\src\haxe\io\FPHelper.cs" />
+    <Compile Include="hx\src\haxe\io\Input.cs" />
+    <Compile Include="hx\src\haxe\io\Output.cs" />
+    <Compile Include="hx\src\haxe\io\Path.cs" />
+    <Compile Include="hx\src\haxe\iterators\MapKeyValueIterator.cs" />
+    <Compile Include="hx\src\haxe\iterators\StringIterator.cs" />
+    <Compile Include="hx\src\haxe\iterators\StringIteratorUnicode.cs" />
+    <Compile Include="hx\src\haxe\iterators\StringKeyValueIterator.cs" />
+    <Compile Include="hx\src\haxe\Json.cs" />
+    <Compile Include="hx\src\haxe\lang\DceNo.cs" />
+    <Compile Include="hx\src\haxe\Log.cs" />
+    <Compile Include="hx\src\haxe\macro\Context.cs" />
+    <Compile Include="hx\src\haxe\macro\Expr.cs" />
+    <Compile Include="hx\src\haxe\macro\Type.cs" />
+    <Compile Include="hx\src\haxe\MainLoop.cs" />
+    <Compile Include="hx\src\haxe\SysTools.cs" />
+    <Compile Include="hx\src\haxe\Timer.cs" />
+    <Compile Include="hx\src\haxe\zip\Compress.cs" />
+    <Compile Include="hx\src\haxe\zip\FlushMode.cs" />
+    <Compile Include="hx\src\haxe\zip\Huffman.cs" />
+    <Compile Include="hx\src\haxe\zip\InflateImpl.cs" />
+    <Compile Include="hx\src\haxe\zip\Uncompress.cs" />
+    <Compile Include="hx\src\hx\ws\BinaryType.cs" />
+    <Compile Include="hx\src\hx\ws\Buffer.cs" />
+    <Compile Include="hx\src\hx\ws\cs\NonBlockingSocket.cs" />
+    <Compile Include="hx\src\hx\ws\HttpHeader.cs" />
+    <Compile Include="hx\src\hx\ws\HttpRequest.cs" />
+    <Compile Include="hx\src\hx\ws\HttpResponse.cs" />
+    <Compile Include="hx\src\hx\ws\Log.cs" />
+    <Compile Include="hx\src\hx\ws\OpCode.cs" />
+    <Compile Include="hx\src\hx\ws\State.cs" />
+    <Compile Include="hx\src\hx\ws\Utf8Encoder.cs" />
+    <Compile Include="hx\src\hx\ws\WebSocket.cs" />
+    <Compile Include="hx\src\hx\ws\WebSocketCommon.cs" />
+    <Compile Include="hx\src\IntIterator.cs" />
+    <Compile Include="hx\src\Lambda.cs" />
+    <Compile Include="hx\src\Math.cs" />
+    <Compile Include="hx\src\openfl\events\ErrorEvent.cs" />
+    <Compile Include="hx\src\openfl\events\Event.cs" />
+    <Compile Include="hx\src\openfl\events\EventDispatcher.cs" />
+    <Compile Include="hx\src\openfl\events\EventType.cs" />
+    <Compile Include="hx\src\openfl\events\IEventDispatcher.cs" />
+    <Compile Include="hx\src\openfl\events\TextEvent.cs" />
+    <Compile Include="hx\src\openfl\_internal\utils\ObjectPool.cs" />
+    <Compile Include="hx\src\org\msgpack\Decoder.cs" />
+    <Compile Include="hx\src\org\msgpack\Encoder.cs" />
+    <Compile Include="hx\src\org\msgpack\MsgPack.cs" />
+    <Compile Include="hx\src\Random.cs" />
+    <Compile Include="hx\src\Reflect.cs" />
+    <Compile Include="hx\src\server\IHander.cs" />
+    <Compile Include="hx\src\server\SocketEvent.cs" />
+    <Compile Include="hx\src\Std.cs" />
+    <Compile Include="hx\src\StringBuf.cs" />
+    <Compile Include="hx\src\StringTools.cs" />
+    <Compile Include="hx\src\Sys.cs" />
+    <Compile Include="hx\src\sys\FileSystem.cs" />
+    <Compile Include="hx\src\sys\io\FileSeek.cs" />
+    <Compile Include="hx\src\sys\io\Process.cs" />
+    <Compile Include="hx\src\sys\net\Host.cs" />
+    <Compile Include="hx\src\sys\net\Socket.cs" />
+    <Compile Include="hx\src\sys\thread\Deque.cs" />
+    <Compile Include="hx\src\sys\thread\Lock.cs" />
+    <Compile Include="hx\src\sys\thread\Mutex.cs" />
+    <Compile Include="hx\src\sys\thread\Thread.cs" />
+    <Compile Include="hx\src\TestPackBuilder.cs" />
+    <Compile Include="hx\src\Type.cs" />
+    <Compile Include="hx\src\UInt.cs" />
+    <Compile Include="hx\src\utils\AES_Test.cs" />
+    <Compile Include="hx\src\utils\CustomTrace.cs" />
+    <Compile Include="hx\src\utils\SQLRex.cs" />
+    <Compile Include="hx\src\web\GameSetting.cs" />
+    <Compile Include="hx\src\web\proto\ChatEvent.cs" />
+    <Compile Include="hx\src\web\proto\ClubEvent.cs" />
+    <Compile Include="hx\src\web\proto\CMDEvent.cs" />
+    <Compile Include="hx\src\web\proto\ErrorEventCS.cs" />
+    <Compile Include="hx\src\web\proto\GameEvent.cs" />
+    <Compile Include="hx\src\web\proto\HallEvent.cs" />
+    <Compile Include="hx\src\web\proto\PacketBuilder.cs" />
+    <Compile Include="hx\src\web\proto\PlayerEvent.cs" />
+    <Compile Include="hx\src\web\proto\ResultEvent.cs" />
+    <Compile Include="hx\src\web\proto\RoomEvent.cs" />
+    <Compile Include="hx\src\web\proto\WebEventDispatch.cs" />
+    <Compile Include="hx\src\web\SocketAsync.cs" />
+    <Compile Include="hx\src\web\TinyPlayer.cs" />
+    <Compile Include="UnityThreading\ActionExtension.cs" />
+    <Compile Include="UnityThreading\Channel.cs" />
+    <Compile Include="UnityThreading\Dispatcher.cs" />
+    <Compile Include="UnityThreading\EnumerableExtension.cs" />
+    <Compile Include="UnityThreading\EnumeratorExtension.cs" />
+    <Compile Include="UnityThreading\ObjectExtension.cs" />
+    <Compile Include="UnityThreading\SwitchTo.cs" />
+    <Compile Include="UnityThreading\Task.cs" />
+    <Compile Include="UnityThreading\TaskDistributer.cs" />
+    <Compile Include="UnityThreading\TaskExtension.cs" />
+    <Compile Include="UnityThreading\Thread.cs" />
+    <Compile Include="UnityThreading\UnityThreadHelper.cs" />
+    <Compile Include="UnityThreading\WaitOneExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hx\hxcs_build.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EventDispathcer-master\src\CEvent.cs.meta" />
+    <None Include="EventDispathcer-master\src\CEventDispatcher.cs.meta" />
+    <None Include="EventDispathcer-master\src\CEventDispatcherObj.cs.meta" />
+    <None Include="EventDispathcer-master\src\CEventListener.cs.meta" />
+    <None Include="EventDispathcer-master\src\CEventName.cs.meta" />
+    <None Include="hx\hxcs_build.txt.meta" />
+    <None Include="hx\src.meta" />
+    <None Include="hx\src\Array.cs.meta" />
+    <None Include="hx\src\binary128.meta" />
+    <None Include="hx\src\binary128\internal.meta" />
+    <None Include="hx\src\binary128\internal\cs.meta" />
+    <None Include="hx\src\binary128\internal\cs\Leb128.cs.meta" />
+    <None Include="hx\src\binary128\internal\Leb128.cs.meta" />
+    <None Include="hx\src\Client.cs.meta" />
+    <None Include="hx\src\client.meta" />
+    <None Include="hx\src\client\PlayerCS.cs.meta" />
+    <None Include="hx\src\client\RoomCS.cs.meta" />
+    <None Include="hx\src\client\TimerHelper.cs.meta" />
+    <None Include="hx\src\Comments.cs.meta" />
+    <None Include="hx\src\cs.meta" />
+    <None Include="hx\src\cs\Boot.cs.meta" />
+    <None Include="hx\src\cs\Flags.cs.meta" />
+    <None Include="hx\src\cs\internal.meta" />
+    <None Include="hx\src\cs\internal\Exceptions.cs.meta" />
+    <None Include="hx\src\cs\internal\FieldLookup.cs.meta" />
+    <None Include="hx\src\cs\internal\Function.cs.meta" />
+    <None Include="hx\src\cs\internal\HxObject.cs.meta" />
+    <None Include="hx\src\cs\internal\Runtime.cs.meta" />
+    <None Include="hx\src\cs\internal\StringExt.cs.meta" />
+    <None Include="hx\src\cs\io.meta" />
+    <None Include="hx\src\cs\io\NativeInput.cs.meta" />
+    <None Include="hx\src\cs\io\NativeOutput.cs.meta" />
+    <None Include="hx\src\cs\Lib.cs.meta" />
+    <None Include="hx\src\cs\NativeArray.cs.meta" />
+    <None Include="hx\src\Date.cs.meta" />
+    <None Include="hx\src\EnumValue.cs.meta" />
+    <None Include="hx\src\EReg.cs.meta" />
+    <None Include="hx\src\gameLogic.meta" />
+    <None Include="hx\src\gameLogic\CardType.cs.meta" />
+    <None Include="hx\src\gameLogic\IGameLogic.cs.meta" />
+    <None Include="hx\src\gameRoom.meta" />
+    <None Include="hx\src\gameRoom\Hall.cs.meta" />
+    <None Include="hx\src\gameRoom\Player.cs.meta" />
+    <None Include="hx\src\haxe.meta" />
+    <None Include="hx\src\haxe\Constraints.cs.meta" />
+    <None Include="hx\src\haxe\crypto.meta" />
+    <None Include="hx\src\haxe\crypto\Adler32.cs.meta" />
+    <None Include="hx\src\haxe\crypto\Aes.cs.meta" />
+    <None Include="hx\src\haxe\crypto\Base64.cs.meta" />
+    <None Include="hx\src\haxe\crypto\BaseCode.cs.meta" />
+    <None Include="hx\src\haxe\crypto\Md5.cs.meta" />
+    <None Include="hx\src\haxe\crypto\mode.meta" />
+    <None Include="hx\src\haxe\crypto\mode\CBC.cs.meta" />
+    <None Include="hx\src\haxe\crypto\mode\CFB.cs.meta" />
+    <None Include="hx\src\haxe\crypto\mode\CTR.cs.meta" />
+    <None Include="hx\src\haxe\crypto\mode\ECB.cs.meta" />
+    <None Include="hx\src\haxe\crypto\mode\OFB.cs.meta" />
+    <None Include="hx\src\haxe\crypto\mode\PCBC.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding.meta" />
+    <None Include="hx\src\haxe\crypto\padding\AnsiX923.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\BitPadding.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\ISO10126.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\NoPadding.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\NullPadding.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\PKCS7.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\SpacePadding.cs.meta" />
+    <None Include="hx\src\haxe\crypto\padding\TBC.cs.meta" />
+    <None Include="hx\src\haxe\crypto\Sha1.cs.meta" />
+    <None Include="hx\src\haxe\ds.meta" />
+    <None Include="hx\src\haxe\ds\BalancedTree.cs.meta" />
+    <None Include="hx\src\haxe\ds\EnumValueMap.cs.meta" />
+    <None Include="hx\src\haxe\ds\HashMap.cs.meta" />
+    <None Include="hx\src\haxe\ds\IntMap.cs.meta" />
+    <None Include="hx\src\haxe\ds\List.cs.meta" />
+    <None Include="hx\src\haxe\ds\Map.cs.meta" />
+    <None Include="hx\src\haxe\ds\ObjectMap.cs.meta" />
+    <None Include="hx\src\haxe\ds\ReadOnlyArray.cs.meta" />
+    <None Include="hx\src\haxe\ds\StringMap.cs.meta" />
+    <None Include="hx\src\haxe\ds\Vector.cs.meta" />
+    <None Include="hx\src\haxe\ds\WeakMap.cs.meta" />
+    <None Include="hx\src\haxe\EntryPoint.cs.meta" />
+    <None Include="hx\src\haxe\format.meta" />
+    <None Include="hx\src\haxe\format\JsonParser.cs.meta" />
+    <None Include="hx\src\haxe\format\JsonPrinter.cs.meta" />
+    <None Include="hx\src\haxe\Int32.cs.meta" />
+    <None Include="hx\src\haxe\Int64.cs.meta" />
+    <None Include="hx\src\haxe\Int64Helper.cs.meta" />
+    <None Include="hx\src\haxe\io.meta" />
+    <None Include="hx\src\haxe\io\Bytes.cs.meta" />
+    <None Include="hx\src\haxe\io\BytesBuffer.cs.meta" />
+    <None Include="hx\src\haxe\io\BytesInput.cs.meta" />
+    <None Include="hx\src\haxe\io\BytesOutput.cs.meta" />
+    <None Include="hx\src\haxe\io\Encoding.cs.meta" />
+    <None Include="hx\src\haxe\io\Eof.cs.meta" />
+    <None Include="hx\src\haxe\io\Error.cs.meta" />
+    <None Include="hx\src\haxe\io\FPHelper.cs.meta" />
+    <None Include="hx\src\haxe\io\Input.cs.meta" />
+    <None Include="hx\src\haxe\io\Output.cs.meta" />
+    <None Include="hx\src\haxe\io\Path.cs.meta" />
+    <None Include="hx\src\haxe\iterators.meta" />
+    <None Include="hx\src\haxe\iterators\MapKeyValueIterator.cs.meta" />
+    <None Include="hx\src\haxe\iterators\StringIterator.cs.meta" />
+    <None Include="hx\src\haxe\iterators\StringIteratorUnicode.cs.meta" />
+    <None Include="hx\src\haxe\iterators\StringKeyValueIterator.cs.meta" />
+    <None Include="hx\src\haxe\Json.cs.meta" />
+    <None Include="hx\src\haxe\lang.meta" />
+    <None Include="hx\src\haxe\lang\DceNo.cs.meta" />
+    <None Include="hx\src\haxe\Log.cs.meta" />
+    <None Include="hx\src\haxe\macro.meta" />
+    <None Include="hx\src\haxe\macro\Context.cs.meta" />
+    <None Include="hx\src\haxe\macro\Expr.cs.meta" />
+    <None Include="hx\src\haxe\macro\Type.cs.meta" />
+    <None Include="hx\src\haxe\MainLoop.cs.meta" />
+    <None Include="hx\src\haxe\SysTools.cs.meta" />
+    <None Include="hx\src\haxe\Timer.cs.meta" />
+    <None Include="hx\src\haxe\zip.meta" />
+    <None Include="hx\src\haxe\zip\Compress.cs.meta" />
+    <None Include="hx\src\haxe\zip\FlushMode.cs.meta" />
+    <None Include="hx\src\haxe\zip\Huffman.cs.meta" />
+    <None Include="hx\src\haxe\zip\InflateImpl.cs.meta" />
+    <None Include="hx\src\haxe\zip\Uncompress.cs.meta" />
+    <None Include="hx\src\hx.meta" />
+    <None Include="hx\src\hx\ws.meta" />
+    <None Include="hx\src\hx\ws\BinaryType.cs.meta" />
+    <None Include="hx\src\hx\ws\Buffer.cs.meta" />
+    <None Include="hx\src\hx\ws\cs.meta" />
+    <None Include="hx\src\hx\ws\cs\NonBlockingSocket.cs.meta" />
+    <None Include="hx\src\hx\ws\HttpHeader.cs.meta" />
+    <None Include="hx\src\hx\ws\HttpRequest.cs.meta" />
+    <None Include="hx\src\hx\ws\HttpResponse.cs.meta" />
+    <None Include="hx\src\hx\ws\Log.cs.meta" />
+    <None Include="hx\src\hx\ws\OpCode.cs.meta" />
+    <None Include="hx\src\hx\ws\State.cs.meta" />
+    <None Include="hx\src\hx\ws\Utf8Encoder.cs.meta" />
+    <None Include="hx\src\hx\ws\WebSocket.cs.meta" />
+    <None Include="hx\src\hx\ws\WebSocketCommon.cs.meta" />
+    <None Include="hx\src\IntIterator.cs.meta" />
+    <None Include="hx\src\Lambda.cs.meta" />
+    <None Include="hx\src\Math.cs.meta" />
+    <None Include="hx\src\openfl.meta" />
+    <None Include="hx\src\openfl\events.meta" />
+    <None Include="hx\src\openfl\events\ErrorEvent.cs.meta" />
+    <None Include="hx\src\openfl\events\Event.cs.meta" />
+    <None Include="hx\src\openfl\events\EventDispatcher.cs.meta" />
+    <None Include="hx\src\openfl\events\EventType.cs.meta" />
+    <None Include="hx\src\openfl\events\IEventDispatcher.cs.meta" />
+    <None Include="hx\src\openfl\events\TextEvent.cs.meta" />
+    <None Include="hx\src\openfl\_internal.meta" />
+    <None Include="hx\src\openfl\_internal\utils.meta" />
+    <None Include="hx\src\openfl\_internal\utils\ObjectPool.cs.meta" />
+    <None Include="hx\src\org.meta" />
+    <None Include="hx\src\org\msgpack.meta" />
+    <None Include="hx\src\org\msgpack\Decoder.cs.meta" />
+    <None Include="hx\src\org\msgpack\Encoder.cs.meta" />
+    <None Include="hx\src\org\msgpack\MsgPack.cs.meta" />
+    <None Include="hx\src\Random.cs.meta" />
+    <None Include="hx\src\Reflect.cs.meta" />
+    <None Include="hx\src\server.meta" />
+    <None Include="hx\src\server\IHander.cs.meta" />
+    <None Include="hx\src\server\SocketEvent.cs.meta" />
+    <None Include="hx\src\Std.cs.meta" />
+    <None Include="hx\src\StringBuf.cs.meta" />
+    <None Include="hx\src\StringTools.cs.meta" />
+    <None Include="hx\src\Sys.cs.meta" />
+    <None Include="hx\src\sys.meta" />
+    <None Include="hx\src\sys\FileSystem.cs.meta" />
+    <None Include="hx\src\sys\io.meta" />
+    <None Include="hx\src\sys\io\FileSeek.cs.meta" />
+    <None Include="hx\src\sys\io\Process.cs.meta" />
+    <None Include="hx\src\sys\net.meta" />
+    <None Include="hx\src\sys\net\Host.cs.meta" />
+    <None Include="hx\src\sys\net\Socket.cs.meta" />
+    <None Include="hx\src\sys\thread.meta" />
+    <None Include="hx\src\sys\thread\Deque.cs.meta" />
+    <None Include="hx\src\sys\thread\Lock.cs.meta" />
+    <None Include="hx\src\sys\thread\Mutex.cs.meta" />
+    <None Include="hx\src\sys\thread\Thread.cs.meta" />
+    <None Include="hx\src\TestPackBuilder.cs.meta" />
+    <None Include="hx\src\Type.cs.meta" />
+    <None Include="hx\src\UInt.cs.meta" />
+    <None Include="hx\src\utils.meta" />
+    <None Include="hx\src\utils\AES_Test.cs.meta" />
+    <None Include="hx\src\utils\CustomTrace.cs.meta" />
+    <None Include="hx\src\utils\SQLRex.cs.meta" />
+    <None Include="hx\src\web.meta" />
+    <None Include="hx\src\web\GameSetting.cs.meta" />
+    <None Include="hx\src\web\proto.meta" />
+    <None Include="hx\src\web\proto\ChatEvent.cs.meta" />
+    <None Include="hx\src\web\proto\ClubEvent.cs.meta" />
+    <None Include="hx\src\web\proto\CMDEvent.cs.meta" />
+    <None Include="hx\src\web\proto\ErrorEventCS.cs.meta" />
+    <None Include="hx\src\web\proto\GameEvent.cs.meta" />
+    <None Include="hx\src\web\proto\HallEvent.cs.meta" />
+    <None Include="hx\src\web\proto\PacketBuilder.cs.meta" />
+    <None Include="hx\src\web\proto\PlayerEvent.cs.meta" />
+    <None Include="hx\src\web\proto\ResultEvent.cs.meta" />
+    <None Include="hx\src\web\proto\RoomEvent.cs.meta" />
+    <None Include="hx\src\web\proto\WebEventDispatch.cs.meta" />
+    <None Include="hx\src\web\SocketAsync.cs.meta" />
+    <None Include="hx\src\web\TinyPlayer.cs.meta" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
