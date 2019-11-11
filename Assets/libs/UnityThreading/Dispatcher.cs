@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using System.Threading;
+using haxe.lang;
 using UnityEngine;
 
 namespace UnityThreading
@@ -96,6 +97,16 @@ namespace UnityThreading
         public Task Dispatch(Action action)
         {
 			CheckAccessLimitation();
+
+            var task = Task.Create(action);
+            AddTask(task);
+            return task;
+        }
+
+
+        public Task Dispatch(Function action)
+        {
+            CheckAccessLimitation();
 
             var task = Task.Create(action);
             AddTask(task);

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System;
 using System.Threading;
 using System.Collections;
+using haxe.lang;
 
 namespace UnityThreading
 {
@@ -362,7 +363,12 @@ namespace UnityThreading
 			return new Task<Unit>(action);
 		}
 
-		public static Task<T> Create<T>(Func<Task, T> func)
+        public static Task Create(Function action)
+        {
+            return new Task<Unit>(action);
+        }
+
+        public static Task<T> Create<T>(Func<Task, T> func)
 		{
 			return new Task<T>(func);
 		}
@@ -414,7 +420,12 @@ namespace UnityThreading
 			this.function = t => { action(); return default(T); };
 		}
 
-		public Task(IEnumerator enumerator)
+        public Task(haxe.lang.Function action)
+        {
+            this.function = t => { action.__hx_invokeDynamic(null); return default(T); };
+        }
+
+        public Task(IEnumerator enumerator)
 		{
 			this.function = t => { return (T)enumerator; };
 		}
