@@ -50,6 +50,7 @@ public class TestWebSocket : MonoBehaviour
 
         self.addEventListener(HallEvent.OnReg, onReg);
         TestEventDispathFromHaxe();
+      
     }
 
     private void onReg(CEvent evt)
@@ -58,17 +59,18 @@ public class TestWebSocket : MonoBehaviour
 
     private void onLogin(CEvent evt)
     {
+        HallEvent e = (HallEvent)evt.eventParams;
+        Debug.Log("unity 登陆成功");
+        Debug.Log(e);
+
+
+        TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(e.player);
+
+
+        Debug.Log(JsonConvert.SerializeObject(pp));
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-            HallEvent e = (HallEvent) evt.eventParams;
-            Debug.Log("unity 登陆成功");
-            Debug.Log(e);
-
-
-            TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(e.player);
-
-
-            Debug.Log(JsonConvert.SerializeObject(pp));
+            
         });
     }
 
@@ -124,7 +126,7 @@ public class TestWebSocket : MonoBehaviour
         Debug.Log("从这里开始...");
 
 
-        self.Login("13060669789878", "123456");
+        self.Login("13060669337", "123456");
 
       //  self.regist()注册
       // self.forgotpassWord()忘记密码
@@ -138,6 +140,6 @@ public class TestWebSocket : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        client.quit(); //退出登录，退出socket,切换账号。
+        //client.quit(); //退出登录，退出socket,切换账号。
     }
 }
