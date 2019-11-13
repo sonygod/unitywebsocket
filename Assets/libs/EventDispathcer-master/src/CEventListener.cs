@@ -16,10 +16,9 @@ public class CEventListener {
         if (OnEvent != null)
         {
 
-            UnityThreadHelper.Dispatcher.Dispatch(() =>
-            {
+            
                 OnEvent(evt);
-            });
+           
           
         }
     }
