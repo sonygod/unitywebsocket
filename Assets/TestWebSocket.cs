@@ -59,19 +59,21 @@ public class TestWebSocket : MonoBehaviour
 
     private void onLogin(CEvent evt)
     {
-        HallEvent e = (HallEvent)evt.eventParams;
-        Debug.Log("unity 登陆成功");
-        Debug.Log(e);
+      ;
+        UnityThreadHelper.Dispatcher.Dispatch(() =>
+        {
+            HallEvent e = (HallEvent)evt.eventParams;
+            Debug.Log("unity 登陆成功");
+            Debug.Log(e);
 
 
-        TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(e.player);
+            TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(e.player);
 
 
-        Debug.Log(JsonConvert.SerializeObject(pp));
+            Debug.Log(JsonConvert.SerializeObject(pp));
 
-        GameObject.FindObjectOfType<MonoBehaviour>();
 
-        Debug.Log("我操，根本没有问题。");
+        });
     }
 
     private void TestEventDispathFromHaxe()
