@@ -68,10 +68,10 @@ public class TestWebSocket : MonoBehaviour
 
 
         Debug.Log(JsonConvert.SerializeObject(pp));
-        UnityThreadHelper.Dispatcher.Dispatch(() =>
-        {
-            
-        });
+
+        GameObject.FindObjectOfType<MonoBehaviour>();
+
+        Debug.Log("我操，根本没有问题。");
     }
 
     private void TestEventDispathFromHaxe()
