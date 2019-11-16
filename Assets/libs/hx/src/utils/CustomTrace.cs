@@ -10,7 +10,7 @@ namespace utils {
 		
 		
 		public CustomTrace() {
-			#line 7 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
+			#line 8 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
 			global::utils.CustomTrace.__hx_ctor_utils_CustomTrace(this);
 		}
 		#line default
@@ -24,9 +24,9 @@ namespace utils {
 		
 		
 		public static void init() {
-			#line 42 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
+			#line 43 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
 			global::haxe.lang.Function oldTrace = ((global::haxe.lang.Function) (new global::haxe.lang.Closure(typeof(global::UnityEngine.Debug), "Log", 3804260)) );
-			global::haxe.Log.trace = new global::utils.CustomTrace_init_43__Fun(oldTrace);
+			global::haxe.Log.trace = new global::utils.CustomTrace_init_44__Fun(oldTrace);
 		}
 		#line default
 		
@@ -37,18 +37,18 @@ namespace utils {
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace utils {
-	public class CustomTrace_init_43__Fun : global::haxe.lang.Function {
+	public class CustomTrace_init_44__Fun : global::haxe.lang.Function {
 		
-		public CustomTrace_init_43__Fun(global::haxe.lang.Function oldTrace) : base(2, 0) {
-			#line 44 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
+		public CustomTrace_init_44__Fun(global::haxe.lang.Function oldTrace) : base(2, 0) {
+			#line 45 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
 			this.oldTrace = oldTrace;
 		}
 		#line default
 		
 		public override object __hx_invoke2_o(double __fn_float1, object __fn_dyn1, double __fn_float2, object __fn_dyn2) {
-			#line 43 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
+			#line 44 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
 			object pos = ( (( __fn_dyn2 == global::haxe.lang.Runtime.undefined )) ? (((object) (__fn_float2) )) : (( (( __fn_dyn2 == null )) ? (null) : (((object) (__fn_dyn2) )) )) );
-			#line 43 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
+			#line 44 "D:\\project\\sangong\\sangong\\src\\utils\\CustomTrace.hx"
 			object v = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (((object) (__fn_float1) )) : (((object) (__fn_dyn1) )) );
 			string tmp = global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("[", new global::haxe.root.Date(((global::System.DateTime) (global::System.DateTime.Now) )).toString()), "] "), global::haxe.root.Std.@string(v)), global::haxe.root.Std.@string(pos));
 			this.oldTrace.__hx_invoke1_o(default(double), tmp);

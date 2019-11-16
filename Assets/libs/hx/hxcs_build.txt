@@ -520,9 +520,9 @@ M cs.system.reflection.emit.ILGenerator
 M cs.system.reflection.ResourceAttributes
 M Client
 C Client
-C Client_connectWithIP_103__Fun
-C Client_testThread_76__Fun
-C Client_testThread_88__Fun
+C Client_connectWithIP_121__Fun
+C Client_testThread_94__Fun
+C Client_testThread_106__Fun
 M System.Runtime.Serialization.SerializationEntry
 M haxe.iterators.StringIterator
 C haxe.iterators.StringIterator
@@ -1056,6 +1056,8 @@ C haxe.crypto.mode.OFB
 M cs.system.TypeCode
 M System.Reflection.ParameterModifier
 M System.Reflection.FieldInfo
+M client.ConvertCSHX
+C client.ConvertCSHX
 M System.Runtime.InteropServices._PropertyInfo
 M haxe.io.FPHelper
 C haxe.io.FPHelper
@@ -1118,7 +1120,7 @@ C sys.FileSystem
 M System.Reflection.Emit.UnmanagedMarshal
 M utils.CustomTrace
 C utils.CustomTrace
-C utils.CustomTrace_init_43__Fun
+C utils.CustomTrace_init_44__Fun
 M cs.system.UnhandledExceptionEventHandler
 M cs.system.text.NormalizationForm
 M System.SystemException

@@ -28,13 +28,25 @@ public class TestWebSocket : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+      
         TestPackBuilder.main(); //初始化
         UnityThreadHelper.EnsureHelper(); //线程初始化，这个必须要在开始定义。
 
+
+
+        TinyPlayerCS pp = new TinyPlayerCS();
+
+        pp.id = 2009;
+
+      
+
+       
         client = new Client();
 
         //client.testPlayer.addEventListener("onOpen", onCSOpen);
-
+        client.testConvert(pp);
+        Debug.Log("是否解决了？");
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
@@ -50,7 +62,12 @@ public class TestWebSocket : MonoBehaviour
 
         self.addEventListener(HallEvent.OnReg, onReg);
         TestEventDispathFromHaxe();
+
       
+
+
+
+
     }
 
     private void onReg(CEvent evt)
@@ -59,7 +76,7 @@ public class TestWebSocket : MonoBehaviour
 
     private void onLogin(CEvent evt)
     {
-      ;
+     
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
             HallEvent e = (HallEvent)evt.eventParams;

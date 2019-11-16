@@ -207,34 +207,34 @@ namespace openfl._internal.utils {
 		#line default
 		
 		public virtual void release(object @object) {
-			#line 108 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 99 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			this.activeObjects--;
-			#line 110 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 101 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ( this.__size == default(object) ) || ( ( this.activeObjects + this.inactiveObjects ) < ((int) (global::haxe.lang.Runtime.toInt(this.__size)) ) ) )) {
-				#line 112 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 103 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.clean.__hx_invoke1_o(default(double), @object);
 				{
-					#line 113 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 104 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					if (global::haxe.lang.Runtime.eq(this.__inactiveObject0, null)) {
-						#line 113 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 104 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						this.__inactiveObject0 = @object;
 					}
 					else if (global::haxe.lang.Runtime.eq(this.__inactiveObject1, null)) {
-						#line 113 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 104 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						this.__inactiveObject1 = @object;
 					}
 					else {
-						#line 113 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 104 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						this.__inactiveObjectList.@add(@object);
 					}
 					
-					#line 113 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 104 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					this.inactiveObjects++;
 				}
 				
 			}
 			else {
-				#line 117 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 108 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				((global::haxe.IMap) (this.__pool) ).@remove(@object);
 			}
 			
@@ -243,126 +243,126 @@ namespace openfl._internal.utils {
 		
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public void __addInactive(object @object) {
-			#line 127 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 118 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (global::haxe.lang.Runtime.eq(this.__inactiveObject0, null)) {
-				#line 129 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 120 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.__inactiveObject0 = @object;
 			}
 			else if (global::haxe.lang.Runtime.eq(this.__inactiveObject1, null)) {
-				#line 133 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 124 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.__inactiveObject1 = @object;
 			}
 			else {
-				#line 137 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 128 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.__inactiveObjectList.@add(@object);
 			}
 			
-			#line 140 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 131 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			this.inactiveObjects++;
 		}
 		#line default
 		
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public object __getInactive() {
-			#line 145 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 136 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			object @object = null;
-			#line 147 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 138 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ! (global::haxe.lang.Runtime.eq(this.__inactiveObject0, null)) )) {
-				#line 149 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 140 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				@object = this.__inactiveObject0;
 				this.__inactiveObject0 = null;
 			}
 			else if (( ! (global::haxe.lang.Runtime.eq(this.__inactiveObject1, null)) )) {
-				#line 154 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 145 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				@object = this.__inactiveObject1;
 				this.__inactiveObject1 = null;
 			}
 			else {
-				#line 159 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 150 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				@object = this.__inactiveObjectList.pop();
-				#line 161 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 152 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				if (( this.__inactiveObjectList.length > 0 )) {
-					#line 163 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 154 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					this.__inactiveObject0 = this.__inactiveObjectList.pop();
 				}
 				
-				#line 166 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 157 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				if (( this.__inactiveObjectList.length > 0 )) {
-					#line 168 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 159 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					this.__inactiveObject1 = this.__inactiveObjectList.pop();
 				}
 				
 			}
 			
-			#line 176 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 167 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			this.inactiveObjects--;
 			this.activeObjects++;
-			#line 179 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 170 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			return @object;
 		}
 		#line default
 		
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public virtual void __removeInactive(int count) {
-			#line 184 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 175 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ( count <= 0 ) || ( this.inactiveObjects == 0 ) )) {
-				#line 184 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 175 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				return;
 			}
 			
-			#line 186 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 177 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ! (global::haxe.lang.Runtime.eq(this.__inactiveObject0, null)) )) {
-				#line 188 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 179 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				((global::haxe.IMap) (this.__pool) ).@remove(this.__inactiveObject0);
 				this.__inactiveObject0 = null;
-				#line 190 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 181 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.inactiveObjects--;
 				 -- count;
 			}
 			
-			#line 194 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 185 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ( count == 0 ) || ( this.inactiveObjects == 0 ) )) {
-				#line 194 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 185 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				return;
 			}
 			
-			#line 196 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 187 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ! (global::haxe.lang.Runtime.eq(this.__inactiveObject1, null)) )) {
-				#line 198 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 189 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				((global::haxe.IMap) (this.__pool) ).@remove(this.__inactiveObject1);
 				this.__inactiveObject1 = null;
-				#line 200 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 191 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.inactiveObjects--;
 				 -- count;
 			}
 			
-			#line 204 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 195 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( ( count == 0 ) || ( this.inactiveObjects == 0 ) )) {
-				#line 204 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 195 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				return;
 			}
 			
-			#line 206 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 197 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			{
-				#line 206 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 197 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				global::haxe.ds._List.ListNode _g_head = this.__inactiveObjectList.h;
-				#line 206 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 197 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				while (( _g_head != null )) {
-					#line 206 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 197 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					object val = _g_head.item;
-					#line 206 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 197 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					_g_head = _g_head.next;
-					#line 206 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 197 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					object @object = ((object) (val) );
-					#line 208 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 199 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					((global::haxe.IMap) (this.__pool) ).@remove(@object);
 					this.__inactiveObjectList.@remove(@object);
-					#line 210 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 201 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					this.inactiveObjects--;
 					 -- count;
-					#line 213 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 204 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					if (( ( count == 0 ) || ( this.inactiveObjects == 0 ) )) {
-						#line 213 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 204 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						return;
 					}
 					
@@ -375,52 +375,52 @@ namespace openfl._internal.utils {
 		
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public virtual object get_size() {
-			#line 220 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 211 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			return this.__size;
 		}
 		#line default
 		
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public virtual object set_size(object @value) {
-			#line 225 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 216 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			if (( @value == default(object) )) {
-				#line 227 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 218 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				this.__size = null;
 			}
 			else {
-				#line 231 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 222 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				int current = ( this.inactiveObjects + this.activeObjects );
 				this.__size = @value;
-				#line 234 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+				#line 225 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 				if (( current > ((int) (global::haxe.lang.Runtime.toInt(@value)) ) )) {
-					#line 236 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 227 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					this.__removeInactive(( ((int) (current) ) - ((int) (global::haxe.lang.Runtime.toInt(@value)) ) ));
 				}
 				else if (( ((int) (global::haxe.lang.Runtime.toInt(@value)) ) > current )) {
-					#line 240 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 231 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					object @object = default(object);
-					#line 242 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+					#line 233 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 					{
-						#line 242 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 233 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						int _g = 0;
-						#line 242 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 233 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						int _g1 = ( ((int) (global::haxe.lang.Runtime.toInt(@value)) ) - ((int) (current) ) );
-						#line 242 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+						#line 233 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 						while (( _g < _g1 )) {
-							#line 242 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+							#line 233 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 							int i = _g++;
-							#line 244 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+							#line 235 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 							@object = ((object) (this.create.__hx_invoke0_o()) );
-							#line 246 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+							#line 237 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 							if (( ! (global::haxe.lang.Runtime.eq(@object, null)) )) {
-								#line 248 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+								#line 239 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 								((global::haxe.IMap) (this.__pool) ).@set(@object, false);
 								this.__inactiveObjectList.@add(@object);
-								#line 250 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+								#line 241 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 								this.inactiveObjects++;
 							}
 							else {
-								#line 254 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+								#line 245 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 								break;
 							}
 							
@@ -432,7 +432,7 @@ namespace openfl._internal.utils {
 				
 			}
 			
-			#line 260 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
+			#line 251 "D:\\project\\sangong\\sangong\\src\\openfl\\_internal\\utils\\ObjectPool.hx"
 			return @value;
 		}
 		#line default

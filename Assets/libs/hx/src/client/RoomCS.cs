@@ -10,101 +10,81 @@ namespace client {
 		
 		
 		public RoomCS(object data) : base() {
-			#line 26 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			this.data = data;
+			#line 24 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			this.wd = global::web.proto.WebEventDispatch.getInstance();
+			#line 23 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			this.events = new global::haxe.root.Array(new object[]{});
+			#line 27 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			{
+				#line 30 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				this.data = data;
+				#line 32 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				this.events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("get_room_info") ), ((string) ("join_room") ), ((string) ("leave_room") ), ((string) ("dispatch") ), ((string) ("destory") ), ((string) ("updateRoomUsers") )});
+			}
+			
 		}
 		#line default
 		
 		public object data;
 		
+		public global::haxe.root.Array events;
+		
+		public global::web.proto.WebEventDispatch wd;
+		
+		public global::client.ConvertCSHX cs;
+		
 		public virtual void @on() {
-			#line 30 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-			#line 32 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.@on(((string) ("create_room") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onCreateRoom", 914379062)) ), default(object), default(object), default(object));
-			wd.@on(((string) ("get_room_info") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetRoomInfo", 1577180160)) ), default(object), default(object), default(object));
-			#line 34 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.@on(((string) ("join_room") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onJoinRoom", 477978468)) ), default(object), default(object), default(object));
-			wd.@on(((string) ("leave_room") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onLeaveRoom", 2126608787)) ), default(object), default(object), default(object));
-			#line 36 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.@on(((string) ("dispatch") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onDispath", 317495956)) ), default(object), default(object), default(object));
-			wd.@on(((string) ("destory") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onRoomDestory", 1765542170)) ), default(object), default(object), default(object));
-			#line 38 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.@on(((string) ("updateRoomUsers") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onUpdateRoomUsers", 620069381)) ), default(object), default(object), default(object));
+			#line 44 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			int _g = 0;
+			#line 44 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			global::haxe.root.Array _g1 = this.events;
+			#line 44 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			while (( _g < _g1.length )) {
+				#line 44 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				string e = global::haxe.lang.Runtime.toString(_g1.__get(_g));
+				#line 44 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				 ++ _g;
+				this.wd.@on(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object), default(object), default(object));
+			}
+			
+		}
+		#line default
+		
+		public virtual void transEvent(object e) {
+			#line 51 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(global::haxe.lang.Runtime.toString(((object) (global::haxe.lang.Runtime.callField(e, "field", 9671866, new object[]{"type"})) )), e)) ), ((object) (this) ));
 		}
 		#line default
 		
 		public virtual void off() {
-			#line 42 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-			#line 44 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.off(((string) ("create_room") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onCreateRoom", 914379062)) ), default(object));
-			wd.off(((string) ("get_room_info") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetRoomInfo", 1577180160)) ), default(object));
-			#line 46 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.off(((string) ("join_room") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onJoinRoom", 477978468)) ), default(object));
-			wd.off(((string) ("leave_room") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onLeaveRoom", 2126608787)) ), default(object));
-			#line 48 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.off(((string) ("dispatch") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onDispath", 317495956)) ), default(object));
-			wd.off(((string) ("destory") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onRoomDestory", 1765542170)) ), default(object));
-			#line 50 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			wd.off(((string) ("updateRoomUsers") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onUpdateRoomUsers", 620069381)) ), default(object));
-		}
-		#line default
-		
-		public virtual void onCreateRoom(global::web.proto.RoomEvent e) {
 			#line 56 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
-		}
-		#line default
-		
-		public virtual void onGetRoomInfo(global::web.proto.RoomEvent e) {
-			#line 60 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
-		}
-		#line default
-		
-		public virtual void onJoinRoom(global::web.proto.RoomEvent e) {
-			#line 64 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
-		}
-		#line default
-		
-		public virtual void onDispath(global::web.proto.RoomEvent e) {
-			#line 68 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
-		}
-		#line default
-		
-		public virtual void onRoomDestory(global::web.proto.RoomEvent e) {
-			#line 72 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
-		}
-		#line default
-		
-		public virtual void onLeaveRoom(global::web.proto.RoomEvent e) {
-			#line 76 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
-		}
-		#line default
-		
-		public virtual void onUpdateRoomUsers(global::web.proto.RoomEvent e) {
-			#line 80 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
+			int _g = 0;
+			#line 56 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			global::haxe.root.Array _g1 = this.events;
+			#line 56 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			while (( _g < _g1.length )) {
+				#line 56 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				string e = global::haxe.lang.Runtime.toString(_g1.__get(_g));
+				#line 56 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				 ++ _g;
+				this.wd.off(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object));
+			}
+			
 		}
 		#line default
 		
 		public virtual object __hx_lookupField(string field, int hash, bool throwErrors, bool isCheck) {
-			#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			if (isCheck) {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				return global::haxe.lang.Runtime.undefined;
 			}
 			else if (throwErrors) {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				throw new global::System.MemberAccessException("Field not found.");
 			}
 			else {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				return null;
 			}
 			
@@ -112,13 +92,13 @@ namespace client {
 		#line default
 		
 		public virtual double __hx_lookupField_f(string field, int hash, bool throwErrors) {
-			#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			if (throwErrors) {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				throw new global::System.MemberAccessException("Field not found or incompatible field type.");
 			}
 			else {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				return default(double);
 			}
 			
@@ -126,33 +106,33 @@ namespace client {
 		#line default
 		
 		public virtual object __hx_lookupSetField(string field, int hash, object @value) {
-			#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			throw new global::System.MemberAccessException("Cannot access field for writing.");
 		}
 		#line default
 		
 		public virtual double __hx_lookupSetField_f(string field, int hash, double @value) {
-			#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			throw new global::System.MemberAccessException("Cannot access field for writing or incompatible type.");
 		}
 		#line default
 		
 		public virtual double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				switch (hash) {
 					case 1113806378:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						this.data = ((object) (@value) );
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return this.__hx_lookupSetField_f(field, hash, @value);
 					}
 					
@@ -165,29 +145,56 @@ namespace client {
 		
 		public virtual object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				switch (hash) {
 					case 2012391216:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						this.eventListenerDic = ((global::System.Collections.Generic.Dictionary<string, global::CEventListener>) (@value) );
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return @value;
+					}
+					
+					
+					case 22192:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						this.cs = ((global::client.ConvertCSHX) (@value) );
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return @value;
+					}
+					
+					
+					case 26637:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						this.wd = ((global::web.proto.WebEventDispatch) (@value) );
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return @value;
+					}
+					
+					
+					case 376065817:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						this.events = ((global::haxe.root.Array) (@value) );
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return @value;
 					}
 					
 					
 					case 1113806378:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						this.data = ((object) (@value) );
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return this.__hx_lookupSetField(field, hash, @value);
 					}
 					
@@ -200,116 +207,95 @@ namespace client {
 		
 		public virtual object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				switch (hash) {
 					case 183035374:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasListener", 183035374)) );
 					}
 					
 					
 					case 1181009664:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "dispatchEvent", 1181009664)) );
 					}
 					
 					
 					case 1433765834:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeEventListener", 1433765834)) );
 					}
 					
 					
 					case 1902382029:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addEventListener", 1902382029)) );
 					}
 					
 					
 					case 2012391216:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return this.eventListenerDic;
-					}
-					
-					
-					case 620069381:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onUpdateRoomUsers", 620069381)) );
-					}
-					
-					
-					case 2126608787:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onLeaveRoom", 2126608787)) );
-					}
-					
-					
-					case 1765542170:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onRoomDestory", 1765542170)) );
-					}
-					
-					
-					case 317495956:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onDispath", 317495956)) );
-					}
-					
-					
-					case 477978468:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onJoinRoom", 477978468)) );
-					}
-					
-					
-					case 1577180160:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetRoomInfo", 1577180160)) );
-					}
-					
-					
-					case 914379062:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onCreateRoom", 914379062)) );
 					}
 					
 					
 					case 5542767:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "off", 5542767)) );
+					}
+					
+					
+					case 529665746:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) );
 					}
 					
 					
 					case 24863:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "on", 24863)) );
+					}
+					
+					
+					case 22192:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return this.cs;
+					}
+					
+					
+					case 26637:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return this.wd;
+					}
+					
+					
+					case 376065817:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						return this.events;
 					}
 					
 					
 					case 1113806378:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return this.data;
 					}
 					
 					
 					default:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return this.__hx_lookupField(field, hash, throwErrors, isCheck);
 					}
 					
@@ -322,18 +308,18 @@ namespace client {
 		
 		public virtual double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				switch (hash) {
 					case 1113806378:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.data)) );
 					}
 					
 					
 					default:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return this.__hx_lookupField_f(field, hash, throwErrors);
 					}
 					
@@ -346,108 +332,54 @@ namespace client {
 		
 		public virtual object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				switch (hash) {
 					case 1902382029:
 					case 1433765834:
 					case 1181009664:
 					case 183035374:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return global::haxe.lang.Runtime.slowCallField(this, field, dynargs);
-					}
-					
-					
-					case 620069381:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onUpdateRoomUsers(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
-					}
-					
-					
-					case 2126608787:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onLeaveRoom(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
-					}
-					
-					
-					case 1765542170:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onRoomDestory(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
-					}
-					
-					
-					case 317495956:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onDispath(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
-					}
-					
-					
-					case 477978468:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onJoinRoom(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
-					}
-					
-					
-					case 1577180160:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onGetRoomInfo(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
-					}
-					
-					
-					case 914379062:
-					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						this.onCreateRoom(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-						break;
 					}
 					
 					
 					case 5542767:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						this.off();
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						break;
+					}
+					
+					
+					case 529665746:
+					{
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						this.transEvent(((object) (dynargs[0]) ));
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						break;
 					}
 					
 					
 					case 24863:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						this.@on();
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						break;
 					}
 					
 					
 					default:
 					{
-						#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						return ((global::haxe.lang.Function) (this.__hx_getField(field, hash, true, false, false)) ).__hx_invokeDynamic(dynargs);
 					}
 					
 				}
 				
-				#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				return null;
 			}
 			#line default
@@ -455,9 +387,15 @@ namespace client {
 		
 		
 		public virtual void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			baseArr.push("eventListenerDic");
-			#line 19 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			baseArr.push("cs");
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			baseArr.push("wd");
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			baseArr.push("events");
+			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			baseArr.push("data");
 		}
 		#line default
