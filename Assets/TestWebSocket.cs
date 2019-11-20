@@ -15,6 +15,7 @@ using Event = openfl.events.Event;
 using UnityThreading;
 using haxe.root;
 using Newtonsoft.Json;
+using utils;
 using web;
 
 public class TestWebSocket : MonoBehaviour
@@ -38,7 +39,7 @@ public class TestWebSocket : MonoBehaviour
         TestPackBuilder.main(); //初始化
         UnityThreadHelper.EnsureHelper(); //线程初始化,这个必须要在开始定义.
 
-
+        CustomTrace.close(true);//关闭输出。关闭框架输出，如果影响调试。
 
         TinyPlayerCS pp = new TinyPlayerCS();
 
@@ -95,6 +96,17 @@ public class TestWebSocket : MonoBehaviour
             TinyRoomCS c = ConvertTool.ConvertRoom(e.room);
 
 
+            if (currentRoom != null)
+            {
+                TinyRoomCS c2 = ConvertTool.ConvertRoom(currentRoom.data);
+                if (c.id == c2.id)
+                {
+
+                    Debug.LogError("不能重复创建房间");
+                    return;
+                }
+            }
+
             Debug.Log(c);
 
             var room = new RoomCS(e.room);
@@ -121,9 +133,23 @@ public class TestWebSocket : MonoBehaviour
 
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-//            var parms = evt.eventParams;
-//
-//            Debug.Log("完成一局，结果返回" + JsonConvert.SerializeObject(parms));
+            //            var parms = evt.eventParams;
+            //
+            //            Debug.Log("完成一局，结果返回" + JsonConvert.SerializeObject(parms));
+
+
+
+            RoomEvent parms = (RoomEvent)evt.eventParams;
+
+            var room = parms.room;
+
+
+            TinyRoomCS ts = ConvertTool.ConvertRoom(room);
+
+
+
+
+            Debug.Log("房间发牌" + JsonConvert.SerializeObject(ts));
         });
     }
 
