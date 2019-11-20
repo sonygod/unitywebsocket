@@ -1125,7 +1125,7 @@ C sys.FileSystem
 M System.Reflection.Emit.UnmanagedMarshal
 M utils.CustomTrace
 C utils.CustomTrace
-C utils.CustomTrace_init_44__Fun
+C utils.CustomTrace_init_46__Fun
 M cs.system.UnhandledExceptionEventHandler
 M cs.system.text.NormalizationForm
 M System.SystemException

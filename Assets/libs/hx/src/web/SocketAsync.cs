@@ -405,24 +405,18 @@ namespace web {
 			unchecked {
 				#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				bool compress = false;
-				if (( ( data != null ) && ( data.length > 500 ) )) {
-					#line 576 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-					data = global::haxe.zip.Compress.run(data, 1);
-					compress = true;
-				}
-				
-				#line 580 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				global::haxe.io.Bytes data1 = global::web.proto.PacketBuilder.createPacket(((uint) (mainID) ), ((uint) (subID) ), userID, data, compress);
 				#line 582 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				global::haxe.io.Bytes data1 = global::web.proto.PacketBuilder.createPacket(((uint) (mainID) ), ((uint) (subID) ), userID, data, compress);
+				#line 584 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				if (( data1 != null )) {
-					#line 583 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-					global::web.SocketAsync.socket.binaryType = ((string) ("arraybuffer") );
 					#line 585 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					global::web.SocketAsync.socket.binaryType = ((string) ("arraybuffer") );
+					#line 587 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 					global::web.SocketAsync.socket.send(data1);
 				}
 				else {
-					#line 587 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "send data=null", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCS", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (587) )}));
+					#line 589 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "send data=null", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCS", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (589) )}));
 				}
 				
 			}

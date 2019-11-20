@@ -146,8 +146,17 @@ public class TestWebSocket : MonoBehaviour
     {
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-            var parms = evt.eventParams;
-            Debug.Log("房间参数" + JsonConvert.SerializeObject(parms));
+            RoomEvent parms = (RoomEvent)evt.eventParams;
+
+            var room = parms.room;
+
+
+            TinyRoomCS ts = ConvertTool.ConvertRoom(room);
+
+
+
+
+            Debug.Log("獲取房間信息房间" + JsonConvert.SerializeObject(ts));
         });
     }
 

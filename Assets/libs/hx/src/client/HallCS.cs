@@ -49,7 +49,7 @@ namespace client {
 		public virtual void transEvent(global::web.proto.RoomEvent e) {
 			unchecked {
 				#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u623f\u95f4\u521b\u5efa**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (47) )}));
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u623f\u95f4\u4fe1\u606f**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (47) )}));
 				#line 50 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 			}
