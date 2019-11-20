@@ -57,7 +57,7 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        client.connectWithIP("192.168.1.134", 9003); //这里改成你自己的ip
+        client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
                                                      ///  client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -121,9 +121,9 @@ public class TestWebSocket : MonoBehaviour
 
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-            var parms = evt.eventParams;
-
-            Debug.Log("完成一局，结果返回" + JsonConvert.SerializeObject(parms));
+//            var parms = evt.eventParams;
+//
+//            Debug.Log("完成一局，结果返回" + JsonConvert.SerializeObject(parms));
         });
     }
 
@@ -136,9 +136,17 @@ public class TestWebSocket : MonoBehaviour
         {
             //  throw new NotImplementedException();
 
-            var parms = evt.eventParams;
+            RoomEvent parms = (RoomEvent)evt.eventParams;
 
-            Debug.Log("开始发牌参数" + JsonConvert.SerializeObject(parms));
+            var room = parms.room;
+
+
+            TinyRoomCS ts = ConvertTool.ConvertRoom(room);
+
+
+
+
+            Debug.Log("房间发牌" + JsonConvert.SerializeObject(ts));
         });
     }
 
@@ -156,7 +164,38 @@ public class TestWebSocket : MonoBehaviour
 
 
 
-            Debug.Log("獲取房間信息房间" + JsonConvert.SerializeObject(ts));
+            Debug.Log("获取信息房间" + JsonConvert.SerializeObject(ts));
+
+            switch (ts.status)
+            {
+
+                case 0:
+                    Debug.Log("空闲");
+                    break;
+                case 1:
+                    Debug.Log("准备");
+                    break;
+                case 2:
+                    Debug.Log("开始");
+                    break;
+                case 3:
+                    Debug.Log("发牌");
+                    break;
+                case 4:
+                    Debug.Log("抢庄");
+                    break;
+                case 5:
+                    Debug.Log("下注");
+                    break;
+                case 6:
+                    Debug.Log("本轮结束");
+                    break;
+
+                case 7:
+                    Debug.Log("游戏全部结束");//用于开房间，一共有几局
+                    break;
+
+            }
         });
     }
 
