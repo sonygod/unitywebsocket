@@ -353,7 +353,7 @@ public class TestWebSocket : MonoBehaviour
 
     void OnApplicationQuit()
     {
-        //client.quit(); //退出登录,退出socket,切换账号.
+        client.quit(); //退出登录,退出socket,切换账号.
     }
 
 
