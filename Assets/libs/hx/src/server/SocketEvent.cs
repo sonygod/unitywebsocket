@@ -6,39 +6,30 @@ namespace server {
 	public sealed class SocketEvent : global::openfl.events.Event {
 		
 		static SocketEvent() {
-			#line 14 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent.OPEN = ((string) ("socket_open") );
-			#line 19 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent.CLOSE = ((string) ("socket_close") );
-			#line 24 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent.MESSAGE = ((string) ("socket_message") );
-			#line 27 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent.ERROR = ((string) ("socket_error") );
-			#line 29 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent.HEARTBEAT = ((string) ("socket_heartbeat") );
 		}
-		#line default
+		
 		
 		public SocketEvent(global::haxe.lang.EmptyObject empty) : base(global::haxe.lang.EmptyObject.EMPTY) {
 		}
 		
 		
 		public SocketEvent(string type, global::server.IHander hander, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 38 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent.__hx_ctor_server_SocketEvent(this, type, hander, bubbles, cancelable);
 		}
-		#line default
+		
 		
 		private static void __hx_ctor_server_SocketEvent(global::server.SocketEvent __hx_this, string type, global::server.IHander hander, object bubbles, object cancelable) {
-			#line 37 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-			#line 37 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-			#line 40 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			__hx_this.hander = hander;
 		}
-		#line default
+		
 		
 		public static new string OPEN;
 		
@@ -53,82 +44,67 @@ namespace server {
 		public global::server.IHander hander;
 		
 		public override global::openfl.events.Event clone() {
-			#line 45 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			global::server.SocketEvent @event = new global::server.SocketEvent(this.type, this.hander, this.bubbles, this.cancelable);
 			@event.target = this.target;
-			#line 47 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			@event.currentTarget = this.currentTarget;
 			@event.eventPhase = this.eventPhase;
-			#line 49 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			@event.hander = this.hander;
 			return @event;
 		}
-		#line default
+		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 				switch (hash) {
 					case 939359644:
 					{
-						#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 						this.hander = ((global::server.IHander) (@value) );
-						#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 				switch (hash) {
 					case 1214452573:
 					{
-						#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clone", 1214452573)) );
 					}
 					
 					
 					case 939359644:
 					{
-						#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 						return this.hander;
 					}
 					
 					
 					default:
 					{
-						#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			baseArr.push("hander");
-			#line 9 "D:\\project\\sangong\\sangong\\src\\server\\SocketEvent.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

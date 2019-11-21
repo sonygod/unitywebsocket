@@ -10,27 +10,20 @@ namespace sys.thread {
 		
 		
 		public Lock() {
-			#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			global::sys.thread.Lock.__hx_ctor_sys_thread_Lock(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_sys_thread_Lock(global::sys.thread.Lock __hx_this) {
 			unchecked {
-				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				__hx_this.releaseCount = 0;
-				#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				__hx_this.waitCount = 1;
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				__hx_this.releaseEvent = new global::System.Threading.ManualResetEvent(false);
-				#line 30 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				__hx_this.lockObj = new global::haxe.lang.DynamicObject(new int[]{}, new object[]{}, new int[]{}, new double[]{});
-				#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				{
 				}
 				
 			}
-			#line default
 		}
 		
 		
@@ -44,31 +37,21 @@ namespace sys.thread {
 		
 		public virtual bool wait(object timeout) {
 			unchecked {
-				#line 39 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				int myTicket = default(int);
-				#line 41 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				lock(this.lockObj){
-					#line 42 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 					myTicket = this.waitCount;
 					this.waitCount++;
-					#line 44 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 					if (( myTicket <= this.releaseCount )) {
-						#line 45 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return true;
 					}
 					
-					#line 47 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 					( this.releaseEvent as global::System.Threading.EventWaitHandle ).Reset();
 				}
 				;
-				#line 50 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				if (( timeout == default(object) )) {
-					#line 51 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 					while (true) {
-						#line 52 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						( this.releaseEvent as global::System.Threading.WaitHandle ).WaitOne();
 						if (( myTicket <= this.releaseCount )) {
-							#line 54 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 							return true;
 						}
 						
@@ -76,20 +59,15 @@ namespace sys.thread {
 					
 				}
 				else {
-					#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 					double timeoutStamp = ((double) (global::haxe.lang.Runtime.toDouble(global::haxe.lang.Runtime.plus(global::haxe.root.Sys.time(), timeout))) );
 					while (true) {
-						#line 60 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						double secondsLeft = ( timeoutStamp - global::haxe.root.Sys.time() );
 						if (( ( secondsLeft <= 0 ) ||  ! (( this.releaseEvent as global::System.Threading.WaitHandle ).WaitOne(((int) (((int) (( secondsLeft * 1000 )) )) )))  )) {
-							#line 63 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 							this.release();
 							return false;
 						}
 						
-						#line 66 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						if (( myTicket <= this.releaseCount )) {
-							#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 							return true;
 						}
 						
@@ -97,266 +75,215 @@ namespace sys.thread {
 					
 				}
 				
-				#line 38 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				return default(bool);
 			}
-			#line default
 		}
 		
 		
 		public virtual void release() {
-			#line 74 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			lock(this.lockObj){
-				#line 75 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				this.releaseCount++;
 				( this.releaseEvent as global::System.Threading.EventWaitHandle ).Set();
 			}
 			;
 		}
-		#line default
+		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				switch (hash) {
 					case 293985672:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.releaseCount = ((int) (@value) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					case 127488538:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.waitCount = ((int) (@value) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					case 877441228:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.lockObj = ((object) (@value) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				switch (hash) {
 					case 293985672:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.releaseCount = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					case 127488538:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.waitCount = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					case 1021796563:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.releaseEvent = ((global::System.Threading.ManualResetEvent) (@value) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					case 877441228:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.lockObj = ((object) (@value) );
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				switch (hash) {
 					case 1491961287:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "release", 1491961287)) );
 					}
 					
 					
 					case 1324505717:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "wait", 1324505717)) );
 					}
 					
 					
 					case 293985672:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return this.releaseCount;
 					}
 					
 					
 					case 127488538:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return this.waitCount;
 					}
 					
 					
 					case 1021796563:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return this.releaseEvent;
 					}
 					
 					
 					case 877441228:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return this.lockObj;
 					}
 					
 					
 					default:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				switch (hash) {
 					case 293985672:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return ((double) (this.releaseCount) );
 					}
 					
 					
 					case 127488538:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return ((double) (this.waitCount) );
 					}
 					
 					
 					case 877441228:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.lockObj)) );
 					}
 					
 					
 					default:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				switch (hash) {
 					case 1491961287:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						this.release();
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						break;
 					}
 					
 					
 					case 1324505717:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return this.wait(((object) (dynargs[0]) ));
 					}
 					
 					
 					default:
 					{
-						#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 				return null;
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			baseArr.push("releaseCount");
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			baseArr.push("waitCount");
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			baseArr.push("releaseEvent");
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			baseArr.push("lockObj");
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\thread\\Lock.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

@@ -10,26 +10,23 @@ namespace haxe {
 		
 		
 		public Json() {
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Json.hx"
 			global::haxe.Json.__hx_ctor_haxe_Json(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_Json(global::haxe.Json __hx_this) {
 		}
 		
 		
 		public static object parse(string text) {
-			#line 44 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Json.hx"
 			return new global::haxe.format.JsonParser(((string) (text) )).doParse();
 		}
-		#line default
+		
 		
 		public static string stringify(object @value, global::haxe.lang.Function replacer, string space) {
-			#line 60 "C:\\HaxeToolkit\\haxe\\std\\haxe\\Json.hx"
 			return global::haxe.format.JsonPrinter.print(@value, replacer, space);
 		}
-		#line default
+		
 		
 	}
 }

@@ -10,10 +10,9 @@ namespace cs {
 		
 		
 		public Lib() {
-			#line 31 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			global::cs.Lib.__hx_ctor_cs_Lib(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_cs_Lib(global::cs.Lib __hx_this) {
 		}
@@ -22,104 +21,81 @@ namespace cs {
 		public static string decimalSeparator;
 		
 		public static void applyCultureChanges() {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			global::System.Globalization.CultureInfo ci = new global::System.Globalization.CultureInfo(((string) (global::System.Threading.Thread.CurrentThread.CurrentCulture.Name) ), ((bool) (true) ));
 			global::cs.Lib.decimalSeparator = ci.NumberFormat.NumberDecimalSeparator;
-			#line 41 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			ci.NumberFormat.NumberDecimalSeparator = ((string) (".") );
 			global::System.Threading.Thread.CurrentThread.CurrentCulture = ((global::System.Globalization.CultureInfo) (ci) );
 		}
-		#line default
+		
 		
 		public static void revertDefaultCulture() {
-			#line 49 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			global::System.Globalization.CultureInfo ci = new global::System.Globalization.CultureInfo(((string) (global::System.Threading.Thread.CurrentThread.CurrentCulture.Name) ), ((bool) (true) ));
 			global::System.Threading.Thread.CurrentThread.CurrentCulture = ((global::System.Globalization.CultureInfo) (ci) );
 		}
-		#line default
+		
 		
 		public static global::System.Type fromNativeType(global::System.Type t) {
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return t;
 		}
-		#line default
+		
 		
 		public static global::System.Type toNativeType(global::System.Type cl) {
-			#line 106 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return cl;
 		}
-		#line default
+		
 		
 		public static global::System.Type toNativeEnum(global::System.Type cl) {
-			#line 113 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return cl;
 		}
-		#line default
+		
 		
 		public static global::System.Type nativeType(object obj) {
-			#line 122 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return obj.GetType();
 		}
-		#line default
+		
 		
 		public static global::System.Type getNativeType(object obj) {
-			#line 129 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return obj.GetType();
 		}
-		#line default
+		
 		
 		public static object[] mkDynamic(object[] native) {
-			#line 134 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			object[] ret = new object[( native as global::System.Array ).Length];
 			{
-				#line 135 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 				int _g = 0;
-				#line 135 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 				int _g1 = ( native as global::System.Array ).Length;
-				#line 135 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 				while (( _g < _g1 )) {
-					#line 135 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 					int i = _g++;
 					ret[i] = ((object) (native[i]) );
 				}
 				
 			}
 			
-			#line 137 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return ret;
 		}
-		#line default
+		
 		
 		public static global::haxe.root.Array array(object[] native) {
-			#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			object[] ret = new object[( native as global::System.Array ).Length];
-			#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			{
-				#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 				int _g = 0;
-				#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 				int _g1 = ( native as global::System.Array ).Length;
-				#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 				while (( _g < _g1 )) {
-					#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 					int i = _g++;
-					#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 					ret[i] = ((object) (native[i]) );
 				}
 				
 			}
 			
-			#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			object[] dyn = ret;
 			return new global::haxe.root.Array(((object[]) (dyn) ));
 		}
-		#line default
+		
 		
 		public static global::haxe.root.Array arrayAlloc(int size) {
-			#line 160 "C:\\HaxeToolkit\\haxe\\std\\cs\\Lib.hx"
 			return new global::haxe.root.Array(((object[]) (new object[size]) ));
 		}
-		#line default
+		
 		
 	}
 }

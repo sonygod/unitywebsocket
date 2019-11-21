@@ -10,239 +10,192 @@ namespace haxe.iterators {
 		
 		
 		public StringIteratorUnicode(string s) {
-			#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			global::haxe.iterators.StringIteratorUnicode.__hx_ctor_haxe_iterators_StringIteratorUnicode(this, s);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_iterators_StringIteratorUnicode(global::haxe.iterators.StringIteratorUnicode __hx_this, string s) {
-			#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			__hx_this.offset = 0;
-			#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			{
-				#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				__hx_this.s = s;
 			}
 			
 		}
-		#line default
+		
 		
 		public static global::haxe.iterators.StringIteratorUnicode unicodeIterator(string s) {
-			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			return new global::haxe.iterators.StringIteratorUnicode(((string) (s) ));
 		}
-		#line default
+		
 		
 		public int offset;
 		
 		public string s;
 		
 		public bool hasNext() {
-			#line 48 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			return ( this.offset < this.s.Length );
 		}
-		#line default
+		
 		
 		public int next() {
 			unchecked {
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				string s = this.s;
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				int index = this.offset++;
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				int c = ( (((bool) (( ((uint) (index) ) < s.Length )) )) ? (((int) (s[index]) )) : (-1) );
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				if (( ( c >= 55296 ) && ( c <= 56319 ) )) {
-					#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 					int index1 = ( index + 1 );
-					#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 					c = ( ( ( c - 55232 ) << 10 ) | ( (( (((bool) (( ((uint) (index1) ) < s.Length )) )) ? (((int) (s[index1]) )) : (-1) )) & 1023 ) );
 				}
 				
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				int c1 = c;
 				if (( c1 >= 65536 )) {
-					#line 59 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 					this.offset++;
 				}
 				
-				#line 61 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				return c1;
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				switch (hash) {
 					case 1614780307:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						this.offset = ((int) (@value) );
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				switch (hash) {
 					case 115:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						this.s = global::haxe.lang.Runtime.toString(@value);
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return @value;
 					}
 					
 					
 					case 1614780307:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						this.offset = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				switch (hash) {
 					case 1224901875:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "next", 1224901875)) );
 					}
 					
 					
 					case 407283053:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasNext", 407283053)) );
 					}
 					
 					
 					case 115:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return this.s;
 					}
 					
 					
 					case 1614780307:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return this.offset;
 					}
 					
 					
 					default:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				switch (hash) {
 					case 1614780307:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return ((double) (this.offset) );
 					}
 					
 					
 					default:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 				switch (hash) {
 					case 1224901875:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return this.next();
 					}
 					
 					
 					case 407283053:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return this.hasNext();
 					}
 					
 					
 					default:
 					{
-						#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			baseArr.push("s");
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			baseArr.push("offset");
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringIteratorUnicode.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

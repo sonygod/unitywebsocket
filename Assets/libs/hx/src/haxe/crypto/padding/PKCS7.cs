@@ -10,10 +10,9 @@ namespace haxe.crypto.padding {
 		
 		
 		public PKCS7() {
-			#line 6 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 			global::haxe.crypto.padding.PKCS7.__hx_ctor_haxe_crypto_padding_PKCS7(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_crypto_padding_PKCS7(global::haxe.crypto.padding.PKCS7 __hx_this) {
 		}
@@ -21,78 +20,54 @@ namespace haxe.crypto.padding {
 		
 		public static global::haxe.io.Bytes pad(global::haxe.io.Bytes ciphertext, int blockSize) {
 			unchecked {
-				#line 10 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				if (( blockSize > 255 )) {
-					#line 10 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					throw global::haxe.lang.HaxeException.wrap("PKCS#7 padding cannot be longer than 255 bytes");
 				}
 				
-				#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				if (( blockSize < 0 )) {
-					#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					throw global::haxe.lang.HaxeException.wrap("PKCS#7 padding size must be positive");
 				}
 				
-				#line 12 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				global::haxe.io.BytesBuffer buffer = new global::haxe.io.BytesBuffer();
 				{
-					#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					int len = ciphertext.length;
-					#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					if (( ( len < 0 ) || ( len > ciphertext.length ) )) {
-						#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 						throw global::haxe.lang.HaxeException.wrap(global::haxe.io.Error.OutsideBounds);
 					}
 					
-					#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					( buffer.b as global::System.IO.Stream ).Write(((byte[]) (ciphertext.b) ), ((int) (0) ), ((int) (len) ));
 				}
 				
-				#line 14 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				int padding = ( blockSize - ( ciphertext.length % blockSize ) );
 				{
-					#line 15 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					int _g = 0;
-					#line 15 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					int _g1 = padding;
-					#line 15 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					while (( _g < _g1 )) {
-						#line 15 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 						int i = _g++;
 						( buffer.b as global::System.IO.Stream ).WriteByte(((byte) (( padding & 255 )) ));
 					}
 					
 				}
 				
-				#line 18 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				return buffer.getBytes();
 			}
-			#line default
 		}
 		
 		
 		public static global::haxe.io.Bytes unpad(global::haxe.io.Bytes encrypt) {
 			unchecked {
-				#line 23 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				int padding = ((int) (((byte) (encrypt.b[( encrypt.length - 1 )]) )) );
 				if (( padding > encrypt.length )) {
-					#line 24 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Cannot remove ", global::haxe.lang.Runtime.toString(padding)), " bytes, because message is "), global::haxe.lang.Runtime.toString(encrypt.length)), " bytes"));
 				}
 				
-				#line 25 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				int block = ( encrypt.length - padding );
 				{
-					#line 26 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					int _g = block;
-					#line 26 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					int _g1 = encrypt.length;
-					#line 26 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 					while (( _g < _g1 )) {
-						#line 26 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 						int i = _g++;
 						if (( ((int) (((byte) (encrypt.b[i]) )) ) != padding )) {
-							#line 27 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 							throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Invalid padding value. Got ", global::haxe.lang.Runtime.toString(((int) (((byte) (encrypt.b[i]) )) ))), ", expected "), global::haxe.lang.Runtime.toString(padding)), " at position "), global::haxe.lang.Runtime.toString(i)));
 						}
 						
@@ -100,10 +75,8 @@ namespace haxe.crypto.padding {
 					
 				}
 				
-				#line 29 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\PKCS7.hx"
 				return encrypt.sub(0, block);
 			}
-			#line default
 		}
 		
 		

@@ -10,211 +10,174 @@ namespace haxe.iterators {
 		
 		
 		public MapKeyValueIterator(global::haxe.IMap map) {
-			#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			global::haxe.iterators.MapKeyValueIterator.__hx_ctor_haxe_iterators_MapKeyValueIterator(((global::haxe.iterators.MapKeyValueIterator) (this) ), ((global::haxe.IMap) (map) ));
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_iterators_MapKeyValueIterator(global::haxe.iterators.MapKeyValueIterator __hx_this, global::haxe.IMap map) {
-			#line 36 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			__hx_this.map = map;
 			__hx_this.keys = map.keys();
 		}
-		#line default
+		
 		
 		public global::haxe.IMap map;
 		
 		public object keys;
 		
 		public bool hasNext() {
-			#line 44 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			return global::haxe.lang.Runtime.toBool(global::haxe.lang.Runtime.callField(this.keys, "hasNext", 407283053, null));
 		}
-		#line default
+		
 		
 		public object next() {
-			#line 51 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			object key = ((object) (global::haxe.lang.Runtime.callField(this.keys, "next", 1224901875, null)) );
 			{
-				#line 52 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				object __temp_odecl1 = this.map.@get(key);
-				#line 52 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				return new global::haxe.lang.DynamicObject(new int[]{5343647, 834174833}, new object[]{key, __temp_odecl1}, new int[]{}, new double[]{});
 			}
 			
 		}
-		#line default
+		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				switch (hash) {
 					case 1191633396:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						this.keys = ((object) (@value) );
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				switch (hash) {
 					case 1191633396:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						this.keys = ((object) (@value) );
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return @value;
 					}
 					
 					
 					case 5442204:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						this.map = ((global::haxe.IMap) (@value) );
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				switch (hash) {
 					case 1224901875:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "next", 1224901875)) );
 					}
 					
 					
 					case 407283053:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasNext", 407283053)) );
 					}
 					
 					
 					case 1191633396:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return this.keys;
 					}
 					
 					
 					case 5442204:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return this.map;
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				switch (hash) {
 					case 1191633396:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.keys)) );
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 				switch (hash) {
 					case 1224901875:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return this.next();
 					}
 					
 					
 					case 407283053:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return this.hasNext();
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			baseArr.push("keys");
-			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			baseArr.push("map");
-			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\MapKeyValueIterator.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

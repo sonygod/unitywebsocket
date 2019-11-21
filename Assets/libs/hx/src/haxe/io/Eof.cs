@@ -10,66 +10,56 @@ namespace haxe.io {
 		
 		
 		public Eof() {
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 			global::haxe.io.Eof.__hx_ctor_haxe_io_Eof(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_io_Eof(global::haxe.io.Eof __hx_this) {
 		}
 		
 		
 		public virtual string toString() {
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 			return "Eof";
 		}
-		#line default
+		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 				switch (hash) {
 					case 946786476:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 				switch (hash) {
 					case 946786476:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 						return this.toString();
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Eof.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		

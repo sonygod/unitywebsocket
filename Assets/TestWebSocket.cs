@@ -58,8 +58,9 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-                                                     ///  client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+          client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        /// client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
@@ -230,8 +231,9 @@ public class TestWebSocket : MonoBehaviour
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
             var parms = evt.eventParams;
-            Debug.Log("删除房间" + JsonConvert.SerializeObject(parms));
-
+            Debug.Log("删除房间" );
+            currentRoom = null;
+            
             hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom); //这里补回到大厅。
         });
     }
@@ -296,6 +298,12 @@ public class TestWebSocket : MonoBehaviour
     private void onGlobalError(ErrorEventCS obj)
     {
         Debug.Log("服务器返回错误" + obj.text); //你需要在这里switch 一下各种事件的处理.
+
+
+        if (obj.text == "0")
+        {
+
+        }
     }
 
     private void onCSOpen(CEvent evt)
@@ -475,7 +483,7 @@ public class TestWebSocket : MonoBehaviour
                 }
 
                 self.leaveRoom((uint)c.id);
-                currentRoom = null;
+              
             }
             else
             {

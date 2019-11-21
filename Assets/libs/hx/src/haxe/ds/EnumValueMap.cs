@@ -10,67 +10,49 @@ namespace haxe.ds {
 		
 		
 		public EnumValueMap() : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.EnumValueMap.__hx_ctor_haxe_ds_EnumValueMap(((global::haxe.ds.EnumValueMap) (this) ));
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_ds_EnumValueMap(global::haxe.ds.EnumValueMap __hx_this) {
-			#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.BalancedTree.__hx_ctor_haxe_ds_BalancedTree(((global::haxe.ds.BalancedTree) (__hx_this) ));
 		}
-		#line default
+		
 		
 		global::haxe.IMap global::haxe.IMap.copy() {
-			#line 144 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return ((global::haxe.IMap) (this.copy()) );
 		}
-		#line default
+		
 		
 		public override int compare(object k1, object k2) {
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			int d = ( global::haxe.root.Type.enumIndex(k1) - global::haxe.root.Type.enumIndex(k2) );
 			if (( d != 0 )) {
-				#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				return d;
 			}
 			
-			#line 36 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			global::haxe.root.Array p1 = global::haxe.root.Type.enumParameters(k1);
 			global::haxe.root.Array p2 = global::haxe.root.Type.enumParameters(k2);
-			#line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			if (( ( p1.length == 0 ) && ( p2.length == 0 ) )) {
-				#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				return 0;
 			}
 			
-			#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			return this.compareArgs(p1, p2);
 		}
-		#line default
+		
 		
 		public virtual int compareArgs(global::haxe.root.Array a1, global::haxe.root.Array a2) {
-			#line 44 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			int ld = ( a1.length - a2.length );
 			if (( ld != 0 )) {
-				#line 46 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				return ld;
 			}
 			
-			#line 47 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			{
-				#line 47 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				int _g = 0;
-				#line 47 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				int _g1 = a1.length;
-				#line 47 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				while (( _g < _g1 )) {
-					#line 47 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 					int i = _g++;
 					int d = this.compareArg(a1.__get(i), a2.__get(i));
-					#line 49 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 					if (( d != 0 )) {
-						#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return d;
 					}
 					
@@ -78,119 +60,99 @@ namespace haxe.ds {
 				
 			}
 			
-			#line 52 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			return 0;
 		}
-		#line default
+		
 		
 		public virtual int compareArg(object v1, object v2) {
-			#line 56 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			if (( global::haxe.root.Reflect.isEnumValue(v1) && global::haxe.root.Reflect.isEnumValue(v2) )) {
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				return this.compare(v1, v2);
 			}
 			else if (( ( v1 is global::haxe.root.Array ) && ( v2 is global::haxe.root.Array ) )) {
-				#line 59 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				return this.compareArgs(((global::haxe.root.Array) (v1) ), ((global::haxe.root.Array) (v2) ));
 			}
 			else {
-				#line 61 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				return global::haxe.root.Reflect.compare(((object) (v1) ), ((object) (v2) ));
 			}
 			
 		}
-		#line default
+		
 		
 		public override global::haxe.ds.BalancedTree copy() {
-			#line 66 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			global::haxe.ds.EnumValueMap copied = new global::haxe.ds.EnumValueMap();
 			copied.root = this.root;
-			#line 68 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 			return copied;
 		}
-		#line default
+		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				switch (hash) {
 					case 1103412149:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "copy", 1103412149)) );
 					}
 					
 					
 					case 244830897:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "compareArg", 244830897)) );
 					}
 					
 					
 					case 910198946:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "compareArgs", 910198946)) );
 					}
 					
 					
 					case 57219237:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "compare", 57219237)) );
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 				switch (hash) {
 					case 57219237:
 					case 1103412149:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return global::haxe.lang.Runtime.slowCallField(this, field, dynargs);
 					}
 					
 					
 					case 244830897:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return this.compareArg(((object) (dynargs[0]) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 910198946:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return this.compareArgs(((global::haxe.root.Array) (((object) (dynargs[0]) )) ), ((global::haxe.root.Array) (((object) (dynargs[1]) )) ));
 					}
 					
 					
 					default:
 					{
-						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\EnumValueMap.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		

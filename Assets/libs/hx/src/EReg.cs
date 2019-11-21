@@ -10,49 +10,36 @@ namespace haxe.root {
 		
 		
 		public EReg(string r, string opt) {
-			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			global::haxe.root.EReg.__hx_ctor__EReg(this, r, opt);
 		}
-		#line default
+		
 		
 		private static void __hx_ctor__EReg(global::haxe.root.EReg __hx_this, string r, string opt) {
 			unchecked {
-				#line 35 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				int opts = ((int) (global::haxe.lang.Runtime.toInt(((object) (global::System.Text.RegularExpressions.RegexOptions.CultureInvariant) ))) );
 				{
-					#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					int _g = 0;
-					#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					int _g1 = opt.Length;
-					#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					while (( _g < _g1 )) {
-						#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						int i = _g++;
-						#line 38 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						switch (((int) (opt[i]) )) {
 							case 103:
 							{
-								#line 42 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 								__hx_this.isGlobal = true;
-								#line 42 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 								break;
 							}
 							
 							
 							case 105:
 							{
-								#line 40 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 								opts |= ((int) (global::haxe.lang.Runtime.toInt(((object) (global::System.Text.RegularExpressions.RegexOptions.IgnoreCase) ))) );
-								#line 40 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 								break;
 							}
 							
 							
 							case 109:
 							{
-								#line 44 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 								opts |= ((int) (global::haxe.lang.Runtime.toInt(((object) (global::System.Text.RegularExpressions.RegexOptions.Multiline) ))) );
-								#line 44 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 								break;
 							}
 							
@@ -63,18 +50,15 @@ namespace haxe.root {
 					
 				}
 				
-				#line 52 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				__hx_this.regex = new global::System.Text.RegularExpressions.Regex(((string) (r) ), ((global::System.Text.RegularExpressions.RegexOptions) (((object) (opts) )) ));
 			}
-			#line default
 		}
 		
 		
 		public static string escape(string s) {
-			#line 133 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return global::System.Text.RegularExpressions.Regex.Escape(((string) (s) ));
 		}
-		#line default
+		
 		
 		public global::System.Text.RegularExpressions.Regex regex;
 		
@@ -85,477 +69,378 @@ namespace haxe.root {
 		public string cur;
 		
 		public bool match(string s) {
-			#line 56 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			this.m = this.regex.Match(((string) (s) ));
 			this.cur = s;
-			#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return ( this.m as global::System.Text.RegularExpressions.Group ).Success;
 		}
-		#line default
+		
 		
 		public string matched(int n) {
-			#line 62 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			if (( ( this.m == null ) || ((bool) (( ((uint) (n) ) > this.m.Groups.Count )) ) )) {
-				#line 63 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				throw global::haxe.lang.HaxeException.wrap("EReg::matched");
 			}
 			
-			#line 64 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			if ( ! (this.m.Groups[n].Success) ) {
-				#line 65 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				return null;
 			}
 			
-			#line 66 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return ( this.m.Groups[n] as global::System.Text.RegularExpressions.Capture ).Value;
 		}
-		#line default
+		
 		
 		public string matchedLeft() {
-			#line 70 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return this.cur.Substring(((int) (0) ), ((int) (( this.m as global::System.Text.RegularExpressions.Capture ).Index) ));
 		}
-		#line default
+		
 		
 		public string matchedRight() {
-			#line 74 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return this.cur.Substring(((int) (( ( this.m as global::System.Text.RegularExpressions.Capture ).Index + ( this.m as global::System.Text.RegularExpressions.Capture ).Length )) ));
 		}
-		#line default
+		
 		
 		public object matchedPos() {
-			#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			int tmp = ( this.m as global::System.Text.RegularExpressions.Capture ).Index;
-			#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			{
-				#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				int __temp_odecl1 = ( this.m as global::System.Text.RegularExpressions.Capture ).Length;
-				#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				return new global::haxe.lang.DynamicObject(new int[]{}, new object[]{}, new int[]{5393365, 5594516}, new double[]{((double) (__temp_odecl1) ), ((double) (tmp) )});
 			}
 			
 		}
-		#line default
+		
 		
 		public bool matchSub(string s, int pos, object len) {
 			unchecked {
-				#line 81 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				int len1 = ( (( len == default(object) )) ? (-1) : (((int) (global::haxe.lang.Runtime.toInt(len)) )) );
 				this.m = ( (( len1 < 0 )) ? (this.regex.Match(((string) (s) ), ((int) (pos) ))) : (this.regex.Match(((string) (s) ), ((int) (pos) ), ((int) (len1) ))) );
-				#line 83 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				this.cur = s;
 				return ( this.m as global::System.Text.RegularExpressions.Group ).Success;
 			}
-			#line default
 		}
 		
 		
 		public global::haxe.root.Array split(string s) {
-			#line 88 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			if (this.isGlobal) {
-				#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				string[] native = this.regex.Split(((string) (s) ));
-				#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				object[] ret = new object[( native as global::System.Array ).Length];
-				#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				{
-					#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					int _g = 0;
-					#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					int _g1 = ( native as global::System.Array ).Length;
-					#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					while (( _g < _g1 )) {
-						#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						int i = _g++;
-						#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						ret[i] = ((string) (native[i]) );
 					}
 					
 				}
 				
-				#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				object[] dyn = ret;
-				#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				return new global::haxe.root.Array(((object[]) (dyn) ));
 			}
 			
-			#line 90 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			global::System.Text.RegularExpressions.Match m = this.regex.Match(((string) (s) ));
 			if ( ! (( m as global::System.Text.RegularExpressions.Group ).Success) ) {
-				#line 92 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				return new global::haxe.root.Array(new object[]{s});
 			}
 			
-			#line 93 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return new global::haxe.root.Array(new object[]{s.Substring(((int) (0) ), ((int) (( m as global::System.Text.RegularExpressions.Capture ).Index) )), s.Substring(((int) (( ( m as global::System.Text.RegularExpressions.Capture ).Index + ( m as global::System.Text.RegularExpressions.Capture ).Length )) ))});
 		}
-		#line default
+		
 		
 		public int start(int @group) {
-			#line 97 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return ( this.m.Groups[@group] as global::System.Text.RegularExpressions.Capture ).Index;
 		}
-		#line default
+		
 		
 		public int len(int @group) {
-			#line 101 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			return ( this.m.Groups[@group] as global::System.Text.RegularExpressions.Capture ).Length;
 		}
-		#line default
+		
 		
 		public string replace(string s, string @by) {
 			unchecked {
-				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				if (this.isGlobal) {
-					#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					return this.regex.Replace(((string) (s) ), ((string) (@by) ));
 				}
 				else {
-					#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					return this.regex.Replace(((string) (s) ), ((string) (@by) ), ((int) (1) ));
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public string map(string s, global::haxe.lang.Function f) {
 			unchecked {
-				#line 109 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				int offset = 0;
 				global::System.Text.StringBuilder buf_b = new global::System.Text.StringBuilder();
-				#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				while (true) {
-					#line 112 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					if (( offset >= s.Length )) {
-						#line 113 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						break;
 					}
 					else if ( ! (this.matchSub(s, offset, null)) ) {
-						#line 115 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						buf_b.Append(((string) (global::haxe.root.Std.@string(global::haxe.lang.StringExt.substr(s, offset, null))) ));
 						break;
 					}
 					
-					#line 118 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					object p = this.matchedPos();
 					buf_b.Append(((string) (global::haxe.root.Std.@string(global::haxe.lang.StringExt.substr(s, offset, ( ((int) (global::haxe.lang.Runtime.getField_f(p, "pos", 5594516, true)) ) - ((int) (offset) ) )))) ));
-					#line 120 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					buf_b.Append(((string) (global::haxe.root.Std.@string(global::haxe.lang.Runtime.toString(f.__hx_invoke1_o(default(double), this)))) ));
 					if (( ((int) (global::haxe.lang.Runtime.getField_f(p, "len", 5393365, true)) ) == 0 )) {
-						#line 122 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						buf_b.Append(((string) (global::haxe.root.Std.@string(global::haxe.lang.StringExt.substr(s, ((int) (global::haxe.lang.Runtime.getField_f(p, "pos", 5594516, true)) ), 1))) ));
 						offset = ( ((int) (global::haxe.lang.Runtime.getField_f(p, "pos", 5594516, true)) ) + 1 );
 					}
 					else {
-						#line 125 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						offset = ( ((int) (global::haxe.lang.Runtime.getField_f(p, "pos", 5594516, true)) ) + ((int) (global::haxe.lang.Runtime.getField_f(p, "len", 5393365, true)) ) );
 					}
 					
-					#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					if ( ! (this.isGlobal) ) {
-						#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						break;
 					}
 					
 				}
 				
-				#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				if (( (  ! (this.isGlobal)  && ( offset > 0 ) ) && ( offset < s.Length ) )) {
-					#line 128 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 					buf_b.Append(((string) (global::haxe.root.Std.@string(global::haxe.lang.StringExt.substr(s, offset, null))) ));
 				}
 				
-				#line 129 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				return buf_b.ToString();
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				switch (hash) {
 					case 4949376:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						this.cur = global::haxe.lang.Runtime.toString(@value);
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return @value;
 					}
 					
 					
 					case 1821933:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						this.isGlobal = global::haxe.lang.Runtime.toBool(@value);
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return @value;
 					}
 					
 					
 					case 109:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						this.m = ((global::System.Text.RegularExpressions.Match) (@value) );
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return @value;
 					}
 					
 					
 					case 1723805383:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						this.regex = ((global::System.Text.RegularExpressions.Regex) (@value) );
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				switch (hash) {
 					case 5442204:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "map", 5442204)) );
 					}
 					
 					
 					case 724060212:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "replace", 724060212)) );
 					}
 					
 					
 					case 5393365:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "len", 5393365)) );
 					}
 					
 					
 					case 67859554:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "start", 67859554)) );
 					}
 					
 					
 					case 24046298:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "split", 24046298)) );
 					}
 					
 					
 					case 1126920507:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "matchSub", 1126920507)) );
 					}
 					
 					
 					case 1271070480:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "matchedPos", 1271070480)) );
 					}
 					
 					
 					case 614073432:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "matchedRight", 614073432)) );
 					}
 					
 					
 					case 2083500811:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "matchedLeft", 2083500811)) );
 					}
 					
 					
 					case 159136996:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "matched", 159136996)) );
 					}
 					
 					
 					case 52644165:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "match", 52644165)) );
 					}
 					
 					
 					case 4949376:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.cur;
 					}
 					
 					
 					case 1821933:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.isGlobal;
 					}
 					
 					
 					case 109:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.m;
 					}
 					
 					
 					case 1723805383:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.regex;
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 				switch (hash) {
 					case 5442204:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.map(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )), ((global::haxe.lang.Function) (((object) (dynargs[1]) )) ));
 					}
 					
 					
 					case 724060212:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.replace(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[1]) )));
 					}
 					
 					
 					case 5393365:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.len(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 67859554:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.start(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 24046298:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.split(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )));
 					}
 					
 					
 					case 1126920507:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.matchSub(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((object) (dynargs[2]) ));
 					}
 					
 					
 					case 1271070480:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.matchedPos();
 					}
 					
 					
 					case 614073432:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.matchedRight();
 					}
 					
 					
 					case 2083500811:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.matchedLeft();
 					}
 					
 					
 					case 159136996:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.matched(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 52644165:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return this.match(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )));
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			baseArr.push("cur");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			baseArr.push("isGlobal");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			baseArr.push("m");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			baseArr.push("regex");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\EReg.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

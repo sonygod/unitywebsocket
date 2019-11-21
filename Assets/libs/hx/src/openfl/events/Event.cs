@@ -7,108 +7,65 @@ namespace openfl.events {
 		
 		static Event() {
 			unchecked{
-				#line 54 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.__pool = new global::openfl._internal.utils.ObjectPool(null, null, 20);
-				#line 75 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.ACTIVATE = ((string) ("activate") );
-				#line 89 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.ADDED = ((string) ("added") );
-				#line 103 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.ADDED_TO_STAGE = ((string) ("addedToStage") );
-				#line 118 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CANCEL = ((string) ("cancel") );
-				#line 132 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CHANGE = ((string) ("change") );
-				#line 159 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CLEAR = ((string) ("clear") );
-				#line 173 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CLOSE = ((string) ("close") );
-				#line 187 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.COMPLETE = ((string) ("complete") );
-				#line 201 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CONNECT = ((string) ("connect") );
-				#line 210 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CONTEXT3D_CREATE = ((string) ("context3DCreate") );
-				#line 234 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.COPY = ((string) ("copy") );
-				#line 258 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.CUT = ((string) ("cut") );
-				#line 279 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.DEACTIVATE = ((string) ("deactivate") );
-				#line 297 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.ENTER_FRAME = ((string) ("enterFrame") );
-				#line 315 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.EXIT_FRAME = ((string) ("exitFrame") );
-				#line 333 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.FRAME_CONSTRUCTED = ((string) ("frameConstructed") );
-				#line 351 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.FRAME_LABEL = ((string) ("frameLabel") );
-				#line 365 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.FULLSCREEN = ((string) ("fullScreen") );
-				#line 379 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.ID3 = ((string) ("id3") );
-				#line 393 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.INIT = ((string) ("init") );
-				#line 407 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.MOUSE_LEAVE = ((string) ("mouseLeave") );
-				#line 421 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.OPEN = ((string) ("open") );
-				#line 446 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.PASTE = ((string) ("paste") );
-				#line 460 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.REMOVED = ((string) ("removed") );
-				#line 474 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.REMOVED_FROM_STAGE = ((string) ("removedFromStage") );
-				#line 492 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.RENDER = ((string) ("render") );
-				#line 506 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.RESIZE = ((string) ("resize") );
-				#line 520 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.SCROLL = ((string) ("scroll") );
-				#line 534 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.SELECT = ((string) ("select") );
-				#line 559 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.SELECT_ALL = ((string) ("selectAll") );
-				#line 573 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.SOUND_COMPLETE = ((string) ("soundComplete") );
-				#line 587 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.TAB_CHILDREN_CHANGE = ((string) ("tabChildrenChange") );
-				#line 601 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.TAB_ENABLED_CHANGE = ((string) ("tabEnabledChange") );
-				#line 615 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.TAB_INDEX_CHANGE = ((string) ("tabIndexChange") );
-				#line 624 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.TEXTURE_READY = ((string) ("textureReady") );
-				#line 654 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				global::openfl.events.Event.UNLOAD = ((string) ("unload") );
 			}
 		}
-		#line default
+		
 		
 		public Event(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public Event(string type, object bubbles, object cancelable) {
-			#line 728 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(this, type, bubbles, cancelable);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_openfl_events_Event(global::openfl.events.Event __hx_this, string type, object bubbles, object cancelable) {
 			unchecked {
-				#line 729 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-				#line 729 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				bool bubbles1 = ( (( bubbles == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 				__hx_this.type = type;
-				#line 731 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				__hx_this.bubbles = bubbles1;
 				__hx_this.cancelable = cancelable1;
-				#line 733 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				__hx_this.eventPhase = ((int) (2) );
 			}
-			#line default
 		}
 		
 		
@@ -209,113 +166,83 @@ namespace openfl.events {
 		public bool __preventDefault;
 		
 		public virtual global::openfl.events.Event clone() {
-			#line 761 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			global::openfl.events.Event @event = new global::openfl.events.Event(this.type, this.bubbles, this.cancelable);
 			@event.eventPhase = this.eventPhase;
-			#line 763 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			@event.target = this.target;
 			@event.currentTarget = this.currentTarget;
-			#line 765 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			return @event;
 		}
-		#line default
+		
 		
 		public virtual string formatToString(string className, string p1, string p2, string p3, string p4, string p5) {
-			#line 794 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			global::haxe.root.Array parameters = new global::haxe.root.Array(new object[]{});
 			if (( p1 != null )) {
-				#line 795 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				parameters.push(p1);
 			}
 			
-			#line 796 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			if (( p2 != null )) {
-				#line 796 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				parameters.push(p2);
 			}
 			
-			#line 797 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			if (( p3 != null )) {
-				#line 797 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				parameters.push(p3);
 			}
 			
-			#line 798 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			if (( p4 != null )) {
-				#line 798 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				parameters.push(p4);
 			}
 			
-			#line 799 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			if (( p5 != null )) {
-				#line 799 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				parameters.push(p5);
 			}
 			
-			#line 801 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			return global::haxe.lang.Runtime.toString(global::haxe.root.Reflect.callMethod(this, ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "__formatToString", 762525219)) ), new global::haxe.root.Array(new object[]{className, parameters})));
 		}
-		#line default
+		
 		
 		public virtual bool isDefaultPrevented() {
-			#line 814 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			return this.__preventDefault;
 		}
-		#line default
+		
 		
 		public virtual void preventDefault() {
-			#line 825 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			if (this.cancelable) {
-				#line 827 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				this.__preventDefault = true;
 			}
 			
 		}
-		#line default
+		
 		
 		public virtual void stopImmediatePropagation() {
-			#line 844 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			this.__isCanceled = true;
 			this.__isCanceledNow = true;
 		}
-		#line default
+		
 		
 		public virtual void stopPropagation() {
-			#line 863 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			this.__isCanceled = true;
 		}
-		#line default
+		
 		
 		public virtual string toString() {
-			#line 877 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			return this.__formatToString("Event", new global::haxe.root.Array(new object[]{"type", "bubbles", "cancelable"}));
 		}
-		#line default
+		
 		
 		[global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
 		public virtual string __formatToString(string className, global::haxe.root.Array parameters) {
-			#line 884 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			string output = global::haxe.lang.Runtime.concat("[", className);
 			object arg = null;
-			#line 887 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			{
-				#line 887 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				int _g = 0;
-				#line 887 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				while (( _g < parameters.length )) {
-					#line 887 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 					string param = global::haxe.lang.Runtime.toString(parameters.__get(_g));
-					#line 887 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 					 ++ _g;
-					#line 889 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 					arg = global::haxe.root.Reflect.field(this, param);
-					#line 891 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 					if (( arg is string )) {
-						#line 893 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						output = global::haxe.lang.Runtime.concat(output, global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(" ", param), "=\""), global::haxe.root.Std.@string(arg)), "\""));
 					}
 					else {
-						#line 897 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						output = global::haxe.lang.Runtime.concat(output, global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(" ", param), "="), global::haxe.root.Std.@string(arg)));
 					}
 					
@@ -323,432 +250,350 @@ namespace openfl.events {
 				
 			}
 			
-			#line 901 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			output = global::haxe.lang.Runtime.concat(output, "]");
 			return output;
 		}
-		#line default
+		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				switch (hash) {
 					case 116192081:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.target = ((object) (@value) );
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1044656577:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.eventPhase = ((int) (@value) );
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1783198826:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.currentTarget = ((object) (@value) );
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				switch (hash) {
 					case 467974121:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.__preventDefault = global::haxe.lang.Runtime.toBool(@value);
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 94306131:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.__isCanceledNow = global::haxe.lang.Runtime.toBool(@value);
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1382589827:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.__isCanceled = global::haxe.lang.Runtime.toBool(@value);
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1292432058:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.type = global::haxe.lang.Runtime.toString(@value);
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 116192081:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.target = ((object) (@value) );
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1044656577:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.eventPhase = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1783198826:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.currentTarget = ((object) (@value) );
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1148821524:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.cancelable = global::haxe.lang.Runtime.toBool(@value);
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					case 1633074023:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.bubbles = global::haxe.lang.Runtime.toBool(@value);
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				switch (hash) {
 					case 762525219:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "__formatToString", 762525219)) );
 					}
 					
 					
 					case 946786476:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 544309738:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "stopPropagation", 544309738)) );
 					}
 					
 					
 					case 1533460349:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "stopImmediatePropagation", 1533460349)) );
 					}
 					
 					
 					case 1738878153:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "preventDefault", 1738878153)) );
 					}
 					
 					
 					case 69677120:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "isDefaultPrevented", 69677120)) );
 					}
 					
 					
 					case 2033429251:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "formatToString", 2033429251)) );
 					}
 					
 					
 					case 1214452573:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clone", 1214452573)) );
 					}
 					
 					
 					case 467974121:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.__preventDefault;
 					}
 					
 					
 					case 94306131:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.__isCanceledNow;
 					}
 					
 					
 					case 1382589827:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.__isCanceled;
 					}
 					
 					
 					case 1292432058:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.type;
 					}
 					
 					
 					case 116192081:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.target;
 					}
 					
 					
 					case 1044656577:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.eventPhase;
 					}
 					
 					
 					case 1783198826:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.currentTarget;
 					}
 					
 					
 					case 1148821524:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.cancelable;
 					}
 					
 					
 					case 1633074023:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.bubbles;
 					}
 					
 					
 					default:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				switch (hash) {
 					case 116192081:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.target)) );
 					}
 					
 					
 					case 1044656577:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((double) (this.eventPhase) );
 					}
 					
 					
 					case 1783198826:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.currentTarget)) );
 					}
 					
 					
 					default:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				switch (hash) {
 					case 762525219:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.__formatToString(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )), ((global::haxe.root.Array) (((object) (dynargs[1]) )) ));
 					}
 					
 					
 					case 946786476:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.toString();
 					}
 					
 					
 					case 544309738:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.stopPropagation();
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						break;
 					}
 					
 					
 					case 1533460349:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.stopImmediatePropagation();
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						break;
 					}
 					
 					
 					case 1738878153:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						this.preventDefault();
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						break;
 					}
 					
 					
 					case 69677120:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.isDefaultPrevented();
 					}
 					
 					
 					case 2033429251:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.formatToString(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[1]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[2]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[3]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[4]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[5]) )));
 					}
 					
 					
 					case 1214452573:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return this.clone();
 					}
 					
 					
 					default:
 					{
-						#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 				return null;
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("__preventDefault");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("__isCanceledNow");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("__isCanceled");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("type");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("target");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("eventPhase");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("currentTarget");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("cancelable");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			baseArr.push("bubbles");
-			#line 52 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\Event.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 		public override string ToString(){
 			return this.toString();

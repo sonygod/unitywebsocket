@@ -10,26 +10,23 @@ namespace hx.ws {
 		
 		
 		public Utf8Encoder() {
-			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Utf8Encoder.hx"
 			global::hx.ws.Utf8Encoder.__hx_ctor_hx_ws_Utf8Encoder(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_hx_ws_Utf8Encoder(global::hx.ws.Utf8Encoder __hx_this) {
 		}
 		
 		
 		public static global::haxe.io.Bytes encode(string str) {
-			#line 8 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Utf8Encoder.hx"
 			return global::haxe.io.Bytes.ofString(str, null);
 		}
-		#line default
+		
 		
 		public static string decode(global::haxe.io.Bytes data) {
-			#line 13 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Utf8Encoder.hx"
 			return data.toString();
 		}
-		#line default
+		
 		
 	}
 }

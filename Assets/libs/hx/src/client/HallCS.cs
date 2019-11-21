@@ -3,74 +3,49 @@ using haxe.root;
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace client {
-	public class HallCS : global::CEventDispatcher, global::haxe.lang.IHxObject {
-		
-		public HallCS(global::haxe.lang.EmptyObject empty) : base() {
-		}
-		
+	public class HallCS : global::CEventDispatcher {
 		
 		public HallCS() : base() {
 			unchecked {
-				#line 26 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u521b\u5efa\u4e86\u5927\u5385", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (26) )}));
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u521b\u5efa\u4e86\u5927\u5385", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (27) )}));
 			}
-			#line default
 		}
 		
 		
 		public virtual void addEvent() {
 			unchecked {
-				#line 34 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-				#line 36 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") )});
-				#line 38 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				{
-					#line 38 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					int _g = 0;
-					#line 38 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					while (( _g < events.length )) {
-						#line 38 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 						string e = global::haxe.lang.Runtime.toString(events.__get(_g));
-						#line 38 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 						 ++ _g;
 						wd.addEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object), default(object), default(object));
 					}
 					
 				}
 				
-				#line 41 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u5927\u5385\u6dfb\u52a0\u503e\u542c\u5668\u6210\u529f\uff0c", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (41) )}));
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u5927\u5385\u6dfb\u52a0\u503e\u542c\u5668\u6210\u529f\uff0c", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (42) )}));
 			}
-			#line default
 		}
 		
 		
 		public virtual void transEvent(global::web.proto.RoomEvent e) {
 			unchecked {
-				#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u623f\u95f4\u4fe1\u606f**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (47) )}));
-				#line 50 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u623f\u95f4\u4fe1\u606f**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (48) )}));
 				( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 			}
-			#line default
 		}
 		
 		
 		public virtual void off() {
-			#line 54 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-			#line 56 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") )});
-			#line 58 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			{
-				#line 58 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				int _g = 0;
-				#line 58 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				while (( _g < events.length )) {
-					#line 58 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					string e = global::haxe.lang.Runtime.toString(events.__get(_g));
-					#line 58 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					 ++ _g;
 					wd.removeEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object));
 				}
@@ -78,240 +53,7 @@ namespace client {
 			}
 			
 		}
-		#line default
 		
-		public virtual object __hx_lookupField(string field, int hash, bool throwErrors, bool isCheck) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			if (isCheck) {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				return global::haxe.lang.Runtime.undefined;
-			}
-			else if (throwErrors) {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				throw new global::System.MemberAccessException("Field not found.");
-			}
-			else {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				return null;
-			}
-			
-		}
-		#line default
-		
-		public virtual double __hx_lookupField_f(string field, int hash, bool throwErrors) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			if (throwErrors) {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				throw new global::System.MemberAccessException("Field not found or incompatible field type.");
-			}
-			else {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				return default(double);
-			}
-			
-		}
-		#line default
-		
-		public virtual object __hx_lookupSetField(string field, int hash, object @value) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			throw new global::System.MemberAccessException("Cannot access field for writing.");
-		}
-		#line default
-		
-		public virtual double __hx_lookupSetField_f(string field, int hash, double @value) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			throw new global::System.MemberAccessException("Cannot access field for writing or incompatible type.");
-		}
-		#line default
-		
-		public virtual double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			switch (hash) {
-				default:
-				{
-					#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-					return this.__hx_lookupSetField_f(field, hash, @value);
-				}
-				
-			}
-			
-		}
-		#line default
-		
-		public virtual object __hx_setField(string field, int hash, object @value, bool handleProperties) {
-			unchecked {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				switch (hash) {
-					case 2012391216:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						this.eventListenerDic = ((global::System.Collections.Generic.Dictionary<string, global::CEventListener>) (@value) );
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return @value;
-					}
-					
-					
-					default:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return this.__hx_lookupSetField(field, hash, @value);
-					}
-					
-				}
-				
-			}
-			#line default
-		}
-		
-		
-		public virtual object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
-			unchecked {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				switch (hash) {
-					case 183035374:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasListener", 183035374)) );
-					}
-					
-					
-					case 1181009664:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "dispatchEvent", 1181009664)) );
-					}
-					
-					
-					case 1433765834:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeEventListener", 1433765834)) );
-					}
-					
-					
-					case 1902382029:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addEventListener", 1902382029)) );
-					}
-					
-					
-					case 2012391216:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return this.eventListenerDic;
-					}
-					
-					
-					case 5542767:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "off", 5542767)) );
-					}
-					
-					
-					case 529665746:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) );
-					}
-					
-					
-					case 1864494649:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addEvent", 1864494649)) );
-					}
-					
-					
-					default:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return this.__hx_lookupField(field, hash, throwErrors, isCheck);
-					}
-					
-				}
-				
-			}
-			#line default
-		}
-		
-		
-		public virtual double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			switch (hash) {
-				default:
-				{
-					#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-					return this.__hx_lookupField_f(field, hash, throwErrors);
-				}
-				
-			}
-			
-		}
-		#line default
-		
-		public virtual object __hx_invokeField(string field, int hash, object[] dynargs) {
-			unchecked {
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				switch (hash) {
-					case 1902382029:
-					case 1433765834:
-					case 1181009664:
-					case 183035374:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return global::haxe.lang.Runtime.slowCallField(this, field, dynargs);
-					}
-					
-					
-					case 5542767:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						this.off();
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						break;
-					}
-					
-					
-					case 529665746:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						this.transEvent(((global::web.proto.RoomEvent) (((object) (dynargs[0]) )) ));
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						break;
-					}
-					
-					
-					case 1864494649:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						this.addEvent();
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						break;
-					}
-					
-					
-					default:
-					{
-						#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-						return ((global::haxe.lang.Function) (this.__hx_getField(field, hash, true, false, false)) ).__hx_invokeDynamic(dynargs);
-					}
-					
-				}
-				
-				#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-				return null;
-			}
-			#line default
-		}
-		
-		
-		public virtual void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
-			baseArr.push("eventListenerDic");
-		}
-		#line default
 		
 	}
 }

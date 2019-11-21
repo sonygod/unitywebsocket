@@ -10,68 +10,51 @@ namespace haxe.crypto.padding {
 		
 		
 		public NullPadding() {
-			#line 6 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 			global::haxe.crypto.padding.NullPadding.__hx_ctor_haxe_crypto_padding_NullPadding(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_crypto_padding_NullPadding(global::haxe.crypto.padding.NullPadding __hx_this) {
 		}
 		
 		
 		public static global::haxe.io.Bytes pad(global::haxe.io.Bytes ciphertext, int blockSize) {
-			#line 10 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 			global::haxe.io.BytesBuffer buffer = new global::haxe.io.BytesBuffer();
 			{
-				#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				int len = ciphertext.length;
-				#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				if (( ( len < 0 ) || ( len > ciphertext.length ) )) {
-					#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 					throw global::haxe.lang.HaxeException.wrap(global::haxe.io.Error.OutsideBounds);
 				}
 				
-				#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				( buffer.b as global::System.IO.Stream ).Write(((byte[]) (ciphertext.b) ), ((int) (0) ), ((int) (len) ));
 			}
 			
-			#line 12 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 			int padding = ( blockSize - ( ciphertext.length % blockSize ) );
 			{
-				#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				int _g = 0;
-				#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				int _g1 = padding;
-				#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				while (( _g < _g1 )) {
-					#line 13 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 					int i = _g++;
 					( buffer.b as global::System.IO.Stream ).WriteByte(((byte) (0) ));
 				}
 				
 			}
 			
-			#line 16 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 			return buffer.getBytes();
 		}
-		#line default
+		
 		
 		public static global::haxe.io.Bytes unpad(global::haxe.io.Bytes encrypt) {
 			unchecked {
-				#line 21 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				int padding = 0;
 				int pos = encrypt.length;
-				#line 23 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				while (( ( padding == 0 ) && ( pos > 0 ) )) {
-					#line 24 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 					 -- pos;
 					padding = ((int) (((byte) (encrypt.b[pos]) )) );
 				}
 				
-				#line 27 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\padding\\NullPadding.hx"
 				return encrypt.sub(0, ( pos + 1 ));
 			}
-			#line default
 		}
 		
 		

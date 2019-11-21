@@ -10,451 +10,333 @@ namespace haxe.crypto {
 		
 		
 		public Sha1() {
-			#line 48 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 			global::haxe.crypto.Sha1.__hx_ctor_haxe_crypto_Sha1(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_crypto_Sha1(global::haxe.crypto.Sha1 __hx_this) {
 		}
 		
 		
 		public static string encode(string s) {
-			#line 30 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 			global::haxe.crypto.Sha1 sh = new global::haxe.crypto.Sha1();
 			global::haxe.root.Array h = sh.doEncode(global::haxe.crypto.Sha1.str2blks(s));
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 			return sh.hex(h);
 		}
-		#line default
+		
 		
 		public static global::haxe.io.Bytes make(global::haxe.io.Bytes b) {
 			unchecked {
-				#line 36 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				global::haxe.root.Array h = new global::haxe.crypto.Sha1().doEncode(global::haxe.crypto.Sha1.bytes2blks(b));
 				global::haxe.io.Bytes @out = global::haxe.io.Bytes.alloc(20);
-				#line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int p = 0;
 				{
-					#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					{
-						#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (((int) (( ((uint) (((int) (global::haxe.lang.Runtime.toInt(h.__get(0))) )) ) >> 24 )) )) );
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(0))) ) >> 16 ) & 255 )) );
-						#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(0))) ) >> 8 ) & 255 )) );
 						@out.b[p++] = ((byte) (( ((int) (global::haxe.lang.Runtime.toInt(h.__get(0))) ) & 255 )) );
 					}
 					
-					#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					{
-						#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (((int) (( ((uint) (((int) (global::haxe.lang.Runtime.toInt(h.__get(1))) )) ) >> 24 )) )) );
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(1))) ) >> 16 ) & 255 )) );
-						#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(1))) ) >> 8 ) & 255 )) );
 						@out.b[p++] = ((byte) (( ((int) (global::haxe.lang.Runtime.toInt(h.__get(1))) ) & 255 )) );
 					}
 					
-					#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					{
-						#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (((int) (( ((uint) (((int) (global::haxe.lang.Runtime.toInt(h.__get(2))) )) ) >> 24 )) )) );
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(2))) ) >> 16 ) & 255 )) );
-						#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(2))) ) >> 8 ) & 255 )) );
 						@out.b[p++] = ((byte) (( ((int) (global::haxe.lang.Runtime.toInt(h.__get(2))) ) & 255 )) );
 					}
 					
-					#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					{
-						#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (((int) (( ((uint) (((int) (global::haxe.lang.Runtime.toInt(h.__get(3))) )) ) >> 24 )) )) );
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(3))) ) >> 16 ) & 255 )) );
-						#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(3))) ) >> 8 ) & 255 )) );
 						@out.b[p++] = ((byte) (( ((int) (global::haxe.lang.Runtime.toInt(h.__get(3))) ) & 255 )) );
 					}
 					
-					#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					{
-						#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (((int) (( ((uint) (((int) (global::haxe.lang.Runtime.toInt(h.__get(4))) )) ) >> 24 )) )) );
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(4))) ) >> 16 ) & 255 )) );
-						#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						@out.b[p++] = ((byte) (( ( ((int) (global::haxe.lang.Runtime.toInt(h.__get(4))) ) >> 8 ) & 255 )) );
 						@out.b[p++] = ((byte) (( ((int) (global::haxe.lang.Runtime.toInt(h.__get(4))) ) & 255 )) );
 					}
 					
 				}
 				
-				#line 45 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return @out;
 			}
-			#line default
 		}
 		
 		
 		public static global::haxe.root.Array str2blks(string s) {
 			unchecked {
-				#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				global::haxe.io.Bytes s1 = global::haxe.io.Bytes.ofString(s, null);
-				#line 99 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int nblk = ( (( ( s1.length + 8 ) >> 6 )) + 1 );
 				global::haxe.root.Array blks = new global::haxe.root.Array();
-				#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				{
-					#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g = 0;
-					#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g1 = ( nblk * 16 );
-					#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					while (( _g < _g1 )) {
-						#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int i = _g++;
 						int __temp_expr1 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(i, 0))) );
 					}
 					
 				}
 				
-				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				{
-					#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g2 = 0;
-					#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g3 = s1.length;
-					#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					while (( _g2 < _g3 )) {
-						#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int i1 = _g2++;
 						int p = ( i1 >> 2 );
-						#line 106 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int __temp_expr2 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(p, ( ((int) (global::haxe.lang.Runtime.toInt(blks.__get(p))) ) | ( ((int) (((byte) (s1.b[i1]) )) ) << ( 24 - (( (( i1 & 3 )) << 3 )) ) ) )))) );
 					}
 					
 				}
 				
-				#line 108 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int i2 = s1.length;
 				int p1 = ( i2 >> 2 );
-				#line 110 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int __temp_expr3 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(p1, ( ((int) (global::haxe.lang.Runtime.toInt(blks.__get(p1))) ) | ( 128 << ( 24 - (( (( i2 & 3 )) << 3 )) ) ) )))) );
 				int __temp_expr4 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(( ( nblk * 16 ) - 1 ), ( s1.length * 8 )))) );
-				#line 112 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return blks;
 			}
-			#line default
 		}
 		
 		
 		public static global::haxe.root.Array bytes2blks(global::haxe.io.Bytes b) {
 			unchecked {
-				#line 116 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int nblk = ( (( ( b.length + 8 ) >> 6 )) + 1 );
 				global::haxe.root.Array blks = new global::haxe.root.Array();
-				#line 119 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				{
-					#line 119 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g = 0;
-					#line 119 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g1 = ( nblk * 16 );
-					#line 119 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					while (( _g < _g1 )) {
-						#line 119 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int i = _g++;
 						int __temp_expr1 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(i, 0))) );
 					}
 					
 				}
 				
-				#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				{
-					#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g2 = 0;
-					#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g3 = b.length;
-					#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					while (( _g2 < _g3 )) {
-						#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int i1 = _g2++;
 						int p = ( i1 >> 2 );
-						#line 123 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int __temp_expr2 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(p, ( ((int) (global::haxe.lang.Runtime.toInt(blks.__get(p))) ) | ( ((int) (((byte) (b.b[i1]) )) ) << ( 24 - (( (( i1 & 3 )) << 3 )) ) ) )))) );
 					}
 					
 				}
 				
-				#line 125 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int i2 = b.length;
 				int p1 = ( i2 >> 2 );
-				#line 127 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int __temp_expr3 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(p1, ( ((int) (global::haxe.lang.Runtime.toInt(blks.__get(p1))) ) | ( 128 << ( 24 - (( (( i2 & 3 )) << 3 )) ) ) )))) );
 				int __temp_expr4 = ((int) (global::haxe.lang.Runtime.toInt(blks.__set(( ( nblk * 16 ) - 1 ), ( b.length * 8 )))) );
-				#line 129 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return blks;
 			}
-			#line default
 		}
 		
 		
 		public virtual global::haxe.root.Array doEncode(global::haxe.root.Array x) {
 			unchecked {
-				#line 51 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				global::haxe.root.Array w = new global::haxe.root.Array();
-				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int a = 1732584193;
 				int b = -271733879;
-				#line 55 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int c = -1732584194;
 				int d = 271733878;
-				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int e = -1009589776;
-				#line 59 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				int i = 0;
 				while (( i < x.length )) {
-					#line 61 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int olda = a;
 					int oldb = b;
-					#line 63 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int oldc = c;
 					int oldd = d;
-					#line 65 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int olde = e;
-					#line 67 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int j = 0;
 					while (( j < 80 )) {
-						#line 69 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						if (( j < 16 )) {
-							#line 70 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 							int __temp_expr2 = ((int) (global::haxe.lang.Runtime.toInt(w.__set(j, ((int) (global::haxe.lang.Runtime.toInt(x.__get(( i + j )))) )))) );
 						}
 						else {
-							#line 72 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 							int num = ( ( ( ((int) (global::haxe.lang.Runtime.toInt(w.__get(( j - 3 )))) ) ^ ((int) (global::haxe.lang.Runtime.toInt(w.__get(( j - 8 )))) ) ) ^ ((int) (global::haxe.lang.Runtime.toInt(w.__get(( j - 14 )))) ) ) ^ ((int) (global::haxe.lang.Runtime.toInt(w.__get(( j - 16 )))) ) );
-							#line 72 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 							int __temp_expr1 = ((int) (global::haxe.lang.Runtime.toInt(w.__set(j, ( ( num << 1 ) | ((int) (( ((uint) (num) ) >> 31 )) ) )))) );
 						}
 						
-						#line 73 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int t = ( ( ( ( (( ( a << 5 ) | ((int) (( ((uint) (a) ) >> 27 )) ) )) + this.ft(j, b, c, d) ) + e ) + ((int) (global::haxe.lang.Runtime.toInt(w.__get(j))) ) ) + this.kt(j) );
 						e = d;
-						#line 75 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						d = c;
 						c = ( ( b << 30 ) | ((int) (( ((uint) (b) ) >> 2 )) ) );
-						#line 77 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						b = a;
 						a = t;
-						#line 79 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						 ++ j;
 					}
 					
-					#line 81 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					a += olda;
 					b += oldb;
-					#line 83 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					c += oldc;
 					d += oldd;
-					#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					e += olde;
 					i += 16;
 				}
 				
-				#line 88 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return new global::haxe.root.Array(new object[]{a, b, c, d, e});
 			}
-			#line default
 		}
 		
 		
 		public int rol(int num, int cnt) {
 			unchecked {
-				#line 136 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return ( ( num << cnt ) | ((int) (( ((uint) (num) ) >> ( 32 - cnt ) )) ) );
 			}
-			#line default
 		}
 		
 		
 		public virtual int ft(int t, int b, int c, int d) {
 			unchecked {
-				#line 143 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				if (( t < 20 )) {
-					#line 144 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					return ( ( b & c ) | (  ~ (b)  & d ) );
 				}
 				
-				#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				if (( t < 40 )) {
-					#line 146 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					return ( ( b ^ c ) ^ d );
 				}
 				
-				#line 147 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				if (( t < 60 )) {
-					#line 148 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					return ( ( ( b & c ) | ( b & d ) ) | ( c & d ) );
 				}
 				
-				#line 149 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return ( ( b ^ c ) ^ d );
 			}
-			#line default
 		}
 		
 		
 		public virtual int kt(int t) {
 			unchecked {
-				#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				if (( t < 20 )) {
-					#line 157 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					return 1518500249;
 				}
 				
-				#line 158 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				if (( t < 40 )) {
-					#line 159 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					return 1859775393;
 				}
 				
-				#line 160 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				if (( t < 60 )) {
-					#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					return -1894007588;
 				}
 				
-				#line 162 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return -899497514;
 			}
-			#line default
 		}
 		
 		
 		public virtual string hex(global::haxe.root.Array a) {
 			unchecked {
-				#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				string str = "";
 				{
-					#line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					int _g = 0;
-					#line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 					while (( _g < a.length )) {
-						#line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						int num = ((int) (global::haxe.lang.Runtime.toInt(a.__get(_g))) );
-						#line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						 ++ _g;
 						str = global::haxe.lang.Runtime.concat(str, global::haxe.root.StringTools.hex(num, 8));
 					}
 					
 				}
 				
-				#line 170 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				return str.ToLowerInvariant();
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				switch (hash) {
 					case 5194459:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hex", 5194459)) );
 					}
 					
 					
 					case 23977:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "kt", 23977)) );
 					}
 					
 					
 					case 22862:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "ft", 22862)) );
 					}
 					
 					
 					case 5693967:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "rol", 5693967)) );
 					}
 					
 					
 					case 234584065:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "doEncode", 234584065)) );
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 				switch (hash) {
 					case 5194459:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return this.hex(((global::haxe.root.Array) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 23977:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return this.kt(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 22862:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return this.ft(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[3]) ))) ));
 					}
 					
 					
 					case 5693967:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return this.rol(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ));
 					}
 					
 					
 					case 234584065:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return this.doEncode(((global::haxe.root.Array) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Sha1.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		

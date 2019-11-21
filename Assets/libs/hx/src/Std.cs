@@ -10,137 +10,103 @@ namespace haxe.root {
 		
 		
 		public static bool @is(object v, object t) {
-			#line 29 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			if (( v == null )) {
-				#line 30 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				return false;
 			}
 			
-			#line 31 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			if (( t == null )) {
-				#line 32 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				return false;
 			}
 			
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			global::System.Type clt = ((global::System.Type) (( t as global::System.Type )) );
 			if (global::haxe.lang.Runtime.typeEq(clt, null)) {
-				#line 35 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				return false;
 			}
 			
-			#line 37 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			switch (( clt as global::System.Reflection.MemberInfo ).ToString()) {
 				case "System.Boolean":
 				{
-					#line 43 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return v is bool;
 				}
 				
 				
 				case "System.Double":
 				{
-					#line 39 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return v is double || v is int;
 				}
 				
 				
 				case "System.Int32":
 				{
-					#line 41 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return global::haxe.lang.Runtime.isInt(v);
 				}
 				
 				
 				case "System.Object":
 				{
-					#line 45 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return true;
 				}
 				
 				
 			}
 			
-			#line 48 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			global::System.Type vt = v.GetType();
-			#line 50 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			if (clt.IsAssignableFrom(((global::System.Type) (vt) ))) {
-				#line 51 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				return true;
 			}
 			
-			#line 62 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			return false;
 		}
-		#line default
+		
 		
 		public static string @string(object s) {
-			#line 66 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			if (( s == null )) {
-				#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				return "null";
 			}
 			
-			#line 68 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			if (( s is bool )) {
-				#line 69 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (global::haxe.lang.Runtime.toBool(s)) {
-					#line 69 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return "true";
 				}
 				else {
-					#line 69 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return "false";
 				}
 				
 			}
 			
-			#line 71 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			return s.ToString();
 		}
-		#line default
+		
 		
 		public static int @int(double x) {
-			#line 75 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			return ((int) (x) );
 		}
-		#line default
+		
 		
 		public static object parseInt(string x) {
 			unchecked {
-				#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (( x == null )) {
-					#line 80 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return null;
 				}
 				
-				#line 82 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				int ret = 0;
 				int @base = 10;
-				#line 84 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				int i = -1;
 				int len = x.Length;
-				#line 87 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (( x.StartsWith("0") && ( len > 2 ) )) {
-					#line 88 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					int c = ((int) (x[1]) );
 					if (( ( c == 120 ) || ( c == 88 ) )) {
-						#line 90 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						i = 1;
 						@base = 16;
 					}
 					
 				}
 				
-				#line 95 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				bool foundAny = ( i != -1 );
 				bool isNeg = false;
-				#line 97 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				while ((  ++ i < len )) {
-					#line 98 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					int c1 = ((int) (x[i]) );
 					if ( ! (foundAny) ) {
-						#line 100 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						switch (c1) {
 							case 9:
 							case 10:
@@ -148,20 +114,16 @@ namespace haxe.root {
 							case 32:
 							case 43:
 							{
-								#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								if (isNeg) {
-									#line 106 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									return null;
 								}
 								
-								#line 107 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								continue;
 							}
 							
 							
 							case 45:
 							{
-								#line 102 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								isNeg = true;
 								continue;
 							}
@@ -171,82 +133,61 @@ namespace haxe.root {
 						
 					}
 					
-					#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					if (( ( c1 >= 48 ) && ( c1 <= 57 ) )) {
-						#line 112 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						if ((  ! (foundAny)  && ( c1 == 48 ) )) {
-							#line 113 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							foundAny = true;
 							continue;
 						}
 						
-						#line 116 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						ret *= @base;
 						foundAny = true;
-						#line 119 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						ret += ( c1 - 48 );
 					}
 					else if (( @base == 16 )) {
-						#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						if (( ( c1 >= 97 ) && ( c1 <= 102 ) )) {
-							#line 122 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							ret *= @base;
 							foundAny = true;
-							#line 124 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							ret += ( ( c1 - 97 ) + 10 );
 						}
 						else if (( ( c1 >= 65 ) && ( c1 <= 70 ) )) {
-							#line 126 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							ret *= @base;
 							foundAny = true;
-							#line 128 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							ret += ( ( c1 - 65 ) + 10 );
 						}
 						else {
-							#line 130 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							break;
 						}
 						
 					}
 					else {
-						#line 133 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						break;
 					}
 					
 				}
 				
-				#line 137 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (foundAny) {
-					#line 138 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					if (isNeg) {
-						#line 138 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						return  - (ret) ;
 					}
 					else {
-						#line 138 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						return ret;
 					}
 					
 				}
 				else {
-					#line 140 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return null;
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public static double parseFloat(string x) {
 			unchecked {
-				#line 144 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (( x == null )) {
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return global::haxe.root.Math.NaN;
 				}
 				
-				#line 146 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				x = x.TrimStart();
 				bool found = false;
 				bool hasDot = false;
@@ -254,60 +195,44 @@ namespace haxe.root {
 				bool hasE = false;
 				bool hasESign = false;
 				bool hasEData = false;
-				#line 153 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				int i = -1;
-				#line 157 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				while ((  ++ i < x.Length )) {
-					#line 158 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					int chr = ((int) (((global::System.String) (x) )[i]) );
 					if (( ( chr >= 48 ) && ( chr <= 57 ) )) {
-						#line 160 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						if (hasE) {
-							#line 161 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 							hasEData = true;
 						}
 						
-						#line 163 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						found = true;
 					}
 					else {
-						#line 165 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						switch (chr) {
 							case 43:
 							case 45:
 							{
-								#line 170 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								if ((  ! (found)  &&  ! (hasSign)  )) {
-									#line 171 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									hasSign = true;
 								}
 								else if (( ( ( found &&  ! (hasESign)  ) && hasE ) &&  ! (hasEData)  )) {
-									#line 173 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									hasESign = true;
 								}
 								else {
-									#line 175 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									goto label1;
 								}
 								
-								#line 170 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								break;
 							}
 							
 							
 							case 46:
 							{
-								#line 168 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								if ( ! (hasDot) ) {
-									#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									hasDot = true;
 								}
 								else {
-									#line 175 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									goto label1;
 								}
 								
-								#line 168 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								break;
 							}
 							
@@ -315,24 +240,19 @@ namespace haxe.root {
 							case 69:
 							case 101:
 							{
-								#line 166 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								if ( ! (hasE) ) {
-									#line 167 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									hasE = true;
 								}
 								else {
-									#line 175 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 									goto label1;
 								}
 								
-								#line 166 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								break;
 							}
 							
 							
 							default:
 							{
-								#line 175 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 								goto label1;
 							}
 							
@@ -342,54 +262,40 @@ namespace haxe.root {
 					
 				}
 				label1: {};
-				#line 178 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (( hasE &&  ! (hasEData)  )) {
-					#line 179 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					 -- i;
 					if (hasESign) {
-						#line 181 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 						 -- i;
 					}
 					
 				}
 				
-				#line 183 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				if (( i != x.Length )) {
-					#line 184 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					x = global::haxe.lang.StringExt.substr(x, 0, i);
 				}
 				
-				#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				try {
-					#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return global::System.Double.Parse(((string) (x) ), ((global::System.IFormatProvider) (global::System.Globalization.CultureInfo.InvariantCulture) ));
 				}
 				catch (global::System.Exception catchallException){
-					#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					global::haxe.lang.Exceptions.exception = catchallException;
-					#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					object e = ( (( catchallException is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException) ).obj) : ((object) (catchallException) ) );
-					#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 					return global::haxe.root.Math.NaN;
 				}
 				
 				
 			}
-			#line default
 		}
 		
 		
 		public static int random(int x) {
-			#line 199 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			if (( x <= 0 )) {
-				#line 200 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 				return 0;
 			}
 			
-			#line 201 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Std.hx"
 			return global::haxe.root.Math.rand.Next(((int) (x) ));
 		}
-		#line default
+		
 		
 	}
 }

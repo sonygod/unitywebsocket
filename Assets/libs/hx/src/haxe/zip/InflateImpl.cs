@@ -7,36 +7,30 @@ namespace haxe.zip._InflateImpl {
 		
 		static Window() {
 			unchecked{
-				#line 29 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip._InflateImpl.Window.SIZE = 32768;
 				global::haxe.zip._InflateImpl.Window.BUFSIZE = 65536;
 			}
 		}
-		#line default
+		
 		
 		public Window(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public Window(bool hasCrc) {
-			#line 37 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			global::haxe.zip._InflateImpl.Window.__hx_ctor_haxe_zip__InflateImpl_Window(this, hasCrc);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_zip__InflateImpl_Window(global::haxe.zip._InflateImpl.Window __hx_this, bool hasCrc) {
 			unchecked {
-				#line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.buffer = global::haxe.io.Bytes.alloc(65536);
 				__hx_this.pos = 0;
-				#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (hasCrc) {
-					#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.crc = new global::haxe.crypto.Adler32();
 				}
 				
 			}
-			#line default
 		}
 		
 		
@@ -52,334 +46,268 @@ namespace haxe.zip._InflateImpl {
 		
 		public virtual void slide() {
 			unchecked {
-				#line 45 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (( this.crc != null )) {
-					#line 46 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					this.crc.update(this.buffer, 0, 32768);
 				}
 				
-				#line 47 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.io.Bytes b = global::haxe.io.Bytes.alloc(65536);
 				this.pos -= 32768;
-				#line 49 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				b.blit(0, this.buffer, 32768, this.pos);
 				this.buffer = b;
 			}
-			#line default
 		}
 		
 		
 		public virtual void addBytes(global::haxe.io.Bytes b, int p, int len) {
 			unchecked {
-				#line 54 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (( ( this.pos + len ) > 65536 )) {
-					#line 55 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					this.slide();
 				}
 				
-				#line 56 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				this.buffer.blit(this.pos, b, p, len);
 				this.pos += len;
 			}
-			#line default
 		}
 		
 		
 		public virtual void addByte(int c) {
 			unchecked {
-				#line 61 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (( this.pos == 65536 )) {
-					#line 62 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					this.slide();
 				}
 				
-				#line 63 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				this.buffer.b[this.pos] = ((byte) (c) );
 				this.pos++;
 			}
-			#line default
 		}
 		
 		
 		public virtual int getLastChar() {
 			unchecked {
-				#line 68 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				return ((int) (((byte) (this.buffer.b[( this.pos - 1 )]) )) );
 			}
-			#line default
 		}
 		
 		
 		public virtual int available() {
-			#line 72 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return this.pos;
 		}
-		#line default
+		
 		
 		public virtual global::haxe.crypto.Adler32 checksum() {
-			#line 76 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			if (( this.crc != null )) {
-				#line 77 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				this.crc.update(this.buffer, 0, this.pos);
 			}
 			
-			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return this.crc;
 		}
-		#line default
+		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 5594516:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.pos = ((int) (@value) );
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 4948692:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.crc = ((global::haxe.crypto.Adler32) (@value) );
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 5594516:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.pos = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1351924992:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.buffer = ((global::haxe.io.Bytes) (@value) );
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 755154371:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "checksum", 755154371)) );
 					}
 					
 					
 					case 2005096905:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "available", 2005096905)) );
 					}
 					
 					
 					case 2063350530:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getLastChar", 2063350530)) );
 					}
 					
 					
 					case 2103468489:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addByte", 2103468489)) );
 					}
 					
 					
 					case 922037898:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addBytes", 922037898)) );
 					}
 					
 					
 					case 2127021361:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "slide", 2127021361)) );
 					}
 					
 					
 					case 4948692:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.crc;
 					}
 					
 					
 					case 5594516:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.pos;
 					}
 					
 					
 					case 1351924992:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.buffer;
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 5594516:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.pos) );
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 755154371:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.checksum();
 					}
 					
 					
 					case 2005096905:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.available();
 					}
 					
 					
 					case 2063350530:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.getLastChar();
 					}
 					
 					
 					case 2103468489:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.addByte(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 922037898:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.addBytes(((global::haxe.io.Bytes) (((object) (dynargs[0]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ));
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 2127021361:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.slide();
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					default:
 					{
-						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				return null;
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("crc");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("pos");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("buffer");
-			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }
@@ -426,10 +354,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 83 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "Head";
 		}
-		#line default
+		
 		
 	}
 }
@@ -445,10 +372,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 84 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "Block";
 		}
-		#line default
+		
 		
 	}
 }
@@ -464,10 +390,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "CData";
 		}
-		#line default
+		
 		
 	}
 }
@@ -483,10 +408,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 86 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "Flat";
 		}
-		#line default
+		
 		
 	}
 }
@@ -502,10 +426,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 87 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "Crc";
 		}
-		#line default
+		
 		
 	}
 }
@@ -521,10 +444,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 88 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "Dist";
 		}
-		#line default
+		
 		
 	}
 }
@@ -540,10 +462,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 89 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "DistOne";
 		}
-		#line default
+		
 		
 	}
 }
@@ -559,10 +480,9 @@ namespace haxe.zip._InflateImpl {
 		
 		
 		public override string getTag() {
-			#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return "Done";
 		}
-		#line default
+		
 		
 	}
 }
@@ -575,104 +495,67 @@ namespace haxe.zip {
 		
 		static InflateImpl() {
 			unchecked{
-				#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.LEN_EXTRA_BITS_TBL = new global::haxe.root.Array(new object[]{0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, -1, -1});
-				#line 100 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.LEN_BASE_VAL_TBL = new global::haxe.root.Array(new object[]{3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258});
-				#line 103 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.DIST_EXTRA_BITS_TBL = new global::haxe.root.Array(new object[]{0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, -1, -1});
-				#line 106 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.DIST_BASE_VAL_TBL = new global::haxe.root.Array(new object[]{1, 2, 3, 4, 5, 7, 9, 13, 17, 25, 33, 49, 65, 97, 129, 193, 257, 385, 513, 769, 1025, 1537, 2049, 3073, 4097, 6145, 8193, 12289, 16385, 24577});
-				#line 109 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.CODE_LENGTHS_POS = new global::haxe.root.Array(new object[]{16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15});
-				#line 127 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.FIXED_HUFFMAN = null;
 			}
 		}
-		#line default
+		
 		
 		public InflateImpl(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public InflateImpl(global::haxe.io.Input i, object header, object crc) {
-			#line 129 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			global::haxe.zip.InflateImpl.__hx_ctor_haxe_zip_InflateImpl(this, i, header, crc);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_zip_InflateImpl(global::haxe.zip.InflateImpl __hx_this, global::haxe.io.Input i, object header, object crc) {
 			unchecked {
-				#line 129 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				object crc1 = ( (( crc == default(object) )) ? (((object) (true) )) : (crc) );
-				#line 129 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				object header1 = ( (( header == default(object) )) ? (((object) (true) )) : (header) );
 				__hx_this.isFinal = false;
-				#line 131 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.htools = new global::haxe.zip.HuffTools();
 				__hx_this.huffman = __hx_this.buildFixedHuffman();
-				#line 133 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.huffdist = null;
 				__hx_this.len = 0;
-				#line 135 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.dist = 0;
 				__hx_this.state = ( (global::haxe.lang.Runtime.toBool((header1))) ? (global::haxe.zip._InflateImpl.State.Head) : (global::haxe.zip._InflateImpl.State.Block) );
-				#line 137 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.input = i;
 				__hx_this.bits = 0;
-				#line 139 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.nbits = 0;
 				__hx_this.needed = 0;
-				#line 141 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.output = null;
 				__hx_this.outpos = 0;
-				#line 143 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.lengths = new global::haxe.root.Array();
 				{
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
-					#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					__hx_this.lengths.push(-1);
 				}
 				
-				#line 146 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				__hx_this.window = new global::haxe.zip._InflateImpl.Window(global::haxe.lang.Runtime.toBool(crc1));
 			}
-			#line default
 		}
 		
 		
@@ -690,39 +573,28 @@ namespace haxe.zip {
 		
 		public static global::haxe.io.Bytes run(global::haxe.io.Input i, object bufsize) {
 			unchecked {
-				#line 388 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				object bufsize1 = ( (( bufsize == default(object) )) ? (((object) (65536) )) : (bufsize) );
 				global::haxe.io.Bytes buf = global::haxe.io.Bytes.alloc(((int) (global::haxe.lang.Runtime.toInt(bufsize1)) ));
-				#line 390 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.io.BytesBuffer output = new global::haxe.io.BytesBuffer();
 				global::haxe.zip.InflateImpl inflate = new global::haxe.zip.InflateImpl(i, null, null);
-				#line 392 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				while (true) {
-					#line 393 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					int len = inflate.readBytes(buf, 0, ((int) (global::haxe.lang.Runtime.toInt(bufsize1)) ));
 					{
-						#line 394 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						if (( ( len < 0 ) || ( len > buf.length ) )) {
-							#line 394 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							throw global::haxe.lang.HaxeException.wrap(global::haxe.io.Error.OutsideBounds);
 						}
 						
-						#line 394 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						( output.b as global::System.IO.Stream ).Write(((byte[]) (buf.b) ), ((int) (0) ), ((int) (len) ));
 					}
 					
-					#line 395 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					if (( len < ((int) (global::haxe.lang.Runtime.toInt(bufsize1)) ) )) {
-						#line 396 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 				}
 				
-				#line 398 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				return output.getBytes();
 			}
-			#line default
 		}
 		
 		
@@ -758,151 +630,114 @@ namespace haxe.zip {
 		
 		public virtual global::haxe.zip.Huffman buildFixedHuffman() {
 			unchecked {
-				#line 150 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (( global::haxe.zip.InflateImpl.FIXED_HUFFMAN != null )) {
-					#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					return global::haxe.zip.InflateImpl.FIXED_HUFFMAN;
 				}
 				
-				#line 152 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.root.Array a = new global::haxe.root.Array();
 				{
-					#line 153 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					int _g = 0;
-					#line 153 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					while (( _g < 288 )) {
-						#line 153 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int n = _g++;
 						a.push(( (( n <= 143 )) ? (8) : (( (( n <= 255 )) ? (9) : (( (( n <= 279 )) ? (7) : (8) )) )) ));
 					}
 					
 				}
 				
-				#line 155 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				global::haxe.zip.InflateImpl.FIXED_HUFFMAN = this.htools.make(a, 0, 288, 10);
 				return global::haxe.zip.InflateImpl.FIXED_HUFFMAN;
 			}
-			#line default
 		}
 		
 		
 		public virtual int readBytes(global::haxe.io.Bytes b, int pos, int len) {
-			#line 160 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.needed = len;
 			this.outpos = pos;
-			#line 162 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.output = b;
 			if (( len > 0 )) {
-				#line 164 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				while (this.inflateLoop()) {
 				}
 				
 			}
 			
-			#line 165 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			return ( len - this.needed );
 		}
-		#line default
+		
 		
 		public virtual int getBits(int n) {
 			unchecked {
-				#line 169 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				while (( this.nbits < n )) {
-					#line 170 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					this.bits |= ( this.input.readByte() << this.nbits );
 					this.nbits += 8;
 				}
 				
-				#line 173 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				int b = ( this.bits & ( (( 1 << n )) - 1 ) );
 				this.nbits -= n;
-				#line 175 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				this.bits >>= n;
 				return b;
 			}
-			#line default
 		}
 		
 		
 		public virtual bool getBit() {
 			unchecked {
-				#line 180 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (( this.nbits == 0 )) {
-					#line 181 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					this.nbits = 8;
 					this.bits = this.input.readByte();
 				}
 				
-				#line 184 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				bool b = ( (( this.bits & 1 )) == 1 );
 				this.nbits--;
-				#line 186 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				this.bits >>= 1;
 				return b;
 			}
-			#line default
 		}
 		
 		
 		public virtual int getRevBits(int n) {
 			unchecked {
-				#line 191 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				if (( n == 0 )) {
-					#line 192 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					return 0;
 				}
 				else if (this.getBit()) {
-					#line 194 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					return ( ( 1 << ( n - 1 ) ) | this.getRevBits(( n - 1 )) );
 				}
 				else {
-					#line 196 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					return this.getRevBits(( n - 1 ));
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public virtual void resetBits() {
-			#line 200 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.bits = 0;
 			this.nbits = 0;
 		}
-		#line default
+		
 		
 		public virtual void addBytes(global::haxe.io.Bytes b, int p, int len) {
-			#line 205 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.window.addBytes(b, p, len);
 			this.output.blit(this.outpos, b, p, len);
-			#line 207 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.needed -= len;
 			this.outpos += len;
 		}
-		#line default
+		
 		
 		public virtual void addByte(int b) {
-			#line 212 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.window.addByte(b);
 			this.output.b[this.outpos] = ((byte) (b) );
-			#line 214 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.needed--;
 			this.outpos++;
 		}
-		#line default
+		
 		
 		public virtual void addDistOne(int n) {
-			#line 219 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			int c = this.window.getLastChar();
 			{
-				#line 220 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				int _g = 0;
-				#line 220 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				int _g1 = n;
-				#line 220 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				while (( _g < _g1 )) {
-					#line 220 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					int i = _g++;
 					this.addByte(c);
 				}
@@ -910,66 +745,51 @@ namespace haxe.zip {
 			}
 			
 		}
-		#line default
+		
 		
 		public virtual void addDist(int d, int len) {
-			#line 225 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			this.addBytes(this.window.buffer, ( this.window.pos - d ), len);
 		}
-		#line default
+		
 		
 		public virtual int applyHuffman(global::haxe.zip.Huffman h) {
 			unchecked {
-				#line 229 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (h._hx_index) {
 					case 0:
 					{
-						#line 230 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int n = ( h as global::haxe.zip.Huffman_Found ).i;
-						#line 230 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return n;
 					}
 					
 					
 					case 1:
 					{
-						#line 231 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						global::haxe.zip.Huffman b = ( h as global::haxe.zip.Huffman_NeedBit ).right;
-						#line 231 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						global::haxe.zip.Huffman a = ( h as global::haxe.zip.Huffman_NeedBit ).left;
-						#line 231 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.applyHuffman(( (this.getBit()) ? (b) : (a) ));
 					}
 					
 					
 					case 2:
 					{
-						#line 232 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						global::haxe.root.Array tbl = ( h as global::haxe.zip.Huffman_NeedBits ).table;
-						#line 232 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int n1 = ( h as global::haxe.zip.Huffman_NeedBits ).n;
-						#line 232 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.applyHuffman(((global::haxe.zip.Huffman) (tbl.__get(this.getBits(n1))) ));
 					}
 					
 					
 				}
 				
-				#line 228 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				return default(int);
 			}
-			#line default
 		}
 		
 		
 		public virtual void inflateLengths(global::haxe.root.Array a, int max) {
 			unchecked {
-				#line 237 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				int i = 0;
 				int prev = 0;
-				#line 239 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				while (( i < max )) {
-					#line 240 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 					int n = this.applyHuffman(this.huffman);
 					switch (n) {
 						case 0:
@@ -989,68 +809,53 @@ namespace haxe.zip {
 						case 14:
 						case 15:
 						{
-							#line 243 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							prev = n;
 							int __temp_expr1 = ((int) (global::haxe.lang.Runtime.toInt(a.__set(i, n))) );
-							#line 245 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							 ++ i;
-							#line 242 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							break;
 						}
 						
 						
 						case 16:
 						{
-							#line 247 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							int end = ( ( i + 3 ) + this.getBits(2) );
 							if (( end > max )) {
-								#line 249 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
-							#line 250 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							while (( i < end )) {
-								#line 251 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								int __temp_expr2 = ((int) (global::haxe.lang.Runtime.toInt(a.__set(i, prev))) );
 								 ++ i;
 							}
 							
-							#line 246 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							break;
 						}
 						
 						
 						case 17:
 						{
-							#line 255 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							i += ( 3 + this.getBits(3) );
 							if (( i > max )) {
-								#line 257 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
-							#line 254 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							break;
 						}
 						
 						
 						case 18:
 						{
-							#line 259 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							i += ( 11 + this.getBits(7) );
 							if (( i > max )) {
-								#line 261 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
-							#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							break;
 						}
 						
 						
 						default:
 						{
-							#line 263 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							throw global::haxe.lang.HaxeException.wrap("Invalid data");
 						}
 						
@@ -1059,43 +864,31 @@ namespace haxe.zip {
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public virtual bool inflateLoop() {
 			unchecked {
-				#line 269 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (this.state._hx_index) {
 					case 0:
 					{
-						#line 271 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int cmf = this.input.readByte();
 						int cm = ( cmf & 15 );
-						#line 273 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int cinfo = ( cmf >> 4 );
 						if (( cm != 8 )) {
-							#line 275 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							throw global::haxe.lang.HaxeException.wrap("Invalid data");
 						}
 						
-						#line 276 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int flg = this.input.readByte();
-						#line 278 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						bool fdict = ( (( flg & 32 )) != 0 );
-						#line 280 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						if (( ( (( (( cmf << 8 )) + flg )) % 31 ) != 0 )) {
-							#line 281 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							throw global::haxe.lang.HaxeException.wrap("Invalid data");
 						}
 						
-						#line 282 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						if (fdict) {
-							#line 283 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							throw global::haxe.lang.HaxeException.wrap("Unsupported dictionary");
 						}
 						
-						#line 284 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.state = global::haxe.zip._InflateImpl.State.Block;
 						return true;
 					}
@@ -1103,24 +896,18 @@ namespace haxe.zip {
 					
 					case 1:
 					{
-						#line 301 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.isFinal = this.getBit();
 						switch (this.getBits(2)) {
 							case 0:
 							{
-								#line 304 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.len = this.input.readUInt16();
 								int nlen = this.input.readUInt16();
-								#line 306 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								if (( nlen != ( 65535 - this.len ) )) {
-									#line 306 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									throw global::haxe.lang.HaxeException.wrap("Invalid data");
 								}
 								
-								#line 307 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.state = global::haxe.zip._InflateImpl.State.Flat;
 								bool r = this.inflateLoop();
-								#line 309 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.resetBits();
 								return r;
 							}
@@ -1128,10 +915,8 @@ namespace haxe.zip {
 							
 							case 1:
 							{
-								#line 312 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.huffman = this.buildFixedHuffman();
 								this.huffdist = null;
-								#line 314 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.state = global::haxe.zip._InflateImpl.State.CData;
 								return true;
 							}
@@ -1139,72 +924,51 @@ namespace haxe.zip {
 							
 							case 2:
 							{
-								#line 317 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								int hlit = ( this.getBits(5) + 257 );
 								int hdist = ( this.getBits(5) + 1 );
-								#line 319 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								int hclen = ( this.getBits(4) + 4 );
 								{
-									#line 320 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									int _g = 0;
-									#line 320 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									int _g1 = hclen;
-									#line 320 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									while (( _g < _g1 )) {
-										#line 320 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 										int i = _g++;
 										int __temp_expr1 = ((int) (global::haxe.lang.Runtime.toInt(this.lengths.__set(((int) (global::haxe.lang.Runtime.toInt(global::haxe.zip.InflateImpl.CODE_LENGTHS_POS.__get(i))) ), this.getBits(3)))) );
 									}
 									
 								}
 								
-								#line 322 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								{
-									#line 322 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									int _g2 = hclen;
-									#line 322 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									int _g3 = 19;
-									#line 322 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									while (( _g2 < _g3 )) {
-										#line 322 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 										int i1 = _g2++;
 										int __temp_expr2 = ((int) (global::haxe.lang.Runtime.toInt(this.lengths.__set(((int) (global::haxe.lang.Runtime.toInt(global::haxe.zip.InflateImpl.CODE_LENGTHS_POS.__get(i1))) ), 0))) );
 									}
 									
 								}
 								
-								#line 324 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.huffman = this.htools.make(this.lengths, 0, 19, 8);
 								global::haxe.root.Array lengths = new global::haxe.root.Array();
-								#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								{
-									#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									int _g4 = 0;
-									#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									int _g5 = ( hlit + hdist );
-									#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 									while (( _g4 < _g5 )) {
-										#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 										int i2 = _g4++;
 										lengths.push(0);
 									}
 									
 								}
 								
-								#line 328 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.inflateLengths(lengths, ( hlit + hdist ));
 								this.huffdist = this.htools.make(lengths, hlit, hdist, 16);
-								#line 330 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								this.huffman = this.htools.make(lengths, 0, hlit, 16);
 								this.state = global::haxe.zip._InflateImpl.State.CData;
-								#line 332 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								return true;
 							}
 							
 							
 							default:
 							{
-								#line 334 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
@@ -1215,46 +979,34 @@ namespace haxe.zip {
 					
 					case 2:
 					{
-						#line 362 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int n = this.applyHuffman(this.huffman);
 						if (( n < 256 )) {
-							#line 364 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.addByte(n);
 							return ( this.needed > 0 );
 						}
 						else if (( n == 256 )) {
-							#line 367 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.state = ( (this.isFinal) ? (global::haxe.zip._InflateImpl.State.Crc) : (global::haxe.zip._InflateImpl.State.Block) );
 							return true;
 						}
 						else {
-							#line 370 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							n -= 257;
 							int extra_bits = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.zip.InflateImpl.LEN_EXTRA_BITS_TBL.__get(n))) );
-							#line 372 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							if (( extra_bits == -1 )) {
-								#line 373 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
-							#line 374 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.len = ( ((int) (global::haxe.lang.Runtime.toInt(global::haxe.zip.InflateImpl.LEN_BASE_VAL_TBL.__get(n))) ) + this.getBits(extra_bits) );
 							int dist_code = ( (( this.huffdist == null )) ? (this.getRevBits(5)) : (this.applyHuffman(this.huffdist)) );
-							#line 376 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							extra_bits = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.zip.InflateImpl.DIST_EXTRA_BITS_TBL.__get(dist_code))) );
 							if (( extra_bits == -1 )) {
-								#line 378 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
-							#line 379 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.dist = ( ((int) (global::haxe.lang.Runtime.toInt(global::haxe.zip.InflateImpl.DIST_BASE_VAL_TBL.__get(dist_code))) ) + this.getBits(extra_bits) );
 							if (( this.dist > this.window.available() )) {
-								#line 381 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 								throw global::haxe.lang.HaxeException.wrap("Invalid data");
 							}
 							
-							#line 382 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.state = ( (( this.dist == 1 )) ? (global::haxe.zip._InflateImpl.State.DistOne) : (global::haxe.zip._InflateImpl.State.Dist) );
 							return true;
 						}
@@ -1264,41 +1016,31 @@ namespace haxe.zip {
 					
 					case 3:
 					{
-						#line 337 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int rlen = ( (( this.len < this.needed )) ? (this.len) : (this.needed) );
 						global::haxe.io.Bytes bytes = this.input.read(rlen);
-						#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.len -= rlen;
 						this.addBytes(bytes, 0, rlen);
-						#line 341 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						if (( this.len == 0 )) {
-							#line 342 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.state = ( (this.isFinal) ? (global::haxe.zip._InflateImpl.State.Crc) : (global::haxe.zip._InflateImpl.State.Block) );
 						}
 						
-						#line 343 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ( this.needed > 0 );
 					}
 					
 					
 					case 4:
 					{
-						#line 287 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						global::haxe.crypto.Adler32 calc = this.window.checksum();
 						if (( calc == null )) {
-							#line 289 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.state = global::haxe.zip._InflateImpl.State.Done;
 							return true;
 						}
 						
-						#line 292 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						global::haxe.crypto.Adler32 crc = global::haxe.crypto.Adler32.read(this.input);
 						if ( ! (calc.@equals(crc)) ) {
-							#line 294 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							throw global::haxe.lang.HaxeException.wrap("Invalid CRC");
 						}
 						
-						#line 295 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.state = global::haxe.zip._InflateImpl.State.Done;
 						return true;
 					}
@@ -1306,712 +1048,572 @@ namespace haxe.zip {
 					
 					case 5:
 					{
-						#line 352 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						while (( ( this.len > 0 ) && ( this.needed > 0 ) )) {
-							#line 353 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							int rdist = ( (( this.len < this.dist )) ? (this.len) : (this.dist) );
 							int rlen1 = ( (( this.needed < rdist )) ? (this.needed) : (rdist) );
-							#line 355 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.addDist(this.dist, rlen1);
 							this.len -= rlen1;
 						}
 						
-						#line 358 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						if (( this.len == 0 )) {
-							#line 359 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.state = global::haxe.zip._InflateImpl.State.CData;
 						}
 						
-						#line 360 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ( this.needed > 0 );
 					}
 					
 					
 					case 6:
 					{
-						#line 345 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						int rlen2 = ( (( this.len < this.needed )) ? (this.len) : (this.needed) );
 						this.addDistOne(rlen2);
-						#line 347 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.len -= rlen2;
 						if (( this.len == 0 )) {
-							#line 349 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 							this.state = global::haxe.zip._InflateImpl.State.CData;
 						}
 						
-						#line 350 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ( this.needed > 0 );
 					}
 					
 					
 					case 7:
 					{
-						#line 299 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return false;
 					}
 					
 					
 				}
 				
-				#line 268 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				return default(bool);
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 209783238:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.outpos = ((int) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1707675189:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.needed = ((int) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1114204006:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.dist = ((int) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 5393365:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.len = ((int) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1092025094:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.bits = ((int) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 388680308:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.nbits = ((int) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 1384944624:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.window = ((global::haxe.zip._InflateImpl.Window) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 127579341:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.lengths = ((global::haxe.root.Array) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1042138122:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.input = ((global::haxe.io.Input) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 209783238:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.outpos = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 209784577:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.output = ((global::haxe.io.Bytes) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1707675189:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.needed = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1114204006:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.dist = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 5393365:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.len = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 692852915:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.htools = ((global::haxe.zip.HuffTools) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 58524531:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.huffdist = ((global::haxe.zip.Huffman) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 722956077:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.huffman = ((global::haxe.zip.Huffman) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 488637228:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.isFinal = global::haxe.lang.Runtime.toBool(@value);
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 67859985:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.state = ((global::haxe.zip._InflateImpl.State) (@value) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 1092025094:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.bits = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					case 388680308:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.nbits = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 633519755:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "inflateLoop", 633519755)) );
 					}
 					
 					
 					case 961933062:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "inflateLengths", 961933062)) );
 					}
 					
 					
 					case 1787083615:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "applyHuffman", 1787083615)) );
 					}
 					
 					
 					case 2124851751:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addDist", 2124851751)) );
 					}
 					
 					
 					case 627260031:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addDistOne", 627260031)) );
 					}
 					
 					
 					case 2103468489:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addByte", 2103468489)) );
 					}
 					
 					
 					case 922037898:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addBytes", 922037898)) );
 					}
 					
 					
 					case 117638261:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "resetBits", 117638261)) );
 					}
 					
 					
 					case 1395946515:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getRevBits", 1395946515)) );
 					}
 					
 					
 					case 588902871:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getBit", 588902871)) );
 					}
 					
 					
 					case 328837820:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getBits", 328837820)) );
 					}
 					
 					
 					case 243225909:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readBytes", 243225909)) );
 					}
 					
 					
 					case 666085479:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "buildFixedHuffman", 666085479)) );
 					}
 					
 					
 					case 1384944624:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.window;
 					}
 					
 					
 					case 127579341:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.lengths;
 					}
 					
 					
 					case 1042138122:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.input;
 					}
 					
 					
 					case 209783238:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.outpos;
 					}
 					
 					
 					case 209784577:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.output;
 					}
 					
 					
 					case 1707675189:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.needed;
 					}
 					
 					
 					case 1114204006:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.dist;
 					}
 					
 					
 					case 5393365:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.len;
 					}
 					
 					
 					case 692852915:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.htools;
 					}
 					
 					
 					case 58524531:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.huffdist;
 					}
 					
 					
 					case 722956077:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.huffman;
 					}
 					
 					
 					case 488637228:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.isFinal;
 					}
 					
 					
 					case 67859985:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.state;
 					}
 					
 					
 					case 1092025094:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.bits;
 					}
 					
 					
 					case 388680308:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.nbits;
 					}
 					
 					
 					default:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 209783238:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.outpos) );
 					}
 					
 					
 					case 1707675189:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.needed) );
 					}
 					
 					
 					case 1114204006:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.dist) );
 					}
 					
 					
 					case 5393365:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.len) );
 					}
 					
 					
 					case 1092025094:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.bits) );
 					}
 					
 					
 					case 388680308:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return ((double) (this.nbits) );
 					}
 					
 					
 					default:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				switch (hash) {
 					case 633519755:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.inflateLoop();
 					}
 					
 					
 					case 961933062:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.inflateLengths(((global::haxe.root.Array) (((object) (dynargs[0]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ));
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 1787083615:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.applyHuffman(((global::haxe.zip.Huffman) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 2124851751:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.addDist(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ));
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 627260031:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.addDistOne(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 2103468489:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.addByte(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 922037898:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.addBytes(((global::haxe.io.Bytes) (((object) (dynargs[0]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ));
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 117638261:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						this.resetBits();
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						break;
 					}
 					
 					
 					case 1395946515:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.getRevBits(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 588902871:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.getBit();
 					}
 					
 					
 					case 328837820:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.getBits(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 243225909:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.readBytes(((global::haxe.io.Bytes) (((object) (dynargs[0]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ));
 					}
 					
 					
 					case 666085479:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return this.buildFixedHuffman();
 					}
 					
 					
 					default:
 					{
-						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 				return null;
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("window");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("lengths");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("input");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("outpos");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("output");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("needed");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("dist");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("len");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("htools");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("huffdist");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("huffman");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("isFinal");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("state");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("bits");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			baseArr.push("nbits");
-			#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\InflateImpl.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

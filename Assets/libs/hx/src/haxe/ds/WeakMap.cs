@@ -10,74 +10,63 @@ namespace haxe.ds {
 		
 		
 		public WeakMap() {
-			#line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			global::haxe.ds.WeakMap.__hx_ctor_haxe_ds_WeakMap(((global::haxe.ds.WeakMap) (this) ));
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_ds_WeakMap(global::haxe.ds.WeakMap __hx_this) {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			throw global::haxe.lang.HaxeException.wrap("Not implemented for this platform");
 		}
-		#line default
+		
 		
 		global::haxe.IMap global::haxe.IMap.copy() {
-			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return ((global::haxe.IMap) (this.copy()) );
 		}
-		#line default
+		
 		
 		public virtual void @set(object key, object @value) {
 		}
 		
 		
 		public virtual object @get(object key) {
-			#line 51 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return null;
 		}
-		#line default
+		
 		
 		public virtual bool exists(object key) {
-			#line 58 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return false;
 		}
-		#line default
+		
 		
 		public virtual bool @remove(object key) {
-			#line 65 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return false;
 		}
-		#line default
+		
 		
 		public virtual object keys() {
-			#line 72 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return null;
 		}
-		#line default
+		
 		
 		public virtual object iterator() {
-			#line 79 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return null;
 		}
-		#line default
+		
 		
 		public object keyValueIterator() {
-			#line 86 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return null;
 		}
-		#line default
+		
 		
 		public virtual global::haxe.ds.WeakMap copy() {
-			#line 93 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return null;
 		}
-		#line default
+		
 		
 		public virtual string toString() {
-			#line 100 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 			return null;
 		}
-		#line default
+		
 		
 		public virtual void clear() {
 		}
@@ -85,181 +74,152 @@ namespace haxe.ds {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 				switch (hash) {
 					case 1213952397:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clear", 1213952397)) );
 					}
 					
 					
 					case 946786476:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 1103412149:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "copy", 1103412149)) );
 					}
 					
 					
 					case 1257164128:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keyValueIterator", 1257164128)) );
 					}
 					
 					
 					case 328878574:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "iterator", 328878574)) );
 					}
 					
 					
 					case 1191633396:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keys", 1191633396)) );
 					}
 					
 					
 					case 76061764:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "remove", 76061764)) );
 					}
 					
 					
 					case 1071652316:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "exists", 1071652316)) );
 					}
 					
 					
 					case 5144726:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "get", 5144726)) );
 					}
 					
 					
 					case 5741474:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "set", 5741474)) );
 					}
 					
 					
 					default:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 				switch (hash) {
 					case 1213952397:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						this.clear();
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						break;
 					}
 					
 					
 					case 946786476:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.toString();
 					}
 					
 					
 					case 1103412149:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.copy();
 					}
 					
 					
 					case 1257164128:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.keyValueIterator();
 					}
 					
 					
 					case 328878574:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.iterator();
 					}
 					
 					
 					case 1191633396:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.keys();
 					}
 					
 					
 					case 76061764:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.@remove(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 1071652316:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.exists(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 5144726:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return this.@get(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 5741474:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						this.@set(((object) (dynargs[0]) ), ((object) (dynargs[1]) ));
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						break;
 					}
 					
 					
 					default:
 					{
-						#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\WeakMap.hx"
 				return null;
 			}
-			#line default
 		}
 		
 		

@@ -10,139 +10,104 @@ namespace haxe.io {
 		
 		
 		public Path(string path) {
-			#line 76 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.io.Path.__hx_ctor_haxe_io_Path(this, path);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_io_Path(global::haxe.io.Path __hx_this, string path) {
 			unchecked {
-				#line 77 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				switch (path) {
 					case ".":
 					case "..":
 					{
-						#line 79 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						__hx_this.dir = path;
 						__hx_this.file = "";
-						#line 81 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return;
 					}
 					
 					
 				}
 				
-				#line 83 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				int c1 = global::haxe.lang.StringExt.lastIndexOf(path, "/", null);
 				int c2 = global::haxe.lang.StringExt.lastIndexOf(path, "\\", null);
-				#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (( c1 < c2 )) {
-					#line 86 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					__hx_this.dir = global::haxe.lang.StringExt.substr(path, 0, c2);
 					path = global::haxe.lang.StringExt.substr(path, ( c2 + 1 ), null);
-					#line 88 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					__hx_this.backslash = true;
 				}
 				else if (( c2 < c1 )) {
-					#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					__hx_this.dir = global::haxe.lang.StringExt.substr(path, 0, c1);
 					path = global::haxe.lang.StringExt.substr(path, ( c1 + 1 ), null);
 				}
 				else {
-					#line 93 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					__hx_this.dir = null;
 				}
 				
-				#line 94 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				int cp = global::haxe.lang.StringExt.lastIndexOf(path, ".", null);
 				if (( cp != -1 )) {
-					#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					__hx_this.ext = global::haxe.lang.StringExt.substr(path, ( cp + 1 ), null);
 					__hx_this.file = global::haxe.lang.StringExt.substr(path, 0, cp);
 				}
 				else {
-					#line 99 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					__hx_this.ext = null;
 					__hx_this.file = path;
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public static string withoutExtension(string path) {
-			#line 124 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.io.Path s = new global::haxe.io.Path(((string) (path) ));
 			s.ext = null;
-			#line 126 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return s.toString();
 		}
-		#line default
+		
 		
 		public static string withoutDirectory(string path) {
-			#line 135 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.io.Path s = new global::haxe.io.Path(((string) (path) ));
 			s.dir = null;
-			#line 137 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return s.toString();
 		}
-		#line default
+		
 		
 		public static string directory(string path) {
-			#line 148 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.io.Path s = new global::haxe.io.Path(((string) (path) ));
 			if (( s.dir == null )) {
-				#line 150 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return "";
 			}
 			
-			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return s.dir;
 		}
-		#line default
+		
 		
 		public static string extension(string path) {
-			#line 162 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.io.Path s = new global::haxe.io.Path(((string) (path) ));
 			if (( s.ext == null )) {
-				#line 164 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return "";
 			}
 			
-			#line 165 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return s.ext;
 		}
-		#line default
+		
 		
 		public static string withExtension(string path, string ext) {
-			#line 176 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.io.Path s = new global::haxe.io.Path(((string) (path) ));
 			s.ext = ext;
-			#line 178 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return s.toString();
 		}
-		#line default
+		
 		
 		public static string @join(global::haxe.root.Array paths) {
 			unchecked {
-				#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				global::haxe.root.Array ret = new global::haxe.root.Array(new object[]{});
-				#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				{
-					#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					int _g = 0;
-					#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					int _g1 = paths.length;
-					#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					while (( _g < _g1 )) {
-						#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						int i = _g++;
-						#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						string elt = ((string) (paths.__a[i]) );
-						#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						if (( ( elt != null ) && ( elt != "" ) )) {
-							#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 							ret.push(elt);
 						}
 						
@@ -150,77 +115,53 @@ namespace haxe.io {
 					
 				}
 				
-				#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				global::haxe.root.Array paths1 = ret;
 				if (( paths1.length == 0 )) {
-					#line 192 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return "";
 				}
 				
-				#line 194 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				string path = global::haxe.lang.Runtime.toString(paths1.__get(0));
 				{
-					#line 195 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					int _g2 = 1;
-					#line 195 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					int _g11 = paths1.length;
-					#line 195 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					while (( _g2 < _g11 )) {
-						#line 195 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						int i1 = _g2++;
 						path = global::haxe.io.Path.addTrailingSlash(path);
-						#line 197 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						path = global::haxe.lang.Runtime.concat(path, global::haxe.lang.Runtime.toString(paths1.__get(i1)));
 					}
 					
 				}
 				
-				#line 199 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return global::haxe.io.Path.normalize(path);
 			}
-			#line default
 		}
 		
 		
 		public static string normalize(string path) {
 			unchecked {
-				#line 211 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				string slash = "/";
 				path = global::haxe.lang.StringExt.split(path, "\\").@join(slash);
-				#line 213 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (( path == slash )) {
-					#line 214 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return slash;
 				}
 				
-				#line 216 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				global::haxe.root.Array target = new global::haxe.root.Array(new object[]{});
-				#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				{
-					#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					int _g = 0;
-					#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					global::haxe.root.Array _g1 = global::haxe.lang.StringExt.split(path, slash);
-					#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					while (( _g < _g1.length )) {
-						#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						string token = global::haxe.lang.Runtime.toString(_g1.__get(_g));
-						#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						 ++ _g;
 						if (( ( ( token == ".." ) && ( target.length > 0 ) ) && ( global::haxe.lang.Runtime.toString(target.__get(( target.length - 1 ))) != ".." ) )) {
-							#line 220 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 							string __temp_expr1 = global::haxe.lang.Runtime.toString(target.pop());
 						}
 						else if (( token == "" )) {
-							#line 222 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 							if (( ( target.length > 0 ) || global::haxe.lang.Runtime.eq(global::haxe.lang.StringExt.charCodeAt(path, 0), 47) )) {
-								#line 223 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								target.push(token);
 							}
 							
 						}
 						else if (( token != "." )) {
-							#line 226 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 							target.push(token);
 						}
 						
@@ -228,105 +169,73 @@ namespace haxe.io {
 					
 				}
 				
-				#line 230 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				string tmp = target.@join(slash);
 				global::haxe.root.StringBuf acc = new global::haxe.root.StringBuf();
-				#line 232 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				bool colon = false;
 				bool slashes = false;
-				#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				{
-					#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					int _g2_offset = 0;
-					#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					string _g2_s = tmp;
-					#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					while (( _g2_offset < _g2_s.Length )) {
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						string s = _g2_s;
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						int index = _g2_offset++;
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						int c = ( (((bool) (( ((uint) (index) ) < s.Length )) )) ? (((int) (s[index]) )) : (-1) );
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						if (( ( c >= 55296 ) && ( c <= 56319 ) )) {
-							#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 							int index1 = ( index + 1 );
-							#line 606 "C:\\HaxeToolkit\\haxe\\std\\StringTools.hx"
 							c = ( ( ( c - 55232 ) << 10 ) | ( (( (((bool) (( ((uint) (index1) ) < s.Length )) )) ? (((int) (s[index1]) )) : (-1) )) & 1023 ) );
 						}
 						
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						int c1 = c;
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						if (( c1 >= 65536 )) {
-							#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 							 ++ _g2_offset;
 						}
 						
-						#line 235 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						int c2 = c1;
 						switch (c2) {
 							case 47:
 							{
-								#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								if ( ! (colon) ) {
-									#line 245 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 									slashes = true;
 								}
 								else {
-									#line 246 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 									int i = c2;
-									#line 246 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 									{
-										#line 247 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 										colon = false;
 										if (slashes) {
-											#line 249 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 											acc.b.Append(((string) ("/") ));
 											slashes = false;
 										}
 										
-										#line 252 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 										acc.addChar(i);
 									}
 									
 								}
 								
-								#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								break;
 							}
 							
 							
 							case 58:
 							{
-								#line 242 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								acc.b.Append(((string) (":") ));
 								colon = true;
-								#line 241 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								break;
 							}
 							
 							
 							default:
 							{
-								#line 246 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								int i1 = c2;
-								#line 246 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								{
-									#line 247 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 									colon = false;
 									if (slashes) {
-										#line 249 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 										acc.b.Append(((string) ("/") ));
 										slashes = false;
 									}
 									
-									#line 252 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 									acc.addChar(i1);
 								}
 								
-								#line 246 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								break;
 							}
 							
@@ -336,78 +245,58 @@ namespace haxe.io {
 					
 				}
 				
-				#line 256 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return acc.b.ToString();
 			}
-			#line default
 		}
 		
 		
 		public static string addTrailingSlash(string path) {
 			unchecked {
-				#line 272 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (( path.Length == 0 )) {
-					#line 273 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return "/";
 				}
 				
-				#line 274 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				int c1 = global::haxe.lang.StringExt.lastIndexOf(path, "/", null);
 				int c2 = global::haxe.lang.StringExt.lastIndexOf(path, "\\", null);
-				#line 276 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (( c1 < c2 )) {
-					#line 277 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					if (( c2 != ( path.Length - 1 ) )) {
-						#line 278 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return global::haxe.lang.Runtime.concat(path, "\\");
 					}
 					else {
-						#line 280 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return path;
 					}
 					
 				}
 				else if (( c1 != ( path.Length - 1 ) )) {
-					#line 283 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return global::haxe.lang.Runtime.concat(path, "/");
 				}
 				else {
-					#line 285 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return path;
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public static string removeTrailingSlashes(string path) {
 			unchecked {
-				#line 300 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				while (true) {
-					#line 301 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					object _g = global::haxe.lang.StringExt.charCodeAt(path, ( path.Length - 1 ));
-					#line 301 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					if (( _g == default(object) )) {
-						#line 305 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						break;
 					}
 					else {
-						#line 301 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						switch (((int) (global::haxe.lang.Runtime.toInt((_g))) )) {
 							case 47:
 							case 92:
 							{
-								#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								path = global::haxe.lang.StringExt.substr(path, 0, -1);
-								#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								break;
 							}
 							
 							
 							default:
 							{
-								#line 305 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 								goto label1;
 							}
 							
@@ -417,55 +306,42 @@ namespace haxe.io {
 					
 				}
 				label1: {};
-				#line 308 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return path;
 			}
-			#line default
 		}
 		
 		
 		public static bool isAbsolute(string path) {
 			unchecked {
-				#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (path.StartsWith("/")) {
-					#line 316 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return true;
 				}
 				
-				#line 317 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (( global::haxe.lang.StringExt.charAt(path, 1) == ":" )) {
-					#line 318 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return true;
 				}
 				
-				#line 319 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				if (path.StartsWith("\\\\")) {
-					#line 320 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 					return true;
 				}
 				
-				#line 321 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return false;
 			}
-			#line default
 		}
 		
 		
 		public static string unescape(string path) {
-			#line 325 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.root.EReg regex = new global::haxe.root.EReg("-x([0-9][0-9])", "g");
 			return regex.map(path, ( (( global::haxe.io.Path_unescape_326__Fun.__hx_current != null )) ? (global::haxe.io.Path_unescape_326__Fun.__hx_current) : (global::haxe.io.Path_unescape_326__Fun.__hx_current = ((global::haxe.io.Path_unescape_326__Fun) (new global::haxe.io.Path_unescape_326__Fun()) )) ));
 		}
-		#line default
+		
 		
 		public static string escape(string path, object allowSlashes) {
-			#line 329 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			bool allowSlashes1 = ( (( allowSlashes == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(allowSlashes)) );
 			global::haxe.root.EReg regex = ( (allowSlashes1) ? (new global::haxe.root.EReg("[^A-Za-z0-9_/\\\\\\.]", "g")) : (new global::haxe.root.EReg("[^A-Za-z0-9_\\.]", "g")) );
-			#line 331 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return regex.map(path, ( (( global::haxe.io.Path_escape_331__Fun.__hx_current != null )) ? (global::haxe.io.Path_escape_331__Fun.__hx_current) : (global::haxe.io.Path_escape_331__Fun.__hx_current = ((global::haxe.io.Path_escape_331__Fun) (new global::haxe.io.Path_escape_331__Fun()) )) ));
 		}
-		#line default
+		
 		
 		public string dir;
 		
@@ -476,153 +352,124 @@ namespace haxe.io {
 		public bool backslash;
 		
 		public virtual string toString() {
-			#line 115 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat((( (( this.dir == null )) ? ("") : (global::haxe.lang.Runtime.concat(this.dir, (( (this.backslash) ? ("\\") : ("/") )))) )), this.file), (( (( this.ext == null )) ? ("") : (global::haxe.lang.Runtime.concat(".", this.ext)) )));
 		}
-		#line default
+		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				switch (hash) {
 					case 1212528822:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						this.backslash = global::haxe.lang.Runtime.toBool(@value);
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return @value;
 					}
 					
 					
 					case 5049505:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						this.ext = global::haxe.lang.Runtime.toString(@value);
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return @value;
 					}
 					
 					
 					case 1136381564:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						this.file = global::haxe.lang.Runtime.toString(@value);
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return @value;
 					}
 					
 					
 					case 4996429:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						this.dir = global::haxe.lang.Runtime.toString(@value);
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				switch (hash) {
 					case 946786476:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 1212528822:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return this.backslash;
 					}
 					
 					
 					case 5049505:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return this.ext;
 					}
 					
 					
 					case 1136381564:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return this.file;
 					}
 					
 					
 					case 4996429:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return this.dir;
 					}
 					
 					
 					default:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				switch (hash) {
 					case 946786476:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return this.toString();
 					}
 					
 					
 					default:
 					{
-						#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			baseArr.push("backslash");
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			baseArr.push("ext");
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			baseArr.push("file");
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			baseArr.push("dir");
-			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 		public override string ToString(){
 			return this.toString();
@@ -646,12 +493,9 @@ namespace haxe.io {
 		
 		public override object __hx_invoke1_o(double __fn_float1, object __fn_dyn1) {
 			unchecked {
-				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				global::haxe.root.EReg regex1 = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (((global::haxe.root.EReg) (((object) (__fn_float1) )) )) : (((global::haxe.root.EReg) (__fn_dyn1) )) );
-				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 				return global::haxe.lang.StringExt.fromCharCode(((int) (global::haxe.lang.Runtime.toInt(global::haxe.root.Std.parseInt(regex1.matched(1)))) ));
 			}
-			#line default
 		}
 		
 		
@@ -671,12 +515,10 @@ namespace haxe.io {
 		public static global::haxe.io.Path_escape_331__Fun __hx_current;
 		
 		public override object __hx_invoke1_o(double __fn_float1, object __fn_dyn1) {
-			#line 331 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			global::haxe.root.EReg v = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (((global::haxe.root.EReg) (((object) (__fn_float1) )) )) : (((global::haxe.root.EReg) (__fn_dyn1) )) );
-			#line 331 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Path.hx"
 			return global::haxe.lang.Runtime.concat("-x", global::haxe.lang.Runtime.toString(global::haxe.lang.StringExt.charCodeAt(v.matched(0), 0)));
 		}
-		#line default
+		
 		
 	}
 }

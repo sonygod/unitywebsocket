@@ -10,38 +10,29 @@ namespace haxe.io {
 		
 		
 		public BytesInput(global::haxe.io.Bytes b, object pos, object len) {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			global::haxe.io.BytesInput.__hx_ctor_haxe_io_BytesInput(this, b, pos, len);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_haxe_io_BytesInput(global::haxe.io.BytesInput __hx_this, global::haxe.io.Bytes b, object pos, object len) {
-			#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( pos == default(object) )) {
-				#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				pos = 0;
 			}
 			
-			#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( len == default(object) )) {
-				#line 43 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				len = ( ((int) (b.length) ) - ((int) (global::haxe.lang.Runtime.toInt(pos)) ) );
 			}
 			
-			#line 44 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( ( ( ((int) (global::haxe.lang.Runtime.toInt(pos)) ) < 0 ) || ( ((int) (global::haxe.lang.Runtime.toInt(len)) ) < 0 ) ) || ( ( ((int) (global::haxe.lang.Runtime.toInt(pos)) ) + ((int) (global::haxe.lang.Runtime.toInt(len)) ) ) > b.length ) )) {
-				#line 45 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				throw global::haxe.lang.HaxeException.wrap(global::haxe.io.Error.OutsideBounds);
 			}
 			
-			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			__hx_this.b = b.b;
 			__hx_this.pos = ((int) (global::haxe.lang.Runtime.toInt(pos)) );
-			#line 59 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			__hx_this.len = ((int) (global::haxe.lang.Runtime.toInt(len)) );
 			__hx_this.totlen = ((int) (global::haxe.lang.Runtime.toInt(len)) );
 		}
-		#line default
+		
 		
 		public byte[] b;
 		
@@ -56,402 +47,323 @@ namespace haxe.io {
 		
 		
 		public int get_position() {
-			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			return this.pos;
 		}
-		#line default
+		
 		
 		public int get_length() {
-			#line 79 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			return this.totlen;
 		}
-		#line default
+		
 		
 		public virtual int set_position(int p) {
-			#line 84 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( p < 0 )) {
-				#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				p = 0;
 			}
 			else if (( p > this.totlen )) {
-				#line 87 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				p = this.totlen;
 			}
 			
-			#line 91 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			this.len = ( this.totlen - p );
 			return this.pos = p;
 		}
-		#line default
+		
 		
 		public override int readByte() {
-			#line 100 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( this.len == 0 )) {
-				#line 101 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				throw global::haxe.lang.HaxeException.wrap(new global::haxe.io.Eof());
 			}
 			
-			#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			this.len--;
-			#line 114 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			return ((int) (((byte) (this.b[this.pos++]) )) );
 		}
-		#line default
+		
 		
 		public override int readBytes(global::haxe.io.Bytes buf, int pos, int len) {
-			#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( ( ( pos < 0 ) || ( len < 0 ) ) || ( ( pos + len ) > buf.length ) )) {
-				#line 122 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				throw global::haxe.lang.HaxeException.wrap(global::haxe.io.Error.OutsideBounds);
 			}
 			
-			#line 142 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			int avail = this.len;
 			if (( len > avail )) {
-				#line 144 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				len = avail;
 			}
 			
-			#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			if (( len == 0 )) {
-				#line 146 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				throw global::haxe.lang.HaxeException.wrap(new global::haxe.io.Eof());
 			}
 			
-			#line 147 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			global::System.Array.Copy(((global::System.Array) (this.b) ), ((int) (this.pos) ), ((global::System.Array) (buf.b) ), ((int) (pos) ), ((int) (len) ));
 			this.pos += len;
-			#line 149 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			this.len -= len;
-			#line 171 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			return len;
 		}
-		#line default
+		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				switch (hash) {
 					case 1257939113:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.set_position(((int) (@value) ));
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 400509660:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.totlen = ((int) (@value) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 5393365:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.len = ((int) (@value) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 5594516:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.pos = ((int) (@value) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				switch (hash) {
 					case 1257939113:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.set_position(((int) (global::haxe.lang.Runtime.toInt(@value)) ));
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 400509660:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.totlen = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 5393365:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.len = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 5594516:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.pos = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					case 98:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						this.b = ((byte[]) (@value) );
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				switch (hash) {
 					case 243225909:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readBytes", 243225909)) );
 					}
 					
 					
 					case 1763375486:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readByte", 1763375486)) );
 					}
 					
 					
 					case 353204262:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "set_position", 353204262)) );
 					}
 					
 					
 					case 261031087:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "get_length", 261031087)) );
 					}
 					
 					
 					case 1332402:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "get_position", 1332402)) );
 					}
 					
 					
 					case 520590566:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.get_length();
 					}
 					
 					
 					case 1257939113:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.get_position();
 					}
 					
 					
 					case 400509660:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.totlen;
 					}
 					
 					
 					case 5393365:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.len;
 					}
 					
 					
 					case 5594516:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.pos;
 					}
 					
 					
 					case 98:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.b;
 					}
 					
 					
 					default:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				switch (hash) {
 					case 520590566:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((double) (this.get_length()) );
 					}
 					
 					
 					case 1257939113:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((double) (this.get_position()) );
 					}
 					
 					
 					case 400509660:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((double) (this.totlen) );
 					}
 					
 					
 					case 5393365:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((double) (this.len) );
 					}
 					
 					
 					case 5594516:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return ((double) (this.pos) );
 					}
 					
 					
 					default:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 				switch (hash) {
 					case 1763375486:
 					case 243225909:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return global::haxe.lang.Runtime.slowCallField(this, field, dynargs);
 					}
 					
 					
 					case 353204262:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.set_position(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 261031087:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.get_length();
 					}
 					
 					
 					case 1332402:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return this.get_position();
 					}
 					
 					
 					default:
 					{
-						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
-			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			baseArr.push("length");
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			baseArr.push("position");
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			baseArr.push("totlen");
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			baseArr.push("len");
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			baseArr.push("pos");
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			baseArr.push("b");
-			#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\BytesInput.hx"
 			base.__hx_getFields(baseArr);
 		}
-		#line default
+		
 		
 	}
 }

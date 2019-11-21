@@ -10,20 +10,18 @@ namespace web {
 		
 		
 		public GameSetting() {
-			#line 7 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
 			global::web.GameSetting.__hx_ctor_web_GameSetting(this);
 		}
-		#line default
+		
 		
 		protected static void __hx_ctor_web_GameSetting(global::web.GameSetting __hx_this) {
 		}
 		
 		
 		public static bool getInstallGame(uint id) {
-			#line 14 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
 			return true;
 		}
-		#line default
+		
 		
 		public static void InstallGame(uint id, string name) {
 		}

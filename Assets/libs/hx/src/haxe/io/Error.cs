@@ -15,10 +15,9 @@ namespace haxe.io {
 		public static readonly global::haxe.io.Error OutsideBounds = new global::haxe.io.Error_OutsideBounds();
 		
 		public static global::haxe.io.Error Custom(object e) {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return new global::haxe.io.Error_Custom(e);
 		}
-		#line default
+		
 		
 		protected static readonly string[] __hx_constructs = new string[]{"Blocked", "Overflow", "OutsideBounds", "Custom"};
 		
@@ -36,10 +35,9 @@ namespace haxe.io {
 		
 		
 		public override string getTag() {
-			#line 30 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return "Blocked";
 		}
-		#line default
+		
 		
 	}
 }
@@ -55,10 +53,9 @@ namespace haxe.io {
 		
 		
 		public override string getTag() {
-			#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return "Overflow";
 		}
-		#line default
+		
 		
 	}
 }
@@ -74,10 +71,9 @@ namespace haxe.io {
 		
 		
 		public override string getTag() {
-			#line 36 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return "OutsideBounds";
 		}
-		#line default
+		
 		
 	}
 }
@@ -89,63 +85,49 @@ namespace haxe.io {
 	public sealed class Error_Custom : global::haxe.io.Error {
 		
 		public Error_Custom(object e) : base(3) {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			this.e = e;
 		}
-		#line default
+		
 		
 		public override global::haxe.root.Array getParams() {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return new global::haxe.root.Array(new object[]{this.e});
 		}
-		#line default
+		
 		
 		public override string getTag() {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return "Custom";
 		}
-		#line default
+		
 		
 		public override int GetHashCode() {
 			unchecked {
-				#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.e});
 			}
-			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
-				#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 				return true;
 			}
 			
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			global::haxe.io.Error_Custom en = ( other as global::haxe.io.Error_Custom );
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			if (( en == null )) {
-				#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 				return false;
 			}
 			
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
-				#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 				return false;
 			}
 			
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return true;
 		}
-		#line default
+		
 		
 		public override string toString() {
-			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Error.hx"
 			return global::haxe.lang.Enum.paramsToString("Custom", new object[]{this.e});
 		}
-		#line default
+		
 		
 		public readonly object e;
 		

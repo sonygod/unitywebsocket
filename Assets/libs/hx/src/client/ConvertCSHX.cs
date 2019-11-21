@@ -3,41 +3,22 @@ using haxe.root;
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace client {
-	public class ConvertCSHX : global::haxe.lang.HxObject {
-		
-		public ConvertCSHX(global::haxe.lang.EmptyObject empty) {
-		}
-		
+	public class ConvertCSHX {
 		
 		public ConvertCSHX() {
-			#line 9 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
-			global::client.ConvertCSHX.__hx_ctor_client_ConvertCSHX(this);
-		}
-		#line default
-		
-		protected static void __hx_ctor_client_ConvertCSHX(global::client.ConvertCSHX __hx_this) {
 		}
 		
 		
 		public static object convertRoomData(string data) {
-			#line 18 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			object roomInfo = new global::haxe.format.JsonParser(((string) (data) )).doParse();
-			#line 20 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			object result = new global::haxe.lang.DynamicObject(new int[]{}, new object[]{}, new int[]{}, new double[]{});
-			#line 22 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			global::haxe.root.Array fs = global::haxe.root.Reflect.fields(roomInfo);
-			#line 24 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			{
-				#line 24 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 				int _g = 0;
-				#line 24 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 				while (( _g < fs.length )) {
-					#line 24 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 					string f = global::haxe.lang.Runtime.toString(fs.__get(_g));
-					#line 24 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 					 ++ _g;
 					if (( global::haxe.root.Reflect.field(roomInfo, f) != null )) {
-						#line 26 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 						global::haxe.root.Reflect.setField(result, f, global::haxe.root.Reflect.field(roomInfo, f));
 					}
 					
@@ -45,30 +26,20 @@ namespace client {
 				
 			}
 			
-			#line 29 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			return result;
 		}
-		#line default
+		
 		
 		public static object convertPlayerData(object data) {
-			#line 38 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			object roomInfo = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{((object) (0) )}, new int[]{}, new double[]{});
-			#line 40 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			global::haxe.root.Array fs = global::haxe.root.Reflect.fields(data);
-			#line 42 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			{
-				#line 42 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 				int _g = 0;
-				#line 42 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 				while (( _g < fs.length )) {
-					#line 42 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 					string f = global::haxe.lang.Runtime.toString(fs.__get(_g));
-					#line 42 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 					 ++ _g;
 					object v = global::haxe.root.Reflect.field(data, f);
-					#line 44 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 					if (( v != null )) {
-						#line 45 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 						global::haxe.root.Reflect.setField(roomInfo, f, v);
 					}
 					
@@ -76,10 +47,9 @@ namespace client {
 				
 			}
 			
-			#line 49 "D:\\project\\sangong\\sangong\\src\\client\\ConvertCSHX.hx"
 			return roomInfo;
 		}
-		#line default
+		
 		
 	}
 }
