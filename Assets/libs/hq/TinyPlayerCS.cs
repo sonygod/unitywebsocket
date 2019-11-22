@@ -14,17 +14,17 @@ namespace web
 
         public uint roomCard;
 
-        public int oriMoney;
+        public float oriMoney;
 
         public int[] cards;
 
         public int money;
 
-        public int money_clone;
+        public float money_clone;
 
-        public int earnMoney;
+        public float earnMoney;
 
-        public int loseMoney;
+        public float loseMoney;
 
         public uint scroe;
 
@@ -38,7 +38,7 @@ namespace web
 
         public int clubID;
 
-        public int canGetMoney;
+        public float canGetMoney;
 
         public string nick_name;
 
@@ -64,9 +64,9 @@ namespace web
 
         public bool isRobot;
 
-        public int resultEarnMoney;
+        public float resultEarnMoney;
 
-        public int resultLostMoney;
+        public float resultLostMoney;
 
         public string scoreTip;
 

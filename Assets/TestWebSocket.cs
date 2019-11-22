@@ -186,8 +186,21 @@ public class TestWebSocket : MonoBehaviour
             var room = parms.room;
 
 
+            Debug.Log("room"+room);
             TinyRoomCS ts = ConvertTool.ConvertRoom(room);
 
+
+            var idle = 0; // 空闲;
+            var ready = 1; // 准备状态
+            var playing = 2; // 玩;
+            var start = 2;
+            var dispath = 3;
+            var qiangzhuang = 4; // 抢庄
+            var settingZhuang = 5;//设置庄
+            var gamebling = 6; // 下注
+            var switchTimes = 7;////设置倍数。如：两点一倍，炸弹四倍
+            var roundFinish = 8; // 一局结束
+            var over = 9; // 游戏结束;
 
 
 
@@ -212,15 +225,23 @@ public class TestWebSocket : MonoBehaviour
                     Debug.Log("抢庄");
                     break;
                 case 5:
-                    Debug.Log("下注");
+                    Debug.Log("设置庄");
                     break;
                 case 6:
-                    Debug.Log("本轮结束");
+                    Debug.Log("下注");
                     break;
 
                 case 7:
-                    Debug.Log("游戏全部结束");//用于开房间，一共有几局
+                    Debug.Log("设置倍数");//用于开房间，一共有几局
                     break;
+
+                case 8:
+                    Debug.Log("本轮结束");//用于开房间，一共有几局
+                    break;
+                case 9:
+                    Debug.Log("游戏结束");//用于开房间，一共有几局
+                    break;
+
 
             }
         });
