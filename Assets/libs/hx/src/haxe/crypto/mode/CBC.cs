@@ -10,57 +10,81 @@ namespace haxe.crypto.mode {
 		
 		
 		public CBC() {
+			#line 5 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 			global::haxe.crypto.mode.CBC.__hx_ctor_haxe_crypto_mode_CBC(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_crypto_mode_CBC(global::haxe.crypto.mode.CBC __hx_this) {
 		}
 		
 		
 		public static void encrypt(global::haxe.io.Bytes src, global::haxe.io.Bytes iv, int blockSize, global::haxe.lang.Function encryptBlock) {
+			#line 9 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 			global::haxe.io.Bytes vector = iv.sub(0, iv.length);
 			int i = 0;
+			#line 11 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 			int len = src.length;
 			while (( i < len )) {
+				#line 14 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 				{
+					#line 14 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					int _g = 0;
+					#line 14 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					int _g1 = blockSize;
+					#line 14 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					while (( _g < _g1 )) {
+						#line 14 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 						int j = _g++;
+						#line 16 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 						src.b[( i + j )] = ((byte) (( ((int) (((byte) (src.b[( i + j )]) )) ) ^ ((int) (((byte) (vector.b[j]) )) ) )) );
 					}
 					
 				}
 				
+				#line 18 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 				encryptBlock.__hx_invoke4_o(default(double), src, ((double) (i) ), global::haxe.lang.Runtime.undefined, default(double), src, ((double) (i) ), global::haxe.lang.Runtime.undefined);
+				#line 20 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 				vector = src.sub(i, blockSize);
 				i += blockSize;
 			}
 			
 		}
-		
+		#line default
 		
 		public static void decrypt(global::haxe.io.Bytes src, global::haxe.io.Bytes iv, int blockSize, global::haxe.lang.Function decryptBlock) {
+			#line 27 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 			int vpos = ( src.length - blockSize );
 			int i = src.length;
+			#line 29 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 			while (( i > 0 )) {
+				#line 31 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 				i -= blockSize;
 				vpos -= blockSize;
+				#line 34 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 				decryptBlock.__hx_invoke4_o(default(double), src, ((double) (i) ), global::haxe.lang.Runtime.undefined, default(double), src, ((double) (i) ), global::haxe.lang.Runtime.undefined);
+				#line 36 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 				if (( vpos < 0 )) {
+					#line 37 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					int _g = 0;
+					#line 37 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					int _g1 = blockSize;
+					#line 37 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					while (( _g < _g1 )) {
+						#line 37 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 						int j = _g++;
 						src.b[j] = ((byte) (( ((int) (((byte) (src.b[j]) )) ) ^ ((int) (((byte) (iv.b[j]) )) ) )) );
 					}
 					
 				}
 				else {
+					#line 40 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					int _g2 = 0;
+					#line 40 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					int _g11 = blockSize;
+					#line 40 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 					while (( _g2 < _g11 )) {
+						#line 40 "C:\\HaxeToolkit\\haxe\\lib\\crypto\\0,3,0\\src\\haxe\\crypto\\mode\\CBC.hx"
 						int j1 = _g2++;
 						src.b[( i + j1 )] = ((byte) (( ((int) (((byte) (src.b[( i + j1 )]) )) ) ^ ((int) (((byte) (src.b[( vpos + j1 )]) )) ) )) );
 					}
@@ -70,7 +94,7 @@ namespace haxe.crypto.mode {
 			}
 			
 		}
-		
+		#line default
 		
 	}
 }

@@ -24,35 +24,43 @@ namespace haxe.lang {
 		override public string Message { get { return this.toString(); } }
 
 		public HaxeException(object obj) : base() {
+			#line 42 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 			if (( obj is global::haxe.lang.HaxeException )) {
+				#line 43 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 				global::haxe.lang.HaxeException _obj = ((global::haxe.lang.HaxeException) (obj) );
 				obj = _obj.getObject();
 			}
 			
+			#line 46 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 			this.obj = obj;
 		}
-		
+		#line default
 		
 		public static global::System.Exception wrap(object obj) {
+			#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 			if (( obj is global::System.Exception )) {
+				#line 59 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 				return ((global::System.Exception) (obj) );
 			}
 			
+			#line 61 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 			return new global::haxe.lang.HaxeException(obj);
 		}
-		
+		#line default
 		
 		public object obj;
 		
 		public virtual object getObject() {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 			return this.obj;
 		}
-		
+		#line default
 		
 		public virtual string toString() {
+			#line 54 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\Exceptions.hx"
 			return global::haxe.root.Std.@string(this.obj);
 		}
-		
+		#line default
 		
 		public override string ToString(){
 			return this.toString();

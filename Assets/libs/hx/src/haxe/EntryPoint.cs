@@ -6,21 +6,24 @@ namespace haxe {
 	public class EntryPoint : global::haxe.lang.HxObject {
 		
 		static EntryPoint() {
+			#line 37 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.sleepLock = new global::sys.thread.Lock();
 			global::haxe.EntryPoint.mutex = new global::sys.thread.Mutex();
+			#line 40 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.pending = new global::haxe.root.Array();
 			global::haxe.EntryPoint.threadCount = 0;
 		}
-		
+		#line default
 		
 		public EntryPoint(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public EntryPoint() {
+			#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.__hx_ctor_haxe_EntryPoint(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_EntryPoint(global::haxe.EntryPoint __hx_this) {
 		}
@@ -35,64 +38,84 @@ namespace haxe {
 		public static int threadCount;
 		
 		public static void wakeup() {
+			#line 48 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.sleepLock.release();
 		}
-		
+		#line default
 		
 		public static void runInMainThread(global::haxe.lang.Function f) {
+			#line 54 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.mutex.acquire();
 			global::haxe.EntryPoint.pending.push(f);
+			#line 56 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.mutex.release();
 			global::haxe.EntryPoint.wakeup();
 		}
-		
+		#line default
 		
 		public static void addThread(global::haxe.lang.Function f) {
+			#line 65 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.mutex.acquire();
 			global::haxe.EntryPoint.threadCount++;
+			#line 67 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.mutex.release();
 			global::sys.thread._Thread.Thread_Impl_.create(new global::haxe.EntryPoint_addThread_68__Fun(f));
 		}
-		
+		#line default
 		
 		public static double processEvents() {
 			unchecked {
+				#line 87 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 				while (true) {
+					#line 89 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					global::haxe.EntryPoint.mutex.acquire();
 					global::haxe.lang.Function f = ((global::haxe.lang.Function) (global::haxe.EntryPoint.pending.shift()) );
+					#line 91 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					global::haxe.EntryPoint.mutex.release();
+					#line 95 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					if (( f == null )) {
+						#line 96 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 						break;
 					}
 					
+					#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					((global::haxe.lang.Function) (f) ).__hx_invoke0_o();
 				}
 				
+				#line 99 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 				double time = global::haxe.MainLoop.tick();
 				if ((  ! (global::haxe.MainLoop.hasEvents())  && ( global::haxe.EntryPoint.threadCount == 0 ) )) {
+					#line 101 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					return ((double) (-1) );
 				}
 				
+				#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 				return time;
 			}
+			#line default
 		}
 		
 		
 		public static void run() {
+			#line 134 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			while (true) {
+				#line 135 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 				double nextTick = global::haxe.EntryPoint.processEvents();
 				if (( nextTick < 0 )) {
+					#line 137 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					break;
 				}
 				
+				#line 138 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 				if (( nextTick > 0 )) {
+					#line 139 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 					global::haxe.EntryPoint.sleepLock.wait(nextTick);
 				}
 				
 			}
 			
 		}
-		
+		#line default
 		
 	}
 }
@@ -104,22 +127,28 @@ namespace haxe {
 	public class EntryPoint_addThread_68__Fun : global::haxe.lang.Function {
 		
 		public EntryPoint_addThread_68__Fun(global::haxe.lang.Function f) : base(0, 0) {
+			#line 68 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			this.f = f;
 		}
-		
+		#line default
 		
 		public override object __hx_invoke0_o() {
+			#line 69 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			this.f.__hx_invoke0_o();
 			global::haxe.EntryPoint.mutex.acquire();
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.threadCount--;
 			if (( global::haxe.EntryPoint.threadCount == 0 )) {
+				#line 73 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 				global::haxe.EntryPoint.wakeup();
 			}
 			
+			#line 74 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			global::haxe.EntryPoint.mutex.release();
+			#line 68 "C:\\HaxeToolkit\\haxe\\std\\haxe\\EntryPoint.hx"
 			return null;
 		}
-		
+		#line default
 		
 		public global::haxe.lang.Function f;
 		

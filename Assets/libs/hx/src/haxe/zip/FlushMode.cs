@@ -34,9 +34,10 @@ namespace haxe.zip {
 		
 		
 		public override string getTag() {
+			#line 26 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\FlushMode.hx"
 			return "NO";
 		}
-		
+		#line default
 		
 	}
 }
@@ -52,9 +53,10 @@ namespace haxe.zip {
 		
 		
 		public override string getTag() {
+			#line 27 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\FlushMode.hx"
 			return "SYNC";
 		}
-		
+		#line default
 		
 	}
 }
@@ -70,9 +72,10 @@ namespace haxe.zip {
 		
 		
 		public override string getTag() {
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\FlushMode.hx"
 			return "FULL";
 		}
-		
+		#line default
 		
 	}
 }
@@ -88,9 +91,10 @@ namespace haxe.zip {
 		
 		
 		public override string getTag() {
+			#line 29 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\FlushMode.hx"
 			return "FINISH";
 		}
-		
+		#line default
 		
 	}
 }
@@ -106,9 +110,10 @@ namespace haxe.zip {
 		
 		
 		public override string getTag() {
+			#line 30 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\FlushMode.hx"
 			return "BLOCK";
 		}
-		
+		#line default
 		
 	}
 }

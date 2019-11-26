@@ -10,9 +10,10 @@ namespace utils {
 		
 		
 		public AES_Test() {
+			#line 9 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 			global::utils.AES_Test.__hx_ctor_utils_AES_Test(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_utils_AES_Test(global::utils.AES_Test __hx_this) {
 		}
@@ -20,39 +21,57 @@ namespace utils {
 		
 		public static void test() {
 			unchecked {
+				#line 11 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				string key1 = global::haxe.root.Random.@string(32, null);
 				string iv1 = global::haxe.root.Random.@string(32, null);
+				#line 13 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				string content = "123789";
 				string eKey = global::utils.AES_Test.encrypt(content, key1, iv1);
+				#line 16 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("before=", eKey), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"test", "utils.AES_Test", "src/utils/AES_Test.hx"}, new int[]{1981972957}, new double[]{((double) (16) )}));
+				#line 18 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				string data2 = global::utils.AES_Test.decrypt(eKey, key1, iv1);
+				#line 20 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("after=", data2), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"test", "utils.AES_Test", "src/utils/AES_Test.hx"}, new int[]{1981972957}, new double[]{((double) (20) )}));
 			}
+			#line default
 		}
 		
 		
 		public static string encrypt(string content, string key, string iv) {
+			#line 24 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 			global::haxe.crypto.Aes aes = new global::haxe.crypto.Aes(null, null);
 			global::haxe.io.Bytes key1 = global::haxe.io.Bytes.ofHex(key);
+			#line 26 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 			global::haxe.io.Bytes text = global::haxe.io.Bytes.ofString(content, null);
 			global::haxe.io.Bytes iv1 = global::haxe.io.Bytes.ofHex(iv);
+			#line 29 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 			aes.init(key1, iv1);
+			#line 32 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 			global::haxe.io.Bytes data = aes.encrypt(((string) ("ctr") ), text, ((string) ("NoPadding") ));
+			#line 34 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 			return data.toHex();
 		}
-		
+		#line default
 		
 		public static string decrypt(string content, string key, string iv) {
 			unchecked {
+				#line 38 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				global::haxe.crypto.Aes aes = new global::haxe.crypto.Aes(null, null);
 				global::haxe.io.Bytes key1 = global::haxe.io.Bytes.ofHex(key);
+				#line 41 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				global::haxe.io.Bytes iv1 = global::haxe.io.Bytes.ofHex(iv);
+				#line 43 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				aes.init(key1, iv1);
+				#line 45 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				global::haxe.io.Bytes to = global::haxe.io.Bytes.ofHex(content);
+				#line 47 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				global::haxe.io.Bytes data = aes.decrypt(((string) ("ctr") ), to, ((string) ("NoPadding") ));
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("Decrypted text: ", global::haxe.root.Std.@string(data)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"decrypt", "utils.AES_Test", "src/utils/AES_Test.hx"}, new int[]{1981972957}, new double[]{((double) (48) )}));
+				#line 50 "D:\\project\\sangong\\sangong\\src\\utils\\AES_Test.hx"
 				return data.toString();
 			}
+			#line default
 		}
 		
 		

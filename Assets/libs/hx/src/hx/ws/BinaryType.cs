@@ -5,16 +5,18 @@ namespace hx.ws._BinaryType {
 	public sealed class BinaryType_Impl_ {
 		
 		static BinaryType_Impl_() {
+			#line 10 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\BinaryType.hx"
 			global::hx.ws._BinaryType.BinaryType_Impl_.ARRAYBUFFER = ((string) ("arraybuffer") );
 		}
-		
+		#line default
 		
 		public static string ARRAYBUFFER;
 		
 		public static string toString(string this1) {
+			#line 13 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\BinaryType.hx"
 			return this1;
 		}
-		
+		#line default
 		
 	}
 }

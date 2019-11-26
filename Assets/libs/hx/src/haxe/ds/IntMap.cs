@@ -10,144 +10,180 @@ namespace haxe.ds {
 			if(global::haxe.ds.IntMap.__hx_init_called) return;
 			global::haxe.ds.IntMap.__hx_init_called = true;
 			{
+				#line 35 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				global::haxe.ds.IntMap.HASH_UPPER = 0.7;
 			}
 			
 		}
-		
+		#line default
 		
 		public IntMap(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public IntMap() {
+			#line 51 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			global::haxe.ds.IntMap.__hx_ctor_haxe_ds_IntMap(((global::haxe.ds.IntMap) (this) ));
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_ds_IntMap(global::haxe.ds.IntMap __hx_this) {
 			unchecked {
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				__hx_this.cachedIndex = -1;
 			}
+			#line default
 		}
 		
 		
 		public static double HASH_UPPER;
 		
 		public static void assert(bool x) {
+			#line 396 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			if ( ! (x) ) {
+				#line 397 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				throw global::haxe.lang.HaxeException.wrap("assert failed");
 			}
 			
 		}
-		
+		#line default
 		
 		public static int defaultK() {
+			#line 402 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return 0;
 		}
-		
+		#line default
 		
 		public static void arrayCopy(global::System.Array sourceArray, int sourceIndex, global::System.Array destinationArray, int destinationIndex, int length) {
+			#line 406 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			global::System.Array.Copy(((global::System.Array) (sourceArray) ), ((int) (sourceIndex) ), ((global::System.Array) (destinationArray) ), ((int) (destinationIndex) ), ((int) (length) ));
 		}
-		
+		#line default
 		
 		public static int getInc(int k, int mask) {
 			unchecked {
+				#line 410 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return ( (( ( ( k >> 3 ) ^ ( k << 3 ) ) | 1 )) & mask );
 			}
+			#line default
 		}
 		
 		
 		public static int hash(int i) {
+			#line 414 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return i;
 		}
-		
+		#line default
 		
 		public static int getFlag(int[] flags, int i) {
 			unchecked {
+				#line 424 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return ( ((int) (( ((uint) (((int) (flags[( i >> 4 )]) )) ) >> (( (( i & 15 )) << 1 )) )) ) & 3 );
 			}
+			#line default
 		}
 		
 		
 		public static bool isDel(int flag) {
 			unchecked {
+				#line 428 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return ( (( flag & 1 )) != 0 );
 			}
+			#line default
 		}
 		
 		
 		public static bool isEmpty(int flag) {
 			unchecked {
+				#line 432 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return ( (( flag & 2 )) != 0 );
 			}
+			#line default
 		}
 		
 		
 		public static bool isEither(int flag) {
+			#line 436 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return ( flag != 0 );
 		}
-		
+		#line default
 		
 		public static void setIsDelFalse(int[] flags, int i) {
 			unchecked {
+				#line 440 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				flags[( i >> 4 )] &=  ~ ((( 1 << (( (( i & 15 )) << 1 )) ))) ;
 			}
+			#line default
 		}
 		
 		
 		public static void setIsEmptyFalse(int[] flags, int i) {
 			unchecked {
+				#line 444 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				flags[( i >> 4 )] &=  ~ ((( 2 << (( (( i & 15 )) << 1 )) ))) ;
 			}
+			#line default
 		}
 		
 		
 		public static void setIsBothFalse(int[] flags, int i) {
 			unchecked {
+				#line 448 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				flags[( i >> 4 )] &=  ~ ((( 3 << (( (( i & 15 )) << 1 )) ))) ;
 			}
+			#line default
 		}
 		
 		
 		public static void setIsDelTrue(int[] flags, int i) {
 			unchecked {
+				#line 452 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				flags[( i >> 4 )] |= ( 1 << (( (( i & 15 )) << 1 )) );
 			}
+			#line default
 		}
 		
 		
 		public static int roundUp(int x) {
 			unchecked {
+				#line 456 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				 -- x;
 				x |= ((int) (( ((uint) (x) ) >> 1 )) );
+				#line 458 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				x |= ((int) (( ((uint) (x) ) >> 2 )) );
 				x |= ((int) (( ((uint) (x) ) >> 4 )) );
+				#line 460 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				x |= ((int) (( ((uint) (x) ) >> 8 )) );
 				x |= ((int) (( ((uint) (x) ) >> 16 )) );
+				#line 462 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return  ++ x;
 			}
+			#line default
 		}
 		
 		
 		public static int flagsSize(int m) {
 			unchecked {
+				#line 466 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( m < 16 )) {
+					#line 466 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return 1;
 				}
 				else {
+					#line 466 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return ( m >> 4 );
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		global::haxe.IMap global::haxe.IMap.copy() {
+			#line 358 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return ((global::haxe.IMap) (this.copy()) );
 		}
-		
+		#line default
 		
 		public int[] flags;
 		
@@ -168,66 +204,97 @@ namespace haxe.ds {
 		public int cachedIndex;
 		
 		public virtual void @set(object k, object v) {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			this.@set(((int) (global::haxe.lang.Runtime.toInt(k)) ), ((object) (v) ));
 		}
-		
+		#line default
 		
 		public virtual void @set(int key, object @value) {
 			unchecked {
+				#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int targetIndex = default(int);
 				if (( this.nOccupied >= this.upperBound )) {
+					#line 60 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( this.nBuckets > ( this.size << 1 ) )) {
+						#line 61 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.resize(( this.nBuckets - 1 ));
 					}
 					else {
+						#line 63 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.resize(( this.nBuckets + 1 ));
 					}
 					
 				}
 				
+				#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int[] flags = this.flags;
+				#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int[] _keys = this._keys;
 				{
+					#line 69 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int mask = ( this.nBuckets - 1 );
+					#line 69 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int hashedKey = key;
+					#line 69 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int curIndex = ( hashedKey & mask );
+					#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int delKey = -1;
+					#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int curFlag = 0;
+					#line 75 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( (( ( ((int) (( ((uint) (((int) (flags[( curIndex >> 4 )]) )) ) >> (( (( curIndex & 15 )) << 1 )) )) ) & 3 ) & 2 )) != 0 )) {
+						#line 76 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						targetIndex = curIndex;
 					}
 					else {
+						#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						int inc = ( (( ( ( hashedKey >> 3 ) ^ ( hashedKey << 3 ) ) | 1 )) & mask );
+						#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						int last = curIndex;
 						while (true) {
+							#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							bool tmp = default(bool);
+							#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							if (( ((int) (_keys[curIndex]) ) != key )) {
+								#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								curFlag = ( ((int) (( ((uint) (((int) (flags[( curIndex >> 4 )]) )) ) >> (( (( curIndex & 15 )) << 1 )) )) ) & 3 );
+								#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								tmp = ( (( curFlag & 2 )) != 0 );
 							}
 							else {
+								#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								tmp = true;
 							}
 							
+							#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							if ( ! (( ! (tmp) )) ) {
+								#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								break;
 							}
 							
+							#line 80 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							if (( ( delKey == -1 ) && ( (( curFlag & 1 )) != 0 ) )) {
+								#line 81 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								delKey = curIndex;
 							}
 							
+							#line 83 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							curIndex = ( ( curIndex + inc ) & mask );
+							#line 85 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							if (( curIndex == last )) {
+								#line 85 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								throw global::haxe.lang.HaxeException.wrap("assert failed");
 							}
 							
 						}
 						
+						#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						if (( ( delKey != -1 ) && ( (( ( ((int) (( ((uint) (((int) (flags[( curIndex >> 4 )]) )) ) >> (( (( curIndex & 15 )) << 1 )) )) ) & 3 ) & 2 )) != 0 ) )) {
+							#line 90 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							targetIndex = delKey;
 						}
 						else {
+							#line 92 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							targetIndex = curIndex;
 						}
 						
@@ -235,69 +302,101 @@ namespace haxe.ds {
 					
 				}
 				
+				#line 97 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int flag = ( ((int) (( ((uint) (((int) (flags[( targetIndex >> 4 )]) )) ) >> (( (( targetIndex & 15 )) << 1 )) )) ) & 3 );
 				if (( (( flag & 2 )) != 0 )) {
+					#line 99 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					_keys[targetIndex] = key;
 					this.vals[targetIndex] = @value;
+					#line 101 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					flags[( targetIndex >> 4 )] &=  ~ ((( 3 << (( (( targetIndex & 15 )) << 1 )) ))) ;
 					this.size++;
+					#line 103 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.nOccupied++;
 				}
 				else if (( (( flag & 1 )) != 0 )) {
+					#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					_keys[targetIndex] = key;
 					this.vals[targetIndex] = @value;
+					#line 107 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					flags[( targetIndex >> 4 )] &=  ~ ((( 3 << (( (( targetIndex & 15 )) << 1 )) ))) ;
 					this.size++;
 				}
 				else {
+					#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( ((int) (_keys[targetIndex]) ) != key )) {
+						#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						throw global::haxe.lang.HaxeException.wrap("assert failed");
 					}
 					
+					#line 113 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.vals[targetIndex] = @value;
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public int lookup(int key) {
 			unchecked {
+				#line 118 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( this.nBuckets != 0 )) {
+					#line 119 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int[] flags = this.flags;
+					#line 119 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int[] _keys = this._keys;
+					#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int mask = ( this.nBuckets - 1 );
+					#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int k = key;
+					#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int index = ( k & mask );
+					#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int curFlag = -1;
+					#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int inc = ( (( ( ( k >> 3 ) ^ ( k << 3 ) ) | 1 )) & mask );
+					#line 121 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int last = index;
+					#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					while (true) {
+						#line 128 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						if (( ((int) (_keys[index]) ) == key )) {
+							#line 129 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							curFlag = ( ((int) (( ((uint) (((int) (flags[( index >> 4 )]) )) ) >> (( (( index & 15 )) << 1 )) )) ) & 3 );
+							#line 129 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							if (( (( curFlag & 2 )) != 0 )) {
+								#line 130 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								index = ( ( index + inc ) & mask );
+								#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								if ( ! ((( index != last ))) ) {
+									#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									break;
 								}
 								else {
+									#line 131 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									continue;
 								}
 								
 							}
 							else if (( (( curFlag & 1 )) != 0 )) {
+								#line 133 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								return -1;
 							}
 							else {
+								#line 135 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								return index;
 							}
 							
 						}
 						else {
+							#line 138 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							index = ( ( index + inc ) & mask );
 						}
 						
+						#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						if ( ! ((( index != last ))) ) {
+							#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							break;
 						}
 						
@@ -305,193 +404,281 @@ namespace haxe.ds {
 					
 				}
 				
+				#line 143 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return -1;
 			}
+			#line default
 		}
 		
 		
 		public virtual object @get(object k) {
+			#line 146 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return ((object) (this.@get(((int) (global::haxe.lang.Runtime.toInt(k)) ))) );
 		}
-		
+		#line default
 		
 		public virtual object @get(int key) {
 			unchecked {
+				#line 147 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int idx = -1;
+				#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				bool tmp = default(bool);
+				#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( this.cachedKey == key )) {
+					#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					idx = this.cachedIndex;
+					#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = ( idx != -1 );
 				}
 				else {
+					#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = false;
 				}
 				
+				#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (tmp) {
+					#line 150 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return ((object) (this.vals[idx]) );
 				}
 				
+				#line 154 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				idx = this.lookup(key);
 				if (( idx != -1 )) {
+					#line 157 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.cachedKey = key;
 					this.cachedIndex = idx;
+					#line 160 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return ((object) (this.vals[idx]) );
 				}
 				
+				#line 163 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return null;
 			}
+			#line default
 		}
 		
 		
 		public virtual object getDefault(int key, object def) {
 			unchecked {
+				#line 167 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int idx = -1;
+				#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				bool tmp = default(bool);
+				#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( this.cachedKey == key )) {
+					#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					idx = this.cachedIndex;
+					#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = ( idx != -1 );
 				}
 				else {
+					#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = false;
 				}
 				
+				#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (tmp) {
+					#line 170 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return ((object) (this.vals[idx]) );
 				}
 				
+				#line 174 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				idx = this.lookup(key);
 				if (( idx != -1 )) {
+					#line 177 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.cachedKey = key;
 					this.cachedIndex = idx;
+					#line 180 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return ((object) (this.vals[idx]) );
 				}
 				
+				#line 183 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return def;
 			}
+			#line default
 		}
 		
 		
 		public virtual bool exists(object k) {
+			#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return ((bool) (this.exists(((int) (global::haxe.lang.Runtime.toInt(k)) ))) );
 		}
-		
+		#line default
 		
 		public virtual bool exists(int key) {
 			unchecked {
+				#line 187 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int idx = -1;
+				#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				bool tmp = default(bool);
+				#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( this.cachedKey == key )) {
+					#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					idx = this.cachedIndex;
+					#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = ( idx != -1 );
 				}
 				else {
+					#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = false;
 				}
 				
+				#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (tmp) {
+					#line 190 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return true;
 				}
 				
+				#line 194 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				idx = this.lookup(key);
 				if (( idx != -1 )) {
+					#line 197 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.cachedKey = key;
 					this.cachedIndex = idx;
+					#line 201 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return true;
 				}
 				
+				#line 204 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return false;
 			}
+			#line default
 		}
 		
 		
 		public virtual bool @remove(object k) {
+			#line 207 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return ((bool) (this.@remove(((int) (global::haxe.lang.Runtime.toInt(k)) ))) );
 		}
-		
+		#line default
 		
 		public virtual bool @remove(int key) {
 			unchecked {
+				#line 208 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int idx = -1;
+				#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				bool tmp = default(bool);
+				#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( this.cachedKey == key )) {
+					#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					idx = this.cachedIndex;
+					#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = ( idx != -1 );
 				}
 				else {
+					#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					tmp = false;
 				}
 				
+				#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if ( ! (tmp) ) {
+					#line 213 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					idx = this.lookup(key);
 				}
 				
+				#line 216 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( idx == -1 )) {
+					#line 217 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return false;
 				}
 				else {
+					#line 220 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( this.cachedKey == key )) {
+						#line 221 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.cachedIndex = -1;
 					}
 					
+					#line 224 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( (( ((int) (( ((uint) (((int) (this.flags[( idx >> 4 )]) )) ) >> (( (( idx & 15 )) << 1 )) )) ) & 3 )) == 0 )) {
+						#line 225 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.flags[( idx >> 4 )] |= ( 1 << (( (( idx & 15 )) << 1 )) );
 						 -- this.size;
+						#line 228 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.vals[idx] = null;
 					}
 					
+					#line 236 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					return true;
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public void resize(int newNBuckets) {
 			unchecked {
+				#line 242 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				int[] newFlags = null;
 				int j = 1;
+				#line 244 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				{
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int x = newNBuckets;
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					 -- x;
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					x |= ((int) (( ((uint) (x) ) >> 1 )) );
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					x |= ((int) (( ((uint) (x) ) >> 2 )) );
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					x |= ((int) (( ((uint) (x) ) >> 4 )) );
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					x |= ((int) (( ((uint) (x) ) >> 8 )) );
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					x |= ((int) (( ((uint) (x) ) >> 16 )) );
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					 ++ x;
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					newNBuckets = x;
 					if (( newNBuckets < 4 )) {
+						#line 247 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						newNBuckets = 4;
 					}
 					
+					#line 248 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( this.size >= ( ( newNBuckets * 0.7 ) + 0.5 ) )) {
+						#line 250 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						j = 0;
 					}
 					else {
+						#line 252 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						int nfSize = ( (( newNBuckets < 16 )) ? (1) : (( newNBuckets >> 4 )) );
 						newFlags = new int[nfSize];
+						#line 254 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						{
+							#line 254 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							int _g = 0;
+							#line 254 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							int _g1 = nfSize;
+							#line 254 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							while (( _g < _g1 )) {
+								#line 254 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								int i = _g++;
 								newFlags[i] = -1431655766;
 							}
 							
 						}
 						
+						#line 257 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						if (( this.nBuckets < newNBuckets )) {
+							#line 259 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							int[] k = new int[newNBuckets];
 							if (( this._keys != null )) {
+								#line 261 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								global::System.Array.Copy(((global::System.Array) (this._keys) ), ((int) (0) ), ((global::System.Array) (k) ), ((int) (0) ), ((int) (this.nBuckets) ));
 							}
 							
+							#line 263 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							this._keys = k;
+							#line 265 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							object[] v = new object[newNBuckets];
 							if (( this.vals != null )) {
+								#line 267 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								global::System.Array.Copy(((global::System.Array) (this.vals) ), ((int) (0) ), ((global::System.Array) (v) ), ((int) (0) ), ((int) (this.nBuckets) ));
 							}
 							
+							#line 269 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							this.vals = v;
 						}
 						
@@ -499,48 +686,70 @@ namespace haxe.ds {
 					
 				}
 				
+				#line 274 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				if (( j != 0 )) {
+					#line 277 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.cachedKey = 0;
 					this.cachedIndex = -1;
+					#line 281 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					j = -1;
 					int nBuckets = this.nBuckets;
 					int[] _keys = this._keys;
 					object[] vals = this.vals;
 					int[] flags = this.flags;
+					#line 284 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int newMask = ( newNBuckets - 1 );
 					while ((  ++ j < nBuckets )) {
+						#line 286 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						if (( (( ((int) (( ((uint) (((int) (flags[( j >> 4 )]) )) ) >> (( (( j & 15 )) << 1 )) )) ) & 3 )) == 0 )) {
+							#line 287 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							int key = ((int) (_keys[j]) );
 							object val = ((object) (vals[j]) );
+							#line 292 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							vals[j] = null;
 							flags[( j >> 4 )] |= ( 1 << (( (( j & 15 )) << 1 )) );
+							#line 294 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							while (true) {
+								#line 296 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								int k1 = key;
 								int inc = ( (( ( ( k1 >> 3 ) ^ ( k1 << 3 ) ) | 1 )) & newMask );
+								#line 298 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								int i1 = ( k1 & newMask );
 								while (( (( ( ((int) (( ((uint) (((int) (newFlags[( i1 >> 4 )]) )) ) >> (( (( i1 & 15 )) << 1 )) )) ) & 3 ) & 2 )) == 0 )) {
+									#line 300 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									i1 = ( ( i1 + inc ) & newMask );
 								}
 								
+								#line 302 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								newFlags[( i1 >> 4 )] &=  ~ ((( 2 << (( (( i1 & 15 )) << 1 )) ))) ;
+								#line 304 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 								if (( ( i1 < nBuckets ) && ( (( ((int) (( ((uint) (((int) (flags[( i1 >> 4 )]) )) ) >> (( (( i1 & 15 )) << 1 )) )) ) & 3 )) == 0 ) )) {
+									#line 306 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									{
+										#line 307 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 										int tmp = ((int) (_keys[i1]) );
 										_keys[i1] = key;
+										#line 309 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 										key = tmp;
 									}
 									
+									#line 310 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									{
+										#line 311 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 										object tmp1 = ((object) (vals[i1]) );
 										vals[i1] = val;
+										#line 313 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 										val = tmp1;
 									}
 									
+									#line 316 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									flags[( i1 >> 4 )] |= ( 1 << (( (( i1 & 15 )) << 1 )) );
 								}
 								else {
+									#line 318 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									_keys[i1] = key;
 									vals[i1] = val;
+									#line 320 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 									break;
 								}
 								
@@ -550,73 +759,99 @@ namespace haxe.ds {
 						
 					}
 					
+					#line 326 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (( nBuckets > newNBuckets )) {
+						#line 328 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						{
+							#line 329 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							int[] k2 = new int[newNBuckets];
 							global::System.Array.Copy(((global::System.Array) (_keys) ), ((int) (0) ), ((global::System.Array) (k2) ), ((int) (0) ), ((int) (newNBuckets) ));
+							#line 331 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							this._keys = k2;
 						}
 						
+						#line 332 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						{
+							#line 333 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							object[] v1 = new object[newNBuckets];
 							global::System.Array.Copy(((global::System.Array) (vals) ), ((int) (0) ), ((global::System.Array) (v1) ), ((int) (0) ), ((int) (newNBuckets) ));
+							#line 335 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							this.vals = v1;
 						}
 						
 					}
 					
+					#line 339 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.flags = newFlags;
 					this.nBuckets = newNBuckets;
+					#line 341 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					this.nOccupied = this.size;
 					this.upperBound = ((int) (( ( newNBuckets * 0.7 ) + .5 )) );
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public object keys() {
+			#line 347 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return new global::haxe.ds._IntMap.IntMapKeyIterator(((global::haxe.ds.IntMap) (this) ));
 		}
-		
+		#line default
 		
 		public object iterator() {
+			#line 351 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return new global::haxe.ds._IntMap.IntMapValueIterator(((global::haxe.ds.IntMap) (this) ));
 		}
-		
+		#line default
 		
 		public object keyValueIterator() {
+			#line 355 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return new global::haxe.iterators.MapKeyValueIterator(((global::haxe.IMap) (this) ));
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.IntMap copy() {
+			#line 359 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			global::haxe.ds.IntMap copied = new global::haxe.ds.IntMap();
 			{
+				#line 360 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				object key = ((object) (new global::haxe.ds._IntMap.IntMapKeyIterator(((global::haxe.ds.IntMap) (this) ))) );
+				#line 360 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				while (global::haxe.lang.Runtime.toBool(global::haxe.lang.Runtime.callField(key, "hasNext", 407283053, null))) {
+					#line 360 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int key1 = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.callField(key, "next", 1224901875, null))) );
 					copied.@set(((int) (key1) ), ((object) (this.@get(((int) (key1) ))) ));
 				}
 				
 			}
 			
+			#line 362 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return copied;
 		}
-		
+		#line default
 		
 		public virtual string toString() {
+			#line 366 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			global::System.Text.StringBuilder s_b = new global::System.Text.StringBuilder();
 			s_b.Append(((string) ("{") ));
+			#line 368 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			object it = ((object) (new global::haxe.ds._IntMap.IntMapKeyIterator(((global::haxe.ds.IntMap) (this) ))) );
 			{
+				#line 369 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				object i = it;
+				#line 369 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				while (global::haxe.lang.Runtime.toBool(global::haxe.lang.Runtime.callField(i, "hasNext", 407283053, null))) {
+					#line 369 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int i1 = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.callField(i, "next", 1224901875, null))) );
 					s_b.Append(((string) (global::haxe.root.Std.@string(i1)) ));
+					#line 371 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					s_b.Append(((string) (" => ") ));
 					s_b.Append(((string) (global::haxe.root.Std.@string(global::haxe.root.Std.@string(this.@get(((int) (i1) ))))) ));
+					#line 373 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					if (global::haxe.lang.Runtime.toBool(global::haxe.lang.Runtime.callField(it, "hasNext", 407283053, null))) {
+						#line 374 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						s_b.Append(((string) (", ") ));
 					}
 					
@@ -624,464 +859,571 @@ namespace haxe.ds {
 				
 			}
 			
+			#line 376 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			s_b.Append(((string) ("}") ));
 			return s_b.ToString();
 		}
-		
+		#line default
 		
 		public virtual void clear() {
 			unchecked {
+				#line 381 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				this.flags = null;
 				this._keys = null;
+				#line 383 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				this.vals = null;
 				this.nBuckets = 0;
+				#line 385 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				this.size = 0;
 				this.nOccupied = 0;
+				#line 387 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				this.upperBound = 0;
+				#line 389 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				this.cachedKey = 0;
 				this.cachedIndex = -1;
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 922671056:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.cachedIndex = ((int) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1395555037:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.cachedKey = ((int) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 2022294396:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.upperBound = ((int) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 480756972:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.nOccupied = ((int) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1280549057:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.size = ((int) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1537812987:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.nBuckets = ((int) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 922671056:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.cachedIndex = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1395555037:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.cachedKey = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 2022294396:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.upperBound = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 480756972:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.nOccupied = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1280549057:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.size = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1537812987:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.nBuckets = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 1313416818:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.vals = ((object[]) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 2048392659:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this._keys = ((int[]) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 42740551:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.flags = ((int[]) (@value) );
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 1213952397:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clear", 1213952397)) );
 					}
 					
 					
 					case 946786476:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 1103412149:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "copy", 1103412149)) );
 					}
 					
 					
 					case 1257164128:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keyValueIterator", 1257164128)) );
 					}
 					
 					
 					case 328878574:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "iterator", 328878574)) );
 					}
 					
 					
 					case 1191633396:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keys", 1191633396)) );
 					}
 					
 					
 					case 142301684:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "resize", 142301684)) );
 					}
 					
 					
 					case 76061764:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "remove", 76061764)) );
 					}
 					
 					
 					case 1071652316:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "exists", 1071652316)) );
 					}
 					
 					
 					case 1797611211:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getDefault", 1797611211)) );
 					}
 					
 					
 					case 5144726:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "get", 5144726)) );
 					}
 					
 					
 					case 1639293562:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "lookup", 1639293562)) );
 					}
 					
 					
 					case 5741474:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "set", 5741474)) );
 					}
 					
 					
 					case 922671056:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.cachedIndex;
 					}
 					
 					
 					case 1395555037:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.cachedKey;
 					}
 					
 					
 					case 2022294396:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.upperBound;
 					}
 					
 					
 					case 480756972:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.nOccupied;
 					}
 					
 					
 					case 1280549057:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.size;
 					}
 					
 					
 					case 1537812987:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.nBuckets;
 					}
 					
 					
 					case 1313416818:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.vals;
 					}
 					
 					
 					case 2048392659:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this._keys;
 					}
 					
 					
 					case 42740551:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.flags;
 					}
 					
 					
 					default:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 922671056:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.cachedIndex) );
 					}
 					
 					
 					case 1395555037:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.cachedKey) );
 					}
 					
 					
 					case 2022294396:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.upperBound) );
 					}
 					
 					
 					case 480756972:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.nOccupied) );
 					}
 					
 					
 					case 1280549057:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.size) );
 					}
 					
 					
 					case 1537812987:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.nBuckets) );
 					}
 					
 					
 					default:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 1213952397:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.clear();
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						break;
 					}
 					
 					
 					case 946786476:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.toString();
 					}
 					
 					
 					case 1103412149:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.copy();
 					}
 					
 					
 					case 1257164128:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.keyValueIterator();
 					}
 					
 					
 					case 328878574:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.iterator();
 					}
 					
 					
 					case 1191633396:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.keys();
 					}
 					
 					
 					case 142301684:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.resize(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						break;
 					}
 					
 					
 					case 76061764:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.@remove(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 1071652316:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.exists(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 1797611211:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.getDefault(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 5144726:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.@get(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 1639293562:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.lookup(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 5741474:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.@set(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((object) (dynargs[1]) ));
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						break;
 					}
 					
 					
 					default:
 					{
+						#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
+				#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return null;
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("cachedIndex");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("cachedKey");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("upperBound");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("nOccupied");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("size");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("nBuckets");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("vals");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("_keys");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("flags");
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 		public override string ToString(){
 			return this.toString();
@@ -1102,16 +1444,19 @@ namespace haxe.ds._IntMap {
 		
 		
 		public IntMapKeyIterator(global::haxe.ds.IntMap m) {
+			#line 476 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			global::haxe.ds._IntMap.IntMapKeyIterator.__hx_ctor_haxe_ds__IntMap_IntMapKeyIterator(((global::haxe.ds._IntMap.IntMapKeyIterator) (this) ), ((global::haxe.ds.IntMap) (m) ));
 		}
-		
+		#line default
 		
 		private static void __hx_ctor_haxe_ds__IntMap_IntMapKeyIterator(global::haxe.ds._IntMap.IntMapKeyIterator __hx_this, global::haxe.ds.IntMap m) {
+			#line 477 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			__hx_this.i = 0;
 			__hx_this.m = m;
+			#line 479 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			__hx_this.len = m.nBuckets;
 		}
-		
+		#line default
 		
 		public global::haxe.ds.IntMap m;
 		
@@ -1121,12 +1466,18 @@ namespace haxe.ds._IntMap {
 		
 		public bool hasNext() {
 			unchecked {
+				#line 483 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				{
+					#line 483 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int _g = this.i;
+					#line 483 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int _g1 = this.len;
+					#line 483 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					while (( _g < _g1 )) {
+						#line 483 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						int j = _g++;
 						if (( (( ((int) (( ((uint) (((int) (this.m.flags[( j >> 4 )]) )) ) >> (( (( j & 15 )) << 1 )) )) ) & 3 )) == 0 )) {
+							#line 485 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							this.i = j;
 							return true;
 						}
@@ -1135,186 +1486,229 @@ namespace haxe.ds._IntMap {
 					
 				}
 				
+				#line 489 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return false;
 			}
+			#line default
 		}
 		
 		
 		public int next() {
+			#line 493 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			int ret = ((int) (this.m._keys[this.i]) );
+			#line 495 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			this.m.cachedIndex = this.i;
 			this.m.cachedKey = ret;
+			#line 498 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			this.i++;
 			return ret;
 		}
-		
+		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 5393365:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.len = ((int) (@value) );
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 105:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.i = ((int) (@value) );
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 5393365:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.len = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 105:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.i = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 109:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.m = ((global::haxe.ds.IntMap) (@value) );
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "next", 1224901875)) );
 					}
 					
 					
 					case 407283053:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasNext", 407283053)) );
 					}
 					
 					
 					case 5393365:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.len;
 					}
 					
 					
 					case 105:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.i;
 					}
 					
 					
 					case 109:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.m;
 					}
 					
 					
 					default:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 5393365:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.len) );
 					}
 					
 					
 					case 105:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.i) );
 					}
 					
 					
 					default:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.next();
 					}
 					
 					
 					case 407283053:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.hasNext();
 					}
 					
 					
 					default:
 					{
+						#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("len");
+			#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("i");
+			#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("m");
+			#line 471 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 	}
 }
@@ -1330,16 +1724,19 @@ namespace haxe.ds._IntMap {
 		
 		
 		public IntMapValueIterator(global::haxe.ds.IntMap m) {
+			#line 509 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			global::haxe.ds._IntMap.IntMapValueIterator.__hx_ctor_haxe_ds__IntMap_IntMapValueIterator(((global::haxe.ds._IntMap.IntMapValueIterator) (this) ), ((global::haxe.ds.IntMap) (m) ));
 		}
-		
+		#line default
 		
 		private static void __hx_ctor_haxe_ds__IntMap_IntMapValueIterator(global::haxe.ds._IntMap.IntMapValueIterator __hx_this, global::haxe.ds.IntMap m) {
+			#line 510 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			__hx_this.i = 0;
 			__hx_this.m = m;
+			#line 512 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			__hx_this.len = m.nBuckets;
 		}
-		
+		#line default
 		
 		public global::haxe.ds.IntMap m;
 		
@@ -1349,12 +1746,18 @@ namespace haxe.ds._IntMap {
 		
 		public bool hasNext() {
 			unchecked {
+				#line 516 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				{
+					#line 516 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int _g = this.i;
+					#line 516 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					int _g1 = this.len;
+					#line 516 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 					while (( _g < _g1 )) {
+						#line 516 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						int j = _g++;
 						if (( (( ((int) (( ((uint) (((int) (this.m.flags[( j >> 4 )]) )) ) >> (( (( j & 15 )) << 1 )) )) ) & 3 )) == 0 )) {
+							#line 518 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 							this.i = j;
 							return true;
 						}
@@ -1363,182 +1766,223 @@ namespace haxe.ds._IntMap {
 					
 				}
 				
+				#line 522 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				return false;
 			}
+			#line default
 		}
 		
 		
 		public object next() {
+			#line 526 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			return ((object) (this.m.vals[this.i++]) );
 		}
-		
+		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 5393365:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.len = ((int) (@value) );
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 105:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.i = ((int) (@value) );
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 5393365:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.len = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 105:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.i = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					case 109:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						this.m = ((global::haxe.ds.IntMap) (@value) );
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "next", 1224901875)) );
 					}
 					
 					
 					case 407283053:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasNext", 407283053)) );
 					}
 					
 					
 					case 5393365:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.len;
 					}
 					
 					
 					case 105:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.i;
 					}
 					
 					
 					case 109:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.m;
 					}
 					
 					
 					default:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 5393365:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.len) );
 					}
 					
 					
 					case 105:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return ((double) (this.i) );
 					}
 					
 					
 					default:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.next();
 					}
 					
 					
 					case 407283053:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return this.hasNext();
 					}
 					
 					
 					default:
 					{
+						#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("len");
+			#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("i");
+			#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			baseArr.push("m");
+			#line 504 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\haxe\\ds\\IntMap.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 	}
 }

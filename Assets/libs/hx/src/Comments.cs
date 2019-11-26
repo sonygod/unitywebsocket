@@ -10,9 +10,10 @@ namespace haxe.root {
 		
 		
 		public Comments() {
+			#line 43 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 			global::haxe.root.Comments.__hx_ctor__Comments(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor__Comments(global::haxe.root.Comments __hx_this) {
 		}
@@ -20,30 +21,42 @@ namespace haxe.root {
 		
 		public static string extract(object e) {
 			unchecked {
+				#line 128 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 				global::haxe.macro.ExprDef _g = ((global::haxe.macro.ExprDef) (global::haxe.lang.Runtime.getField(e, "expr", 1126038837, true)) );
+				#line 128 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 				if (( _g._hx_index == 0 )) {
+					#line 129 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 					global::haxe.macro.Constant _g1 = ( _g as global::haxe.macro.ExprDef_EConst ).c;
+					#line 129 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 					if (( _g1._hx_index == 2 )) {
+						#line 129 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 						global::haxe.macro.StringLiteralKind _g3 = ( _g1 as global::haxe.macro.Constant_CString ).kind;
+						#line 129 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 						string v = ( _g1 as global::haxe.macro.Constant_CString ).s;
 						string temp = v;
+						#line 131 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 						if (( temp.Length < 80 )) {
+							#line 133 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 							string str80 = "                                                                                ";
 							temp = global::haxe.lang.Runtime.concat(temp, global::haxe.lang.StringExt.substr(str80, 0, ( str80.Length - temp.Length )));
 						}
 						
+						#line 136 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 						return temp;
 					}
 					else {
+						#line 137 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 						return "not a proper comment";
 					}
 					
 				}
 				else {
+					#line 137 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 					return "not a proper comment";
 				}
 				
 			}
+			#line default
 		}
 		
 		

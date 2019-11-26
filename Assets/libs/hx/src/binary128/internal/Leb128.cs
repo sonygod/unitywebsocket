@@ -9,53 +9,62 @@ namespace binary128.@internal {
 		
 		
 		public Leb128() {
+			#line 30 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			global::binary128.@internal.Leb128.__hx_ctor_binary128_internal_Leb128(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_binary128_internal_Leb128(global::binary128.@internal.Leb128 __hx_this) {
 		}
 		
 		
 		public static void writeInt32(global::haxe.io.BytesOutput w, int val) {
+			#line 37 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			global::binary128.@internal.cs.Leb128.writeSigned32LEB128(w, val);
 		}
-		
+		#line default
 		
 		public static void writeUint32(global::haxe.io.BytesOutput w, uint val) {
+			#line 56 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			global::binary128.@internal.cs.Leb128.writeUnsigned32LEB128(w, val);
 		}
-		
+		#line default
 		
 		public static void writeInt64(global::haxe.io.BytesOutput w, long val) {
+			#line 74 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			global::binary128.@internal.cs.Leb128.writeSigned64LEB128(w, val);
 		}
-		
+		#line default
 		
 		public static void writeUint64(global::haxe.io.BytesOutput w, ulong val) {
+			#line 92 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			global::binary128.@internal.cs.Leb128.writeUnsigned64LEB128(w, val);
 		}
-		
+		#line default
 		
 		public static int readInt32(global::haxe.io.BytesInput i) {
+			#line 110 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			return ((int) (global::binary128.@internal.cs.Leb128.readSignedLEB128(i)) );
 		}
-		
+		#line default
 		
 		public static long readInt64(global::haxe.io.BytesInput i) {
+			#line 130 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			return ((long) (((int) (global::binary128.@internal.cs.Leb128.readSignedLEB128(i)) )) );
 		}
-		
+		#line default
 		
 		public static uint readUint32(global::haxe.io.BytesInput i) {
+			#line 150 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			return ((uint) (global::binary128.@internal.cs.Leb128.readUnsignedLEB128(i)) );
 		}
-		
+		#line default
 		
 		public static ulong readUint64(global::haxe.io.BytesInput i) {
+			#line 170 "C:\\HaxeToolkit\\haxe\\lib\\binary128\\0,0,1\\src\\binary128\\internal\\Leb128.hx"
 			return ((ulong) (global::binary128.@internal.cs.Leb128.readUnsignedLEB128(i)) );
 		}
-		
+		#line default
 		
 	}
 }

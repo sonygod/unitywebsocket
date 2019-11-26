@@ -10,177 +10,218 @@ namespace haxe.iterators {
 		
 		
 		public StringKeyValueIterator(string s) {
+			#line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			global::haxe.iterators.StringKeyValueIterator.__hx_ctor_haxe_iterators_StringKeyValueIterator(this, s);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_iterators_StringKeyValueIterator(global::haxe.iterators.StringKeyValueIterator __hx_this, string s) {
+			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			__hx_this.offset = 0;
+			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			{
+				#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				__hx_this.s = s;
 			}
 			
 		}
-		
+		#line default
 		
 		public int offset;
 		
 		public string s;
 		
 		public bool hasNext() {
+			#line 46 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			return ( this.offset < this.s.Length );
 		}
-		
+		#line default
 		
 		public object next() {
 			unchecked {
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				int tmp = this.offset;
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				string s = this.s;
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				int index = this.offset++;
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				return new global::haxe.lang.DynamicObject(new int[]{}, new object[]{}, new int[]{5343647, 834174833}, new double[]{((double) (tmp) ), ((double) (( (((bool) (( ((uint) (index) ) < s.Length )) )) ? (((int) (s[index]) )) : (-1) )) )});
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				switch (hash) {
 					case 1614780307:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						this.offset = ((int) (@value) );
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				switch (hash) {
 					case 115:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						this.s = global::haxe.lang.Runtime.toString(@value);
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return @value;
 					}
 					
 					
 					case 1614780307:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						this.offset = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "next", 1224901875)) );
 					}
 					
 					
 					case 407283053:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasNext", 407283053)) );
 					}
 					
 					
 					case 115:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return this.s;
 					}
 					
 					
 					case 1614780307:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return this.offset;
 					}
 					
 					
 					default:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				switch (hash) {
 					case 1614780307:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return ((double) (this.offset) );
 					}
 					
 					
 					default:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return this.next();
 					}
 					
 					
 					case 407283053:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return this.hasNext();
 					}
 					
 					
 					default:
 					{
+						#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			baseArr.push("s");
+			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			baseArr.push("offset");
+			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\iterators\\StringKeyValueIterator.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 	}
 }

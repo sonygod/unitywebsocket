@@ -10,24 +10,28 @@ namespace haxe.zip {
 		
 		
 		public Uncompress(object windowBits) {
+			#line 26 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 			global::haxe.zip.Uncompress.__hx_ctor_haxe_zip_Uncompress(this, windowBits);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_zip_Uncompress(global::haxe.zip.Uncompress __hx_this, object windowBits) {
+			#line 27 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 			throw global::haxe.lang.HaxeException.wrap("Not implemented for this platform");
 		}
-		
+		#line default
 		
 		public static global::haxe.io.Bytes run(global::haxe.io.Bytes src, object bufsize) {
+			#line 39 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 			return global::haxe.zip.InflateImpl.run(new global::haxe.io.BytesInput(src, null, null), bufsize);
 		}
-		
+		#line default
 		
 		public virtual object execute(global::haxe.io.Bytes src, int srcPos, global::haxe.io.Bytes dst, int dstPos) {
+			#line 31 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 			return null;
 		}
-		
+		#line default
 		
 		public virtual void setFlushMode(global::haxe.zip.FlushMode f) {
 		}
@@ -39,68 +43,83 @@ namespace haxe.zip {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 				switch (hash) {
 					case 1214453688:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "close", 1214453688)) );
 					}
 					
 					
 					case 1661457477:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "setFlushMode", 1661457477)) );
 					}
 					
 					
 					case 1275922997:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "execute", 1275922997)) );
 					}
 					
 					
 					default:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 				switch (hash) {
 					case 1214453688:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						this.close();
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						break;
 					}
 					
 					
 					case 1661457477:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						this.setFlushMode(((global::haxe.zip.FlushMode) (((object) (dynargs[0]) )) ));
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						break;
 					}
 					
 					
 					case 1275922997:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						return this.execute(((global::haxe.io.Bytes) (((object) (dynargs[0]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((global::haxe.io.Bytes) (((object) (dynargs[2]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[3]) ))) ));
 					}
 					
 					
 					default:
 					{
+						#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
+				#line 25 "C:\\HaxeToolkit\\haxe\\std\\haxe\\zip\\Uncompress.hx"
 				return null;
 			}
+			#line default
 		}
 		
 		

@@ -10,38 +10,48 @@ namespace haxe.crypto {
 		
 		
 		public Adler32() {
+			#line 32 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			global::haxe.crypto.Adler32.__hx_ctor_haxe_crypto_Adler32(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_crypto_Adler32(global::haxe.crypto.Adler32 __hx_this) {
 			unchecked {
+				#line 33 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				__hx_this.a1 = 1;
 				__hx_this.a2 = 0;
 			}
+			#line default
 		}
 		
 		
 		public static global::haxe.crypto.Adler32 read(global::haxe.io.Input i) {
 			unchecked {
+				#line 61 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				global::haxe.crypto.Adler32 a = new global::haxe.crypto.Adler32();
 				int a2a = i.readByte();
+				#line 63 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				int a2b = i.readByte();
 				int a1a = i.readByte();
+				#line 65 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				int a1b = i.readByte();
 				a.a1 = ( ( a1a << 8 ) | a1b );
+				#line 67 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				a.a2 = ( ( a2a << 8 ) | a2b );
 				return a;
 			}
+			#line default
 		}
 		
 		
 		public static int make(global::haxe.io.Bytes b) {
+			#line 72 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			global::haxe.crypto.Adler32 a = new global::haxe.crypto.Adler32();
 			a.update(b, 0, b.length);
+			#line 74 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			return a.@get();
 		}
-		
+		#line default
 		
 		public int a1;
 		
@@ -49,229 +59,285 @@ namespace haxe.crypto {
 		
 		public virtual int @get() {
 			unchecked {
+				#line 38 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				return ( ( this.a2 << 16 ) | this.a1 );
 			}
+			#line default
 		}
 		
 		
 		public virtual void update(global::haxe.io.Bytes b, int pos, int len) {
 			unchecked {
+				#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				int a1 = this.a1;
+				#line 42 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				int a2 = this.a2;
 				{
+					#line 43 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 					int _g = pos;
+					#line 43 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 					int _g1 = ( pos + len );
+					#line 43 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 					while (( _g < _g1 )) {
+						#line 43 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						int p = _g++;
 						int c = ((int) (((byte) (b.b[p]) )) );
+						#line 45 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						a1 = ( (( a1 + c )) % 65521 );
 						a2 = ( (( a2 + a1 )) % 65521 );
 					}
 					
 				}
 				
+				#line 48 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				this.a1 = a1;
 				this.a2 = a2;
 			}
+			#line default
 		}
 		
 		
 		public virtual bool @equals(global::haxe.crypto.Adler32 a) {
+			#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			if (( a.a1 == this.a1 )) {
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				return ( a.a2 == this.a2 );
 			}
 			else {
+				#line 53 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				return false;
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual string toString() {
 			unchecked {
+				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				return global::haxe.lang.Runtime.concat(global::haxe.root.StringTools.hex(this.a2, 8), global::haxe.root.StringTools.hex(this.a1, 8));
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				switch (hash) {
 					case 21681:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						this.a2 = ((int) (@value) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return @value;
 					}
 					
 					
 					case 21680:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						this.a1 = ((int) (@value) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				switch (hash) {
 					case 21681:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						this.a2 = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return @value;
 					}
 					
 					
 					case 21680:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						this.a1 = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				switch (hash) {
 					case 946786476:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 1072885311:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "equals", 1072885311)) );
 					}
 					
 					
 					case 117802505:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "update", 117802505)) );
 					}
 					
 					
 					case 5144726:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "get", 5144726)) );
 					}
 					
 					
 					case 21681:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return this.a2;
 					}
 					
 					
 					case 21680:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return this.a1;
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				switch (hash) {
 					case 21681:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return ((double) (this.a2) );
 					}
 					
 					
 					case 21680:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return ((double) (this.a1) );
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				switch (hash) {
 					case 946786476:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return this.toString();
 					}
 					
 					
 					case 1072885311:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return this.@equals(((global::haxe.crypto.Adler32) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 117802505:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						this.update(((global::haxe.io.Bytes) (((object) (dynargs[0]) )) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						break;
 					}
 					
 					
 					case 5144726:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return this.@get();
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 				return null;
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			baseArr.push("a2");
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			baseArr.push("a1");
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\haxe\\crypto\\Adler32.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 		public override string ToString(){
 			return this.toString();

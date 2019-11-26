@@ -7,14 +7,16 @@ namespace haxe.ds._ReadOnlyArray {
 		
 		
 		public static int get_length(global::haxe.root.Array this1) {
+			#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\ReadOnlyArray.hx"
 			return this1.length;
 		}
-		
+		#line default
 		
 		public static object @get(global::haxe.root.Array this1, int i) {
+			#line 44 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\ReadOnlyArray.hx"
 			return this1.__get(i);
 		}
-		
+		#line default
 		
 	}
 }

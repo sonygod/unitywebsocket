@@ -10,60 +10,78 @@ namespace haxe.ds {
 		
 		
 		public BalancedTree() {
+			#line 41 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.BalancedTree.__hx_ctor_haxe_ds_BalancedTree(((global::haxe.ds.BalancedTree) (this) ));
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_ds_BalancedTree(global::haxe.ds.BalancedTree __hx_this) {
 		}
 		
 		
 		global::haxe.IMap global::haxe.IMap.copy() {
+			#line 144 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return ((global::haxe.IMap) (this.copy()) );
 		}
-		
+		#line default
 		
 		public global::haxe.ds.TreeNode root;
 		
 		public virtual void @set(object key, object @value) {
+			#line 51 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			this.root = this.setLoop(key, @value, this.root);
 		}
-		
+		#line default
 		
 		public virtual object @get(object key) {
+			#line 62 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.TreeNode node = this.root;
 			while (( node != null )) {
+				#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				int c = this.compare(key, node.key);
 				if (( c == 0 )) {
+					#line 66 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					return node.@value;
 				}
 				
+				#line 67 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				if (( c < 0 )) {
+					#line 68 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					node = node.left;
 				}
 				else {
+					#line 70 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					node = node.right;
 				}
 				
 			}
 			
+			#line 72 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return null;
 		}
-		
+		#line default
 		
 		public virtual bool @remove(object key) {
+			#line 86 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			try {
+				#line 87 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				this.root = this.removeLoop(key, this.root);
 				return true;
 			}
 			catch (global::System.Exception catchallException){
+				#line 86 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				global::haxe.lang.Exceptions.exception = catchallException;
+				#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				object realException = ( (( catchallException is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException) ).obj) : ((object) (catchallException) ) );
+				#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				if (( realException is string )) {
+					#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					string e = global::haxe.lang.Runtime.toString(realException);
+					#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					return false;
 				}
 				else {
+					#line 90 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					throw;
 				}
 				
@@ -71,501 +89,620 @@ namespace haxe.ds {
 			
 			
 		}
-		
+		#line default
 		
 		public virtual bool exists(object key) {
+			#line 102 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.TreeNode node = this.root;
 			while (( node != null )) {
+				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				int c = this.compare(key, node.key);
 				if (( c == 0 )) {
+					#line 106 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					return true;
 				}
 				else if (( c < 0 )) {
+					#line 108 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					node = node.left;
 				}
 				else {
+					#line 110 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					node = node.right;
 				}
 				
 			}
 			
+			#line 112 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return false;
 		}
-		
+		#line default
 		
 		public virtual object iterator() {
+			#line 121 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.root.Array ret = new global::haxe.root.Array(new object[]{});
 			this.iteratorLoop(this.root, ret);
+			#line 123 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return ((object) (new global::haxe.root._Array.ArrayIterator(((global::haxe.root.Array) (ret) ))) );
 		}
-		
+		#line default
 		
 		public object keyValueIterator() {
+			#line 130 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return new global::haxe.iterators.MapKeyValueIterator(((global::haxe.IMap) (this) ));
 		}
-		
+		#line default
 		
 		public virtual object keys() {
+			#line 139 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.root.Array ret = new global::haxe.root.Array(new object[]{});
 			this.keysLoop(this.root, ret);
+			#line 141 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return ((object) (new global::haxe.root._Array.ArrayIterator(((global::haxe.root.Array) (ret) ))) );
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.BalancedTree copy() {
+			#line 145 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.BalancedTree copied = new global::haxe.ds.BalancedTree();
 			copied.root = this.root;
+			#line 147 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return copied;
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.TreeNode setLoop(object k, object v, global::haxe.ds.TreeNode node) {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( node == null )) {
+				#line 152 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return new global::haxe.ds.TreeNode(null, k, v, null, null);
 			}
 			
+			#line 153 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			int c = this.compare(k, node.key);
 			if (( c == 0 )) {
+				#line 154 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return new global::haxe.ds.TreeNode(node.left, k, v, node.right, ( (( node == null )) ? (0) : (node._height) ));
 			}
 			else if (( c < 0 )) {
+				#line 155 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				global::haxe.ds.TreeNode nl = this.setLoop(k, v, node.left);
 				return this.balance(nl, node.key, node.@value, node.right);
 			}
 			else {
+				#line 158 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				global::haxe.ds.TreeNode nr = this.setLoop(k, v, node.right);
 				return this.balance(node.left, node.key, node.@value, nr);
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.TreeNode removeLoop(object k, global::haxe.ds.TreeNode node) {
+			#line 164 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( node == null )) {
+				#line 165 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				throw global::haxe.lang.HaxeException.wrap("Not_found");
 			}
 			
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			int c = this.compare(k, node.key);
 			if (( c == 0 )) {
+				#line 167 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return this.merge(node.left, node.right);
 			}
 			else if (( c < 0 )) {
+				#line 168 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return this.balance(this.removeLoop(k, node.left), node.key, node.@value, node.right);
 			}
 			else {
+				#line 169 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return this.balance(node.left, node.key, node.@value, this.removeLoop(k, node.right));
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual void iteratorLoop(global::haxe.ds.TreeNode node, global::haxe.root.Array acc) {
+			#line 173 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( node != null )) {
+				#line 174 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				this.iteratorLoop(node.left, acc);
 				acc.push(node.@value);
+				#line 176 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				this.iteratorLoop(node.right, acc);
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual void keysLoop(global::haxe.ds.TreeNode node, global::haxe.root.Array acc) {
+			#line 181 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( node != null )) {
+				#line 182 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				this.keysLoop(node.left, acc);
 				acc.push(node.key);
+				#line 184 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				this.keysLoop(node.right, acc);
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.TreeNode merge(global::haxe.ds.TreeNode t1, global::haxe.ds.TreeNode t2) {
+			#line 189 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( t1 == null )) {
+				#line 190 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return t2;
 			}
 			
+			#line 191 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( t2 == null )) {
+				#line 192 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return t1;
 			}
 			
+			#line 193 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.TreeNode t = this.minBinding(t2);
 			return this.balance(t1, t.key, t.@value, this.removeMinBinding(t2));
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.TreeNode minBinding(global::haxe.ds.TreeNode t) {
+			#line 198 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( t == null )) {
+				#line 198 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				throw global::haxe.lang.HaxeException.wrap("Not_found");
 			}
 			else if (( t.left == null )) {
+				#line 198 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return t;
 			}
 			else {
+				#line 198 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return this.minBinding(t.left);
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.TreeNode removeMinBinding(global::haxe.ds.TreeNode t) {
+			#line 202 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( t.left == null )) {
+				#line 202 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return t.right;
 			}
 			else {
+				#line 202 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return this.balance(this.removeMinBinding(t.left), t.key, t.@value, t.right);
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual global::haxe.ds.TreeNode balance(global::haxe.ds.TreeNode l, object k, object v, global::haxe.ds.TreeNode r) {
 			unchecked {
+				#line 206 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				int hl = ( (( l == null )) ? (0) : (l._height) );
 				int hr = ( (( r == null )) ? (0) : (r._height) );
+				#line 208 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				if (( hl > ( hr + 2 ) )) {
+					#line 209 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					global::haxe.ds.TreeNode _this = l.left;
+					#line 209 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					global::haxe.ds.TreeNode _this1 = l.right;
+					#line 209 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					if (( (( (( _this == null )) ? (0) : (_this._height) )) >= (( (( _this1 == null )) ? (0) : (_this1._height) )) )) {
+						#line 210 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return new global::haxe.ds.TreeNode(l.left, l.key, l.@value, new global::haxe.ds.TreeNode(l.right, k, v, r, null), null);
 					}
 					else {
+						#line 212 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return new global::haxe.ds.TreeNode(new global::haxe.ds.TreeNode(l.left, l.key, l.@value, l.right.left, null), l.right.key, l.right.@value, new global::haxe.ds.TreeNode(l.right.right, k, v, r, null), null);
 					}
 					
 				}
 				else if (( hr > ( hl + 2 ) )) {
+					#line 215 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					global::haxe.ds.TreeNode _this2 = r.right;
+					#line 215 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					global::haxe.ds.TreeNode _this3 = r.left;
+					#line 215 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					if (( (( (( _this2 == null )) ? (0) : (_this2._height) )) > (( (( _this3 == null )) ? (0) : (_this3._height) )) )) {
+						#line 216 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return new global::haxe.ds.TreeNode(new global::haxe.ds.TreeNode(l, k, v, r.left, null), r.key, r.@value, r.right, null);
 					}
 					else {
+						#line 218 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return new global::haxe.ds.TreeNode(new global::haxe.ds.TreeNode(l, k, v, r.left.left, null), r.left.key, r.left.@value, new global::haxe.ds.TreeNode(r.left.right, r.key, r.@value, r.right, null), null);
 					}
 					
 				}
 				else {
+					#line 221 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					return new global::haxe.ds.TreeNode(l, k, v, r, ( (( (( hl > hr )) ? (hl) : (hr) )) + 1 ));
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public virtual int compare(object k1, object k2) {
+			#line 226 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return global::haxe.root.Reflect.compare(((object) (k1) ), ((object) (k2) ));
 		}
-		
+		#line default
 		
 		public virtual string toString() {
+			#line 230 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			if (( this.root == null )) {
+				#line 230 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return "{}";
 			}
 			else {
+				#line 230 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("{", this.root.toString()), "}");
 			}
 			
 		}
-		
+		#line default
 		
 		public virtual void clear() {
+			#line 237 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			this.root = null;
 		}
-		
+		#line default
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 1269755426:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.root = ((global::haxe.ds.TreeNode) (@value) );
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 1213952397:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clear", 1213952397)) );
 					}
 					
 					
 					case 946786476:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 57219237:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "compare", 57219237)) );
 					}
 					
 					
 					case 596483356:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "balance", 596483356)) );
 					}
 					
 					
 					case 2123232567:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeMinBinding", 2123232567)) );
 					}
 					
 					
 					case 1155848147:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "minBinding", 1155848147)) );
 					}
 					
 					
 					case 96903864:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "merge", 96903864)) );
 					}
 					
 					
 					case 451001976:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keysLoop", 451001976)) );
 					}
 					
 					
 					case 1692511090:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "iteratorLoop", 1692511090)) );
 					}
 					
 					
 					case 1154932936:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeLoop", 1154932936)) );
 					}
 					
 					
 					case 222029606:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "setLoop", 222029606)) );
 					}
 					
 					
 					case 1103412149:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "copy", 1103412149)) );
 					}
 					
 					
 					case 1191633396:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keys", 1191633396)) );
 					}
 					
 					
 					case 1257164128:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "keyValueIterator", 1257164128)) );
 					}
 					
 					
 					case 328878574:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "iterator", 328878574)) );
 					}
 					
 					
 					case 1071652316:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "exists", 1071652316)) );
 					}
 					
 					
 					case 76061764:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "remove", 76061764)) );
 					}
 					
 					
 					case 5144726:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "get", 5144726)) );
 					}
 					
 					
 					case 5741474:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "set", 5741474)) );
 					}
 					
 					
 					case 1269755426:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.root;
 					}
 					
 					
 					default:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 1213952397:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.clear();
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						break;
 					}
 					
 					
 					case 946786476:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.toString();
 					}
 					
 					
 					case 57219237:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.compare(((object) (dynargs[0]) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 596483356:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.balance(((global::haxe.ds.TreeNode) (((object) (dynargs[0]) )) ), ((object) (dynargs[1]) ), ((object) (dynargs[2]) ), ((global::haxe.ds.TreeNode) (((object) (dynargs[3]) )) ));
 					}
 					
 					
 					case 2123232567:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.removeMinBinding(((global::haxe.ds.TreeNode) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 1155848147:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.minBinding(((global::haxe.ds.TreeNode) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 96903864:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.merge(((global::haxe.ds.TreeNode) (((object) (dynargs[0]) )) ), ((global::haxe.ds.TreeNode) (((object) (dynargs[1]) )) ));
 					}
 					
 					
 					case 451001976:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.keysLoop(((global::haxe.ds.TreeNode) (((object) (dynargs[0]) )) ), ((global::haxe.root.Array) (((object) (dynargs[1]) )) ));
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						break;
 					}
 					
 					
 					case 1692511090:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.iteratorLoop(((global::haxe.ds.TreeNode) (((object) (dynargs[0]) )) ), ((global::haxe.root.Array) (((object) (dynargs[1]) )) ));
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						break;
 					}
 					
 					
 					case 1154932936:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.removeLoop(((object) (dynargs[0]) ), ((global::haxe.ds.TreeNode) (((object) (dynargs[1]) )) ));
 					}
 					
 					
 					case 222029606:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.setLoop(((object) (dynargs[0]) ), ((object) (dynargs[1]) ), ((global::haxe.ds.TreeNode) (((object) (dynargs[2]) )) ));
 					}
 					
 					
 					case 1103412149:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.copy();
 					}
 					
 					
 					case 1191633396:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.keys();
 					}
 					
 					
 					case 1257164128:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.keyValueIterator();
 					}
 					
 					
 					case 328878574:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.iterator();
 					}
 					
 					
 					case 1071652316:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.exists(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 76061764:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.@remove(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 5144726:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.@get(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 5741474:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.@set(((object) (dynargs[0]) ), ((object) (dynargs[1]) ));
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						break;
 					}
 					
 					
 					default:
 					{
+						#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
+				#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				return null;
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			baseArr.push("root");
+			#line 35 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 		public override string ToString(){
 			return this.toString();
@@ -586,37 +723,52 @@ namespace haxe.ds {
 		
 		
 		public TreeNode(global::haxe.ds.TreeNode l, object k, object v, global::haxe.ds.TreeNode r, object h) {
+			#line 252 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			global::haxe.ds.TreeNode.__hx_ctor_haxe_ds_TreeNode(((global::haxe.ds.TreeNode) (this) ), ((global::haxe.ds.TreeNode) (l) ), ((object) (k) ), ((object) (v) ), ((global::haxe.ds.TreeNode) (r) ), ((object) (h) ));
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_haxe_ds_TreeNode(global::haxe.ds.TreeNode __hx_this, global::haxe.ds.TreeNode l, object k, object v, global::haxe.ds.TreeNode r, object h) {
 			unchecked {
+				#line 252 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				int h1 = ( (( h == default(object) )) ? (-1) : (((int) (global::haxe.lang.Runtime.toInt(h)) )) );
 				__hx_this.left = l;
+				#line 254 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				__hx_this.key = k;
 				__hx_this.@value = v;
+				#line 256 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				__hx_this.right = r;
 				if (( h1 == -1 )) {
+					#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					int tmp = default(int);
+					#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					global::haxe.ds.TreeNode _this = __hx_this.left;
+					#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					global::haxe.ds.TreeNode _this1 = __hx_this.right;
+					#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					if (( (( (( _this == null )) ? (0) : (_this._height) )) > (( (( _this1 == null )) ? (0) : (_this1._height) )) )) {
+						#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						global::haxe.ds.TreeNode _this2 = __hx_this.left;
+						#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						tmp = ( (( _this2 == null )) ? (0) : (_this2._height) );
 					}
 					else {
+						#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						global::haxe.ds.TreeNode _this3 = __hx_this.right;
+						#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						tmp = ( (( _this3 == null )) ? (0) : (_this3._height) );
 					}
 					
+					#line 258 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					__hx_this._height = ( tmp + 1 );
 				}
 				else {
+					#line 260 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 					__hx_this._height = h1;
 				}
 				
 			}
+			#line default
 		}
 		
 		
@@ -631,205 +783,253 @@ namespace haxe.ds {
 		public int _height;
 		
 		public virtual string toString() {
+			#line 267 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			return global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat((( (( this.left == null )) ? ("") : (global::haxe.lang.Runtime.concat(this.left.toString(), ", ")) )), (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("", global::haxe.root.Std.@string(this.key)), "="), global::haxe.root.Std.@string(this.@value)))), (( (( this.right == null )) ? ("") : (global::haxe.lang.Runtime.concat(", ", this.right.toString())) )));
 		}
-		
+		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 1891834246:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this._height = ((int) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					case 834174833:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.@value = ((object) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(((object) (@value) ))) );
 					}
 					
 					
 					case 5343647:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.key = ((object) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(((object) (@value) ))) );
 					}
 					
 					
 					default:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 1891834246:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this._height = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					case 834174833:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.@value = ((object) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					case 5343647:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.key = ((object) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					case 1768164316:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.right = ((global::haxe.ds.TreeNode) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					case 1202718727:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						this.left = ((global::haxe.ds.TreeNode) (@value) );
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 946786476:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 1891834246:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this._height;
 					}
 					
 					
 					case 834174833:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.@value;
 					}
 					
 					
 					case 5343647:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.key;
 					}
 					
 					
 					case 1768164316:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.right;
 					}
 					
 					
 					case 1202718727:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.left;
 					}
 					
 					
 					default:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 1891834246:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((double) (this._height) );
 					}
 					
 					
 					case 834174833:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(((object) (this.@value) ))) );
 					}
 					
 					
 					case 5343647:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(((object) (this.key) ))) );
 					}
 					
 					
 					default:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 				switch (hash) {
 					case 946786476:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return this.toString();
 					}
 					
 					
 					default:
 					{
+						#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			baseArr.push("_height");
+			#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			baseArr.push("value");
+			#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			baseArr.push("key");
+			#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			baseArr.push("right");
+			#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			baseArr.push("left");
+			#line 244 "C:\\HaxeToolkit\\haxe\\std\\haxe\\ds\\BalancedTree.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 		public override string ToString(){
 			return this.toString();

@@ -10,122 +10,164 @@ namespace sys {
 		
 		
 		public FileSystem() {
+			#line 31 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			global::sys.FileSystem.__hx_ctor_sys_FileSystem(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_sys_FileSystem(global::sys.FileSystem __hx_this) {
 		}
 		
 		
 		public static bool exists(string path) {
+			#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			if ( ! (global::System.IO.File.Exists(((string) (path) ))) ) {
+				#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				return global::System.IO.Directory.Exists(((string) (path) ));
 			}
 			else {
+				#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				return true;
 			}
 			
 		}
-		
+		#line default
 		
 		public static void rename(string path, string newPath) {
+			#line 37 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			global::System.IO.Directory.Move(((string) (path) ), ((string) (newPath) ));
 		}
-		
+		#line default
 		
 		public static object stat(string path) {
+			#line 42 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			if (global::System.IO.File.Exists(((string) (path) ))) {
+				#line 43 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				global::System.IO.FileInfo fi = new global::System.IO.FileInfo(path);
+				#line 47 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				global::haxe.root.Date tmp = new global::haxe.root.Date(((global::System.DateTime) (( fi as global::System.IO.FileSystemInfo ).LastAccessTime) ));
 				global::haxe.root.Date tmp1 = new global::haxe.root.Date(((global::System.DateTime) (( fi as global::System.IO.FileSystemInfo ).LastWriteTime) ));
+				#line 49 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				global::haxe.root.Date tmp2 = new global::haxe.root.Date(((global::System.DateTime) (( fi as global::System.IO.FileSystemInfo ).CreationTime) ));
+				#line 44 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				{
+					#line 50 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					int __temp_odecl1 = ((int) (fi.Length) );
+					#line 44 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					return new global::haxe.lang.DynamicObject(new int[]{262801146, 651890926, 1302870512}, new object[]{tmp1, tmp, tmp2}, new int[]{4995541, 5145602, 5246186, 5841808, 499574632, 1214305123, 1269206179, 1280549057}, new double[]{((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (__temp_odecl1) )});
 				}
 				
 			}
 			else if (global::System.IO.Directory.Exists(((string) (path) ))) {
+				#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				global::System.IO.DirectoryInfo fi1 = new global::System.IO.DirectoryInfo(path);
+				#line 62 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				global::haxe.root.Date tmp3 = new global::haxe.root.Date(((global::System.DateTime) (( fi1 as global::System.IO.FileSystemInfo ).LastAccessTime) ));
 				global::haxe.root.Date tmp4 = new global::haxe.root.Date(((global::System.DateTime) (( fi1 as global::System.IO.FileSystemInfo ).LastWriteTime) ));
+				#line 59 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				{
+					#line 64 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					global::haxe.root.Date __temp_odecl2 = new global::haxe.root.Date(((global::System.DateTime) (( fi1 as global::System.IO.FileSystemInfo ).CreationTime) ));
+					#line 59 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					return new global::haxe.lang.DynamicObject(new int[]{262801146, 651890926, 1302870512}, new object[]{tmp4, tmp3, __temp_odecl2}, new int[]{4995541, 5145602, 5246186, 5841808, 499574632, 1214305123, 1269206179, 1280549057}, new double[]{((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) ), ((double) (0) )});
 				}
 				
 			}
 			else {
+				#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Path \'", path), "\' doesn\'t exist"));
 			}
 			
 		}
-		
+		#line default
 		
 		public static string fullPath(string relPath) {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			return ( new global::System.IO.FileInfo(relPath) as global::System.IO.FileSystemInfo ).FullName;
 		}
-		
+		#line default
 		
 		public static string absolutePath(string relPath) {
+			#line 82 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			if (global::haxe.io.Path.isAbsolute(relPath)) {
+				#line 83 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				return relPath;
 			}
 			
+			#line 84 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			return global::haxe.io.Path.@join(new global::haxe.root.Array(new object[]{global::System.IO.Directory.GetCurrentDirectory(), relPath}));
 		}
-		
+		#line default
 		
 		public static bool isDirectory(string path) {
+			#line 88 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			bool isdir = global::System.IO.Directory.Exists(((string) (path) ));
 			if (( isdir != global::System.IO.File.Exists(((string) (path) )) )) {
+				#line 90 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				return isdir;
 			}
 			
+			#line 91 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Path \'", path), "\' doesn\'t exist"));
 		}
-		
+		#line default
 		
 		public static void createDirectory(string path) {
+			#line 95 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			global::System.IO.Directory.CreateDirectory(((string) (path) ));
 		}
-		
+		#line default
 		
 		public static void deleteFile(string path) {
+			#line 99 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			if ( ! (global::System.IO.File.Exists(((string) (path) ))) ) {
+				#line 100 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Path \'", path), "\' doesn\'t exist"));
 			}
 			
+			#line 101 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			global::System.IO.File.Delete(((string) (path) ));
 		}
-		
+		#line default
 		
 		public static void deleteDirectory(string path) {
+			#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			if ( ! (global::System.IO.Directory.Exists(((string) (path) ))) ) {
+				#line 106 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Path \'", path), "\' doesn\'t exist"));
 			}
 			
+			#line 107 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 			global::System.IO.Directory.Delete(((string) (path) ));
 		}
-		
+		#line default
 		
 		public static global::haxe.root.Array readDirectory(string path) {
 			unchecked {
+				#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				string[] ret = global::System.IO.Directory.GetFileSystemEntries(((string) (path) ));
 				if (( ( ret as global::System.Array ).Length > 0 )) {
+					#line 113 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					string fst = ((string) (ret[0]) );
 					string sep = "/";
+					#line 115 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					if (( global::haxe.lang.StringExt.lastIndexOf(fst, sep, null) < global::haxe.lang.StringExt.lastIndexOf(fst, "\\", null) )) {
+						#line 116 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 						sep = "\\";
 					}
 					
+					#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					{
+						#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 						int _g = 0;
+						#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 						int _g1 = ( ret as global::System.Array ).Length;
+						#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 						while (( _g < _g1 )) {
+							#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 							int i = _g++;
 							string path1 = ((string) (ret[i]) );
+							#line 119 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 							ret[i] = global::haxe.lang.StringExt.substr(path1, ( global::haxe.lang.StringExt.lastIndexOf(path1, sep, null) + 1 ), null);
 						}
 						
@@ -133,20 +175,30 @@ namespace sys {
 					
 				}
 				
+				#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				object[] ret1 = new object[( ret as global::System.Array ).Length];
+				#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				{
+					#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					int _g2 = 0;
+					#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					int _g11 = ( ret as global::System.Array ).Length;
+					#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 					while (( _g2 < _g11 )) {
+						#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 						int i1 = _g2++;
+						#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 						ret1[i1] = ((string) (ret[i1]) );
 					}
 					
 				}
 				
+				#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				object[] dyn = ret1;
+				#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\sys\\FileSystem.hx"
 				return new global::haxe.root.Array(((object[]) (dyn) ));
 			}
+			#line default
 		}
 		
 		

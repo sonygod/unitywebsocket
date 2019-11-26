@@ -36,9 +36,10 @@ namespace hx.ws {
 		
 		
 		public override string getTag() {
+			#line 4 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\State.hx"
 			return "Handshake";
 		}
-		
+		#line default
 		
 	}
 }
@@ -54,9 +55,10 @@ namespace hx.ws {
 		
 		
 		public override string getTag() {
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\State.hx"
 			return "Head";
 		}
-		
+		#line default
 		
 	}
 }
@@ -72,9 +74,10 @@ namespace hx.ws {
 		
 		
 		public override string getTag() {
+			#line 6 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\State.hx"
 			return "HeadExtraLength";
 		}
-		
+		#line default
 		
 	}
 }
@@ -90,9 +93,10 @@ namespace hx.ws {
 		
 		
 		public override string getTag() {
+			#line 7 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\State.hx"
 			return "HeadExtraMask";
 		}
-		
+		#line default
 		
 	}
 }
@@ -108,9 +112,10 @@ namespace hx.ws {
 		
 		
 		public override string getTag() {
+			#line 8 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\State.hx"
 			return "Body";
 		}
-		
+		#line default
 		
 	}
 }
@@ -126,9 +131,10 @@ namespace hx.ws {
 		
 		
 		public override string getTag() {
+			#line 9 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\State.hx"
 			return "Closed";
 		}
-		
+		#line default
 		
 	}
 }

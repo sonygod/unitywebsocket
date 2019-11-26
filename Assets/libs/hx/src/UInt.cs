@@ -49,9 +49,10 @@ namespace haxe.root._UInt {
 		
 		
 		public static uint shr(uint lhs, int rhs) {
+			#line 79 "C:\\HaxeToolkit\\haxe\\std\\UInt.hx"
 			return ((uint) (((uint) (( ((uint) (lhs) ) >> rhs )) )) );
 		}
-		
+		#line default
 		
 		
 		

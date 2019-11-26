@@ -12,75 +12,101 @@ namespace haxe.lang {
 		
 		public static global::System.String charAt(global::System.String me, int index) {
 			unchecked {
+				#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				if (((bool) (( ((uint) (index) ) >= me.Length )) )) {
+					#line 34 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return global::haxe.lang.StringExt.empty;
 				}
 				else {
+					#line 36 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return new global::System.String(me[index], 1);
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public static object charCodeAt(global::System.String me, int index) {
+			#line 40 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (((bool) (( ((uint) (index) ) >= me.Length )) )) {
+				#line 41 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				return null;
 			}
 			else {
+				#line 43 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				return ((int) (me[index]) );
 			}
 			
 		}
-		
+		#line default
 		
 		public static int indexOf(global::System.String me, string str) {
+			#line 46 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return global::haxe.lang.StringExt.indexOf(me, str, default(object));
 		}
-		
+		#line default
 		
 		public static int indexOf(global::System.String me, string str, object startIndex) {
 			unchecked {
+				#line 47 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				int sIndex = ( (( startIndex != default(object) )) ? (((int) (global::haxe.lang.Runtime.toInt(startIndex)) )) : (0) );
 				if (( sIndex >= me.Length )) {
+					#line 49 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return -1;
 				}
 				
+				#line 50 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				return me.IndexOf(((string) (str) ), ((int) (sIndex) ), ((global::System.StringComparison) (global::System.StringComparison.Ordinal) ));
 			}
+			#line default
 		}
 		
 		
 		public static int lastIndexOf(global::System.String me, global::System.String str) {
+			#line 53 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return global::haxe.lang.StringExt.lastIndexOf(me, str, default(object));
 		}
-		
+		#line default
 		
 		public static int lastIndexOf(global::System.String me, global::System.String str, object startIndex) {
 			unchecked {
+				#line 54 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				int sIndex = ( (( startIndex == default(object) )) ? (( me.Length - 1 )) : (((int) (global::haxe.lang.Runtime.toInt(startIndex)) )) );
 				if (( sIndex >= me.Length )) {
+					#line 56 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					sIndex = ( me.Length - 1 );
 				}
 				else if (( sIndex < 0 )) {
+					#line 58 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return -1;
 				}
 				
+				#line 61 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				if (( startIndex != default(object) )) {
+					#line 65 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					int d = ( ( me.Length - sIndex ) - str.Length );
 					if (( d < 0 )) {
+						#line 67 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						sIndex += d;
 					}
 					
+					#line 70 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					int i = ( sIndex + 1 );
 					while (( i-- > 0 )) {
+						#line 72 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						bool found = true;
 						{
+							#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 							int _g = 0;
+							#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 							int _g1 = str.Length;
+							#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 							while (( _g < _g1 )) {
+								#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 								int j = _g++;
 								if (( me[( i + j )] != str[j] )) {
+									#line 75 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 									found = false;
 									break;
 								}
@@ -89,32 +115,44 @@ namespace haxe.lang {
 							
 						}
 						
+						#line 80 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						if (found) {
+							#line 81 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 							return i;
 						}
 						
 					}
 					
+					#line 84 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return -1;
 				}
 				else {
+					#line 86 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return me.LastIndexOf(((string) (str) ), ((int) (sIndex) ), ((global::System.StringComparison) (global::System.StringComparison.Ordinal) ));
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public static global::haxe.root.Array split(global::System.String me, global::System.String delimiter) {
 			unchecked {
+				#line 92 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				string[] native = null;
 				if (( delimiter.Length == 0 )) {
+					#line 94 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					int len = me.Length;
 					native = new string[len];
+					#line 96 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					{
+						#line 96 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						int _g = 0;
+						#line 96 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						int _g1 = len;
+						#line 96 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						while (( _g < _g1 )) {
+							#line 96 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 							int i = _g++;
 							native[i] = new global::System.String(me[i], 1);
 						}
@@ -123,130 +161,176 @@ namespace haxe.lang {
 					
 				}
 				else {
+					#line 99 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					string[] str = new string[1];
 					str[0] = global::haxe.lang.Runtime.toString(delimiter);
+					#line 102 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					native = me.Split(((string[]) (str) ), ((global::System.StringSplitOptions) (global::System.StringSplitOptions.None) ));
 				}
 				
+				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				object[] ret = new object[( native as global::System.Array ).Length];
+				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				{
+					#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					int _g2 = 0;
+					#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					int _g11 = ( native as global::System.Array ).Length;
+					#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					while (( _g2 < _g11 )) {
+						#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						int i1 = _g2++;
+						#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						ret[i1] = ((string) (native[i1]) );
 					}
 					
 				}
 				
+				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				object[] dyn = ret;
+				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				return new global::haxe.root.Array(((object[]) (dyn) ));
 			}
+			#line default
 		}
 		
 		
 		public static string substr(global::System.String me, int pos) {
+			#line 108 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return global::haxe.lang.StringExt.substr(me, pos, default(object));
 		}
-		
+		#line default
 		
 		public static string substr(global::System.String me, int pos, object len) {
+			#line 109 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			int meLen = me.Length;
 			int targetLen = meLen;
+			#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( len != default(object) )) {
+				#line 112 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				targetLen = ((int) (global::haxe.lang.Runtime.toInt(len)) );
 				if (( ( targetLen == 0 ) || ( ( pos != 0 ) && ( targetLen < 0 ) ) )) {
+					#line 114 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return "";
 				}
 				
 			}
 			
+			#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( pos < 0 )) {
+				#line 118 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				pos = ( meLen + pos );
 				if (( pos < 0 )) {
+					#line 120 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					pos = 0;
 				}
 				
 			}
 			else if (( targetLen < 0 )) {
+				#line 122 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				targetLen = ( ( meLen + targetLen ) - pos );
 			}
 			
+			#line 125 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( ( pos + targetLen ) > meLen )) {
+				#line 126 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				targetLen = ( meLen - pos );
 			}
 			
+			#line 129 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( ( pos < 0 ) || ( targetLen <= 0 ) )) {
+				#line 130 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				return "";
 			}
 			
+			#line 132 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return me.Substring(((int) (pos) ), ((int) (targetLen) ));
 		}
-		
+		#line default
 		
 		public static string substring(global::System.String me, int startIndex) {
+			#line 135 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return global::haxe.lang.StringExt.substring(me, startIndex, default(object));
 		}
-		
+		#line default
 		
 		public static string substring(global::System.String me, int startIndex, object endIndex) {
+			#line 136 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			int len = me.Length;
 			int endIdx = default(int);
+			#line 138 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( endIndex == default(object) )) {
+				#line 139 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				endIdx = len;
 			}
 			else {
+				#line 140 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				endIdx = ((int) (global::haxe.lang.Runtime.toInt(endIndex)) );
+				#line 140 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				if (( endIdx < 0 )) {
+					#line 141 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					endIdx = 0;
 				}
 				else if (( endIdx > len )) {
+					#line 143 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					endIdx = len;
 				}
 				
 			}
 			
+			#line 145 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( startIndex < 0 )) {
+				#line 146 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				startIndex = 0;
 			}
 			else if (( startIndex > len )) {
+				#line 148 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				startIndex = len;
 			}
 			
+			#line 150 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			if (( startIndex > endIdx )) {
+				#line 151 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				int tmp = startIndex;
 				startIndex = endIdx;
+				#line 153 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				endIdx = tmp;
 			}
 			
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return me.Substring(((int) (startIndex) ), ((int) (( endIdx - startIndex )) ));
 		}
-		
+		#line default
 		
 		public static global::System.String toString(global::System.String me) {
+			#line 160 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return me;
 		}
-		
+		#line default
 		
 		public static string toLowerCase(global::System.String me) {
+			#line 164 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return me.ToLowerInvariant();
 		}
-		
+		#line default
 		
 		public static string toUpperCase(global::System.String me) {
+			#line 168 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return me.ToUpperInvariant();
 		}
-		
+		#line default
 		
 		public static global::System.String toNativeString(global::System.String me) {
+			#line 172 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return me;
 		}
-		
+		#line default
 		
 		public static string fromCharCode(int code) {
+			#line 176 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			return global::System.Char.ConvertFromUtf32(((int) (code) ));
 		}
-		
+		#line default
 		
 	}
 }
@@ -258,9 +342,10 @@ namespace haxe.lang {
 	public class StringRefl {
 		
 		static StringRefl() {
+			#line 182 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			global::haxe.lang.StringRefl.fields = new global::haxe.root.Array(new object[]{"length", "toUpperCase", "toLowerCase", "charAt", "charCodeAt", "indexOf", "lastIndexOf", "split", "substr", "substring"});
 		}
-		
+		#line default
 		
 		public StringRefl() {
 		}
@@ -269,9 +354,11 @@ namespace haxe.lang {
 		public static global::haxe.root.Array fields;
 		
 		public static object handleGetField(string str, string f, bool throwErrors) {
+			#line 187 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 			switch (f) {
 				case "length":
 				{
+					#line 189 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return str.Length;
 				}
 				
@@ -286,16 +373,20 @@ namespace haxe.lang {
 				case "toLowerCase":
 				case "toUpperCase":
 				{
+					#line 191 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					return new global::haxe.lang.Closure(str, f, 0);
 				}
 				
 				
 				default:
 				{
+					#line 193 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					if (throwErrors) {
+						#line 194 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						throw global::haxe.lang.HaxeException.wrap(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("Field not found: \'", f), "\' in String"));
 					}
 					else {
+						#line 196 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						return null;
 					}
 					
@@ -304,31 +395,41 @@ namespace haxe.lang {
 			}
 			
 		}
-		
+		#line default
 		
 		public static object handleCallField(global::System.String str, string f, object[] args) {
 			unchecked {
+				#line 201 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				object[] _args = null;
 				if (( args == null )) {
+					#line 203 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					_args = new global::System.String[]{((global::System.String) (str) )};
 				}
 				else {
+					#line 205 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					_args = new object[( ( args as global::System.Array ).Length + 1 )];
 					{
+						#line 206 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						int _g = 0;
+						#line 206 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						int _g1 = ( args as global::System.Array ).Length;
+						#line 206 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 						while (( _g < _g1 )) {
+							#line 206 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 							int i = _g++;
 							_args[( i + 1 )] = ((object) (args[i]) );
 						}
 						
 					}
 					
+					#line 208 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 					_args[0] = str;
 				}
 				
+				#line 210 "C:\\HaxeToolkit\\haxe\\std\\cs\\internal\\StringExt.hx"
 				return global::haxe.lang.Runtime.slowCallField(typeof(global::haxe.lang.StringExt), f, _args);
 			}
+			#line default
 		}
 		
 		

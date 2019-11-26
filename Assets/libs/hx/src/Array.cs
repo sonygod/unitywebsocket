@@ -10,505 +10,686 @@ namespace haxe.root {
 			if(global::haxe.root.Array.__hx_init_called) return;
 			global::haxe.root.Array.__hx_init_called = true;
 			unchecked{
+				#line 33 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				global::haxe.root.Array.__hx_toString_depth = 0;
 				global::haxe.root.Array.__hx_defaultCapacity = 4;
 			}
 			
 		}
-		
+		#line default
 		
 		public Array(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public Array(object[] native) {
+			#line 56 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::haxe.root.Array.__hx_ctor__Array(((global::haxe.root.Array) (this) ), ((object[]) (native) ));
 		}
-		
+		#line default
 		
 		public Array() {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::haxe.root.Array.__hx_ctor__Array(((global::haxe.root.Array) (this) ));
 		}
-		
+		#line default
 		
 		private static void __hx_ctor__Array(global::haxe.root.Array __hx_this, object[] native) {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			__hx_this.length = ( native as global::System.Array ).Length;
 			__hx_this.__a = native;
 		}
-		
+		#line default
 		
 		private static void __hx_ctor__Array(global::haxe.root.Array __hx_this) {
+			#line 51 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			__hx_this.length = 0;
 			__hx_this.__a = new object[0];
 		}
-		
+		#line default
 		
 		public static int __hx_toString_depth;
 		
 		public static int __hx_defaultCapacity;
 		
 		public static global::haxe.root.Array ofNative(object[] native) {
+			#line 38 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return new global::haxe.root.Array(((object[]) (native) ));
 		}
-		
+		#line default
 		
 		public static global::haxe.root.Array alloc(int size) {
+			#line 47 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return new global::haxe.root.Array(((object[]) (new object[size]) ));
 		}
-		
+		#line default
 		
 		public int length;
 		
 		public object[] __a;
 		
 		public global::haxe.root.Array concat(global::haxe.root.Array a) {
+			#line 68 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			int len = ( this.length + a.length );
 			object[] retarr = new object[len];
+			#line 70 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::System.Array.Copy(((global::System.Array) (this.__a) ), ((int) (0) ), ((global::System.Array) (retarr) ), ((int) (0) ), ((int) (this.length) ));
 			global::System.Array.Copy(((global::System.Array) (a.__a) ), ((int) (0) ), ((global::System.Array) (retarr) ), ((int) (this.length) ), ((int) (a.length) ));
+			#line 73 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return new global::haxe.root.Array(((object[]) (retarr) ));
 		}
-		
+		#line default
 		
 		public void concatNative(object[] a) {
+			#line 77 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] __a = this.__a;
 			int len = ( this.length + ( a as global::System.Array ).Length );
+			#line 79 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( ( __a as global::System.Array ).Length >= len )) {
+				#line 80 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				global::System.Array.Copy(((global::System.Array) (a) ), ((int) (0) ), ((global::System.Array) (__a) ), ((int) (this.length) ), ((int) (this.length) ));
 			}
 			else {
+				#line 82 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object[] newarr = new object[len];
 				global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (0) ), ((global::System.Array) (newarr) ), ((int) (0) ), ((int) (this.length) ));
+				#line 84 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				global::System.Array.Copy(((global::System.Array) (a) ), ((int) (0) ), ((global::System.Array) (newarr) ), ((int) (this.length) ), ((int) (( a as global::System.Array ).Length) ));
+				#line 86 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.__a = newarr;
 			}
 			
+			#line 89 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			this.length = len;
 		}
-		
+		#line default
 		
 		public int indexOf(object x, object fromIndex) {
 			unchecked {
+				#line 93 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int len = this.length;
+				#line 93 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int i = ( (( fromIndex == default(object) )) ? (0) : (((int) (global::haxe.lang.Runtime.toInt(fromIndex)) )) );
 				if (( i < 0 )) {
+					#line 95 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					i += len;
 					if (( i < 0 )) {
+						#line 97 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						i = 0;
 					}
 					
 				}
 				else if (( i >= len )) {
+					#line 99 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					return -1;
 				}
 				
+				#line 101 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return global::System.Array.IndexOf<object>(((object[]) (this.__a) ), ((object) (x) ), ((int) (i) ), ((int) (( len - i )) ));
 			}
+			#line default
 		}
 		
 		
 		public int lastIndexOf(object x, object fromIndex) {
 			unchecked {
+				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int len = this.length;
+				#line 105 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int i = ( (( fromIndex == default(object) )) ? (( len - 1 )) : (((int) (global::haxe.lang.Runtime.toInt(fromIndex)) )) );
 				if (( i >= len )) {
+					#line 107 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					i = ( len - 1 );
 				}
 				else if (( i < 0 )) {
+					#line 109 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					i += len;
 					if (( i < 0 )) {
+						#line 111 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return -1;
 					}
 					
 				}
 				
+				#line 113 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return global::System.Array.LastIndexOf<object>(((object[]) (this.__a) ), ((object) (x) ), ((int) (i) ), ((int) (( i + 1 )) ));
 			}
+			#line default
 		}
 		
 		
 		public string @join(string sep) {
 			unchecked {
+				#line 117 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				global::System.Text.StringBuilder buf_b = new global::System.Text.StringBuilder();
 				int i = -1;
+				#line 120 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				bool first = true;
 				int length = this.length;
+				#line 122 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				while ((  ++ i < length )) {
+					#line 123 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					if (first) {
+						#line 124 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						first = false;
 					}
 					else {
+						#line 126 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						buf_b.Append(((string) (global::haxe.root.Std.@string(sep)) ));
 					}
 					
+					#line 127 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					buf_b.Append(((string) (global::haxe.root.Std.@string(((object) (this.__a[i]) ))) ));
 				}
 				
+				#line 130 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return buf_b.ToString();
 			}
+			#line default
 		}
 		
 		
 		public object pop() {
+			#line 134 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] __a = this.__a;
 			int length = this.length;
+			#line 136 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( length > 0 )) {
+				#line 137 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object val = ((object) (__a[ -- length]) );
 				__a[length] = null;
+				#line 139 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.length = length;
+				#line 141 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return val;
 			}
 			else {
+				#line 143 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return null;
 			}
 			
 		}
-		
+		#line default
 		
 		public int push(object x) {
 			unchecked {
+				#line 148 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( this.length >= ( this.__a as global::System.Array ).Length )) {
+					#line 149 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					int newLen = ( (( this.length == 0 )) ? (4) : (( this.length << 1 )) );
 					object[] newarr = new object[newLen];
+					#line 151 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					( this.__a as global::System.Array ).CopyTo(((global::System.Array) (newarr) ), ((int) (0) ));
+					#line 153 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.__a = newarr;
 				}
 				
+				#line 156 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.__a[this.length] = x;
 				return  ++ this.length;
 			}
+			#line default
 		}
 		
 		
 		public void reverse() {
 			unchecked {
+				#line 161 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int i = 0;
 				int l = this.length;
+				#line 163 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object[] a = this.__a;
 				int half = ( l >> 1 );
+				#line 165 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				 -- l;
 				while (( i < half )) {
+					#line 167 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					object tmp = ((object) (a[i]) );
 					a[i] = ((object) (a[( l - i )]) );
+					#line 169 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					a[( l - i )] = tmp;
 					 ++ i;
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public object shift() {
 			unchecked {
+				#line 175 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int l = this.length;
 				if (( l == 0 )) {
+					#line 177 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					return null;
 				}
 				
+				#line 179 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object[] a = this.__a;
 				object x = ((object) (a[0]) );
+				#line 181 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				 -- l;
 				global::System.Array.Copy(((global::System.Array) (a) ), ((int) (1) ), ((global::System.Array) (a) ), ((int) (0) ), ((int) (( this.length - 1 )) ));
+				#line 183 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				a[l] = null;
 				this.length = l;
+				#line 186 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return x;
 			}
+			#line default
 		}
 		
 		
 		public global::haxe.root.Array slice(int pos, object end) {
+			#line 190 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( pos < 0 )) {
+				#line 191 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				pos = ( this.length + pos );
 				if (( pos < 0 )) {
+					#line 193 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					pos = 0;
 				}
 				
 			}
 			
+			#line 195 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( end == default(object) )) {
+				#line 196 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				end = this.length;
 			}
 			else if (( ((int) (global::haxe.lang.Runtime.toInt(end)) ) < 0 )) {
+				#line 198 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				end = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.plus(this.length, end))) );
 			}
 			
+			#line 199 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( ((int) (global::haxe.lang.Runtime.toInt(end)) ) > this.length )) {
+				#line 200 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				end = this.length;
 			}
 			
+			#line 201 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			int len = ( ((int) (global::haxe.lang.Runtime.toInt(end)) ) - ((int) (pos) ) );
 			if (( len < 0 )) {
+				#line 203 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return new global::haxe.root.Array();
 			}
 			
+			#line 205 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] newarr = new object[len];
 			global::System.Array.Copy(((global::System.Array) (this.__a) ), ((int) (pos) ), ((global::System.Array) (newarr) ), ((int) (0) ), ((int) (len) ));
+			#line 208 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return new global::haxe.root.Array(((object[]) (newarr) ));
 		}
-		
+		#line default
 		
 		public void sort(global::haxe.lang.Function f) {
 			unchecked {
+				#line 212 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( this.length == 0 )) {
+					#line 213 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					return;
 				}
 				
+				#line 214 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.quicksort(0, ( this.length - 1 ), f);
 			}
+			#line default
 		}
 		
 		
 		public void quicksort(int lo, int hi, global::haxe.lang.Function f) {
 			unchecked {
+				#line 218 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object[] buf = this.__a;
 				int i = lo;
 				int j = hi;
+				#line 220 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object p = ((object) (buf[( ( i + j ) >> 1 )]) );
 				while (( i <= j )) {
+					#line 222 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					while (( ( i < hi ) && ( ((int) (f.__hx_invoke2_f(default(double), ((object) (buf[i]) ), default(double), p)) ) < 0 ) )) {
+						#line 223 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						 ++ i;
 					}
 					
+					#line 224 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					while (( ( j > lo ) && ( ((int) (f.__hx_invoke2_f(default(double), ((object) (buf[j]) ), default(double), p)) ) > 0 ) )) {
+						#line 225 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						 -- j;
 					}
 					
+					#line 226 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					if (( i <= j )) {
+						#line 227 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						object t = ((object) (buf[i]) );
 						buf[i++] = ((object) (buf[j]) );
+						#line 229 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						buf[j--] = t;
 					}
 					
 				}
 				
+				#line 233 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( lo < j )) {
+					#line 234 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.quicksort(lo, j, f);
 				}
 				
+				#line 235 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( i < hi )) {
+					#line 236 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.quicksort(i, hi, f);
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public global::haxe.root.Array splice(int pos, int len) {
+			#line 240 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( len < 0 )) {
+				#line 241 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return new global::haxe.root.Array();
 			}
 			
+			#line 242 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( pos < 0 )) {
+				#line 243 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				pos = ( this.length + pos );
 				if (( pos < 0 )) {
+					#line 245 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					pos = 0;
 				}
 				
 			}
 			
+			#line 247 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( pos > this.length )) {
+				#line 248 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				pos = 0;
 				len = 0;
 			}
 			else if (( ( pos + len ) > this.length )) {
+				#line 251 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				len = ( this.length - pos );
 				if (( len < 0 )) {
+					#line 253 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					len = 0;
 				}
 				
 			}
 			
+			#line 255 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] a = this.__a;
+			#line 257 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] ret = new object[len];
 			global::System.Array.Copy(((global::System.Array) (a) ), ((int) (pos) ), ((global::System.Array) (ret) ), ((int) (0) ), ((int) (len) ));
+			#line 259 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::haxe.root.Array ret1 = new global::haxe.root.Array(((object[]) (ret) ));
+			#line 261 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			int end = ( pos + len );
 			global::System.Array.Copy(((global::System.Array) (a) ), ((int) (end) ), ((global::System.Array) (a) ), ((int) (pos) ), ((int) (( this.length - end )) ));
+			#line 263 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			this.length -= len;
 			while ((  -- len >= 0 )) {
+				#line 265 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				a[( this.length + len )] = null;
 			}
 			
+			#line 266 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return ret1;
 		}
-		
+		#line default
 		
 		public void spliceVoid(int pos, int len) {
+			#line 270 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( len < 0 )) {
+				#line 271 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return;
 			}
 			
+			#line 272 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( pos < 0 )) {
+				#line 273 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				pos = ( this.length + pos );
 				if (( pos < 0 )) {
+					#line 275 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					pos = 0;
 				}
 				
 			}
 			
+			#line 277 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( pos > this.length )) {
+				#line 278 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				pos = 0;
 				len = 0;
 			}
 			else if (( ( pos + len ) > this.length )) {
+				#line 281 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				len = ( this.length - pos );
 				if (( len < 0 )) {
+					#line 283 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					len = 0;
 				}
 				
 			}
 			
+			#line 285 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] a = this.__a;
+			#line 287 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			int end = ( pos + len );
 			global::System.Array.Copy(((global::System.Array) (a) ), ((int) (end) ), ((global::System.Array) (a) ), ((int) (pos) ), ((int) (( this.length - end )) ));
+			#line 289 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			this.length -= len;
 			while ((  -- len >= 0 )) {
+				#line 291 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				a[( this.length + len )] = null;
 			}
 			
 		}
-		
+		#line default
 		
 		public string toString() {
 			unchecked {
+				#line 295 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( global::haxe.root.Array.__hx_toString_depth >= 5 )) {
+					#line 296 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					return "...";
 				}
 				
+				#line 298 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				 ++ global::haxe.root.Array.__hx_toString_depth;
 				try {
+					#line 300 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					string s = this.__hx_toString();
 					 -- global::haxe.root.Array.__hx_toString_depth;
+					#line 302 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					return s;
 				}
 				catch (global::System.Exception catchallException){
+					#line 299 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::haxe.lang.Exceptions.exception = catchallException;
+					#line 303 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					object e = ( (( catchallException is global::haxe.lang.HaxeException )) ? (((global::haxe.lang.HaxeException) (catchallException) ).obj) : ((object) (catchallException) ) );
 					 -- global::haxe.root.Array.__hx_toString_depth;
+					#line 305 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					throw global::haxe.lang.HaxeException.wrap(e);
 				}
 				
 				
 			}
+			#line default
 		}
 		
 		
 		public string __hx_toString() {
+			#line 311 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::System.Text.StringBuilder ret_b = new global::System.Text.StringBuilder();
 			object[] a = this.__a;
+			#line 313 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			ret_b.Append(((string) ("[") ));
 			bool first = true;
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			{
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int _g = 0;
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int _g1 = this.length;
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				while (( _g < _g1 )) {
+					#line 315 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					int i = _g++;
 					if (first) {
+						#line 317 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						first = false;
 					}
 					else {
+						#line 319 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						ret_b.Append(((string) (",") ));
 					}
 					
+					#line 320 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					ret_b.Append(((string) (global::haxe.root.Std.@string(((object) (a[i]) ))) ));
 				}
 				
 			}
 			
+			#line 323 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			ret_b.Append(((string) ("]") ));
 			return ret_b.ToString();
 		}
-		
+		#line default
 		
 		public void unshift(object x) {
 			unchecked {
+				#line 328 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object[] __a = this.__a;
 				int length = this.length;
+				#line 330 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( length >= ( __a as global::System.Array ).Length )) {
+					#line 331 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					int newLen = ( (( length << 1 )) + 1 );
 					object[] newarr = new object[newLen];
+					#line 333 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (0) ), ((global::System.Array) (newarr) ), ((int) (1) ), ((int) (length) ));
+					#line 335 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.__a = newarr;
 				}
 				else {
+					#line 337 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (0) ), ((global::System.Array) (__a) ), ((int) (1) ), ((int) (length) ));
 				}
 				
+				#line 340 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.__a[0] = x;
 				 ++ this.length;
 			}
+			#line default
 		}
 		
 		
 		public void insert(int pos, object x) {
 			unchecked {
+				#line 345 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int l = this.length;
 				if (( pos < 0 )) {
+					#line 347 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					pos = ( l + pos );
 					if (( pos < 0 )) {
+						#line 349 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						pos = 0;
 					}
 					
 				}
 				
+				#line 351 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( pos >= l )) {
+					#line 352 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.push(x);
 					return;
 				}
 				else if (( pos == 0 )) {
+					#line 355 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.unshift(x);
 					return;
 				}
 				
+				#line 359 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( l >= ( this.__a as global::System.Array ).Length )) {
+					#line 360 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					int newLen = ( (( this.length << 1 )) + 1 );
 					object[] newarr = new object[newLen];
+					#line 362 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::System.Array.Copy(((global::System.Array) (this.__a) ), ((int) (0) ), ((global::System.Array) (newarr) ), ((int) (0) ), ((int) (pos) ));
 					newarr[pos] = x;
+					#line 364 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::System.Array.Copy(((global::System.Array) (this.__a) ), ((int) (pos) ), ((global::System.Array) (newarr) ), ((int) (( pos + 1 )) ), ((int) (( l - pos )) ));
+					#line 366 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.__a = newarr;
 					 ++ this.length;
 				}
 				else {
+					#line 369 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					object[] __a = this.__a;
 					global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (pos) ), ((global::System.Array) (__a) ), ((int) (( pos + 1 )) ), ((int) (( l - pos )) ));
+					#line 371 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (0) ), ((global::System.Array) (__a) ), ((int) (0) ), ((int) (pos) ));
 					__a[pos] = x;
+					#line 373 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					 ++ this.length;
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public bool @remove(object x) {
 			unchecked {
+				#line 378 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				object[] __a = this.__a;
 				int i = -1;
+				#line 380 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int length = this.length;
 				while ((  ++ i < length )) {
+					#line 382 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					if (global::haxe.lang.Runtime.eq(((object) (__a[i]) ), x)) {
+						#line 383 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (( i + 1 )) ), ((global::System.Array) (__a) ), ((int) (i) ), ((int) (( ( length - i ) - 1 )) ));
 						__a[ -- this.length] = null;
+						#line 386 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return true;
 					}
 					
 				}
 				
+				#line 390 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return false;
 			}
+			#line default
 		}
 		
 		
 		public global::haxe.root.Array map(global::haxe.lang.Function f) {
+			#line 394 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::haxe.root.Array ret = new global::haxe.root.Array(((object[]) (new object[this.length]) ));
 			{
+				#line 395 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int _g = 0;
+				#line 395 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int _g1 = this.length;
+				#line 395 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				while (( _g < _g1 )) {
+					#line 395 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					int i = _g++;
 					{
+						#line 396 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						object val = ((object) (f.__hx_invoke1_o(default(double), ((object) (this.__a[i]) ))) );
+						#line 396 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						ret.__a[i] = val;
 					}
 					
@@ -516,19 +697,27 @@ namespace haxe.root {
 				
 			}
 			
+			#line 397 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return ret;
 		}
-		
+		#line default
 		
 		public global::haxe.root.Array filter(global::haxe.lang.Function f) {
+			#line 401 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::haxe.root.Array ret = new global::haxe.root.Array(new object[]{});
 			{
+				#line 402 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int _g = 0;
+				#line 402 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				int _g1 = this.length;
+				#line 402 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				while (( _g < _g1 )) {
+					#line 402 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					int i = _g++;
 					object elt = ((object) (this.__a[i]) );
+					#line 404 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					if (global::haxe.lang.Runtime.toBool(f.__hx_invoke1_o(default(double), elt))) {
+						#line 405 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						ret.push(elt);
 					}
 					
@@ -536,533 +725,649 @@ namespace haxe.root {
 				
 			}
 			
+			#line 407 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return ret;
 		}
-		
+		#line default
 		
 		public global::haxe.root.Array copy() {
+			#line 411 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			int len = this.length;
 			object[] __a = this.__a;
+			#line 413 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			object[] newarr = new object[len];
 			global::System.Array.Copy(((global::System.Array) (__a) ), ((int) (0) ), ((global::System.Array) (newarr) ), ((int) (0) ), ((int) (len) ));
+			#line 415 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return new global::haxe.root.Array(((object[]) (newarr) ));
 		}
-		
+		#line default
 		
 		public object iterator() {
+			#line 419 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return new global::haxe.root._Array.ArrayIterator(((global::haxe.root.Array) (this) ));
 		}
-		
+		#line default
 		
 		public void resize(int len) {
+			#line 423 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (( this.length < len )) {
+				#line 424 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (( ( this.__a as global::System.Array ).Length < len )) {
+					#line 425 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					global::System.Array.Resize<object>(ref this.__a, ((int) (len) ));
 				}
 				
+				#line 427 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.length = len;
 			}
 			else if (( this.length > len )) {
+				#line 429 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				this.spliceVoid(len, ( this.length - len ));
 			}
 			
 		}
-		
+		#line default
 		
 		public object __get(int idx) {
+			#line 434 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			if (((bool) (( ((uint) (idx) ) >= this.length )) )) {
+				#line 434 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return null;
 			}
 			else {
+				#line 434 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return ((object) (this.__a[idx]) );
 			}
 			
 		}
-		
+		#line default
 		
 		public object __set(int idx, object v) {
 			unchecked {
+				#line 438 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				uint idx1 = ((uint) (idx) );
 				object[] __a = this.__a;
+				#line 440 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (((bool) (( idx1 >= ( __a as global::System.Array ).Length )) )) {
+					#line 441 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					uint len = ((uint) (( idx1 + 1 )) );
 					if (((bool) (( idx1 == ( __a as global::System.Array ).Length )) )) {
+						#line 443 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						len = ((uint) (( (((uint) (( idx1 << 1 )) )) + 1 )) );
 					}
 					
+					#line 444 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					object[] newArr = new object[((int) (len) )];
 					( __a as global::System.Array ).CopyTo(((global::System.Array) (newArr) ), ((int) (0) ));
+					#line 446 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					__a = newArr;
+					#line 446 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.__a = __a;
 				}
 				
+				#line 449 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				if (((bool) (( idx1 >= this.length )) )) {
+					#line 450 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 					this.length = ((int) (((uint) (( idx1 + 1 )) )) );
 				}
 				
+				#line 452 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return __a[((int) (idx1) )] = v;
 			}
+			#line default
 		}
 		
 		
 		public object __unsafe_get(int idx) {
+			#line 456 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return ((object) (this.__a[idx]) );
 		}
-		
+		#line default
 		
 		public object __unsafe_set(int idx, object val) {
+			#line 460 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return this.__a[idx] = val;
 		}
-		
+		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 520590566:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.length = ((int) (@value) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 4745537:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.__a = ((object[]) (@value) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					case 520590566:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.length = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 1621420777:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "__unsafe_set", 1621420777)) );
 					}
 					
 					
 					case 1620824029:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "__unsafe_get", 1620824029)) );
 					}
 					
 					
 					case 1916009602:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "__set", 1916009602)) );
 					}
 					
 					
 					case 1915412854:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "__get", 1915412854)) );
 					}
 					
 					
 					case 142301684:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "resize", 142301684)) );
 					}
 					
 					
 					case 328878574:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "iterator", 328878574)) );
 					}
 					
 					
 					case 1103412149:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "copy", 1103412149)) );
 					}
 					
 					
 					case 87367608:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "filter", 87367608)) );
 					}
 					
 					
 					case 5442204:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "map", 5442204)) );
 					}
 					
 					
 					case 76061764:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "remove", 76061764)) );
 					}
 					
 					
 					case 501039929:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "insert", 501039929)) );
 					}
 					
 					
 					case 2025055113:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "unshift", 2025055113)) );
 					}
 					
 					
 					case 946786476:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "toString", 946786476)) );
 					}
 					
 					
 					case 1352786672:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "spliceVoid", 1352786672)) );
 					}
 					
 					
 					case 1067353468:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "splice", 1067353468)) );
 					}
 					
 					
 					case 1282943179:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "quicksort", 1282943179)) );
 					}
 					
 					
 					case 1280845662:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "sort", 1280845662)) );
 					}
 					
 					
 					case 2127021138:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "slice", 2127021138)) );
 					}
 					
 					
 					case 2082663554:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "shift", 2082663554)) );
 					}
 					
 					
 					case 452737314:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "reverse", 452737314)) );
 					}
 					
 					
 					case 1247875546:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "push", 1247875546)) );
 					}
 					
 					
 					case 5594513:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "pop", 5594513)) );
 					}
 					
 					
 					case 1181037546:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "join", 1181037546)) );
 					}
 					
 					
 					case 359333139:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "lastIndexOf", 359333139)) );
 					}
 					
 					
 					case 1623148745:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "indexOf", 1623148745)) );
 					}
 					
 					
 					case 1532710347:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "concatNative", 1532710347)) );
 					}
 					
 					
 					case 1204816148:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "concat", 1204816148)) );
 					}
 					
 					
 					case 4745537:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.__a;
 					}
 					
 					
 					case 520590566:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.length;
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 520590566:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((double) (this.length) );
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 1621420777:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.__unsafe_set(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 1620824029:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.__unsafe_get(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 1916009602:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.__set(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 1915412854:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.__get(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 142301684:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.resize(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 328878574:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.iterator();
 					}
 					
 					
 					case 1103412149:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.copy();
 					}
 					
 					
 					case 87367608:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.filter(((global::haxe.lang.Function) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 5442204:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.map(((global::haxe.lang.Function) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					case 76061764:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.@remove(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 501039929:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.insert(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((object) (dynargs[1]) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 2025055113:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.unshift(((object) (dynargs[0]) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 946786476:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.toString();
 					}
 					
 					
 					case 1352786672:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.spliceVoid(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 1067353468:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.splice(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ));
 					}
 					
 					
 					case 1282943179:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.quicksort(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((global::haxe.lang.Function) (((object) (dynargs[2]) )) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 1280845662:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.sort(((global::haxe.lang.Function) (((object) (dynargs[0]) )) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 2127021138:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.slice(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 2082663554:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.shift();
 					}
 					
 					
 					case 452737314:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.reverse();
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 1247875546:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.push(((object) (dynargs[0]) ));
 					}
 					
 					
 					case 5594513:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.pop();
 					}
 					
 					
 					case 1181037546:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.@join(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )));
 					}
 					
 					
 					case 359333139:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.lastIndexOf(((object) (dynargs[0]) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 1623148745:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.indexOf(((object) (dynargs[0]) ), ((object) (dynargs[1]) ));
 					}
 					
 					
 					case 1532710347:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.concatNative(((object[]) (((object) (dynargs[0]) )) ));
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						break;
 					}
 					
 					
 					case 1204816148:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.concat(((global::haxe.root.Array) (((object) (dynargs[0]) )) ));
 					}
 					
 					
 					default:
 					{
+						#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
+				#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				return null;
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			baseArr.push("__a");
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			baseArr.push("length");
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 		public object this[int index]{
 			get{
@@ -1091,16 +1396,19 @@ namespace haxe.root._Array {
 		
 		
 		public ArrayIterator(global::haxe.root.Array a) {
+			#line 469 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			global::haxe.root._Array.ArrayIterator.__hx_ctor__Array_ArrayIterator(((global::haxe.root._Array.ArrayIterator) (this) ), ((global::haxe.root.Array) (a) ));
 		}
-		
+		#line default
 		
 		private static void __hx_ctor__Array_ArrayIterator(global::haxe.root._Array.ArrayIterator __hx_this, global::haxe.root.Array a) {
+			#line 470 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			__hx_this.arr = a;
 			__hx_this.len = a.length;
+			#line 472 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			__hx_this.i = 0;
 		}
-		
+		#line default
 		
 		public global::haxe.root.Array arr;
 		
@@ -1109,181 +1417,221 @@ namespace haxe.root._Array {
 		public int i;
 		
 		public bool hasNext() {
+			#line 476 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return ( this.i < this.len );
 		}
-		
+		#line default
 		
 		public object next() {
+			#line 479 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			return this.arr.__get(this.i++);
 		}
-		
+		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
+				#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 105:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.i = ((int) (@value) );
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					case 5393365:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.len = ((int) (@value) );
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
+				#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 105:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.i = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					case 5393365:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.len = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					case 4849249:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						this.arr = ((global::haxe.root.Array) (@value) );
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
+				#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "next", 1224901875)) );
 					}
 					
 					
 					case 407283053:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "hasNext", 407283053)) );
 					}
 					
 					
 					case 105:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.i;
 					}
 					
 					
 					case 5393365:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.len;
 					}
 					
 					
 					case 4849249:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.arr;
 					}
 					
 					
 					default:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
+				#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 105:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((double) (this.i) );
 					}
 					
 					
 					case 5393365:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return ((double) (this.len) );
 					}
 					
 					
 					default:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
+				#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 				switch (hash) {
 					case 1224901875:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.next();
 					}
 					
 					
 					case 407283053:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return this.hasNext();
 					}
 					
 					
 					default:
 					{
+						#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
 			}
+			#line default
 		}
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
+			#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			baseArr.push("i");
+			#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			baseArr.push("len");
+			#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			baseArr.push("arr");
+			#line 464 "C:\\HaxeToolkit\\haxe\\std\\cs\\_std\\Array.hx"
 			base.__hx_getFields(baseArr);
 		}
-		
+		#line default
 		
 	}
 }

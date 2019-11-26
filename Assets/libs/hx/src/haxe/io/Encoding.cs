@@ -28,9 +28,10 @@ namespace haxe.io {
 		
 		
 		public override string getTag() {
+			#line 29 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Encoding.hx"
 			return "UTF8";
 		}
-		
+		#line default
 		
 	}
 }
@@ -46,9 +47,10 @@ namespace haxe.io {
 		
 		
 		public override string getTag() {
+			#line 34 "C:\\HaxeToolkit\\haxe\\std\\haxe\\io\\Encoding.hx"
 			return "RawNative";
 		}
-		
+		#line default
 		
 	}
 }

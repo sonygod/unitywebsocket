@@ -28,6 +28,7 @@ public class TestWebSocket : MonoBehaviour
 
     private PlayerCS self; //自己.
     private HallCS hall;
+    private bool socketConnect;
 
     public TinyPlayerCS currentPlayer { get; private set; }
     public RoomCS currentRoom { get; private set; }
@@ -59,8 +60,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-          client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+         client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+         // client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         /// client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -376,26 +377,35 @@ public class TestWebSocket : MonoBehaviour
         Debug.Log("从这里开始...");
 
 
-        self.Login("13060669337", "123456");
+       // self.Login("13060669337", "123456");
 
         //  self.regist()注册
         // self.forgotpassWord()忘记密码
         //self.changeUserInfo()//换头像
+
+        socketConnect = true;
     }
 
     private void onSocketClose()
     {
         Debug.Log("被远程关闭 ");
+        socketConnect = false;
     }
 
     void OnApplicationQuit()
     {
+        socketConnect = false;
         client.quit(); //退出登录,退出socket,切换账号.
     }
 
 
     void OnGUI()
     {
+
+        if (socketConnect == false)
+        {
+            return;
+        }
         //进入/创建机器人房间
         if (GUI.Button(new Rect(0, 0, 50, 50), "creat"))
         {
@@ -579,5 +589,19 @@ public class TestWebSocket : MonoBehaviour
 
 
         }
+
+
+        if (GUI.Button(new Rect(360, 60, 50, 50), "insertOpenid"))
+        {
+            //先查找是否存在，后插入。
+            self.Login("13060669337", "123456");
+
+
+
+
+
+        }
+
+        //
     }
 }

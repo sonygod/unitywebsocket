@@ -9,49 +9,58 @@ namespace haxe.macro {
 		
 		
 		public static global::haxe.macro.Type TMono(object t) {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TMono(t);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TEnum(object t, global::haxe.root.Array @params) {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TEnum(t, @params);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TInst(object t, global::haxe.root.Array @params) {
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TInst(t, @params);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TType(object t, global::haxe.root.Array @params) {
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TType(t, @params);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TFun(global::haxe.root.Array args, global::haxe.macro.Type ret) {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TFun(args, ret);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TAnonymous(object a) {
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TAnonymous(a);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TDynamic(global::haxe.macro.Type t) {
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TDynamic(t);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TLazy(global::haxe.lang.Function f) {
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TLazy(f);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.Type TAbstract(object t, global::haxe.root.Array @params) {
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.Type_TAbstract(t, @params);
 		}
-		
+		#line default
 		
 		protected static readonly string[] __hx_constructs = new string[]{"TMono", "TEnum", "TInst", "TType", "TFun", "TAnonymous", "TDynamic", "TLazy", "TAbstract"};
 		
@@ -65,47 +74,60 @@ namespace haxe.macro {
 	public sealed class Type_TMono : global::haxe.macro.Type {
 		
 		public Type_TMono(object t) : base(0) {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TMono";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsGetHashCode(0, new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override bool Equals(object other) {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TMono en = ( other as global::haxe.macro.Type_TMono );
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 50 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TMono", new object[]{this.t});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -119,54 +141,71 @@ namespace haxe.macro {
 	public sealed class Type_TEnum : global::haxe.macro.Type {
 		
 		public Type_TEnum(object t, global::haxe.root.Array @params) : base(1) {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TEnum";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.t, this.@params});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TEnum en = ( other as global::haxe.macro.Type_TEnum );
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 57 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TEnum", new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -182,54 +221,71 @@ namespace haxe.macro {
 	public sealed class Type_TInst : global::haxe.macro.Type {
 		
 		public Type_TInst(object t, global::haxe.root.Array @params) : base(2) {
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TInst";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(2, new object[]{this.t, this.@params});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TInst en = ( other as global::haxe.macro.Type_TInst );
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 64 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TInst", new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -245,54 +301,71 @@ namespace haxe.macro {
 	public sealed class Type_TType : global::haxe.macro.Type {
 		
 		public Type_TType(object t, global::haxe.root.Array @params) : base(3) {
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TType";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.t, this.@params});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TType en = ( other as global::haxe.macro.Type_TType );
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 71 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TType", new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -308,54 +381,71 @@ namespace haxe.macro {
 	public sealed class Type_TFun : global::haxe.macro.Type {
 		
 		public Type_TFun(global::haxe.root.Array args, global::haxe.macro.Type ret) : base(4) {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.args = args;
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.ret = ret;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.args, this.ret});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TFun";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(4, new object[]{this.args, this.ret});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TFun en = ( other as global::haxe.macro.Type_TFun );
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.args) ), ((object) (en.args) ))) ) {
+				#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.ret) ), ((object) (en.ret) ))) ) {
+				#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 78 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TFun", new object[]{this.args, this.ret});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.root.Array args;
 		
@@ -371,49 +461,63 @@ namespace haxe.macro {
 	public sealed class Type_TAnonymous : global::haxe.macro.Type {
 		
 		public Type_TAnonymous(object a) : base(5) {
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.a = a;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.a});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TAnonymous";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(5, new object[]{this.a});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TAnonymous en = ( other as global::haxe.macro.Type_TAnonymous );
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.a) ), ((object) (en.a) ))) ) {
+				#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 85 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TAnonymous", new object[]{this.a});
 		}
-		
+		#line default
 		
 		public readonly object a;
 		
@@ -427,49 +531,63 @@ namespace haxe.macro {
 	public sealed class Type_TDynamic : global::haxe.macro.Type {
 		
 		public Type_TDynamic(global::haxe.macro.Type t) : base(6) {
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TDynamic";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(6, new object[]{this.t});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TDynamic en = ( other as global::haxe.macro.Type_TDynamic );
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 92 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TDynamic", new object[]{this.t});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.Type t;
 		
@@ -483,49 +601,63 @@ namespace haxe.macro {
 	public sealed class Type_TLazy : global::haxe.macro.Type {
 		
 		public Type_TLazy(global::haxe.lang.Function f) : base(7) {
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.f = f;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.f});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TLazy";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(7, new object[]{this.f});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TLazy en = ( other as global::haxe.macro.Type_TLazy );
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.f) ), ((object) (en.f) ))) ) {
+				#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 97 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TLazy", new object[]{this.f});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.lang.Function f;
 		
@@ -539,54 +671,71 @@ namespace haxe.macro {
 	public sealed class Type_TAbstract : global::haxe.macro.Type {
 		
 		public Type_TAbstract(object t, global::haxe.root.Array @params) : base(8) {
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TAbstract";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(8, new object[]{this.t, this.@params});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.Type_TAbstract en = ( other as global::haxe.macro.Type_TAbstract );
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 104 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TAbstract", new object[]{this.t, this.@params});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -612,24 +761,28 @@ namespace haxe.macro {
 		public static readonly global::haxe.macro.AnonStatus AConst = new global::haxe.macro.AnonStatus_AConst();
 		
 		public static global::haxe.macro.AnonStatus AExtend(object tl) {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.AnonStatus_AExtend(tl);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.AnonStatus AClassStatics(object t) {
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.AnonStatus_AClassStatics(t);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.AnonStatus AEnumStatics(object t) {
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.AnonStatus_AEnumStatics(t);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.AnonStatus AAbstractStatics(object t) {
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.AnonStatus_AAbstractStatics(t);
 		}
-		
+		#line default
 		
 		protected static readonly string[] __hx_constructs = new string[]{"AClosed", "AOpened", "AConst", "AExtend", "AClassStatics", "AEnumStatics", "AAbstractStatics"};
 		
@@ -647,9 +800,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 130 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AClosed";
 		}
-		
+		#line default
 		
 	}
 }
@@ -665,9 +819,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 136 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AOpened";
 		}
-		
+		#line default
 		
 	}
 }
@@ -683,9 +838,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 143 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AConst";
 		}
-		
+		#line default
 		
 	}
 }
@@ -697,49 +853,63 @@ namespace haxe.macro {
 	public sealed class AnonStatus_AExtend : global::haxe.macro.AnonStatus {
 		
 		public AnonStatus_AExtend(object tl) : base(3) {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.tl = tl;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.tl});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AExtend";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.tl});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.AnonStatus_AExtend en = ( other as global::haxe.macro.AnonStatus_AExtend );
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.tl) ), ((object) (en.tl) ))) ) {
+				#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 151 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("AExtend", new object[]{this.tl});
 		}
-		
+		#line default
 		
 		public readonly object tl;
 		
@@ -753,49 +923,63 @@ namespace haxe.macro {
 	public sealed class AnonStatus_AClassStatics : global::haxe.macro.AnonStatus {
 		
 		public AnonStatus_AClassStatics(object t) : base(4) {
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AClassStatics";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(4, new object[]{this.t});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.AnonStatus_AClassStatics en = ( other as global::haxe.macro.AnonStatus_AClassStatics );
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 156 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("AClassStatics", new object[]{this.t});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -809,49 +993,63 @@ namespace haxe.macro {
 	public sealed class AnonStatus_AEnumStatics : global::haxe.macro.AnonStatus {
 		
 		public AnonStatus_AEnumStatics(object t) : base(5) {
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AEnumStatics";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(5, new object[]{this.t});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.AnonStatus_AEnumStatics en = ( other as global::haxe.macro.AnonStatus_AEnumStatics );
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 161 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("AEnumStatics", new object[]{this.t});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -865,49 +1063,63 @@ namespace haxe.macro {
 	public sealed class AnonStatus_AAbstractStatics : global::haxe.macro.AnonStatus {
 		
 		public AnonStatus_AAbstractStatics(object t) : base(6) {
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AAbstractStatics";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(6, new object[]{this.t});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.AnonStatus_AAbstractStatics en = ( other as global::haxe.macro.AnonStatus_AAbstractStatics );
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 166 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("AAbstractStatics", new object[]{this.t});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -927,33 +1139,38 @@ namespace haxe.macro {
 		public static readonly global::haxe.macro.ClassKind KNormal = new global::haxe.macro.ClassKind_KNormal();
 		
 		public static global::haxe.macro.ClassKind KTypeParameter(global::haxe.root.Array constraints) {
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ClassKind_KTypeParameter(constraints);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.ClassKind KExtension(object cl, global::haxe.root.Array @params) {
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ClassKind_KExtension(cl, @params);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.ClassKind KExpr(object expr) {
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ClassKind_KExpr(expr);
 		}
-		
+		#line default
 		
 		public static readonly global::haxe.macro.ClassKind KGeneric = new global::haxe.macro.ClassKind_KGeneric();
 		
 		public static global::haxe.macro.ClassKind KGenericInstance(object cl, global::haxe.root.Array @params) {
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ClassKind_KGenericInstance(cl, @params);
 		}
-		
+		#line default
 		
 		public static readonly global::haxe.macro.ClassKind KMacroType = new global::haxe.macro.ClassKind_KMacroType();
 		
 		public static global::haxe.macro.ClassKind KAbstractImpl(object a) {
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ClassKind_KAbstractImpl(a);
 		}
-		
+		#line default
 		
 		public static readonly global::haxe.macro.ClassKind KGenericBuild = new global::haxe.macro.ClassKind_KGenericBuild();
 		
@@ -973,9 +1190,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 298 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KNormal";
 		}
-		
+		#line default
 		
 	}
 }
@@ -987,49 +1205,63 @@ namespace haxe.macro {
 	public sealed class ClassKind_KTypeParameter : global::haxe.macro.ClassKind {
 		
 		public ClassKind_KTypeParameter(global::haxe.root.Array constraints) : base(1) {
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.constraints = constraints;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.constraints});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KTypeParameter";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.constraints});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ClassKind_KTypeParameter en = ( other as global::haxe.macro.ClassKind_KTypeParameter );
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.constraints) ), ((object) (en.constraints) ))) ) {
+				#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 303 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("KTypeParameter", new object[]{this.constraints});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.root.Array constraints;
 		
@@ -1043,54 +1275,71 @@ namespace haxe.macro {
 	public sealed class ClassKind_KExtension : global::haxe.macro.ClassKind {
 		
 		public ClassKind_KExtension(object cl, global::haxe.root.Array @params) : base(2) {
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cl = cl;
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.cl, this.@params});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KExtension";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(2, new object[]{this.cl, this.@params});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ClassKind_KExtension en = ( other as global::haxe.macro.ClassKind_KExtension );
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cl) ), ((object) (en.cl) ))) ) {
+				#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 310 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("KExtension", new object[]{this.cl, this.@params});
 		}
-		
+		#line default
 		
 		public readonly object cl;
 		
@@ -1106,49 +1355,63 @@ namespace haxe.macro {
 	public sealed class ClassKind_KExpr : global::haxe.macro.ClassKind {
 		
 		public ClassKind_KExpr(object expr) : base(3) {
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.expr = expr;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.expr});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KExpr";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.expr});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ClassKind_KExpr en = ( other as global::haxe.macro.ClassKind_KExpr );
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.expr) ), ((object) (en.expr) ))) ) {
+				#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 315 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("KExpr", new object[]{this.expr});
 		}
-		
+		#line default
 		
 		public readonly object expr;
 		
@@ -1166,9 +1429,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 320 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KGeneric";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1180,54 +1444,71 @@ namespace haxe.macro {
 	public sealed class ClassKind_KGenericInstance : global::haxe.macro.ClassKind {
 		
 		public ClassKind_KGenericInstance(object cl, global::haxe.root.Array @params) : base(5) {
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cl = cl;
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.cl, this.@params});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KGenericInstance";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(5, new object[]{this.cl, this.@params});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ClassKind_KGenericInstance en = ( other as global::haxe.macro.ClassKind_KGenericInstance );
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cl) ), ((object) (en.cl) ))) ) {
+				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 326 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("KGenericInstance", new object[]{this.cl, this.@params});
 		}
-		
+		#line default
 		
 		public readonly object cl;
 		
@@ -1247,9 +1528,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 333 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KMacroType";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1261,49 +1543,63 @@ namespace haxe.macro {
 	public sealed class ClassKind_KAbstractImpl : global::haxe.macro.ClassKind {
 		
 		public ClassKind_KAbstractImpl(object a) : base(7) {
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.a = a;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.a});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KAbstractImpl";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(7, new object[]{this.a});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ClassKind_KAbstractImpl en = ( other as global::haxe.macro.ClassKind_KAbstractImpl );
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.a) ), ((object) (en.a) ))) ) {
+				#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 339 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("KAbstractImpl", new object[]{this.a});
 		}
-		
+		#line default
 		
 		public readonly object a;
 		
@@ -1321,9 +1617,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 344 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "KGenericBuild";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1339,14 +1636,16 @@ namespace haxe.macro {
 		
 		
 		public static global::haxe.macro.FieldKind FVar(global::haxe.macro.VarAccess read, global::haxe.macro.VarAccess write) {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldKind_FVar(read, write);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.FieldKind FMethod(global::haxe.macro.MethodKind k) {
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldKind_FMethod(k);
 		}
-		
+		#line default
 		
 		protected static readonly string[] __hx_constructs = new string[]{"FVar", "FMethod"};
 		
@@ -1360,52 +1659,68 @@ namespace haxe.macro {
 	public sealed class FieldKind_FVar : global::haxe.macro.FieldKind {
 		
 		public FieldKind_FVar(global::haxe.macro.VarAccess read, global::haxe.macro.VarAccess write) : base(0) {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.read = read;
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.write = write;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.read, this.write});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FVar";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsGetHashCode(0, new object[]{this.read, this.write});
 		}
-		
+		#line default
 		
 		public override bool Equals(object other) {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldKind_FVar en = ( other as global::haxe.macro.FieldKind_FVar );
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.read) ), ((object) (en.read) ))) ) {
+				#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.write) ), ((object) (en.write) ))) ) {
+				#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 604 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FVar", new object[]{this.read, this.write});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.VarAccess read;
 		
@@ -1421,49 +1736,63 @@ namespace haxe.macro {
 	public sealed class FieldKind_FMethod : global::haxe.macro.FieldKind {
 		
 		public FieldKind_FMethod(global::haxe.macro.MethodKind k) : base(1) {
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.k = k;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.k});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FMethod";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.k});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldKind_FMethod en = ( other as global::haxe.macro.FieldKind_FMethod );
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.k) ), ((object) (en.k) ))) ) {
+				#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 609 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FMethod", new object[]{this.k});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.MethodKind k;
 		
@@ -1493,9 +1822,10 @@ namespace haxe.macro {
 		public static readonly global::haxe.macro.VarAccess AccInline = new global::haxe.macro.VarAccess_AccInline();
 		
 		public static global::haxe.macro.VarAccess AccRequire(string r, string msg) {
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.VarAccess_AccRequire(r, msg);
 		}
-		
+		#line default
 		
 		public static readonly global::haxe.macro.VarAccess AccCtor = new global::haxe.macro.VarAccess_AccCtor();
 		
@@ -1515,9 +1845,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 619 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccNormal";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1533,9 +1864,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 624 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccNo";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1551,9 +1883,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 629 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccNever";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1569,9 +1902,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 634 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccResolve";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1587,9 +1921,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 639 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccCall";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1605,9 +1940,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 644 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccInline";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1619,54 +1955,71 @@ namespace haxe.macro {
 	public sealed class VarAccess_AccRequire : global::haxe.macro.VarAccess {
 		
 		public VarAccess_AccRequire(string r, string msg) : base(6) {
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.r = r;
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.msg = msg;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.r, this.msg});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccRequire";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(6, new object[]{this.r, this.msg});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.VarAccess_AccRequire en = ( other as global::haxe.macro.VarAccess_AccRequire );
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.r) ), ((object) (en.r) ))) ) {
+				#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.msg) ), ((object) (en.msg) ))) ) {
+				#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 649 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("AccRequire", new object[]{this.r, this.msg});
 		}
-		
+		#line default
 		
 		public readonly string r;
 		
@@ -1686,9 +2039,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 654 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "AccCtor";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1727,9 +2081,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 664 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "MethNormal";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1745,9 +2100,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 671 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "MethInline";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1763,9 +2119,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 678 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "MethDynamic";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1781,9 +2138,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 683 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "MethMacro";
 		}
-		
+		#line default
 		
 	}
 }
@@ -1799,24 +2157,28 @@ namespace haxe.macro {
 		
 		
 		public static global::haxe.macro.TConstant TInt(int i) {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TConstant_TInt(i);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TConstant TFloat(string s) {
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TConstant_TFloat(s);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TConstant TString(string s) {
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TConstant_TString(s);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TConstant TBool(bool b) {
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TConstant_TBool(b);
 		}
-		
+		#line default
 		
 		public static readonly global::haxe.macro.TConstant TNull = new global::haxe.macro.TConstant_TNull();
 		
@@ -1836,47 +2198,60 @@ namespace haxe.macro {
 	public sealed class TConstant_TInt : global::haxe.macro.TConstant {
 		
 		public TConstant_TInt(int i) : base(0) {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.i = i;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.i});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TInt";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsGetHashCode(0, new object[]{this.i});
 		}
-		
+		#line default
 		
 		public override bool Equals(object other) {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TConstant_TInt en = ( other as global::haxe.macro.TConstant_TInt );
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.i) ), ((object) (en.i) ))) ) {
+				#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 693 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TInt", new object[]{this.i});
 		}
-		
+		#line default
 		
 		public readonly int i;
 		
@@ -1890,49 +2265,63 @@ namespace haxe.macro {
 	public sealed class TConstant_TFloat : global::haxe.macro.TConstant {
 		
 		public TConstant_TFloat(string s) : base(1) {
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.s = s;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.s});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TFloat";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.s});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TConstant_TFloat en = ( other as global::haxe.macro.TConstant_TFloat );
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.s) ), ((object) (en.s) ))) ) {
+				#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 698 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TFloat", new object[]{this.s});
 		}
-		
+		#line default
 		
 		public readonly string s;
 		
@@ -1946,49 +2335,63 @@ namespace haxe.macro {
 	public sealed class TConstant_TString : global::haxe.macro.TConstant {
 		
 		public TConstant_TString(string s) : base(2) {
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.s = s;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.s});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TString";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(2, new object[]{this.s});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TConstant_TString en = ( other as global::haxe.macro.TConstant_TString );
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.s) ), ((object) (en.s) ))) ) {
+				#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 703 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TString", new object[]{this.s});
 		}
-		
+		#line default
 		
 		public readonly string s;
 		
@@ -2002,49 +2405,63 @@ namespace haxe.macro {
 	public sealed class TConstant_TBool : global::haxe.macro.TConstant {
 		
 		public TConstant_TBool(bool b) : base(3) {
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.b = b;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.b});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TBool";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.b});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TConstant_TBool en = ( other as global::haxe.macro.TConstant_TBool );
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.b) ), ((object) (en.b) ))) ) {
+				#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 708 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TBool", new object[]{this.b});
 		}
-		
+		#line default
 		
 		public readonly bool b;
 		
@@ -2062,9 +2479,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 713 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TNull";
 		}
-		
+		#line default
 		
 	}
 }
@@ -2080,9 +2498,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 718 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TThis";
 		}
-		
+		#line default
 		
 	}
 }
@@ -2098,9 +2517,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 723 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TSuper";
 		}
-		
+		#line default
 		
 	}
 }
@@ -2116,24 +2536,28 @@ namespace haxe.macro {
 		
 		
 		public static global::haxe.macro.ModuleType TClassDecl(object c) {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ModuleType_TClassDecl(c);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.ModuleType TEnumDecl(object e) {
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ModuleType_TEnumDecl(e);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.ModuleType TTypeDecl(object t) {
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ModuleType_TTypeDecl(t);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.ModuleType TAbstract(object a) {
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.ModuleType_TAbstract(a);
 		}
-		
+		#line default
 		
 		protected static readonly string[] __hx_constructs = new string[]{"TClassDecl", "TEnumDecl", "TTypeDecl", "TAbstract"};
 		
@@ -2147,47 +2571,60 @@ namespace haxe.macro {
 	public sealed class ModuleType_TClassDecl : global::haxe.macro.ModuleType {
 		
 		public ModuleType_TClassDecl(object c) : base(0) {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.c = c;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.c});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TClassDecl";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsGetHashCode(0, new object[]{this.c});
 		}
-		
+		#line default
 		
 		public override bool Equals(object other) {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ModuleType_TClassDecl en = ( other as global::haxe.macro.ModuleType_TClassDecl );
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.c) ), ((object) (en.c) ))) ) {
+				#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 770 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TClassDecl", new object[]{this.c});
 		}
-		
+		#line default
 		
 		public readonly object c;
 		
@@ -2201,49 +2638,63 @@ namespace haxe.macro {
 	public sealed class ModuleType_TEnumDecl : global::haxe.macro.ModuleType {
 		
 		public ModuleType_TEnumDecl(object e) : base(1) {
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TEnumDecl";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.e});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ModuleType_TEnumDecl en = ( other as global::haxe.macro.ModuleType_TEnumDecl );
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 775 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TEnumDecl", new object[]{this.e});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -2257,49 +2708,63 @@ namespace haxe.macro {
 	public sealed class ModuleType_TTypeDecl : global::haxe.macro.ModuleType {
 		
 		public ModuleType_TTypeDecl(object t) : base(2) {
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.t = t;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.t});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TTypeDecl";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(2, new object[]{this.t});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ModuleType_TTypeDecl en = ( other as global::haxe.macro.ModuleType_TTypeDecl );
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.t) ), ((object) (en.t) ))) ) {
+				#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 780 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TTypeDecl", new object[]{this.t});
 		}
-		
+		#line default
 		
 		public readonly object t;
 		
@@ -2313,49 +2778,63 @@ namespace haxe.macro {
 	public sealed class ModuleType_TAbstract : global::haxe.macro.ModuleType {
 		
 		public ModuleType_TAbstract(object a) : base(3) {
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.a = a;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.a});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TAbstract";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.a});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.ModuleType_TAbstract en = ( other as global::haxe.macro.ModuleType_TAbstract );
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.a) ), ((object) (en.a) ))) ) {
+				#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 785 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TAbstract", new object[]{this.a});
 		}
-		
+		#line default
 		
 		public readonly object a;
 		
@@ -2373,34 +2852,40 @@ namespace haxe.macro {
 		
 		
 		public static global::haxe.macro.FieldAccess FInstance(object c, global::haxe.root.Array @params, object cf) {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldAccess_FInstance(c, @params, cf);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.FieldAccess FStatic(object c, object cf) {
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldAccess_FStatic(c, cf);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.FieldAccess FAnon(object cf) {
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldAccess_FAnon(cf);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.FieldAccess FDynamic(string s) {
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldAccess_FDynamic(s);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.FieldAccess FClosure(object c, object cf) {
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldAccess_FClosure(c, cf);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.FieldAccess FEnum(object e, object ef) {
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.FieldAccess_FEnum(e, ef);
 		}
-		
+		#line default
 		
 		protected static readonly string[] __hx_constructs = new string[]{"FInstance", "FStatic", "FAnon", "FDynamic", "FClosure", "FEnum"};
 		
@@ -2414,57 +2899,76 @@ namespace haxe.macro {
 	public sealed class FieldAccess_FInstance : global::haxe.macro.FieldAccess {
 		
 		public FieldAccess_FInstance(object c, global::haxe.root.Array @params, object cf) : base(0) {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.c = c;
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cf = cf;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.c, this.@params, this.cf});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FInstance";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsGetHashCode(0, new object[]{this.c, this.@params, this.cf});
 		}
-		
+		#line default
 		
 		public override bool Equals(object other) {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldAccess_FInstance en = ( other as global::haxe.macro.FieldAccess_FInstance );
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.c) ), ((object) (en.c) ))) ) {
+				#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cf) ), ((object) (en.cf) ))) ) {
+				#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 817 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FInstance", new object[]{this.c, this.@params, this.cf});
 		}
-		
+		#line default
 		
 		public readonly object c;
 		
@@ -2482,54 +2986,71 @@ namespace haxe.macro {
 	public sealed class FieldAccess_FStatic : global::haxe.macro.FieldAccess {
 		
 		public FieldAccess_FStatic(object c, object cf) : base(1) {
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.c = c;
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cf = cf;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.c, this.cf});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FStatic";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.c, this.cf});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldAccess_FStatic en = ( other as global::haxe.macro.FieldAccess_FStatic );
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.c) ), ((object) (en.c) ))) ) {
+				#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cf) ), ((object) (en.cf) ))) ) {
+				#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 822 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FStatic", new object[]{this.c, this.cf});
 		}
-		
+		#line default
 		
 		public readonly object c;
 		
@@ -2545,49 +3066,63 @@ namespace haxe.macro {
 	public sealed class FieldAccess_FAnon : global::haxe.macro.FieldAccess {
 		
 		public FieldAccess_FAnon(object cf) : base(2) {
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cf = cf;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.cf});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FAnon";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(2, new object[]{this.cf});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldAccess_FAnon en = ( other as global::haxe.macro.FieldAccess_FAnon );
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cf) ), ((object) (en.cf) ))) ) {
+				#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 827 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FAnon", new object[]{this.cf});
 		}
-		
+		#line default
 		
 		public readonly object cf;
 		
@@ -2601,49 +3136,63 @@ namespace haxe.macro {
 	public sealed class FieldAccess_FDynamic : global::haxe.macro.FieldAccess {
 		
 		public FieldAccess_FDynamic(string s) : base(3) {
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.s = s;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.s});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FDynamic";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.s});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldAccess_FDynamic en = ( other as global::haxe.macro.FieldAccess_FDynamic );
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.s) ), ((object) (en.s) ))) ) {
+				#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 832 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FDynamic", new object[]{this.s});
 		}
-		
+		#line default
 		
 		public readonly string s;
 		
@@ -2657,54 +3206,71 @@ namespace haxe.macro {
 	public sealed class FieldAccess_FClosure : global::haxe.macro.FieldAccess {
 		
 		public FieldAccess_FClosure(object c, object cf) : base(4) {
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.c = c;
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cf = cf;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.c, this.cf});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FClosure";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(4, new object[]{this.c, this.cf});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldAccess_FClosure en = ( other as global::haxe.macro.FieldAccess_FClosure );
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.c) ), ((object) (en.c) ))) ) {
+				#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cf) ), ((object) (en.cf) ))) ) {
+				#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 838 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FClosure", new object[]{this.c, this.cf});
 		}
-		
+		#line default
 		
 		public readonly object c;
 		
@@ -2720,54 +3286,71 @@ namespace haxe.macro {
 	public sealed class FieldAccess_FEnum : global::haxe.macro.FieldAccess {
 		
 		public FieldAccess_FEnum(object e, object ef) : base(5) {
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.ef = ef;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e, this.ef});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "FEnum";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(5, new object[]{this.e, this.ef});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.FieldAccess_FEnum en = ( other as global::haxe.macro.FieldAccess_FEnum );
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.ef) ), ((object) (en.ef) ))) ) {
+				#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 843 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("FEnum", new object[]{this.e, this.ef});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -2787,143 +3370,170 @@ namespace haxe.macro {
 		
 		
 		public static global::haxe.macro.TypedExprDef TConst(global::haxe.macro.TConstant c) {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TConst(c);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TLocal(object v) {
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TLocal(v);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TArray(object e1, object e2) {
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TArray(e1, e2);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TBinop(global::haxe.macro.Binop op, object e1, object e2) {
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TBinop(op, e1, e2);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TField(object e, global::haxe.macro.FieldAccess fa) {
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TField(e, fa);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TTypeExpr(global::haxe.macro.ModuleType m) {
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TTypeExpr(m);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TParenthesis(object e) {
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TParenthesis(e);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TObjectDecl(global::haxe.root.Array fields) {
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TObjectDecl(fields);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TArrayDecl(global::haxe.root.Array el) {
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TArrayDecl(el);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TCall(object e, global::haxe.root.Array el) {
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TCall(e, el);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TNew(object c, global::haxe.root.Array @params, global::haxe.root.Array el) {
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TNew(c, @params, el);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TUnop(global::haxe.macro.Unop op, bool postFix, object e) {
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TUnop(op, postFix, e);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TFunction(object tfunc) {
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TFunction(tfunc);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TVar(object v, object expr) {
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TVar(v, expr);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TBlock(global::haxe.root.Array el) {
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TBlock(el);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TFor(object v, object e1, object e2) {
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TFor(v, e1, e2);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TIf(object econd, object eif, object eelse) {
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TIf(econd, eif, eelse);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TWhile(object econd, object e, bool normalWhile) {
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TWhile(econd, e, normalWhile);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TSwitch(object e, global::haxe.root.Array cases, object edef) {
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TSwitch(e, cases, edef);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TTry(object e, global::haxe.root.Array catches) {
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TTry(e, catches);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TReturn(object e) {
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TReturn(e);
 		}
-		
+		#line default
 		
 		public static readonly global::haxe.macro.TypedExprDef TBreak = new global::haxe.macro.TypedExprDef_TBreak();
 		
 		public static readonly global::haxe.macro.TypedExprDef TContinue = new global::haxe.macro.TypedExprDef_TContinue();
 		
 		public static global::haxe.macro.TypedExprDef TThrow(object e) {
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TThrow(e);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TCast(object e, global::haxe.macro.ModuleType m) {
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TCast(e, m);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TMeta(object m, object e1) {
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TMeta(m, e1);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TEnumParameter(object e1, object ef, int index) {
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TEnumParameter(e1, ef, index);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TEnumIndex(object e1) {
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TEnumIndex(e1);
 		}
-		
+		#line default
 		
 		public static global::haxe.macro.TypedExprDef TIdent(string s) {
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.macro.TypedExprDef_TIdent(s);
 		}
-		
+		#line default
 		
 		protected static readonly string[] __hx_constructs = new string[]{"TConst", "TLocal", "TArray", "TBinop", "TField", "TTypeExpr", "TParenthesis", "TObjectDecl", "TArrayDecl", "TCall", "TNew", "TUnop", "TFunction", "TVar", "TBlock", "TFor", "TIf", "TWhile", "TSwitch", "TTry", "TReturn", "TBreak", "TContinue", "TThrow", "TCast", "TMeta", "TEnumParameter", "TEnumIndex", "TIdent"};
 		
@@ -2937,47 +3547,60 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TConst : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TConst(global::haxe.macro.TConstant c) : base(0) {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.c = c;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.c});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TConst";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsGetHashCode(0, new object[]{this.c});
 		}
-		
+		#line default
 		
 		public override bool Equals(object other) {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TConst en = ( other as global::haxe.macro.TypedExprDef_TConst );
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.c) ), ((object) (en.c) ))) ) {
+				#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 853 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TConst", new object[]{this.c});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.TConstant c;
 		
@@ -2991,49 +3614,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TLocal : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TLocal(object v) : base(1) {
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.v = v;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.v});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TLocal";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(1, new object[]{this.v});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TLocal en = ( other as global::haxe.macro.TypedExprDef_TLocal );
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.v) ), ((object) (en.v) ))) ) {
+				#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 858 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TLocal", new object[]{this.v});
 		}
-		
+		#line default
 		
 		public readonly object v;
 		
@@ -3047,54 +3684,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TArray : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TArray(object e1, object e2) : base(2) {
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e1 = e1;
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e2 = e2;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e1, this.e2});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TArray";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(2, new object[]{this.e1, this.e2});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TArray en = ( other as global::haxe.macro.TypedExprDef_TArray );
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e1) ), ((object) (en.e1) ))) ) {
+				#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e2) ), ((object) (en.e2) ))) ) {
+				#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 863 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TArray", new object[]{this.e1, this.e2});
 		}
-		
+		#line default
 		
 		public readonly object e1;
 		
@@ -3110,59 +3764,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TBinop : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TBinop(global::haxe.macro.Binop op, object e1, object e2) : base(3) {
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.op = op;
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e1 = e1;
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e2 = e2;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.op, this.e1, this.e2});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TBinop";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(3, new object[]{this.op, this.e1, this.e2});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TBinop en = ( other as global::haxe.macro.TypedExprDef_TBinop );
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.op) ), ((object) (en.op) ))) ) {
+				#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e1) ), ((object) (en.e1) ))) ) {
+				#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e2) ), ((object) (en.e2) ))) ) {
+				#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 868 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TBinop", new object[]{this.op, this.e1, this.e2});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.Binop op;
 		
@@ -3180,54 +3854,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TField : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TField(object e, global::haxe.macro.FieldAccess fa) : base(4) {
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.fa = fa;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e, this.fa});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TField";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(4, new object[]{this.e, this.fa});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TField en = ( other as global::haxe.macro.TypedExprDef_TField );
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.fa) ), ((object) (en.fa) ))) ) {
+				#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 873 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TField", new object[]{this.e, this.fa});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -3243,49 +3934,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TTypeExpr : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TTypeExpr(global::haxe.macro.ModuleType m) : base(5) {
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.m = m;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.m});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TTypeExpr";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(5, new object[]{this.m});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TTypeExpr en = ( other as global::haxe.macro.TypedExprDef_TTypeExpr );
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.m) ), ((object) (en.m) ))) ) {
+				#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 878 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TTypeExpr", new object[]{this.m});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.ModuleType m;
 		
@@ -3299,49 +4004,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TParenthesis : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TParenthesis(object e) : base(6) {
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TParenthesis";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(6, new object[]{this.e});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TParenthesis en = ( other as global::haxe.macro.TypedExprDef_TParenthesis );
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 883 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TParenthesis", new object[]{this.e});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -3355,49 +4074,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TObjectDecl : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TObjectDecl(global::haxe.root.Array fields) : base(7) {
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.fields = fields;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.fields});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TObjectDecl";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(7, new object[]{this.fields});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TObjectDecl en = ( other as global::haxe.macro.TypedExprDef_TObjectDecl );
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.fields) ), ((object) (en.fields) ))) ) {
+				#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 888 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TObjectDecl", new object[]{this.fields});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.root.Array fields;
 		
@@ -3411,49 +4144,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TArrayDecl : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TArrayDecl(global::haxe.root.Array el) : base(8) {
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.el = el;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.el});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TArrayDecl";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(8, new object[]{this.el});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TArrayDecl en = ( other as global::haxe.macro.TypedExprDef_TArrayDecl );
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.el) ), ((object) (en.el) ))) ) {
+				#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 893 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TArrayDecl", new object[]{this.el});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.root.Array el;
 		
@@ -3467,54 +4214,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TCall : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TCall(object e, global::haxe.root.Array el) : base(9) {
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.el = el;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e, this.el});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TCall";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(9, new object[]{this.e, this.el});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TCall en = ( other as global::haxe.macro.TypedExprDef_TCall );
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.el) ), ((object) (en.el) ))) ) {
+				#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 898 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TCall", new object[]{this.e, this.el});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -3530,59 +4294,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TNew : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TNew(object c, global::haxe.root.Array @params, global::haxe.root.Array el) : base(10) {
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.c = c;
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.@params = @params;
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.el = el;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.c, this.@params, this.el});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TNew";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(10, new object[]{this.c, this.@params, this.el});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TNew en = ( other as global::haxe.macro.TypedExprDef_TNew );
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.c) ), ((object) (en.c) ))) ) {
+				#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.@params) ), ((object) (en.@params) ))) ) {
+				#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.el) ), ((object) (en.el) ))) ) {
+				#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 903 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TNew", new object[]{this.c, this.@params, this.el});
 		}
-		
+		#line default
 		
 		public readonly object c;
 		
@@ -3600,59 +4384,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TUnop : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TUnop(global::haxe.macro.Unop op, bool postFix, object e) : base(11) {
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.op = op;
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.postFix = postFix;
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.op, this.postFix, this.e});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TUnop";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(11, new object[]{this.op, this.postFix, this.e});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TUnop en = ( other as global::haxe.macro.TypedExprDef_TUnop );
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.op) ), ((object) (en.op) ))) ) {
+				#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.postFix) ), ((object) (en.postFix) ))) ) {
+				#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 916 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TUnop", new object[]{this.op, this.postFix, this.e});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.macro.Unop op;
 		
@@ -3670,49 +4474,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TFunction : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TFunction(object tfunc) : base(12) {
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.tfunc = tfunc;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.tfunc});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TFunction";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(12, new object[]{this.tfunc});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TFunction en = ( other as global::haxe.macro.TypedExprDef_TFunction );
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.tfunc) ), ((object) (en.tfunc) ))) ) {
+				#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 921 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TFunction", new object[]{this.tfunc});
 		}
-		
+		#line default
 		
 		public readonly object tfunc;
 		
@@ -3726,54 +4544,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TVar : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TVar(object v, object expr) : base(13) {
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.v = v;
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.expr = expr;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.v, this.expr});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TVar";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(13, new object[]{this.v, this.expr});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TVar en = ( other as global::haxe.macro.TypedExprDef_TVar );
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.v) ), ((object) (en.v) ))) ) {
+				#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.expr) ), ((object) (en.expr) ))) ) {
+				#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 926 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TVar", new object[]{this.v, this.expr});
 		}
-		
+		#line default
 		
 		public readonly object v;
 		
@@ -3789,49 +4624,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TBlock : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TBlock(global::haxe.root.Array el) : base(14) {
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.el = el;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.el});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TBlock";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(14, new object[]{this.el});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TBlock en = ( other as global::haxe.macro.TypedExprDef_TBlock );
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.el) ), ((object) (en.el) ))) ) {
+				#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 931 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TBlock", new object[]{this.el});
 		}
-		
+		#line default
 		
 		public readonly global::haxe.root.Array el;
 		
@@ -3845,59 +4694,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TFor : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TFor(object v, object e1, object e2) : base(15) {
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.v = v;
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e1 = e1;
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e2 = e2;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.v, this.e1, this.e2});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TFor";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(15, new object[]{this.v, this.e1, this.e2});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TFor en = ( other as global::haxe.macro.TypedExprDef_TFor );
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.v) ), ((object) (en.v) ))) ) {
+				#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e1) ), ((object) (en.e1) ))) ) {
+				#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e2) ), ((object) (en.e2) ))) ) {
+				#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 936 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TFor", new object[]{this.v, this.e1, this.e2});
 		}
-		
+		#line default
 		
 		public readonly object v;
 		
@@ -3915,59 +4784,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TIf : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TIf(object econd, object eif, object eelse) : base(16) {
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.econd = econd;
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.eif = eif;
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.eelse = eelse;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.econd, this.eif, this.eelse});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TIf";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(16, new object[]{this.econd, this.eif, this.eelse});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TIf en = ( other as global::haxe.macro.TypedExprDef_TIf );
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.econd) ), ((object) (en.econd) ))) ) {
+				#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.eif) ), ((object) (en.eif) ))) ) {
+				#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.eelse) ), ((object) (en.eelse) ))) ) {
+				#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 941 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TIf", new object[]{this.econd, this.eif, this.eelse});
 		}
-		
+		#line default
 		
 		public readonly object econd;
 		
@@ -3985,59 +4874,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TWhile : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TWhile(object econd, object e, bool normalWhile) : base(17) {
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.econd = econd;
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.normalWhile = normalWhile;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.econd, this.e, this.normalWhile});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TWhile";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(17, new object[]{this.econd, this.e, this.normalWhile});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TWhile en = ( other as global::haxe.macro.TypedExprDef_TWhile );
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.econd) ), ((object) (en.econd) ))) ) {
+				#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.normalWhile) ), ((object) (en.normalWhile) ))) ) {
+				#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 948 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TWhile", new object[]{this.econd, this.e, this.normalWhile});
 		}
-		
+		#line default
 		
 		public readonly object econd;
 		
@@ -4055,59 +4964,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TSwitch : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TSwitch(object e, global::haxe.root.Array cases, object edef) : base(18) {
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.cases = cases;
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.edef = edef;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e, this.cases, this.edef});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TSwitch";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(18, new object[]{this.e, this.cases, this.edef});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TSwitch en = ( other as global::haxe.macro.TypedExprDef_TSwitch );
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.cases) ), ((object) (en.cases) ))) ) {
+				#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.edef) ), ((object) (en.edef) ))) ) {
+				#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 954 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TSwitch", new object[]{this.e, this.cases, this.edef});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -4125,54 +5054,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TTry : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TTry(object e, global::haxe.root.Array catches) : base(19) {
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.catches = catches;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e, this.catches});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TTry";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(19, new object[]{this.e, this.catches});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TTry en = ( other as global::haxe.macro.TypedExprDef_TTry );
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.catches) ), ((object) (en.catches) ))) ) {
+				#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 959 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TTry", new object[]{this.e, this.catches});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -4188,49 +5134,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TReturn : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TReturn(object e) : base(20) {
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TReturn";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(20, new object[]{this.e});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TReturn en = ( other as global::haxe.macro.TypedExprDef_TReturn );
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 964 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TReturn", new object[]{this.e});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -4248,9 +5208,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 969 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TBreak";
 		}
-		
+		#line default
 		
 	}
 }
@@ -4266,9 +5227,10 @@ namespace haxe.macro {
 		
 		
 		public override string getTag() {
+			#line 974 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TContinue";
 		}
-		
+		#line default
 		
 	}
 }
@@ -4280,49 +5242,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TThrow : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TThrow(object e) : base(23) {
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TThrow";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(23, new object[]{this.e});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TThrow en = ( other as global::haxe.macro.TypedExprDef_TThrow );
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 979 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TThrow", new object[]{this.e});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -4336,54 +5312,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TCast : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TCast(object e, global::haxe.macro.ModuleType m) : base(24) {
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e = e;
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.m = m;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e, this.m});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TCast";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(24, new object[]{this.e, this.m});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TCast en = ( other as global::haxe.macro.TypedExprDef_TCast );
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e) ), ((object) (en.e) ))) ) {
+				#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.m) ), ((object) (en.m) ))) ) {
+				#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 984 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TCast", new object[]{this.e, this.m});
 		}
-		
+		#line default
 		
 		public readonly object e;
 		
@@ -4399,54 +5392,71 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TMeta : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TMeta(object m, object e1) : base(25) {
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.m = m;
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e1 = e1;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.m, this.e1});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TMeta";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(25, new object[]{this.m, this.e1});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TMeta en = ( other as global::haxe.macro.TypedExprDef_TMeta );
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.m) ), ((object) (en.m) ))) ) {
+				#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e1) ), ((object) (en.e1) ))) ) {
+				#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 989 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TMeta", new object[]{this.m, this.e1});
 		}
-		
+		#line default
 		
 		public readonly object m;
 		
@@ -4462,59 +5472,79 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TEnumParameter : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TEnumParameter(object e1, object ef, int index) : base(26) {
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e1 = e1;
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.ef = ef;
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.index = index;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e1, this.ef, this.index});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TEnumParameter";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(26, new object[]{this.e1, this.ef, this.index});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TEnumParameter en = ( other as global::haxe.macro.TypedExprDef_TEnumParameter );
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e1) ), ((object) (en.e1) ))) ) {
+				#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.ef) ), ((object) (en.ef) ))) ) {
+				#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.index) ), ((object) (en.index) ))) ) {
+				#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 994 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TEnumParameter", new object[]{this.e1, this.ef, this.index});
 		}
-		
+		#line default
 		
 		public readonly object e1;
 		
@@ -4532,49 +5562,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TEnumIndex : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TEnumIndex(object e1) : base(27) {
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.e1 = e1;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.e1});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TEnumIndex";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(27, new object[]{this.e1});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TEnumIndex en = ( other as global::haxe.macro.TypedExprDef_TEnumIndex );
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.e1) ), ((object) (en.e1) ))) ) {
+				#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 999 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TEnumIndex", new object[]{this.e1});
 		}
-		
+		#line default
 		
 		public readonly object e1;
 		
@@ -4588,49 +5632,63 @@ namespace haxe.macro {
 	public sealed class TypedExprDef_TIdent : global::haxe.macro.TypedExprDef {
 		
 		public TypedExprDef_TIdent(string s) : base(28) {
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			this.s = s;
 		}
-		
+		#line default
 		
 		public override global::haxe.root.Array getParams() {
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return new global::haxe.root.Array(new object[]{this.s});
 		}
-		
+		#line default
 		
 		public override string getTag() {
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return "TIdent";
 		}
-		
+		#line default
 		
 		public override int GetHashCode() {
 			unchecked {
+				#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return global::haxe.lang.Enum.paramsGetHashCode(28, new object[]{this.s});
 			}
+			#line default
 		}
 		
 		
 		public override bool Equals(object other) {
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (global::System.Object.ReferenceEquals(((object) (this) ), ((object) (other) ))) {
+				#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return true;
 			}
 			
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			global::haxe.macro.TypedExprDef_TIdent en = ( other as global::haxe.macro.TypedExprDef_TIdent );
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if (( en == null )) {
+				#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			if ( ! (global::haxe.root.Type.enumEq(((object) (this.s) ), ((object) (en.s) ))) ) {
+				#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 				return false;
 			}
 			
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return true;
 		}
-		
+		#line default
 		
 		public override string toString() {
+			#line 1004 "C:\\HaxeToolkit\\haxe\\std\\haxe\\macro\\Type.hx"
 			return global::haxe.lang.Enum.paramsToString("TIdent", new object[]{this.s});
 		}
-		
+		#line default
 		
 		public readonly string s;
 		

@@ -30,9 +30,10 @@ namespace sys.io {
 		
 		
 		public override string getTag() {
+			#line 26 "C:\\HaxeToolkit\\haxe\\std\\sys\\io\\FileSeek.hx"
 			return "SeekBegin";
 		}
-		
+		#line default
 		
 	}
 }
@@ -48,9 +49,10 @@ namespace sys.io {
 		
 		
 		public override string getTag() {
+			#line 27 "C:\\HaxeToolkit\\haxe\\std\\sys\\io\\FileSeek.hx"
 			return "SeekCur";
 		}
-		
+		#line default
 		
 	}
 }
@@ -66,9 +68,10 @@ namespace sys.io {
 		
 		
 		public override string getTag() {
+			#line 28 "C:\\HaxeToolkit\\haxe\\std\\sys\\io\\FileSeek.hx"
 			return "SeekEnd";
 		}
-		
+		#line default
 		
 	}
 }

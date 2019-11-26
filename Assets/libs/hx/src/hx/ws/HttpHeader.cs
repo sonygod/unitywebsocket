@@ -6,28 +6,35 @@ namespace hx.ws {
 	public class HttpHeader : global::haxe.lang.HxObject {
 		
 		static HttpHeader() {
+			#line 4 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.SEC_WEBSOCKET_KEY = "Sec-WebSocket-Key";
 			global::hx.ws.HttpHeader.SEC_WEBSOSCKET_ACCEPT = "Sec-WebSocket-Accept";
+			#line 6 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.SEC_WEBSOSCKET_VERSION = "Sec-WebSocket-Version";
 			global::hx.ws.HttpHeader.UPGRADE = "Upgrade";
+			#line 8 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.HOST = "Host";
 			global::hx.ws.HttpHeader.CONNECTION = "Connection";
+			#line 10 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.USER_AGENT = "User-Agent";
 			global::hx.ws.HttpHeader.PRAGMA = "Pragma";
+			#line 12 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.CACHE_CONTROL = "Cache-Control";
 			global::hx.ws.HttpHeader.ORIGIN = "Origin";
+			#line 14 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.X_WEBSOCKET_REJECT_REASON = "X-WebSocket-Reject-Reason";
 		}
-		
+		#line default
 		
 		public HttpHeader(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public HttpHeader() {
+			#line 3 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\HttpHeader.hx"
 			global::hx.ws.HttpHeader.__hx_ctor_hx_ws_HttpHeader(this);
 		}
-		
+		#line default
 		
 		protected static void __hx_ctor_hx_ws_HttpHeader(global::hx.ws.HttpHeader __hx_this) {
 		}
