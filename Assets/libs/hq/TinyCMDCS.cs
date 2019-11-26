@@ -6,13 +6,13 @@ namespace web {
 		
 		
 		
-		public object cmd;
+		public int cmd;
 		
 		public object @value;
 		
-		public object id;
+		public int id;
 		
-		public object password;
+		public string password;
 		
 		public string openid;
 		
