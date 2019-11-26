@@ -54,5 +54,14 @@ namespace com.huaqian
 
             return ConvertCSHX.convertRoomData(json);
         }
+
+        public static TinyCMDCS ConvertCMD(object eCmd)
+        {
+            string playerString = haxe.Json.stringify(eCmd, null, null);
+
+            var pp = JsonConvert.DeserializeObject<TinyCMDCS>(playerString);
+
+            return pp;
+        }
     }
 }

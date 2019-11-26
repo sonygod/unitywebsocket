@@ -223,6 +223,9 @@ namespace openfl.events {
 							}
 							
 						}
+						else {
+							global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("\u4e0d\u7b26\u5408\u5192\u6ce1", global::haxe.root.Std.@string(listener1.useCapture)), "  \u9ed8\u8ba4"), global::haxe.root.Std.@string(capture)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"__dispatchEvent", "openfl.events.EventDispatcher", "src/openfl/events/EventDispatcher.hx"}, new int[]{1981972957}, new double[]{((double) (421) )}));
+						}
 						
 					}
 					

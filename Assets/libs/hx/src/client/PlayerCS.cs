@@ -280,6 +280,10 @@ namespace client {
 		}
 		
 		
+		public virtual void excuteCMD(int e) {
+		}
+		
+		
 	}
 }
 

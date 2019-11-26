@@ -17,6 +17,7 @@ using haxe.root;
 using Newtonsoft.Json;
 using utils;
 using web;
+using LitJson;
 
 public class TestWebSocket : MonoBehaviour
 {
@@ -78,10 +79,25 @@ public class TestWebSocket : MonoBehaviour
         hall.addEvent();//这个一定不能删除。
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM,onJoinRoom);
+        hall.addEventListener(CMDEvent.RESULT,onCMDResult);
 
 
 
 
+
+    }
+
+    private void onCMDResult(CEvent evt)
+    {
+        CMDEvent e = (CMDEvent)evt.eventParams;
+
+        TinyCMDCS c = ConvertTool.ConvertCMD(e.cmd);
+
+        
+
+      var info  =JsonConvert.SerializeObject(c);
+
+      Debug.Log("调用系统命令返回"+info);
 
     }
 
@@ -389,12 +405,12 @@ public class TestWebSocket : MonoBehaviour
             {
                 TinyRoomCS room = new TinyRoomCS();
 
-                room.gameID = 2001;//机器人三公，参考文档
-                room.gambling = 1;// // 底注 不同房间准入不同,要计算player还有多少money.
-                room.threshold = 1;//准入.
+                room.gameID = 2001; //机器人三公，参考文档
+                room.gambling = 1; // // 底注 不同房间准入不同,要计算player还有多少money.
+                room.threshold = 1; //准入.
 
 
-                room.owerID = (int)currentPlayer.id;//这个是当前玩家的id.这里测试随便填。
+                room.owerID = (int) currentPlayer.id; //这个是当前玩家的id.这里测试随便填。
 
 
                 self.createRoom(ConvertTool.ToHaxeRoom(room));
@@ -445,7 +461,7 @@ public class TestWebSocket : MonoBehaviour
             {
                 Debug.Log("请创建room");
             }
-        
+
 
         }
         //退出游戏
@@ -462,8 +478,8 @@ public class TestWebSocket : MonoBehaviour
             {
 
 
-                var data=currentRoom.data;
-                self.gameAddBetCS(2);//这里是倍数。
+                var data = currentRoom.data;
+                self.gameAddBetCS(2); //这里是倍数。
             }
             else
             {
@@ -481,7 +497,7 @@ public class TestWebSocket : MonoBehaviour
 
 
 
-            if (currentPlayer != null&&currentRoom!=null)
+            if (currentPlayer != null && currentRoom != null)
             {
 
 
@@ -490,7 +506,7 @@ public class TestWebSocket : MonoBehaviour
 
                 TinyRoomCS c = ConvertTool.ConvertRoom(data);
 
-                if ((int)c.status > 2)
+                if ((int) c.status > 2)
                 {
                     Debug.Log("游戏进行中不能退出");
 
@@ -503,8 +519,8 @@ public class TestWebSocket : MonoBehaviour
                     return;
                 }
 
-                self.leaveRoom((uint)c.id);
-              
+                self.leaveRoom((uint) c.id);
+
             }
             else
             {
@@ -514,5 +530,54 @@ public class TestWebSocket : MonoBehaviour
 
         }
 
+        //获取用户信息，没有登陆的情况下 不要频繁调用
+        if (GUI.Button(new Rect(160, 60, 50, 50), "getinfo"))
+        {
+
+          
+            JsonData cmd = new JsonData();
+            //demo.SetJsonType(JsonType.Object);
+            // demo["id"] = 3302;
+            cmd["openid"] = haxe.root.Random.@string(32,"123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
+
+            cmd["cmd"] = 4002;
+            var d = cmd.ToJson();
+            hall.excuteCMD(d);
+
+
+
+
+
+        }
+
+        if (GUI.Button(new Rect(260, 60, 50, 50), "insertOpenid"))
+        {
+            //先查找是否存在，后插入。
+
+            JsonData cmd = new JsonData();
+            //demo.SetJsonType(JsonType.Object);
+            // demo["id"] = 3302;
+         //   cmd["openid"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
+
+            cmd["cmd"] = 4005;
+
+            JsonData player = new JsonData();
+
+            cmd["player"] = player;
+
+            player["openID"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
+
+
+            player["avatar"] = "1.jpg";
+            player["nick_name"] = "新用户";//插入用户昵称
+
+
+            hall.excuteCMD(cmd.ToJson());
+
+
+
+
+
+        }
     }
 }

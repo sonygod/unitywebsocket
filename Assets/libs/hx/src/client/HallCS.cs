@@ -7,7 +7,11 @@ namespace client {
 		
 		public HallCS() : base() {
 			unchecked {
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u521b\u5efa\u4e86\u5927\u5385", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (27) )}));
+				this.isEnabled = true;
+				{
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u521b\u5efa\u4e86\u5927\u5385", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (31) )}));
+				}
+				
 			}
 		}
 		
@@ -15,13 +19,13 @@ namespace client {
 		public virtual void addEvent() {
 			unchecked {
 				global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-				global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") )});
+				global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") ), ((string) ("CMD_result") )});
 				{
 					int _g = 0;
 					while (( _g < events.length )) {
 						string e = global::haxe.lang.Runtime.toString(events.__get(_g));
 						 ++ _g;
-						wd.addEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object), default(object), default(object));
+						wd.addEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEventHall", 112735659)) ), default(object), default(object), default(object));
 					}
 					
 				}
@@ -31,9 +35,9 @@ namespace client {
 		}
 		
 		
-		public virtual void transEvent(global::web.proto.RoomEvent e) {
+		public virtual void transEventHall(global::openfl.events.Event e) {
 			unchecked {
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u623f\u95f4\u4fe1\u606f**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (48) )}));
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u5927\u5385\u4fe1\u606f**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEventHall", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (50) )}));
 				( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 			}
 		}
@@ -41,17 +45,33 @@ namespace client {
 		
 		public virtual void off() {
 			global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-			global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") )});
+			global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") ), ((string) ("CMD_result") )});
 			{
 				int _g = 0;
 				while (( _g < events.length )) {
 					string e = global::haxe.lang.Runtime.toString(events.__get(_g));
 					 ++ _g;
-					wd.removeEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object));
+					wd.removeEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEventHall", 112735659)) ), default(object));
 				}
 				
 			}
 			
+		}
+		
+		
+		public bool isEnabled;
+		
+		public virtual void excuteCMD(string e) {
+			unchecked {
+				if ( ! (this.isEnabled) ) {
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0d\u80fd\u9891\u7e41\u8c03\u7528,\u4e0b\u6b2130\u79d2\u6709\u6548", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"excuteCMD", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (74) )}));
+					return;
+				}
+				
+				object cmd = ((object) (new global::haxe.format.JsonParser(((string) (e) )).doParse()) );
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), cmd, default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"excuteCMD", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (80) )}));
+				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (15) ), -1, global::org.msgpack.MsgPack.encode(cmd), null);
+			}
 		}
 		
 		

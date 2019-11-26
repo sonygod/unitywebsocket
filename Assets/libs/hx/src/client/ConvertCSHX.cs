@@ -51,6 +51,15 @@ namespace client {
 		}
 		
 		
+		public static object convertTinyCMD(string data) {
+			unchecked {
+				object cmd = new global::haxe.format.JsonParser(((string) (data) )).doParse();
+				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (15) ), -1, global::org.msgpack.MsgPack.encode(cmd), null);
+				return cmd;
+			}
+		}
+		
+		
 	}
 }
 
