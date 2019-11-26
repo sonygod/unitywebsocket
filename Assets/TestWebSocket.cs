@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
@@ -36,39 +35,35 @@ public class TestWebSocket : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-
         TestPackBuilder.main(); //初始化
         UnityThreadHelper.EnsureHelper(); //线程初始化,这个必须要在开始定义.
 
-        CustomTrace.close(true);//关闭输出。关闭框架输出，如果影响调试。
+        CustomTrace.close(true); //关闭输出。关闭框架输出，如果影响调试。
 
         TinyPlayerCS pp = new TinyPlayerCS();
 
         pp.id = 2009;
 
 
-
-
         client = new Client();
 
-        client.testUint((uint)3312);
+        client.testUint((uint) 3312);
 
         //client.testPlayer.addEventListener("onOpen", onCSOpen);
-       
+
         Debug.Log("是否解决了?");
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-         client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-         // client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        // client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         /// client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
 
         self = new PlayerCS(null);
-        self.addEvent();//这里添加倾听器,如果要移除用off
+        self.addEvent(); //这里添加倾听器,如果要移除用off
         self.addEventListener(HallEvent.LOGIN, onLogin);
 
         self.addEventListener(HallEvent.OnReg, onReg);
@@ -76,30 +71,23 @@ public class TestWebSocket : MonoBehaviour
 
 
         //---------------新增-------------------
-        hall = new HallCS();//创建大厅
-        hall.addEvent();//这个一定不能删除。
+        hall = new HallCS(); //创建大厅
+        hall.addEvent(); //这个一定不能删除。
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
-        hall.addEventListener(RoomEvent.JOIN_ROOM,onJoinRoom);
-        hall.addEventListener(CMDEvent.RESULT,onCMDResult);
-
-
-
-
-
+        hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
+        hall.addEventListener(CMDEvent.RESULT, onCMDResult);
     }
 
     private void onCMDResult(CEvent evt)
     {
-        CMDEvent e = (CMDEvent)evt.eventParams;
+        CMDEvent e = (CMDEvent) evt.eventParams;
 
         TinyCMDCS c = ConvertTool.ConvertCMD(e.cmd);
 
-        
 
-      var info  =JsonConvert.SerializeObject(c);
+        var info = JsonConvert.SerializeObject(c);
 
-      Debug.Log("调用系统命令返回"+info);
-
+        Debug.Log("调用系统命令返回" + info);
     }
 
     private void onCreateRoom(CEvent evt)
@@ -109,7 +97,7 @@ public class TestWebSocket : MonoBehaviour
             Debug.Log("创建房间成功" + evt.eventParams);
             //  var c = (TinyRoomCS)evt.eventParams;
 
-            RoomEvent e = (RoomEvent)evt.eventParams;
+            RoomEvent e = (RoomEvent) evt.eventParams;
 
             TinyRoomCS c = ConvertTool.ConvertRoom(e.room);
 
@@ -119,7 +107,6 @@ public class TestWebSocket : MonoBehaviour
                 TinyRoomCS c2 = ConvertTool.ConvertRoom(currentRoom.data);
                 if (c.id == c2.id)
                 {
-
                     Debug.LogError("不能重复创建房间");
                     return;
                 }
@@ -128,9 +115,9 @@ public class TestWebSocket : MonoBehaviour
             Debug.Log(c);
 
             var room = new RoomCS(e.room);
-            room.addEvent();//这里是内部倾听，不能删除，否则所有事件无效。
+            room.addEvent(); //这里是内部倾听，不能删除，否则所有事件无效。
             room.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
-            room.addEventListener(RoomEvent.DESTORY, onDestoryRoom);//删除和退出一样。
+            room.addEventListener(RoomEvent.DESTORY, onDestoryRoom); //删除和退出一样。
             room.addEventListener(RoomEvent.LEAVE_ROOM, onDestoryRoom);
             room.addEventListener(RoomEvent.GET_ROOM_INFO, onGetRoomInfo);
             room.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
@@ -140,7 +127,7 @@ public class TestWebSocket : MonoBehaviour
 
             currentRoom = room;
         });
-       
+
         //room.addEventListener(RoomEvent, onDispath);
         //room.addEventListener(RoomEvent.);
     }
@@ -156,8 +143,7 @@ public class TestWebSocket : MonoBehaviour
             //            Debug.Log("完成一局，结果返回" + JsonConvert.SerializeObject(parms));
 
 
-
-            RoomEvent parms = (RoomEvent)evt.eventParams;
+            RoomEvent parms = (RoomEvent) evt.eventParams;
 
             var room = parms.room;
 
@@ -165,12 +151,9 @@ public class TestWebSocket : MonoBehaviour
             TinyRoomCS ts = ConvertTool.ConvertRoom(room);
 
 
-
-
             Debug.Log("房间发牌" + JsonConvert.SerializeObject(ts));
         });
     }
-
 
 
     //发牌 准备
@@ -180,14 +163,12 @@ public class TestWebSocket : MonoBehaviour
         {
             //  throw new NotImplementedException();
 
-            RoomEvent parms = (RoomEvent)evt.eventParams;
+            RoomEvent parms = (RoomEvent) evt.eventParams;
 
             var room = parms.room;
 
 
             TinyRoomCS ts = ConvertTool.ConvertRoom(room);
-
-
 
 
             Debug.Log("房间发牌" + JsonConvert.SerializeObject(ts));
@@ -198,12 +179,12 @@ public class TestWebSocket : MonoBehaviour
     {
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-            RoomEvent parms = (RoomEvent)evt.eventParams;
+            RoomEvent parms = (RoomEvent) evt.eventParams;
 
             var room = parms.room;
 
 
-            Debug.Log("room"+room);
+            Debug.Log("room" + room);
             TinyRoomCS ts = ConvertTool.ConvertRoom(room);
 
 
@@ -213,19 +194,17 @@ public class TestWebSocket : MonoBehaviour
             var start = 2;
             var dispath = 3;
             var qiangzhuang = 4; // 抢庄
-            var settingZhuang = 5;//设置庄
+            var settingZhuang = 5; //设置庄
             var gamebling = 6; // 下注
-            var switchTimes = 7;////设置倍数。如：两点一倍，炸弹四倍
+            var switchTimes = 7; ////设置倍数。如：两点一倍，炸弹四倍
             var roundFinish = 8; // 一局结束
             var over = 9; // 游戏结束;
-
 
 
             Debug.Log("获取信息房间" + JsonConvert.SerializeObject(ts));
 
             switch (ts.status)
             {
-
                 case 0:
                     Debug.Log("空闲");
                     break;
@@ -249,17 +228,15 @@ public class TestWebSocket : MonoBehaviour
                     break;
 
                 case 7:
-                    Debug.Log("设置倍数");//用于开房间，一共有几局
+                    Debug.Log("设置倍数"); //用于开房间，一共有几局
                     break;
 
                 case 8:
-                    Debug.Log("本轮结束");//用于开房间，一共有几局
+                    Debug.Log("本轮结束"); //用于开房间，一共有几局
                     break;
                 case 9:
-                    Debug.Log("游戏结束");//用于开房间，一共有几局
+                    Debug.Log("游戏结束"); //用于开房间，一共有几局
                     break;
-
-
             }
         });
     }
@@ -269,9 +246,9 @@ public class TestWebSocket : MonoBehaviour
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
             var parms = evt.eventParams;
-            Debug.Log("删除房间" );
+            Debug.Log("删除房间");
             currentRoom = null;
-            
+
             hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom); //这里补回到大厅。
         });
     }
@@ -280,15 +257,13 @@ public class TestWebSocket : MonoBehaviour
     {
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-            RoomEvent parms =(RoomEvent) evt.eventParams;
+            RoomEvent parms = (RoomEvent) evt.eventParams;
 
             var room = parms.room;
 
 
-            TinyRoomCS ts = ConvertTool.ConvertRoom(room); 
+            TinyRoomCS ts = ConvertTool.ConvertRoom(room);
 
-
-            
 
             Debug.Log("加入房间" + JsonConvert.SerializeObject(ts));
         });
@@ -300,10 +275,9 @@ public class TestWebSocket : MonoBehaviour
 
     private void onLogin(CEvent evt)
     {
-
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-            HallEvent e = (HallEvent)evt.eventParams;
+            HallEvent e = (HallEvent) evt.eventParams;
             Debug.Log("unity 登陆成功");
             Debug.Log(e);
 
@@ -312,10 +286,8 @@ public class TestWebSocket : MonoBehaviour
 
             currentPlayer = pp;
 
-            self.installData(e.player);//这一定要设置。
+            self.installData(e.player); //这一定要设置。
             Debug.Log(JsonConvert.SerializeObject(pp));
-
-
         });
     }
 
@@ -340,7 +312,6 @@ public class TestWebSocket : MonoBehaviour
 
         if (obj.text == "0")
         {
-
         }
     }
 
@@ -377,7 +348,7 @@ public class TestWebSocket : MonoBehaviour
         Debug.Log("从这里开始...");
 
 
-       // self.Login("13060669337", "123456");
+        // self.Login("13060669337", "123456");
 
         //  self.regist()注册
         // self.forgotpassWord()忘记密码
@@ -401,16 +372,14 @@ public class TestWebSocket : MonoBehaviour
 
     void OnGUI()
     {
-
         if (socketConnect == false)
         {
             return;
         }
+
         //进入/创建机器人房间
         if (GUI.Button(new Rect(0, 0, 50, 50), "creat"))
         {
-
-
             if (currentPlayer != null)
             {
                 TinyRoomCS room = new TinyRoomCS();
@@ -424,27 +393,16 @@ public class TestWebSocket : MonoBehaviour
 
 
                 self.createRoom(ConvertTool.ToHaxeRoom(room));
-
-
             }
             else
             {
                 Debug.Log("请登录");
             }
-
-
-
-
-
         }
 
         //开始游戏
         if (GUI.Button(new Rect(60, 0, 50, 50), "start"))
         {
-
-
-
-
             if (currentRoom != null)
             {
                 currentRoom.start();
@@ -453,16 +411,11 @@ public class TestWebSocket : MonoBehaviour
             {
                 Debug.Log("请创建room");
             }
-
         }
 
 
         if (GUI.Button(new Rect(120, 0, 50, 50), "getinfo"))
         {
-
-
-
-
             if (currentRoom != null)
             {
                 currentRoom.getInfo();
@@ -471,8 +424,6 @@ public class TestWebSocket : MonoBehaviour
             {
                 Debug.Log("请创建room");
             }
-
-
         }
         //退出游戏
 
@@ -480,14 +431,8 @@ public class TestWebSocket : MonoBehaviour
         //下注
         if (GUI.Button(new Rect(0, 60, 50, 50), "addbet"))
         {
-
-
-
-
             if (currentPlayer != null)
             {
-
-
                 var data = currentRoom.data;
                 self.gameAddBetCS(2); //这里是倍数。
             }
@@ -495,22 +440,14 @@ public class TestWebSocket : MonoBehaviour
             {
                 Debug.Log("请登陆");
             }
-
-
         }
 
 
         //下注
         if (GUI.Button(new Rect(60, 60, 50, 50), "quite"))
         {
-
-
-
-
             if (currentPlayer != null && currentRoom != null)
             {
-
-
                 var data = currentRoom.data;
 
 
@@ -530,34 +467,25 @@ public class TestWebSocket : MonoBehaviour
                 }
 
                 self.leaveRoom((uint) c.id);
-
             }
             else
             {
                 Debug.Log("请登陆和创建房间");
             }
-
-
         }
 
         //获取用户信息，没有登陆的情况下 不要频繁调用
         if (GUI.Button(new Rect(160, 60, 50, 50), "getinfo"))
         {
-
-          
             JsonData cmd = new JsonData();
             //demo.SetJsonType(JsonType.Object);
             // demo["id"] = 3302;
-            cmd["openid"] = haxe.root.Random.@string(32,"123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
+            cmd["openid"] =
+                haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
 
             cmd["cmd"] = 4002;
             var d = cmd.ToJson();
             hall.excuteCMD(d);
-
-
-
-
-
         }
 
         if (GUI.Button(new Rect(260, 60, 50, 50), "insertOpenid"))
@@ -567,7 +495,7 @@ public class TestWebSocket : MonoBehaviour
             JsonData cmd = new JsonData();
             //demo.SetJsonType(JsonType.Object);
             // demo["id"] = 3302;
-         //   cmd["openid"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
+            //   cmd["openid"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
 
             cmd["cmd"] = 4005;
 
@@ -575,31 +503,82 @@ public class TestWebSocket : MonoBehaviour
 
             cmd["player"] = player;
 
-            player["openID"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
+            player["openID"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //填入真实的openid.
 
 
             player["avatar"] = "1.jpg";
-            player["nick_name"] = "新用户";//插入用户昵称
+            player["nick_name"] = "新用户"; //插入用户昵称
 
 
             hall.excuteCMD(cmd.ToJson());
-
-
-
-
-
         }
 
 
-        if (GUI.Button(new Rect(360, 60, 50, 50), "insertOpenid"))
+        if (GUI.Button(new Rect(360, 60, 50, 50), "login"))
         {
             //先查找是否存在，后插入。
             self.Login("13060669337", "123456");
+        }
+
+        //充值，从交易所充入来
+
+        if (GUI.Button(new Rect(6, 160, 50, 50), "charge"))
+        {
+            //先查找是否存在，后插入。
 
 
+            JsonData cmd = new JsonData();
+            cmd["cmd"] = 4006;
+
+            JsonData player = new JsonData();
+
+            cmd["player"] = player;
+            cmd["value"] = 100; //充值金额
+
+            player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
 
 
+            hall.excuteCMD(cmd.ToJson());
+        }
+        //购买道具，充值入游戏
+        if (GUI.Button(new Rect(100, 160, 50, 50), "buy"))
+        {
+            //先查找是否存在，后插入。
 
+
+            JsonData cmd = new JsonData();
+            cmd["cmd"] = 4007;
+
+            JsonData player = new JsonData();
+
+            cmd["value"] =1;//这里是传索引 [100,200,500]  1是200
+            cmd["nums"] = 1; //购买多少次
+
+            player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
+
+
+            hall.excuteCMD(cmd.ToJson());
+        }
+
+
+        //提取
+        if (GUI.Button(new Rect(200, 160, 50, 50), "draw"))
+        {
+            //先查找是否存在，后插入。
+
+
+            JsonData cmd = new JsonData();
+            cmd["cmd"] = 4008;
+
+            JsonData player = new JsonData();
+
+            cmd["value"] = 100;//要提取多少币？
+         
+
+            player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
+
+
+            hall.excuteCMD(cmd.ToJson());
         }
 
         //
