@@ -74,6 +74,8 @@ namespace web
 
         public string mobile;
 
+        public string cardTimes;
+
 
     }
 }
