@@ -10,7 +10,7 @@ namespace client {
 		
 		
 		public TimerHelper() {
-			#line 8 "D:\\project\\sangong\\sangong\\src\\client\\TimerHelper.hx"
+			#line 8 "d:\\project\\sangong\\sangong\\src\\client\\TimerHelper.hx"
 			global::client.TimerHelper.__hx_ctor_client_TimerHelper(this);
 		}
 		#line default
@@ -20,7 +20,7 @@ namespace client {
 		
 		
 		public static string fromTime(double t) {
-			#line 13 "D:\\project\\sangong\\sangong\\src\\client\\TimerHelper.hx"
+			#line 13 "d:\\project\\sangong\\sangong\\src\\client\\TimerHelper.hx"
 			return new global::haxe.root.Date(((global::System.DateTime) (global::System.TimeZone.CurrentTimeZone.ToLocalTime(((global::System.DateTime) (new global::System.DateTime(((long) (( ((long) (( t * ((double) (global::System.TimeSpan.TicksPerMillisecond) ) )) ) + ((long) (global::haxe.root.Date.epochTicks) ) )) ))) ))) )).toString();
 		}
 		#line default

@@ -28,6 +28,7 @@ public class TestWebSocket : MonoBehaviour
     private PlayerCS self; //自己.
     private HallCS hall;
     private bool socketConnect;
+    private Dictionary<int, PlayerCS> dic;//退出房间要删除。
 
     public TinyPlayerCS currentPlayer { get; private set; }
     public RoomCS currentRoom { get; private set; }
@@ -72,7 +73,7 @@ public class TestWebSocket : MonoBehaviour
 
         //---------------新增-------------------
         hall = new HallCS(); //创建大厅
-        hall.addEvent(); //这个一定不能删除。
+        hall.addEvent(); //这个一定不能删除。//todo:不能其他人登陆会影响到这里。
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
@@ -124,6 +125,7 @@ public class TestWebSocket : MonoBehaviour
             hall.removeEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
             room.addEventListener(RoomEvent.DISPATCH, onDispath);
             room.addEventListener(RoomEvent.RESULT, onGetResult);
+
 
             currentRoom = room;
         });
@@ -201,44 +203,109 @@ public class TestWebSocket : MonoBehaviour
             var over = 9; // 游戏结束;
 
 
+
+
+
+
             Debug.Log("获取信息房间" + JsonConvert.SerializeObject(ts));
 
             switch (ts.status)
             {
                 case 0:
-                    Debug.Log("空闲");
+                    Debug.Log("<color=#9400D3>空闲</color>");
                     break;
                 case 1:
-                    Debug.Log("准备");
+                    Debug.Log("<color=#9400D3>准备</color>");
                     break;
                 case 2:
-                    Debug.Log("开始");
+                    Debug.Log("<color=#9400D3>开始</color>");
                     break;
                 case 3:
-                    Debug.Log("发牌");
+                    Debug.Log("<color=#9400D3>发牌</color>");
                     break;
                 case 4:
-                    Debug.Log("抢庄");
+                    Debug.Log("<color=#9400D3>抢庄</color>");
                     break;
                 case 5:
-                    Debug.Log("设置庄");
+                    Debug.Log("<color=#9400D3>设置庄</color>");
                     break;
                 case 6:
-                    Debug.Log("下注");
+                    Debug.Log("<color=#9400D3>下注</color>");
                     break;
 
                 case 7:
-                    Debug.Log("设置倍数"); //用于开房间，一共有几局
+                    Debug.Log("<color=#9400D3>设置倍数</color>"); //用于开房间，一共有几局
                     break;
 
                 case 8:
-                    Debug.Log("本轮结束"); //用于开房间，一共有几局
+                    Debug.Log("<color=#9400D3>本轮结束</color>"); //用于开房间，一共有几局
                     break;
                 case 9:
-                    Debug.Log("游戏结束"); //用于开房间，一共有几局
+                    Debug.Log("<color=#9400D3>游戏结束</color>"); //用于开房间，一共有几局
                     break;
             }
+
+
+            var ps = ts.players;
+            //2019-11-27
+            foreach (TinyPlayerCS cs in ps)
+            {
+
+                if (dic == null)
+                {
+                    dic=new Dictionary<int, PlayerCS>();
+                }
+
+                if (!dic.ContainsKey(cs.id))
+                {
+                    dic [cs.id] = new PlayerCS(null);
+
+
+
+
+                    var player = dic[cs.id];
+
+
+                    if (player.data == null)
+                    {
+                        player.installDataCS(JsonConvert.SerializeObject(cs));
+                    }
+                    player.addEvent();
+
+                    player.addEventListener(PlayerEvent.ADD_BET,onAddBet);//倾听下注，还可以倾听用户 的表情，语音，等。
+
+                }
+
+              
+
+
+
+
+
+
+            }
         });
+    }
+
+    //倾听下注
+    private void onAddBet(CEvent evt)
+    {
+        UnityThreadHelper.Dispatcher.Dispatch(() =>
+        {
+
+            PlayerEvent playerEvent = (PlayerEvent) evt.eventParams;
+
+
+
+            TinyBilingCS biling = ConvertTool.ConvertTinyBiling(playerEvent.bling);
+
+
+
+            Debug.Log(" <color=#9400D3> 房间" + biling.roomID + " 玩家" + biling.playerID+ " 下注= " + biling.bling +
+                      "</color>");
+        });
+
+
     }
 
     private void onDestoryRoom(CEvent evt)
@@ -555,7 +622,7 @@ public class TestWebSocket : MonoBehaviour
             cmd["nums"] = 1; //购买多少次
 
             player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
-
+            cmd["player"] = player;
 
             hall.excuteCMD(cmd.ToJson());
         }
@@ -576,7 +643,7 @@ public class TestWebSocket : MonoBehaviour
          
 
             player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
-
+            cmd["player"] = player;
 
             hall.excuteCMD(cmd.ToJson());
         }

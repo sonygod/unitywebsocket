@@ -1,4 +1,4 @@
-D:\project\sangong\sangong
+d:\project\sangong\sangong
 begin defines
 NET_20
 binary128
@@ -1145,7 +1145,6 @@ C haxe.crypto.mode.CFB
 M cs.Lib
 C cs.Lib
 M web.TinyCMD
-C web.TinyCMDCS
 M cs.system.Array
 M openfl.events.TextEvent
 C openfl.events.TextEvent

@@ -63,5 +63,19 @@ namespace com.huaqian
 
             return pp;
         }
+
+        public static TinyBilingCS ConvertTinyBiling(object playerEventBling)
+        {
+            string playerString = haxe.Json.stringify(playerEventBling, null, null);
+
+
+            var pp = JsonConvert.DeserializeObject<TinyBilingCS>(playerString);
+
+
+            // pp.players=
+
+            return pp;
+
+        }
     }
 }
