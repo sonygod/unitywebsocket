@@ -76,6 +76,13 @@ namespace web
 
         public string cardTimes;
 
+        public int referenceID;//推荐人
+
+        public int coins;//动态奖励，道具币
+
+        public int staticCoins;//静态 币
+
+
 
     }
 }
