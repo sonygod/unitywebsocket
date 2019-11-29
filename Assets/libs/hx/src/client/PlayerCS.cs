@@ -451,12 +451,21 @@ namespace client {
 		}
 		
 		
+		public virtual void getUserInfo() {
+			unchecked {
+				#line 302 "d:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (18) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) ), global::org.msgpack.MsgPack.encode(this.data), null);
+			}
+			#line default
+		}
+		
+		
 		public virtual void excuteCMD(int e) {
 		}
 		
 		
 		public virtual void dispose() {
-			#line 302 "d:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 311 "d:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			this.off();
 		}
 		#line default

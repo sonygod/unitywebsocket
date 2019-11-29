@@ -56,8 +56,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-         client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-       // client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+         //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+       client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         /// client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -68,6 +68,8 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(HallEvent.LOGIN, onLogin);
 
         self.addEventListener(HallEvent.OnReg, onReg);
+
+        self.addEventListener(PlayerEvent.GET_USER_INFO,onGetuserInfo);
         TestEventDispathFromHaxe();
 
 
@@ -77,6 +79,22 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
+    }
+
+    private void onGetuserInfo(CEvent evt)
+    {
+        var playerEvent = (PlayerEvent) evt.eventParams;
+
+        
+
+        TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
+
+  //  currentPlayer = pp;
+
+       // self.installData(e.player); //这一定要设置。
+
+       Debug.Log("pp="+pp.money);
+
     }
 
     private void onCMDResult(CEvent evt)
@@ -548,8 +566,7 @@ public class TestWebSocket : MonoBehaviour
             JsonData cmd = new JsonData();
             //demo.SetJsonType(JsonType.Object);
             // demo["id"] = 3302;
-            cmd["openid"] =
-                haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
+            cmd["openid"] =haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
 
             cmd["cmd"] = 4002;
             var d = cmd.ToJson();
@@ -649,6 +666,14 @@ public class TestWebSocket : MonoBehaviour
             hall.excuteCMD(cmd.ToJson());
         }
 
+
+        if (GUI.Button(new Rect(260, 160, 50, 50), "getinfo"))
+        {
+            //先查找是否存在，后插入。
+
+
+          self.getUserInfo();
+        }
         //
     }
 }

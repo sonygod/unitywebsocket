@@ -1051,7 +1051,7 @@ namespace web {
 		
 		
 		public MiniDispatchPlayerCS() {
-			#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			global::web.MiniDispatchPlayerCS.__hx_ctor_web_MiniDispatchPlayerCS(this);
 		}
 		#line default
@@ -1070,29 +1070,29 @@ namespace web {
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 2027665272:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.scroe = ((uint) (@value) );
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 23515:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.id = ((uint) (@value) );
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -1105,47 +1105,47 @@ namespace web {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 271957958:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.times = ((global::haxe.root.Array) (@value) );
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1092614307:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.cards = ((global::haxe.root.Array) (@value) );
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 2027665272:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.scroe = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 23515:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.id = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -1158,39 +1158,39 @@ namespace web {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 271957958:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.times;
 					}
 					
 					
 					case 1092614307:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.cards;
 					}
 					
 					
 					case 2027665272:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.scroe;
 					}
 					
 					
 					case 23515:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.id;
 					}
 					
 					
 					default:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -1203,25 +1203,25 @@ namespace web {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 2027665272:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.scroe) );
 					}
 					
 					
 					case 23515:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.id) );
 					}
 					
 					
 					default:
 					{
-						#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -1233,15 +1233,15 @@ namespace web {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("times");
-			#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("cards");
-			#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("scroe");
-			#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("id");
-			#line 107 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 113 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default
@@ -1260,7 +1260,7 @@ namespace web {
 		
 		
 		public MiniResultPlayerCS() {
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			global::web.MiniResultPlayerCS.__hx_ctor_web_MiniResultPlayerCS(this);
 		}
 		#line default
@@ -1303,128 +1303,128 @@ namespace web {
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 596855981:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.resultLostMoeny = ((int) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 780426091:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.resultEarnMoney = ((int) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 709377715:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.isBanker = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1835399246:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.round = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 5343647:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.key = ((double) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 22853:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.fk = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1205545654:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.roomID = ((int) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1819568762:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.oriMoney = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 2054470699:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.loseMoney = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 79259656:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.earnMoney = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 207600192:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.money = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 2027665272:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.scroe = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 23515:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.id = ((uint) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -1437,155 +1437,155 @@ namespace web {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 596855981:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.resultLostMoeny = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 780426091:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.resultEarnMoney = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 709377715:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.isBanker = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1244352339:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.timeToClient = global::haxe.lang.Runtime.toString(@value);
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1291635725:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.time = ((global::haxe.root.Date) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1835399246:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.round = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 5343647:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.key = ((double) (global::haxe.lang.Runtime.toDouble(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 22853:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.fk = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1205545654:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.roomID = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1092614307:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.cards = ((global::haxe.root.Array) (@value) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 1819568762:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.oriMoney = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 2054470699:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.loseMoney = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 79259656:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.earnMoney = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 207600192:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.money = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 2027665272:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.scroe = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					case 23515:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						this.id = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -1598,123 +1598,123 @@ namespace web {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 596855981:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.resultLostMoeny;
 					}
 					
 					
 					case 780426091:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.resultEarnMoney;
 					}
 					
 					
 					case 709377715:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.isBanker;
 					}
 					
 					
 					case 1244352339:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.timeToClient;
 					}
 					
 					
 					case 1291635725:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.time;
 					}
 					
 					
 					case 1835399246:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.round;
 					}
 					
 					
 					case 5343647:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.key;
 					}
 					
 					
 					case 22853:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.fk;
 					}
 					
 					
 					case 1205545654:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.roomID;
 					}
 					
 					
 					case 1092614307:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.cards;
 					}
 					
 					
 					case 1819568762:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.oriMoney;
 					}
 					
 					
 					case 2054470699:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.loseMoney;
 					}
 					
 					
 					case 79259656:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.earnMoney;
 					}
 					
 					
 					case 207600192:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.money;
 					}
 					
 					
 					case 2027665272:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.scroe;
 					}
 					
 					
 					case 23515:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.id;
 					}
 					
 					
 					default:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -1727,102 +1727,102 @@ namespace web {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+				#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 				switch (hash) {
 					case 596855981:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.resultLostMoeny) );
 					}
 					
 					
 					case 780426091:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.resultEarnMoney) );
 					}
 					
 					
 					case 709377715:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.isBanker) );
 					}
 					
 					
 					case 1835399246:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.round) );
 					}
 					
 					
 					case 5343647:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return this.key;
 					}
 					
 					
 					case 22853:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.fk) );
 					}
 					
 					
 					case 1205545654:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.roomID) );
 					}
 					
 					
 					case 1819568762:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.oriMoney) );
 					}
 					
 					
 					case 2054470699:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.loseMoney) );
 					}
 					
 					
 					case 79259656:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.earnMoney) );
 					}
 					
 					
 					case 207600192:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.money) );
 					}
 					
 					
 					case 2027665272:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.scroe) );
 					}
 					
 					
 					case 23515:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return ((double) (this.id) );
 					}
 					
 					
 					default:
 					{
-						#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+						#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -1834,39 +1834,39 @@ namespace web {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("resultLostMoeny");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("resultEarnMoney");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("isBanker");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("timeToClient");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("time");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("round");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("key");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("fk");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("roomID");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("cards");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("oriMoney");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("loseMoney");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("earnMoney");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("money");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("scroe");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			baseArr.push("id");
-			#line 122 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
+			#line 128 "d:\\project\\sangong\\sangong\\src\\web\\TinyPlayer.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default
