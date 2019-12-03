@@ -78,9 +78,11 @@ namespace web
 
         public int referenceID;//推荐人
 
-        public int coins;//动态奖励，道具币
+        public float coins;//动态奖励，道具币
 
-        public int staticCoins;//静态 币
+        public float staticCoins;//静态 币
+
+        public float bccmCoins;//bccm币
 
 
 

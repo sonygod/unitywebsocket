@@ -62,8 +62,11 @@ namespace web {
 		public int gambling;
 		
 		public int[] times;
-		
-	}
+
+        public int award;
+
+
+    }
 }
 
 
