@@ -6,13 +6,13 @@ namespace hx.ws._OpCode {
 		
 		static OpCode_Impl_() {
 			unchecked{
-				#line 4 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
+				#line 4 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
 				global::hx.ws._OpCode.OpCode_Impl_.Continuation = ((int) (0) );
 				global::hx.ws._OpCode.OpCode_Impl_.Text = ((int) (1) );
-				#line 6 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
+				#line 6 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
 				global::hx.ws._OpCode.OpCode_Impl_.Binary = ((int) (2) );
 				global::hx.ws._OpCode.OpCode_Impl_.Close = ((int) (8) );
-				#line 8 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
+				#line 8 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
 				global::hx.ws._OpCode.OpCode_Impl_.Ping = ((int) (9) );
 				global::hx.ws._OpCode.OpCode_Impl_.Pong = ((int) (10) );
 			}
@@ -32,7 +32,7 @@ namespace hx.ws._OpCode {
 		public static int Pong;
 		
 		public static int toInt(int this1) {
-			#line 12 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
+			#line 12 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\OpCode.hx"
 			return this1;
 		}
 		#line default

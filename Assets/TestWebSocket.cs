@@ -58,7 +58,7 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketErrorCS = onSocketError;
          //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
-        /// client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+      //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
@@ -70,6 +70,8 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(HallEvent.OnReg, onReg);
 
         self.addEventListener(PlayerEvent.GET_USER_INFO,onGetuserInfo);
+
+        self.addEventListener(PlayerEvent.GET_TEARM_INCOME,onGetIncome);
         TestEventDispathFromHaxe();
 
 
@@ -79,6 +81,24 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
+    }
+
+    //收益 2019-12-5
+    private void onGetIncome(CEvent evt)
+    {
+
+        var playerEvent = (PlayerEvent)evt.eventParams;
+
+
+        var p = playerEvent.player;
+        Debug.Log("获取收益CS");
+
+
+
+        TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
+
+        Debug.Log(JsonConvert.SerializeObject(pp));
+
     }
 
     private void onGetuserInfo(CEvent evt)
@@ -673,6 +693,14 @@ public class TestWebSocket : MonoBehaviour
 
 
           self.getUserInfo();
+        }
+
+        if (GUI.Button(new Rect(360, 160, 50, 50), "tearm"))
+        {
+            //先查找是否存在，后插入。
+
+
+            self.getUserIncomeAndSize();
         }
         //
     }

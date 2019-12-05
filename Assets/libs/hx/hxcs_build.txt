@@ -1,4 +1,4 @@
-d:\project\sangong\sangong
+D:\project\sangong\sangong
 begin defines
 NET_20
 binary128
@@ -713,11 +713,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_524__Fun
-C web.SocketAsync_installSocket_543__Fun
-C web.SocketAsync_installSocket_546__Fun
-C web.SocketAsync_installSocket_562__Fun
-C web.SocketAsync_installSocket_568__Fun
+C web.SocketAsync_reConnectSocket_533__Fun
+C web.SocketAsync_installSocket_552__Fun
+C web.SocketAsync_installSocket_555__Fun
+C web.SocketAsync_installSocket_571__Fun
+C web.SocketAsync_installSocket_577__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64

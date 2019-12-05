@@ -10,28 +10,28 @@ namespace gameRoom {
 		
 		
 		public Player(uint id, object data, global::server.IHander hander) {
-			#line 51 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 51 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			global::gameRoom.Player.__hx_ctor_gameRoom_Player(this, id, data, hander);
 		}
 		#line default
 		
 		protected static void __hx_ctor_gameRoom_Player(global::gameRoom.Player __hx_this, uint id, object data, global::server.IHander hander) {
 			unchecked {
-				#line 46 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 46 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				__hx_this.maxBiling = 1000;
-				#line 51 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 51 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				{
-					#line 53 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+					#line 53 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 					__hx_this.canChangingStatus = true;
 					__hx_this.id = id;
-					#line 56 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+					#line 56 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 					__hx_this.data = data;
 					global::haxe.lang.Runtime.setField(__hx_this.data, "money", 207600192, 0);
-					#line 58 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+					#line 58 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 					global::haxe.lang.Runtime.setField(data, "oriMoney", 1819568762, 1000);
-					#line 60 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+					#line 60 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 					__hx_this.canBet = true;
-					#line 67 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+					#line 67 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 					__hx_this.addEventListener();
 				}
 				
@@ -59,48 +59,48 @@ namespace gameRoom {
 		public object roomInfo;
 		
 		public virtual void setUpRoomInfo(object roomInfo) {
-			#line 75 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 75 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			object roomID = global::haxe.lang.Runtime.getField(roomInfo, "id", 23515, true);
 			this.roomdID = ((uint) (global::haxe.lang.Runtime.toInt(roomID)) );
-			#line 77 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 77 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			this.roomInfo = roomInfo;
 			global::haxe.lang.Runtime.setField(this.data, "roomID", 1205545654, roomID);
 		}
 		#line default
 		
 		public virtual void removeListener() {
-			#line 82 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 82 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			global::web.proto.WebEventDispatch d = global::web.proto.WebEventDispatch.getInstance();
-			#line 97 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 97 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			d.removeEventListener(((string) ("add_bet") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onAddBetC", 1425796404)) ), default(object));
 			d.removeEventListener(((string) ("be_banker") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onBeBankerC", 299197528)) ), default(object));
-			#line 99 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 99 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			d.removeEventListener(((string) ("static_change") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onStatusChangeC", 1373340450)) ), default(object));
-			#line 101 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 101 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			this.wasAddEventListener = false;
 		}
 		#line default
 		
 		public virtual void addEventListener() {
-			#line 105 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 105 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			if (this.wasAddEventListener) {
-				#line 106 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 106 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				return;
 			}
 			
-			#line 108 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 108 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			global::web.proto.WebEventDispatch d = global::web.proto.WebEventDispatch.getInstance();
-			#line 129 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 129 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			this.wasAddEventListener = true;
 		}
 		#line default
 		
 		public virtual void joinRoom(int targetID) {
-			#line 133 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 133 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			this._wasLeaving = false;
-			#line 135 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 135 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			if (((bool) (( targetID == this.id )) )) {
-				#line 136 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 136 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.lang.Runtime.setField(this.data, "inGame", 12898935, true);
 			}
 			
@@ -108,14 +108,14 @@ namespace gameRoom {
 		#line default
 		
 		public virtual bool getLeaving() {
-			#line 147 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 147 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			return this._wasLeaving;
 		}
 		#line default
 		
 		public virtual void onStatusChangeC(global::web.proto.PlayerEvent e) {
 			unchecked {
-				#line 376 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 376 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u7528\u6237\u72b6\u6001\u6539\u53d8\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351, 1830310359}, new object[]{"onStatusChangeC", "gameRoom.Player", "src/gameRoom/Player.hx", new global::haxe.root.Array(new object[]{"up=0", "sit=1"})}, new int[]{1981972957}, new double[]{((double) (376) )}));
 				object s = global::haxe.lang.Runtime.getField(e.player, "status", 100394802, true);
 			}
@@ -125,7 +125,7 @@ namespace gameRoom {
 		
 		public virtual void onBeBankerC(global::web.proto.PlayerEvent e) {
 			unchecked {
-				#line 381 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 381 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u7528\u6237\u6210\u4e3a\u5e84\u5bb6", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onBeBankerC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (381) )}));
 				object id = global::haxe.lang.Runtime.getField(e.player, "id", 23515, true);
 			}
@@ -135,7 +135,7 @@ namespace gameRoom {
 		
 		public virtual void onAddBetC(global::web.proto.PlayerEvent e) {
 			unchecked {
-				#line 386 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 386 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0b\u6ce8", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onAddBetC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (386) )}));
 				object bet = e.bling;
 			}
@@ -145,12 +145,12 @@ namespace gameRoom {
 		
 		public virtual void changeStatusC(int status) {
 			unchecked {
-				#line 535 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 535 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u7528\u6237\u72b6\u6001\u6539\u53d8\uff0c\u5750\u7acb\uff0c\u6216\u8005\u7ad9\u8d77var UP = 0;\tvar SIT = 1; ready=2;", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeStatusC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (535) )}));
 				object tp = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{((object) (this.id) )}, new int[]{}, new double[]{});
-				#line 537 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 537 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.lang.Runtime.setField(tp, "status", 100394802, status);
-				#line 540 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 540 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (11) ), ((int) (this.id) ), global::org.msgpack.MsgPack.encode(tp), null);
 			}
 			#line default
@@ -159,10 +159,10 @@ namespace gameRoom {
 		
 		public virtual void tryToBeBankerC() {
 			unchecked {
-				#line 544 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 544 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u62a2\u5e84", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"tryToBeBankerC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (544) )}));
 				object tp_id = ((object) (this.id) );
-				#line 546 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 546 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (5) ), ((int) (this.id) ), null, null);
 			}
 			#line default
@@ -171,10 +171,10 @@ namespace gameRoom {
 		
 		public virtual void addBetC(uint b) {
 			unchecked {
-				#line 550 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 550 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u7528\u6237\u4e0b\u6ce8", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addBetC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (550) )}));
 				object b1 = new global::haxe.lang.DynamicObject(new int[]{}, new object[]{}, new int[]{888664408, 1213433212}, new double[]{((double) (b) ), ((double) (this.id) )});
-				#line 553 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 553 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (4) ), ((int) (this.id) ), global::org.msgpack.MsgPack.encode(b1), null);
 			}
 			#line default
@@ -183,10 +183,10 @@ namespace gameRoom {
 		
 		public virtual void createClubC(string name, string password, uint pay) {
 			unchecked {
-				#line 558 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 558 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u521b\u5efa\u4ff1\u4e50\u90e8", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createClubC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (558) )}));
 				object b = new global::haxe.lang.DynamicObject(new int[]{5591400, 1221600027, 1224700491}, new object[]{((object) (pay) ), password, name}, new int[]{}, new double[]{});
-				#line 561 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 561 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (6) ), ((int) (this.id) ), global::org.msgpack.MsgPack.encode(b), null);
 			}
 			#line default
@@ -195,10 +195,10 @@ namespace gameRoom {
 		
 		public virtual void getClubListC(int id) {
 			unchecked {
-				#line 565 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 565 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u4ff1\u4e50\u90e8\u6210\u5458", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"getClubListC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (565) )}));
 				object b = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{((object) (id) )}, new int[]{}, new double[]{});
-				#line 568 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 568 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (6) ), id, global::org.msgpack.MsgPack.encode(b), null);
 			}
 			#line default
@@ -207,10 +207,10 @@ namespace gameRoom {
 		
 		public virtual void removeFrmClubC(int targetID) {
 			unchecked {
-				#line 572 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 572 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u5220\u9664\u4ff1\u4e50\u90e8\u6210\u5458", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"removeFrmClubC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (572) )}));
 				object tp = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{((object) (targetID) )}, new int[]{}, new double[]{});
-				#line 575 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 575 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (14) ), ((int) (this.id) ), global::org.msgpack.MsgPack.encode(tp), null);
 			}
 			#line default
@@ -219,10 +219,10 @@ namespace gameRoom {
 		
 		public virtual void sendCommandC(int cmd, int targetID, int @value, int password, string openid) {
 			unchecked {
-				#line 581 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 581 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u7ba1\u7406\u5458\u53d1\u9001\u547d\u4ee4\u3002\u5148\u68c0\u67e5\u7528\u6237\u662f\u5426isGM\uff0c\u5426\u5219\u53d1\u8fc7\u53bb\u4e5f\u662f\u6ca1\u6709\u6548\u679c", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCommandC", "gameRoom.Player", "src/gameRoom/Player.hx"}, new int[]{1981972957}, new double[]{((double) (581) )}));
 				object cmd1 = new global::haxe.lang.DynamicObject(new int[]{23515, 4947578, 563373605, 834174833, 1221600027}, new object[]{((object) (targetID) ), ((object) (cmd) ), openid, ((object) (@value) ), ((object) (password) )}, new int[]{}, new double[]{});
-				#line 590 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 590 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (15) ), ((int) (this.id) ), global::org.msgpack.MsgPack.encode(cmd1), null);
 			}
 			#line default
@@ -231,56 +231,56 @@ namespace gameRoom {
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				switch (hash) {
 					case 1428421673:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.roomInfo = ((object) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 457862913:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.maxBiling = ((int) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 402568708:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.roomdID = ((uint) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 1113806378:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.data = ((object) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 23515:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.id = ((uint) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -293,92 +293,92 @@ namespace gameRoom {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				switch (hash) {
 					case 1428421673:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.roomInfo = ((object) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 457862913:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.maxBiling = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 920765674:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this._wasLeaving = global::haxe.lang.Runtime.toBool(@value);
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 941286177:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.canBet = global::haxe.lang.Runtime.toBool(@value);
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 548230639:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.canChangingStatus = global::haxe.lang.Runtime.toBool(@value);
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 802695958:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.wasAddEventListener = global::haxe.lang.Runtime.toBool(@value);
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 402568708:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.roomdID = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 1113806378:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.data = ((object) (@value) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					case 23515:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.id = ((uint) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -391,179 +391,179 @@ namespace gameRoom {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				switch (hash) {
 					case 2131919360:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "sendCommandC", 2131919360)) );
 					}
 					
 					
 					case 158986576:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeFrmClubC", 158986576)) );
 					}
 					
 					
 					case 2088117657:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getClubListC", 2088117657)) );
 					}
 					
 					
 					case 1910689201:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "createClubC", 1910689201)) );
 					}
 					
 					
 					case 2102473875:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addBetC", 2102473875)) );
 					}
 					
 					
 					case 342296321:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "tryToBeBankerC", 342296321)) );
 					}
 					
 					
 					case 390269249:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "changeStatusC", 390269249)) );
 					}
 					
 					
 					case 1425796404:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onAddBetC", 1425796404)) );
 					}
 					
 					
 					case 299197528:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onBeBankerC", 299197528)) );
 					}
 					
 					
 					case 1373340450:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onStatusChangeC", 1373340450)) );
 					}
 					
 					
 					case 1688768510:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "getLeaving", 1688768510)) );
 					}
 					
 					
 					case 1053199141:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "joinRoom", 1053199141)) );
 					}
 					
 					
 					case 1902382029:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "addEventListener", 1902382029)) );
 					}
 					
 					
 					case 42482904:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "removeListener", 42482904)) );
 					}
 					
 					
 					case 2079633382:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "setUpRoomInfo", 2079633382)) );
 					}
 					
 					
 					case 1428421673:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.roomInfo;
 					}
 					
 					
 					case 457862913:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.maxBiling;
 					}
 					
 					
 					case 920765674:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this._wasLeaving;
 					}
 					
 					
 					case 941286177:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.canBet;
 					}
 					
 					
 					case 548230639:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.canChangingStatus;
 					}
 					
 					
 					case 802695958:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.wasAddEventListener;
 					}
 					
 					
 					case 402568708:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.roomdID;
 					}
 					
 					
 					case 1113806378:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.data;
 					}
 					
 					
 					case 23515:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.id;
 					}
 					
 					
 					default:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -576,46 +576,46 @@ namespace gameRoom {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				switch (hash) {
 					case 1428421673:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.roomInfo)) );
 					}
 					
 					
 					case 457862913:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((double) (this.maxBiling) );
 					}
 					
 					
 					case 402568708:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((double) (this.roomdID) );
 					}
 					
 					
 					case 1113806378:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.data)) );
 					}
 					
 					
 					case 23515:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return ((double) (this.id) );
 					}
 					
 					
 					default:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -628,150 +628,150 @@ namespace gameRoom {
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				switch (hash) {
 					case 2131919360:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.sendCommandC(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[1]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ), ((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[3]) ))) ), global::haxe.lang.Runtime.toString(((object) (dynargs[4]) )));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 158986576:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.removeFrmClubC(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 2088117657:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.getClubListC(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 1910689201:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.createClubC(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )), global::haxe.lang.Runtime.toString(((object) (dynargs[1]) )), ((uint) (global::haxe.lang.Runtime.toInt(((object) (dynargs[2]) ))) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 2102473875:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.addBetC(((uint) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 342296321:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.tryToBeBankerC();
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 390269249:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.changeStatusC(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 1425796404:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.onAddBetC(((global::web.proto.PlayerEvent) (((object) (dynargs[0]) )) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 299197528:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.onBeBankerC(((global::web.proto.PlayerEvent) (((object) (dynargs[0]) )) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 1373340450:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.onStatusChangeC(((global::web.proto.PlayerEvent) (((object) (dynargs[0]) )) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 1688768510:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return this.getLeaving();
 					}
 					
 					
 					case 1053199141:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.joinRoom(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 1902382029:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.addEventListener();
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 42482904:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.removeListener();
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					case 2079633382:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						this.setUpRoomInfo(((object) (dynargs[0]) ));
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						break;
 					}
 					
 					
 					default:
 					{
-						#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+						#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+				#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 				return null;
 			}
 			#line default
@@ -779,25 +779,25 @@ namespace gameRoom {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("roomInfo");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("maxBiling");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("_wasLeaving");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("canBet");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("canChangingStatus");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("wasAddEventListener");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("roomdID");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("data");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			baseArr.push("id");
-			#line 28 "d:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
+			#line 28 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Player.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default
