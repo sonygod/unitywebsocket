@@ -100,6 +100,12 @@ namespace web
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public int? tearmSize;//团队人数
 
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public int? firstSize;//有效直推第一层
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+        public float? staticIncome;
 
 
     }
