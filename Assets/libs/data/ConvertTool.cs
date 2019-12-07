@@ -49,6 +49,27 @@ namespace com.huaqian
 
             return pp;
         }
+
+
+        public static T ConvertData<T>(object data, bool print = false)
+        {
+
+            if (print)
+            {
+                Debug.Log(haxe.Json.stringify(data, null, null));
+            }
+            string playerString = haxe.Json.stringify(data, null, null);
+
+            JsonSerializerSettings settings = new JsonSerializerSettings();
+            settings.NullValueHandling = NullValueHandling.Ignore;
+
+            var pp = JsonConvert.DeserializeObject<T>(playerString, settings);
+
+
+            // pp.players=
+
+            return pp;
+        }
         public static object ToHaxeRoom(TinyRoomCS room)
         {
             //var s=JsonConvert.SerializeObject(room);

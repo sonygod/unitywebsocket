@@ -6,27 +6,27 @@ namespace web.proto {
 	public sealed class RoomEvent : global::openfl.events.Event {
 		
 		static RoomEvent() {
-			#line 16 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 16 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.CREATE_ROOM = ((string) ("create_room") );
-			#line 18 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 18 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.GET_ROOM_INFO = ((string) ("get_room_info") );
-			#line 23 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 23 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.JOIN_ROOM = ((string) ("join_room") );
-			#line 28 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 28 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.LEAVE_ROOM = ((string) ("leave_room") );
-			#line 30 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 30 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.DISPATCH = ((string) ("dispatch") );
-			#line 32 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 32 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.RESULT = ((string) ("result") );
-			#line 34 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 34 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.DESTORY = ((string) ("destory") );
-			#line 39 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 39 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.ROOM_CHANGE_STATUS = ((string) ("room_change_status") );
-			#line 41 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 41 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.UPDATE_ROOM_USERS = ((string) ("updateRoomUsers") );
-			#line 44 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 44 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.KILL_BANK = ((string) ("room_kill_banker") );
-			#line 46 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 46 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.START = ((string) ("room_start_game") );
 		}
 		#line default
@@ -36,21 +36,21 @@ namespace web.proto {
 		
 		
 		public RoomEvent(string type, object room, object player, global::server.IHander hander, object result, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 58 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 58 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent.__hx_ctor_web_proto_RoomEvent(this, type, room, player, hander, result, bubbles, cancelable);
 		}
 		#line default
 		
 		private static void __hx_ctor_web_proto_RoomEvent(global::web.proto.RoomEvent __hx_this, string type, object room, object player, global::server.IHander hander, object result, object bubbles, object cancelable) {
-			#line 57 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 57 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-			#line 57 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 57 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-			#line 60 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 60 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			__hx_this.room = room;
 			__hx_this.player = player;
-			#line 62 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 62 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			__hx_this.hander = hander;
 			__hx_this.result = result;
 		}
@@ -87,57 +87,57 @@ namespace web.proto {
 		public object result;
 		
 		public override global::openfl.events.Event clone() {
-			#line 67 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 67 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			global::web.proto.RoomEvent @event = new global::web.proto.RoomEvent(this.type, this.room, this.player, this.hander, this.result, this.bubbles, this.cancelable);
 			@event.target = this.target;
-			#line 69 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 69 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			@event.currentTarget = this.currentTarget;
 			@event.eventPhase = this.eventPhase;
-			#line 71 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 71 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			@event.room = this.room;
 			@event.player = this.player;
-			#line 73 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 73 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			@event.hander = this.hander;
 			@event.result = this.result;
-			#line 75 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 75 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			return @event;
 		}
 		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+				#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 				switch (hash) {
 					case 142895325:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.result = ((object) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					case 934865761:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.player = ((object) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					case 1269755419:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.room = ((object) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -150,47 +150,47 @@ namespace web.proto {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+				#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 				switch (hash) {
 					case 142895325:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.result = ((object) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					case 939359644:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.hander = ((global::server.IHander) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					case 934865761:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.player = ((object) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					case 1269755419:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						this.room = ((object) (@value) );
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -203,46 +203,46 @@ namespace web.proto {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+				#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 				switch (hash) {
 					case 1214452573:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clone", 1214452573)) );
 					}
 					
 					
 					case 142895325:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return this.result;
 					}
 					
 					
 					case 939359644:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return this.hander;
 					}
 					
 					
 					case 934865761:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return this.player;
 					}
 					
 					
 					case 1269755419:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return this.room;
 					}
 					
 					
 					default:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -255,32 +255,32 @@ namespace web.proto {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+				#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 				switch (hash) {
 					case 142895325:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.result)) );
 					}
 					
 					
 					case 934865761:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.player)) );
 					}
 					
 					
 					case 1269755419:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.room)) );
 					}
 					
 					
 					default:
 					{
-						#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+						#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -292,15 +292,15 @@ namespace web.proto {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			baseArr.push("result");
-			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			baseArr.push("hander");
-			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			baseArr.push("player");
-			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			baseArr.push("room");
-			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
+			#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\RoomEvent.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default

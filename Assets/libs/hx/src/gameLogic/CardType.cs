@@ -30,7 +30,7 @@ namespace gameLogic {
 		
 		
 		public override string getTag() {
-			#line 7 "D:\\project\\sangong\\sangong\\src\\gameLogic\\CardType.hx"
+			#line 7 "d:\\project\\sangong\\sangong\\src\\gameLogic\\CardType.hx"
 			return "CT_ERROR";
 		}
 		#line default
@@ -49,7 +49,7 @@ namespace gameLogic {
 		
 		
 		public override string getTag() {
-			#line 8 "D:\\project\\sangong\\sangong\\src\\gameLogic\\CardType.hx"
+			#line 8 "d:\\project\\sangong\\sangong\\src\\gameLogic\\CardType.hx"
 			return "CT_SanPai";
 		}
 		#line default
@@ -68,7 +68,7 @@ namespace gameLogic {
 		
 		
 		public override string getTag() {
-			#line 9 "D:\\project\\sangong\\sangong\\src\\gameLogic\\CardType.hx"
+			#line 9 "d:\\project\\sangong\\sangong\\src\\gameLogic\\CardType.hx"
 			return "CT_SanGong";
 		}
 		#line default

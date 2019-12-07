@@ -5,13 +5,13 @@ namespace openfl.events._EventType {
 	public sealed class EventType_Impl_ {
 		
 		public static bool @equals<T>(string a, string b) {
-			#line 21 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\EventType.hx"
+			#line 21 "d:\\project\\sangong\\sangong\\src\\openfl\\events\\EventType.hx"
 			return ( ((string) (a) ) == b );
 		}
 		#line default
 		
 		public static bool notEquals<T>(string a, string b) {
-			#line 26 "D:\\project\\sangong\\sangong\\src\\openfl\\events\\EventType.hx"
+			#line 26 "d:\\project\\sangong\\sangong\\src\\openfl\\events\\EventType.hx"
 			return ( ((string) (a) ) != b );
 		}
 		#line default

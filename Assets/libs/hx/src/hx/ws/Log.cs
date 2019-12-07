@@ -7,12 +7,12 @@ namespace hx.ws {
 		
 		static Log() {
 			unchecked{
-				#line 4 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 4 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				global::hx.ws.Log.INFO = 1;
 				global::hx.ws.Log.DEBUG = 16;
-				#line 6 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 6 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				global::hx.ws.Log.DATA = 256;
-				#line 8 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 8 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				global::hx.ws.Log.mask = 0;
 			}
 		}
@@ -23,7 +23,7 @@ namespace hx.ws {
 		
 		
 		public Log() {
-			#line 3 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+			#line 3 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 			global::hx.ws.Log.__hx_ctor_hx_ws_Log(this);
 		}
 		#line default
@@ -42,19 +42,19 @@ namespace hx.ws {
 		
 		public static void info(string data, object id) {
 			unchecked {
-				#line 11 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 11 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( (( global::hx.ws.Log.mask & 1 )) != 1 )) {
-					#line 12 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 12 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					return;
 				}
 				
-				#line 15 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 15 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( id != default(object) )) {
-					#line 16 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 16 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("INFO  :: ID-", global::haxe.lang.Runtime.toString(id)), " :: "), data)) ));
 				}
 				else {
-					#line 18 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 18 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat("INFO  :: ", data)) ));
 				}
 				
@@ -65,19 +65,19 @@ namespace hx.ws {
 		
 		public static void debug(string data, object id) {
 			unchecked {
-				#line 23 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 23 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( (( global::hx.ws.Log.mask & 16 )) != 16 )) {
-					#line 24 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 24 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					return;
 				}
 				
-				#line 27 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 27 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( id != default(object) )) {
-					#line 28 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 28 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("DEBUG :: ID-", global::haxe.lang.Runtime.toString(id)), " :: "), data)) ));
 				}
 				else {
-					#line 30 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 30 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat("DEBUG :: ", data)) ));
 				}
 				
@@ -88,19 +88,19 @@ namespace hx.ws {
 		
 		public static void data(string data, object id) {
 			unchecked {
-				#line 35 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 35 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( (( global::hx.ws.Log.mask & 256 )) != 256 )) {
-					#line 36 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 36 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					return;
 				}
 				
-				#line 39 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+				#line 39 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 				if (( id != default(object) )) {
-					#line 40 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 40 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("DATA  :: ID-", global::haxe.lang.Runtime.toString(id)), "\n------------------------------\n"), data), "\n------------------------------")) ));
 				}
 				else {
-					#line 42 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
+					#line 42 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Log.hx"
 					global::System.Console.WriteLine(((object) (global::haxe.lang.Runtime.concat("", data)) ));
 				}
 				

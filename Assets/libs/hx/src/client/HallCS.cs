@@ -7,13 +7,13 @@ namespace client {
 		
 		public HallCS() : base() {
 			unchecked {
-				#line 73 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 73 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				this.isEnabled = true;
-				#line 28 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 28 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				this.wasAdd = false;
-				#line 30 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 30 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				{
-					#line 33 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 33 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u521b\u5efa\u4e86\u5927\u5385", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (33) )}));
 				}
 				
@@ -26,33 +26,33 @@ namespace client {
 		
 		public virtual void addEvent() {
 			unchecked {
-				#line 37 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 37 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				if (this.wasAdd) {
-					#line 38 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 38 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					global::haxe.Log.trace.__hx_invoke2_o(default(double), "<color=#FFFF00>\u4e0d\u80fd\u91cd\u590d\u6dfb\u52a0\u7a83\u542c\u5668\u3002</color", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (38) )}));
 					return;
 				}
 				
-				#line 41 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 41 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-				#line 45 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 45 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") ), ((string) ("CMD_result") )});
-				#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 47 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				{
-					#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 47 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					int _g = 0;
-					#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 47 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					while (( _g < events.length )) {
-						#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+						#line 47 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 						string e = global::haxe.lang.Runtime.toString(events.__get(_g));
-						#line 47 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+						#line 47 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 						 ++ _g;
 						wd.addEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEventHall", 112735659)) ), default(object), default(object), default(object));
 					}
 					
 				}
 				
-				#line 50 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 50 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u5927\u5385\u6dfb\u52a0\u503e\u542c\u5668\u6210\u529f\uff0c", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addEvent", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (50) )}));
 				this.wasAdd = true;
 			}
@@ -62,9 +62,9 @@ namespace client {
 		
 		public virtual void transEventHall(global::openfl.events.Event e) {
 			unchecked {
-				#line 56 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 56 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6536\u5230\u5927\u5385\u4fe1\u606f**********************", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEventHall", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (56) )}));
-				#line 58 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 58 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 			}
 			#line default
@@ -72,26 +72,26 @@ namespace client {
 		
 		
 		public virtual void off() {
-			#line 62 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+			#line 62 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
-			#line 64 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+			#line 64 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("create_room") ), ((string) ("join_room") ), ((string) ("CMD_result") )});
-			#line 66 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+			#line 66 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			{
-				#line 66 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 66 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				int _g = 0;
-				#line 66 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 66 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				while (( _g < events.length )) {
-					#line 66 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 66 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					string e = global::haxe.lang.Runtime.toString(events.__get(_g));
-					#line 66 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 66 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					 ++ _g;
 					wd.removeEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEventHall", 112735659)) ), default(object));
 				}
 				
 			}
 			
-			#line 69 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+			#line 69 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 			this.wasAdd = false;
 		}
 		#line default
@@ -100,18 +100,18 @@ namespace client {
 		
 		public virtual void excuteCMD(string e) {
 			unchecked {
-				#line 80 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 80 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				if ( ! (this.isEnabled) ) {
-					#line 81 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+					#line 81 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0d\u80fd\u9891\u7e41\u8c03\u7528,\u4e0b\u6b2130\u79d2\u6709\u6548", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"excuteCMD", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (81) )}));
 					return;
 				}
 				
-				#line 85 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 85 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				object cmd = ((object) (new global::haxe.format.JsonParser(((string) (e) )).doParse()) );
-				#line 87 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 87 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::haxe.Log.trace.__hx_invoke2_o(default(double), cmd, default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"excuteCMD", "client.HallCS", "src/client/HallCS.hx"}, new int[]{1981972957}, new double[]{((double) (87) )}));
-				#line 89 "D:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
+				#line 89 "d:\\project\\sangong\\sangong\\src\\client\\HallCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (15) ), -1, global::org.msgpack.MsgPack.encode(cmd), null);
 			}
 			#line default

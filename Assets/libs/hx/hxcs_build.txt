@@ -1,4 +1,4 @@
-D:\project\sangong\sangong
+d:\project\sangong\sangong
 begin defines
 NET_20
 binary128
@@ -713,11 +713,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_533__Fun
-C web.SocketAsync_installSocket_552__Fun
-C web.SocketAsync_installSocket_555__Fun
+C web.SocketAsync_reConnectSocket_553__Fun
 C web.SocketAsync_installSocket_571__Fun
-C web.SocketAsync_installSocket_577__Fun
+C web.SocketAsync_installSocket_574__Fun
+C web.SocketAsync_installSocket_590__Fun
+C web.SocketAsync_installSocket_596__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64
@@ -1003,6 +1003,7 @@ C haxe.io.Error_Custom
 M cs.system.io.FileAttributes
 M cs.system.UriPartial
 M System.Collections.IHashCodeProvider
+M web.TinyBuyItem
 M cs.system.reflection.emit.PackingSize
 M cs.types.Int16
 M cs.system.DayOfWeek
@@ -1182,6 +1183,8 @@ M haxe.iterators.StringKeyValueIterator
 C haxe.iterators.StringKeyValueIterator
 M cs.system.Environment
 M System.Runtime.Remoting.Messaging.IMessageSink
+M web.proto.ShoppingEvent
+C web.proto.ShoppingEvent
 M System.Reflection.Emit.EnumBuilder
 M System.Object
 M cs.system.diagnostics.ThreadState

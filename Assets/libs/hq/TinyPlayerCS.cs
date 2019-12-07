@@ -19,7 +19,7 @@ namespace web
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public int[] cards;
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public int? money;
+        public float? money;
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public float? money_clone;
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

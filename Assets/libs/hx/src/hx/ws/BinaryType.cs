@@ -5,7 +5,7 @@ namespace hx.ws._BinaryType {
 	public sealed class BinaryType_Impl_ {
 		
 		static BinaryType_Impl_() {
-			#line 10 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\BinaryType.hx"
+			#line 10 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\BinaryType.hx"
 			global::hx.ws._BinaryType.BinaryType_Impl_.ARRAYBUFFER = ((string) ("arraybuffer") );
 		}
 		#line default
@@ -13,7 +13,7 @@ namespace hx.ws._BinaryType {
 		public static string ARRAYBUFFER;
 		
 		public static string toString(string this1) {
-			#line 13 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\BinaryType.hx"
+			#line 13 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\BinaryType.hx"
 			return this1;
 		}
 		#line default

@@ -28,7 +28,7 @@ public class TestWebSocket : MonoBehaviour
     private PlayerCS self; //自己.
     private HallCS hall;
     private bool socketConnect;
-    private Dictionary<int, PlayerCS> dic;//退出房间要删除。
+    private Dictionary<int, PlayerCS> dic; //退出房间要删除。
 
     public TinyPlayerCS currentPlayer { get; private set; }
     public RoomCS currentRoom { get; private set; }
@@ -56,9 +56,9 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-         //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-       client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
-      //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+        //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
 
@@ -69,9 +69,11 @@ public class TestWebSocket : MonoBehaviour
 
         self.addEventListener(HallEvent.OnReg, onReg);
 
-        self.addEventListener(PlayerEvent.GET_USER_INFO,onGetuserInfo);
+        self.addEventListener(PlayerEvent.GET_USER_INFO, onGetuserInfo);
 
-        self.addEventListener(PlayerEvent.GET_TEARM_INCOME,onGetIncome);
+        self.addEventListener(PlayerEvent.GET_TEARM_INCOME, onGetIncome);
+        self.addEventListener(ShoppingEvent.GET_BUY_LIST,onGetBuyList);
+        self.addEventListener(ShoppingEvent.GET_CHARGE_LIST, onGetChargeList);
         TestEventDispathFromHaxe();
 
 
@@ -83,11 +85,33 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
     }
 
+    private void onGetChargeList(CEvent evt)
+    {
+        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+
+        var data = e.data;
+
+        TinyChargeCS[] pp = ConvertTool.ConvertData<TinyChargeCS[]>(e.data);
+
+
+        Debug.Log(JsonConvert.SerializeObject(pp));
+    }
+
+    private void onGetBuyList(CEvent evt)
+    {
+        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+
+        TinyBuyItemCS[] pp = ConvertTool.ConvertData<TinyBuyItemCS[]>(e.data);
+
+        Debug.Log(JsonConvert.SerializeObject(pp));
+        //  throw new NotImplementedException();
+    }
+
     //收益 2019-12-5
     private void onGetIncome(CEvent evt)
     {
 
-        var playerEvent = (PlayerEvent)evt.eventParams;
+        var playerEvent = (PlayerEvent) evt.eventParams;
 
 
         var p = playerEvent.player;
@@ -105,15 +129,15 @@ public class TestWebSocket : MonoBehaviour
     {
         var playerEvent = (PlayerEvent) evt.eventParams;
 
-        
+
 
         TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
 
-  //  currentPlayer = pp;
+        //  currentPlayer = pp;
 
-       // self.installData(e.player); //这一定要设置。
+        // self.installData(e.player); //这一定要设置。
 
-       Debug.Log("pp="+pp.money);
+        Debug.Log("pp=" + pp.money);
 
     }
 
@@ -291,12 +315,12 @@ public class TestWebSocket : MonoBehaviour
 
                 if (dic == null)
                 {
-                    dic=new Dictionary<int, PlayerCS>();
+                    dic = new Dictionary<int, PlayerCS>();
                 }
 
                 if (!dic.ContainsKey(cs.id))
                 {
-                    dic [cs.id] = new PlayerCS(null);
+                    dic[cs.id] = new PlayerCS(null);
 
 
 
@@ -308,13 +332,14 @@ public class TestWebSocket : MonoBehaviour
                     {
                         player.installDataCS(JsonConvert.SerializeObject(cs));
                     }
+
                     player.addEvent();
 
-                    player.addEventListener(PlayerEvent.ADD_BET,onAddBet);//倾听下注，还可以倾听用户 的表情，语音，等。
+                    player.addEventListener(PlayerEvent.ADD_BET, onAddBet); //倾听下注，还可以倾听用户 的表情，语音，等。
 
                 }
 
-              
+
 
 
 
@@ -339,7 +364,7 @@ public class TestWebSocket : MonoBehaviour
 
 
 
-            Debug.Log(" <color=#9400D3> 房间" + biling.roomID + " 玩家" + biling.playerID+ " 下注= " + biling.bling +
+            Debug.Log(" <color=#9400D3> 房间" + biling.roomID + " 玩家" + biling.playerID + " 下注= " + biling.bling +
                       "</color>");
         });
 
@@ -491,7 +516,7 @@ public class TestWebSocket : MonoBehaviour
                 TinyRoomCS room = new TinyRoomCS();
 
                 room.gameID = 2001; //机器人三公，参考文档
-                room.gambling = 1; // // 底注 不同房间准入不同,要计算player还有多少money.
+                room.gambling = 10; // // 底注 不同房间准入不同,要计算player还有多少money.
                 room.threshold = 1; //准入.
 
 
@@ -586,7 +611,8 @@ public class TestWebSocket : MonoBehaviour
             JsonData cmd = new JsonData();
             //demo.SetJsonType(JsonType.Object);
             // demo["id"] = 3302;
-            cmd["openid"] =haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
+            cmd["openid"] =
+                haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //"01234567891234567891234567891";
 
             cmd["cmd"] = 4002;
             var d = cmd.ToJson();
@@ -609,7 +635,7 @@ public class TestWebSocket : MonoBehaviour
             cmd["player"] = player;
 
             player["openID"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //填入真实的openid.
-            player["referenceID"] = 0;//推荐人ID.//注册。
+            player["referenceID"] = 0; //推荐人ID.//注册。
 
             player["avatar"] = "1.jpg";
             player["nick_name"] = "新用户"; //插入用户昵称
@@ -645,6 +671,7 @@ public class TestWebSocket : MonoBehaviour
 
             hall.excuteCMD(cmd.ToJson());
         }
+
         //购买道具，充值入游戏
         if (GUI.Button(new Rect(100, 160, 50, 50), "buy"))
         {
@@ -656,7 +683,7 @@ public class TestWebSocket : MonoBehaviour
 
             JsonData player = new JsonData();
 
-            cmd["value"] =1;//这里是传索引 [100,200,500]  1是200
+            cmd["value"] = 1; //这里是传索引 [100,200,500]  1是200
             cmd["nums"] = 1; //购买多少次
 
             player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
@@ -677,8 +704,8 @@ public class TestWebSocket : MonoBehaviour
 
             JsonData player = new JsonData();
 
-            cmd["value"] = 100;//要提取多少币？
-         
+            cmd["value"] = 100; //要提取多少币？
+
 
             player["id"] = 3302; // haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz");//填入真实的openid.
             cmd["player"] = player;
@@ -692,7 +719,7 @@ public class TestWebSocket : MonoBehaviour
             //先查找是否存在，后插入。
 
 
-          self.getUserInfo();
+            self.getUserInfo();
         }
 
         if (GUI.Button(new Rect(360, 160, 50, 50), "tearm"))
@@ -701,7 +728,27 @@ public class TestWebSocket : MonoBehaviour
 
 
             self.getUserIncomeAndSize();
+
+
+
+
+            //
         }
-        //
+
+        if (GUI.Button(new Rect(360, 260, 50, 50), "getBuyList"))
+        {
+            //获取购买游戏币历史
+
+
+            self.getBuyList();
+        }
+
+        if (GUI.Button(new Rect(460, 260, 50, 50), "getChargeList"))
+        {
+            //获取购买游戏币历史
+
+
+            self.getChargeList();
+        }
     }
 }
