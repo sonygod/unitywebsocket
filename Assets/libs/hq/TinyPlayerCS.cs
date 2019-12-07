@@ -105,7 +105,12 @@ namespace web
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
 
-        public float? staticIncome;
+        public float? staticIncome;//静态受益 
+
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+
+        public int? level;//等级
 
 
     }
