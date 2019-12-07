@@ -10,7 +10,7 @@ namespace web {
 		
 		
 		public GameSetting() {
-			#line 7 "d:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
 			global::web.GameSetting.__hx_ctor_web_GameSetting(this);
 		}
 		#line default
@@ -20,7 +20,7 @@ namespace web {
 		
 		
 		public static bool getInstallGame(uint id) {
-			#line 14 "d:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
+			#line 14 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
 			return true;
 		}
 		#line default

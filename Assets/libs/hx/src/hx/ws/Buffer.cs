@@ -10,23 +10,23 @@ namespace hx.ws {
 		
 		
 		public Buffer() {
-			#line 12 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 12 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			global::hx.ws.Buffer.__hx_ctor_hx_ws_Buffer(this);
 		}
 		#line default
 		
 		protected static void __hx_ctor_hx_ws_Buffer(global::hx.ws.Buffer __hx_this) {
-			#line 10 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 10 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			__hx_this.chunks = new global::haxe.root.Array(new object[]{});
-			#line 9 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 9 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			__hx_this.currentData = null;
-			#line 8 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 8 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			__hx_this.currentOffset = 0;
-			#line 7 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 7 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			__hx_this.length = 0;
-			#line 6 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 6 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			__hx_this.available = 0;
-			#line 12 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 12 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			{
 			}
 			
@@ -45,10 +45,10 @@ namespace hx.ws {
 		
 		public virtual void writeByte(int v) {
 			unchecked {
-				#line 16 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 16 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				global::haxe.io.Bytes b = global::haxe.io.Bytes.alloc(1);
 				b.b[0] = ((byte) (v) );
-				#line 18 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 18 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				this.writeBytes(b);
 			}
 			#line default
@@ -57,10 +57,10 @@ namespace hx.ws {
 		
 		public virtual void writeShort(int v) {
 			unchecked {
-				#line 22 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 22 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				global::haxe.io.Bytes b = global::haxe.io.Bytes.alloc(2);
 				b.b[0] = ((byte) (( ( v >> 8 ) & 255 )) );
-				#line 24 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 24 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				b.b[1] = ((byte) (( v & 255 )) );
 				this.writeBytes(b);
 			}
@@ -70,13 +70,13 @@ namespace hx.ws {
 		
 		public virtual void writeInt(int v) {
 			unchecked {
-				#line 29 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 29 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				global::haxe.io.Bytes b = global::haxe.io.Bytes.alloc(4);
 				b.b[0] = ((byte) (( ( v >> 24 ) & 255 )) );
-				#line 31 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 31 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				b.b[1] = ((byte) (( ( v >> 16 ) & 255 )) );
 				b.b[2] = ((byte) (( ( v >> 8 ) & 255 )) );
-				#line 33 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 33 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				b.b[3] = ((byte) (( v & 255 )) );
 				this.writeBytes(b);
 			}
@@ -85,86 +85,86 @@ namespace hx.ws {
 		
 		
 		public virtual void writeBytes(global::haxe.io.Bytes data) {
-			#line 38 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 38 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			this.chunks.push(data);
 			this.available += data.length;
-			#line 40 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 40 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			this.length = this.available;
 		}
 		#line default
 		
 		public virtual global::haxe.io.Bytes readAllAvailableBytes() {
-			#line 44 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 44 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return this.readBytes(this.available);
 		}
 		#line default
 		
 		public virtual string readLine() {
-			#line 48 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 48 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			global::haxe.io.Bytes bytes = this.readUntil("\n");
 			if (( bytes == null )) {
-				#line 50 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 50 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return null;
 			}
 			
-			#line 52 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 52 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return bytes.toString().Trim();
 		}
 		#line default
 		
 		public virtual global::haxe.root.Array readLinesUntil(string delimiter) {
-			#line 56 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 56 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			global::haxe.io.Bytes bytes = this.readUntil(delimiter);
 			if (( bytes == null )) {
-				#line 58 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 58 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return null;
 			}
 			
-			#line 60 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 60 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return global::haxe.lang.StringExt.split(bytes.toString().Trim(), "\n");
 		}
 		#line default
 		
 		public virtual global::haxe.io.Bytes readUntil(string delimiter) {
 			unchecked {
-				#line 65 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 65 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int dl = delimiter.Length;
-				#line 67 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 67 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				{
-					#line 67 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 67 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					int _g = 0;
-					#line 67 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 67 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					int _g1 = ( this.available - dl );
-					#line 67 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 67 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					while (( _g < _g1 )) {
-						#line 67 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 67 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						int i = _g++;
 						bool matched = true;
-						#line 69 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 69 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						{
-							#line 69 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+							#line 69 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 							int _g2 = 0;
-							#line 69 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+							#line 69 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 							int _g11 = dl;
-							#line 69 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+							#line 69 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 							while (( _g2 < _g11 )) {
-								#line 69 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+								#line 69 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 								int j = _g2++;
 								if (global::haxe.lang.Runtime.eq(this.peekByte(( ( ( this.currentOffset + i ) + j ) + 1 )), global::haxe.lang.StringExt.charCodeAt(delimiter, j))) {
-									#line 71 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+									#line 71 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 									continue;
 								}
 								
-								#line 73 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+								#line 73 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 								matched = false;
 								break;
 							}
 							
 						}
 						
-						#line 77 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 77 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						if (matched) {
-							#line 78 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+							#line 78 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 							global::haxe.io.Bytes bytes = this.readBytes(( ( i + dl ) + 1 ));
 							return bytes;
 						}
@@ -173,7 +173,7 @@ namespace hx.ws {
 					
 				}
 				
-				#line 83 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 83 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return null;
 			}
 			#line default
@@ -181,24 +181,24 @@ namespace hx.ws {
 		
 		
 		public virtual global::haxe.io.Bytes readBytes(int count) {
-			#line 87 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 87 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			int count2 = ((int) (global::System.Math.Min(((double) (count) ), ((double) (this.available) ))) );
 			global::haxe.io.Bytes @out = global::haxe.io.Bytes.alloc(count2);
-			#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			{
-				#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int _g = 0;
-				#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int _g1 = count2;
-				#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				while (( _g < _g1 )) {
-					#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					int n = _g++;
-					#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					{
-						#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						int v = this.readByte();
-						#line 89 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 89 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						@out.b[n] = ((byte) (v) );
 					}
 					
@@ -206,17 +206,17 @@ namespace hx.ws {
 				
 			}
 			
-			#line 90 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 90 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return @out;
 		}
 		#line default
 		
 		public virtual uint readUnsignedShort() {
 			unchecked {
-				#line 94 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 94 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int h = this.readByte();
 				int l = this.readByte();
-				#line 96 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 96 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return ((uint) (( ( h << 8 ) | l )) );
 			}
 			#line default
@@ -225,13 +225,13 @@ namespace hx.ws {
 		
 		public virtual uint readUnsignedInt() {
 			unchecked {
-				#line 100 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 100 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int v3 = this.readByte();
 				int v2 = this.readByte();
-				#line 102 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 102 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int v1 = this.readByte();
 				int v0 = this.readByte();
-				#line 104 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 104 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return ((uint) (( ( ( ( v3 << 24 ) | ( v2 << 16 ) ) | ( v1 << 8 ) ) | v0 )) );
 			}
 			#line default
@@ -239,92 +239,92 @@ namespace hx.ws {
 		
 		
 		public virtual int readByte() {
-			#line 108 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 108 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			if (( this.available <= 0 )) {
-				#line 108 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 108 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				throw global::haxe.lang.HaxeException.wrap("No bytes available");
 			}
 			
-			#line 109 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 109 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			while (( ( this.currentData == null ) || ( this.currentOffset >= this.currentData.length ) )) {
-				#line 110 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 110 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				this.currentOffset = 0;
 				this.currentData = ((global::haxe.io.Bytes) (this.chunks.shift()) );
 			}
 			
-			#line 113 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 113 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			this.available--;
 			this.length = this.available;
-			#line 115 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 115 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return ((int) (((byte) (this.currentData.b[this.currentOffset++]) )) );
 		}
 		#line default
 		
 		public virtual int peekByte(int offset) {
-			#line 119 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 119 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			if (( this.available <= 0 )) {
-				#line 119 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 119 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				throw global::haxe.lang.HaxeException.wrap("No bytes available");
 			}
 			
-			#line 120 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 120 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			int tempOffset = offset;
 			global::haxe.io.Bytes tempData = ((global::haxe.io.Bytes) (this.chunks.__get(0)) );
-			#line 122 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 122 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			if (( tempData == null )) {
-				#line 123 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 123 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				tempData = this.currentData;
 			}
 			
-			#line 125 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 125 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			int chunkIndex = 0;
 			while (( tempOffset >= tempData.length )) {
-				#line 127 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 127 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				tempOffset -= tempData.length;
 				 ++ chunkIndex;
-				#line 129 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 129 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				tempData = ((global::haxe.io.Bytes) (this.chunks.__get(chunkIndex)) );
 			}
 			
-			#line 131 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 131 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return ((int) (((byte) (tempData.b[tempOffset]) )) );
 		}
 		#line default
 		
 		public virtual int peekUntil(int @byte) {
 			unchecked {
-				#line 135 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 135 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int tempOffset = this.currentOffset;
 				global::haxe.io.Bytes tempData = ((global::haxe.io.Bytes) (this.chunks.__get(0)) );
-				#line 137 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 137 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				if (( tempData == null )) {
-					#line 138 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 138 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					tempData = this.currentData;
 				}
 				
-				#line 140 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 140 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				int chunkIndex = 0;
 				while (( tempOffset >= tempData.length )) {
-					#line 142 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 142 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					tempOffset -= tempData.length;
 					 ++ chunkIndex;
-					#line 144 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 144 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					tempData = ((global::haxe.io.Bytes) (this.chunks.__get(chunkIndex)) );
 				}
 				
-				#line 146 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 146 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				while (( tempOffset < tempData.length )) {
-					#line 147 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 147 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					if (( ((int) (((byte) (tempData.b[tempOffset]) )) ) == @byte )) {
-						#line 148 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 148 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ( tempOffset + 1 );
 					}
 					
-					#line 150 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 150 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					 ++ tempOffset;
 				}
 				
-				#line 153 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 153 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return -1;
 			}
 			#line default
@@ -332,61 +332,61 @@ namespace hx.ws {
 		
 		
 		public virtual bool endsWith(string e) {
-			#line 157 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 157 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			int i = ( this.available - e.Length );
 			int n = this.currentOffset;
-			#line 159 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 159 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			while (( i < this.available )) {
-				#line 160 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 160 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				if (( ! (global::haxe.lang.Runtime.eq(this.peekByte(i), global::haxe.lang.StringExt.charCodeAt(e, n))) )) {
-					#line 161 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+					#line 161 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 					return false;
 				}
 				
-				#line 163 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 163 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				 ++ i;
 				 ++ n;
 			}
 			
-			#line 167 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 167 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			return true;
 		}
 		#line default
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				switch (hash) {
 					case 1134303404:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.currentOffset = ((int) (@value) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					case 520590566:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.length = ((int) (@value) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					case 2005096905:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.available = ((int) (@value) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -399,56 +399,56 @@ namespace hx.ws {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				switch (hash) {
 					case 1152047462:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.chunks = ((global::haxe.root.Array) (@value) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					case 2062888707:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.currentData = ((global::haxe.io.Bytes) (@value) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					case 1134303404:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.currentOffset = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					case 520590566:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.length = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					case 2005096905:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.available = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -461,151 +461,151 @@ namespace hx.ws {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				switch (hash) {
 					case 1538685534:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "endsWith", 1538685534)) );
 					}
 					
 					
 					case 1154061571:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "peekUntil", 1154061571)) );
 					}
 					
 					
 					case 401708611:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "peekByte", 401708611)) );
 					}
 					
 					
 					case 1763375486:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readByte", 1763375486)) );
 					}
 					
 					
 					case 89107268:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readUnsignedInt", 89107268)) );
 					}
 					
 					
 					case 1997218321:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readUnsignedShort", 1997218321)) );
 					}
 					
 					
 					case 243225909:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readBytes", 243225909)) );
 					}
 					
 					
 					case 2010580328:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readUntil", 2010580328)) );
 					}
 					
 					
 					case 1115112725:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readLinesUntil", 1115112725)) );
 					}
 					
 					
 					case 1873474154:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readLine", 1873474154)) );
 					}
 					
 					
 					case 1224228525:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "readAllAvailableBytes", 1224228525)) );
 					}
 					
 					
 					case 1381630732:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "writeBytes", 1381630732)) );
 					}
 					
 					
 					case 602959184:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "writeInt", 602959184)) );
 					}
 					
 					
 					case 283737885:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "writeShort", 283737885)) );
 					}
 					
 					
 					case 1238832007:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "writeByte", 1238832007)) );
 					}
 					
 					
 					case 1152047462:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.chunks;
 					}
 					
 					
 					case 2062888707:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.currentData;
 					}
 					
 					
 					case 1134303404:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.currentOffset;
 					}
 					
 					
 					case 520590566:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.length;
 					}
 					
 					
 					case 2005096905:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.available;
 					}
 					
 					
 					default:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -618,32 +618,32 @@ namespace hx.ws {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				switch (hash) {
 					case 1134303404:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((double) (this.currentOffset) );
 					}
 					
 					
 					case 520590566:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((double) (this.length) );
 					}
 					
 					
 					case 2005096905:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return ((double) (this.available) );
 					}
 					
 					
 					default:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -656,130 +656,130 @@ namespace hx.ws {
 		
 		public override object __hx_invokeField(string field, int hash, object[] dynargs) {
 			unchecked {
-				#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				switch (hash) {
 					case 1538685534:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.endsWith(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )));
 					}
 					
 					
 					case 1154061571:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.peekUntil(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 401708611:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.peekByte(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 1763375486:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readByte();
 					}
 					
 					
 					case 89107268:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readUnsignedInt();
 					}
 					
 					
 					case 1997218321:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readUnsignedShort();
 					}
 					
 					
 					case 243225909:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readBytes(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
 					}
 					
 					
 					case 2010580328:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readUntil(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )));
 					}
 					
 					
 					case 1115112725:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readLinesUntil(global::haxe.lang.Runtime.toString(((object) (dynargs[0]) )));
 					}
 					
 					
 					case 1873474154:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readLine();
 					}
 					
 					
 					case 1224228525:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return this.readAllAvailableBytes();
 					}
 					
 					
 					case 1381630732:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.writeBytes(((global::haxe.io.Bytes) (((object) (dynargs[0]) )) ));
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						break;
 					}
 					
 					
 					case 602959184:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.writeInt(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						break;
 					}
 					
 					
 					case 283737885:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.writeShort(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						break;
 					}
 					
 					
 					case 1238832007:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						this.writeByte(((int) (global::haxe.lang.Runtime.toInt(((object) (dynargs[0]) ))) ));
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						break;
 					}
 					
 					
 					default:
 					{
-						#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+						#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 						return base.__hx_invokeField(field, hash, dynargs);
 					}
 					
 				}
 				
-				#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+				#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 				return null;
 			}
 			#line default
@@ -787,17 +787,17 @@ namespace hx.ws {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			baseArr.push("chunks");
-			#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			baseArr.push("currentData");
-			#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			baseArr.push("currentOffset");
-			#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			baseArr.push("length");
-			#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			baseArr.push("available");
-			#line 5 "d:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
+			#line 5 "D:\\project\\sangong\\sangong\\src\\hx\\ws\\Buffer.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default

@@ -6,9 +6,9 @@ namespace web.proto {
 	public class ShoppingEvent : global::openfl.events.Event {
 		
 		static ShoppingEvent() {
-			#line 12 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			global::web.proto.ShoppingEvent.GET_BUY_LIST = ((string) ("ShoppingEvent_get_buy_list") );
-			#line 14 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 14 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			global::web.proto.ShoppingEvent.GET_CHARGE_LIST = ((string) ("ShoppingEvent_get_charge_list") );
 		}
 		#line default
@@ -17,21 +17,23 @@ namespace web.proto {
 		}
 		
 		
-		public ShoppingEvent(string type, object data, global::server.IHander hander, object result, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 21 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-			global::web.proto.ShoppingEvent.__hx_ctor_web_proto_ShoppingEvent(this, type, data, hander, result, bubbles, cancelable);
+		public ShoppingEvent(string type, global::haxe.root.Array chargeList, global::haxe.root.Array buyList, global::server.IHander hander, object result, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
+			#line 23 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			global::web.proto.ShoppingEvent.__hx_ctor_web_proto_ShoppingEvent(this, type, chargeList, buyList, hander, result, bubbles, cancelable);
 		}
 		#line default
 		
-		protected static void __hx_ctor_web_proto_ShoppingEvent(global::web.proto.ShoppingEvent __hx_this, string type, object data, global::server.IHander hander, object result, object bubbles, object cancelable) {
-			#line 20 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+		protected static void __hx_ctor_web_proto_ShoppingEvent(global::web.proto.ShoppingEvent __hx_this, string type, global::haxe.root.Array chargeList, global::haxe.root.Array buyList, global::server.IHander hander, object result, object bubbles, object cancelable) {
+			#line 22 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-			#line 20 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 22 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-			#line 23 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-			__hx_this.data = data;
+			#line 26 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			__hx_this.hander = hander;
+			__hx_this.chargeList = chargeList;
+			#line 28 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			__hx_this.buyList = buyList;
 		}
 		#line default
 		
@@ -39,61 +41,46 @@ namespace web.proto {
 		
 		public static string GET_CHARGE_LIST;
 		
-		public object data;
+		public global::haxe.root.Array chargeList;
+		
+		public global::haxe.root.Array buyList;
 		
 		public global::server.IHander hander;
 		
-		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
-			unchecked {
-				#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-				switch (hash) {
-					case 1113806378:
-					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						this.data = ((object) (@value) );
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						return @value;
-					}
-					
-					
-					default:
-					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						return base.__hx_setField_f(field, hash, @value, handleProperties);
-					}
-					
-				}
-				
-			}
-			#line default
-		}
-		
-		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+				#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 				switch (hash) {
 					case 939359644:
 					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 						this.hander = ((global::server.IHander) (@value) );
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 						return @value;
 					}
 					
 					
-					case 1113806378:
+					case 285288132:
 					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						this.data = ((object) (@value) );
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						this.buyList = ((global::haxe.root.Array) (@value) );
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						return @value;
+					}
+					
+					
+					case 1213345010:
+					{
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						this.chargeList = ((global::haxe.root.Array) (@value) );
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -106,25 +93,32 @@ namespace web.proto {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+				#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 				switch (hash) {
 					case 939359644:
 					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 						return this.hander;
 					}
 					
 					
-					case 1113806378:
+					case 285288132:
 					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						return this.data;
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						return this.buyList;
+					}
+					
+					
+					case 1213345010:
+					{
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						return this.chargeList;
 					}
 					
 					
 					default:
 					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+						#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -135,36 +129,14 @@ namespace web.proto {
 		}
 		
 		
-		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
-			unchecked {
-				#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-				switch (hash) {
-					case 1113806378:
-					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						return ((double) (global::haxe.lang.Runtime.toDouble(this.data)) );
-					}
-					
-					
-					default:
-					{
-						#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
-					}
-					
-				}
-				
-			}
-			#line default
-		}
-		
-		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			baseArr.push("hander");
-			#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
-			baseArr.push("data");
-			#line 8 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			baseArr.push("buyList");
+			#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			baseArr.push("chargeList");
+			#line 8 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default

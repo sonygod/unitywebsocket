@@ -56,8 +56,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        //client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
+       // client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -89,9 +89,9 @@ public class TestWebSocket : MonoBehaviour
     {
         ShoppingEvent e = (ShoppingEvent)evt.eventParams;
 
-        var data = e.data;
+        var data = e.chargeList;
 
-        TinyChargeCS[] pp = ConvertTool.ConvertData<TinyChargeCS[]>(e.data);
+        TinyChargeCS[] pp = ConvertTool.ConvertData<TinyChargeCS[]>(e.chargeList);
 
 
         Debug.Log(JsonConvert.SerializeObject(pp));
@@ -101,7 +101,7 @@ public class TestWebSocket : MonoBehaviour
     {
         ShoppingEvent e = (ShoppingEvent)evt.eventParams;
 
-        TinyBuyItemCS[] pp = ConvertTool.ConvertData<TinyBuyItemCS[]>(e.data);
+        TinyBuyItemCS[] pp = ConvertTool.ConvertData<TinyBuyItemCS[]>(e.buyList);
 
         Debug.Log(JsonConvert.SerializeObject(pp));
         //  throw new NotImplementedException();

@@ -1,4 +1,4 @@
-d:\project\sangong\sangong
+D:\project\sangong\sangong
 begin defines
 NET_20
 binary128
@@ -422,6 +422,7 @@ M System.RuntimeFieldHandle
 M cs.system.runtime.remoting.contexts.CrossContextDelegate
 M haxe.ds.Vector
 C haxe.ds._Vector.Vector_Impl_
+M web.TinyCharge
 M Class
 M System.UIntPtr
 M CEventListener

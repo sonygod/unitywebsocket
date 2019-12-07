@@ -6,7 +6,7 @@ namespace web.proto {
 	public sealed class ChatEvent : global::openfl.events.Event {
 		
 		static ChatEvent() {
-			#line 17 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 17 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			global::web.proto.ChatEvent.CHAT = ((string) ("chat_event_chat") );
 		}
 		#line default
@@ -16,18 +16,18 @@ namespace web.proto {
 		
 		
 		public ChatEvent(string type, object chat, global::server.IHander hander, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 25 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 25 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			global::web.proto.ChatEvent.__hx_ctor_web_proto_ChatEvent(this, type, chat, hander, bubbles, cancelable);
 		}
 		#line default
 		
 		private static void __hx_ctor_web_proto_ChatEvent(global::web.proto.ChatEvent __hx_this, string type, object chat, global::server.IHander hander, object bubbles, object cancelable) {
-			#line 24 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 24 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-			#line 24 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 24 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-			#line 26 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 26 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			__hx_this.chat = chat;
 			__hx_this.hander = hander;
 		}
@@ -40,10 +40,10 @@ namespace web.proto {
 		public global::server.IHander hander;
 		
 		public override global::openfl.events.Event clone() {
-			#line 31 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 31 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			global::web.proto.ChatEvent @event = new global::web.proto.ChatEvent(this.type, this.chat, this.hander, this.bubbles, this.cancelable);
 			@event.chat = this.chat;
-			#line 33 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 33 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			@event.hander = this.hander;
 			return @event;
 		}
@@ -51,20 +51,20 @@ namespace web.proto {
 		
 		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
 			unchecked {
-				#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 				switch (hash) {
 					case 1103060696:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						this.chat = ((object) (@value) );
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return base.__hx_setField_f(field, hash, @value, handleProperties);
 					}
 					
@@ -77,29 +77,29 @@ namespace web.proto {
 		
 		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
 			unchecked {
-				#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 				switch (hash) {
 					case 939359644:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						this.hander = ((global::server.IHander) (@value) );
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return @value;
 					}
 					
 					
 					case 1103060696:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						this.chat = ((object) (@value) );
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return @value;
 					}
 					
 					
 					default:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return base.__hx_setField(field, hash, @value, handleProperties);
 					}
 					
@@ -112,32 +112,32 @@ namespace web.proto {
 		
 		public override object __hx_getField(string field, int hash, bool throwErrors, bool isCheck, bool handleProperties) {
 			unchecked {
-				#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 				switch (hash) {
 					case 1214452573:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "clone", 1214452573)) );
 					}
 					
 					
 					case 939359644:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return this.hander;
 					}
 					
 					
 					case 1103060696:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return this.chat;
 					}
 					
 					
 					default:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
 					}
 					
@@ -150,18 +150,18 @@ namespace web.proto {
 		
 		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
 			unchecked {
-				#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+				#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 				switch (hash) {
 					case 1103060696:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return ((double) (global::haxe.lang.Runtime.toDouble(this.chat)) );
 					}
 					
 					
 					default:
 					{
-						#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+						#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
@@ -173,11 +173,11 @@ namespace web.proto {
 		
 		
 		public override void __hx_getFields(global::haxe.root.Array baseArr) {
-			#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			baseArr.push("hander");
-			#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			baseArr.push("chat");
-			#line 13 "d:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
+			#line 13 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ChatEvent.hx"
 			base.__hx_getFields(baseArr);
 		}
 		#line default
