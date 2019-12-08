@@ -68,8 +68,6 @@ namespace client {
 				#line 74 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				wd.addEventListener(((string) ("ShoppingEvent_get_draw_out_list") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetBuyList", 950423245)) ), default(object), default(object), default(object));
 				this.wasAdd = true;
-				#line 76 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				this.wasAdd = true;
 			}
 			#line default
 		}

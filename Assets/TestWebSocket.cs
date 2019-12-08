@@ -56,8 +56,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-      // client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
-       client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        // client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
+        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -72,9 +72,9 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(PlayerEvent.GET_USER_INFO, onGetuserInfo);
 
         self.addEventListener(PlayerEvent.GET_TEARM_INCOME, onGetIncome);
-        self.addEventListener(ShoppingEvent.GET_BUY_LIST,onGetBuyList);
+        self.addEventListener(ShoppingEvent.GET_BUY_LIST, onGetBuyList);
         self.addEventListener(ShoppingEvent.GET_CHARGE_LIST, onGetChargeList);
-       self.addEventListener(ShoppingEvent.GET_DRAW_OUT_LIST, onGetDrawOutList);
+        self.addEventListener(ShoppingEvent.GET_DRAW_OUT_LIST, onGetDrawOutList);
         TestEventDispathFromHaxe();
 
 
@@ -89,14 +89,11 @@ public class TestWebSocket : MonoBehaviour
     //获取提币记录，未测试
     private void onGetDrawOutList(CEvent evt)
     {
-        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+        ShoppingEvent e = (ShoppingEvent) evt.eventParams;
 
         var data = e.chargeList;
 
         TinyDrawOutCS[] pp = ConvertTool.ConvertData<TinyDrawOutCS[]>(e.chargeList);
-
-
-
 
 
         Debug.Log(JsonConvert.SerializeObject(pp));
@@ -104,7 +101,7 @@ public class TestWebSocket : MonoBehaviour
 
     private void onGetChargeList(CEvent evt)
     {
-        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+        ShoppingEvent e = (ShoppingEvent) evt.eventParams;
 
         var data = e.chargeList;
 
@@ -116,7 +113,7 @@ public class TestWebSocket : MonoBehaviour
 
     private void onGetBuyList(CEvent evt)
     {
-        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+        ShoppingEvent e = (ShoppingEvent) evt.eventParams;
 
         TinyBuyItemCS[] pp = ConvertTool.ConvertData<TinyBuyItemCS[]>(e.buyList);
 
@@ -127,7 +124,6 @@ public class TestWebSocket : MonoBehaviour
     //收益 2019-12-5
     private void onGetIncome(CEvent evt)
     {
-
         var playerEvent = (PlayerEvent) evt.eventParams;
 
 
@@ -135,17 +131,14 @@ public class TestWebSocket : MonoBehaviour
         Debug.Log("获取收益CS");
 
 
-
         TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
 
         Debug.Log(JsonConvert.SerializeObject(pp));
-
     }
 
     private void onGetuserInfo(CEvent evt)
     {
         var playerEvent = (PlayerEvent) evt.eventParams;
-
 
 
         TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
@@ -155,7 +148,6 @@ public class TestWebSocket : MonoBehaviour
         // self.installData(e.player); //这一定要设置。
 
         Debug.Log("pp=" + pp.money);
-
     }
 
     private void onCMDResult(CEvent evt)
@@ -282,10 +274,6 @@ public class TestWebSocket : MonoBehaviour
             var over = 9; // 游戏结束;
 
 
-
-
-
-
             Debug.Log("获取信息房间" + JsonConvert.SerializeObject(ts));
 
             switch (ts.status)
@@ -329,7 +317,6 @@ public class TestWebSocket : MonoBehaviour
             //2019-11-27
             foreach (TinyPlayerCS cs in ps)
             {
-
                 if (dic == null)
                 {
                     dic = new Dictionary<int, PlayerCS>();
@@ -338,8 +325,6 @@ public class TestWebSocket : MonoBehaviour
                 if (!dic.ContainsKey(cs.id))
                 {
                     dic[cs.id] = new PlayerCS(null);
-
-
 
 
                     var player = dic[cs.id];
@@ -353,16 +338,7 @@ public class TestWebSocket : MonoBehaviour
                     player.addEvent();
 
                     player.addEventListener(PlayerEvent.ADD_BET, onAddBet); //倾听下注，还可以倾听用户 的表情，语音，等。
-
                 }
-
-
-
-
-
-
-
-
             }
         });
     }
@@ -372,20 +348,15 @@ public class TestWebSocket : MonoBehaviour
     {
         UnityThreadHelper.Dispatcher.Dispatch(() =>
         {
-
             PlayerEvent playerEvent = (PlayerEvent) evt.eventParams;
-
 
 
             TinyBilingCS biling = ConvertTool.ConvertTinyBiling(playerEvent.bling);
 
 
-
             Debug.Log(" <color=#9400D3> 房间" + biling.roomID + " 玩家" + biling.playerID + " 下注= " + biling.bling +
                       "</color>");
         });
-
-
     }
 
     private void onDestoryRoom(CEvent evt)
@@ -418,7 +389,6 @@ public class TestWebSocket : MonoBehaviour
 
     private void onReg(CEvent evt)
     {
-
     }
 
     private void onLogin(CEvent evt)
@@ -747,8 +717,6 @@ public class TestWebSocket : MonoBehaviour
             self.getUserIncomeAndSize();
 
 
-
-
             //
         }
 
@@ -766,6 +734,15 @@ public class TestWebSocket : MonoBehaviour
 
 
             self.getChargeList();
+        }
+
+
+        if (GUI.Button(new Rect(560, 260, 50, 50), "getDrawList"))
+        {
+            //获取购买游戏币历史
+
+
+            self.getDrawOutist();
         }
     }
 }
