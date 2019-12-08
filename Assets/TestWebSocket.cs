@@ -56,8 +56,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
-       // client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+      // client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
+       client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -74,6 +74,7 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(PlayerEvent.GET_TEARM_INCOME, onGetIncome);
         self.addEventListener(ShoppingEvent.GET_BUY_LIST,onGetBuyList);
         self.addEventListener(ShoppingEvent.GET_CHARGE_LIST, onGetChargeList);
+       self.addEventListener(ShoppingEvent.GET_DRAW_OUT_LIST, onGetDrawOutList);
         TestEventDispathFromHaxe();
 
 
@@ -83,6 +84,22 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
+    }
+
+    //获取提币记录，未测试
+    private void onGetDrawOutList(CEvent evt)
+    {
+        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+
+        var data = e.chargeList;
+
+        TinyDrawOutCS[] pp = ConvertTool.ConvertData<TinyDrawOutCS[]>(e.chargeList);
+
+
+
+
+
+        Debug.Log(JsonConvert.SerializeObject(pp));
     }
 
     private void onGetChargeList(CEvent evt)

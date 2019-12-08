@@ -714,11 +714,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_553__Fun
-C web.SocketAsync_installSocket_571__Fun
-C web.SocketAsync_installSocket_574__Fun
-C web.SocketAsync_installSocket_590__Fun
-C web.SocketAsync_installSocket_596__Fun
+C web.SocketAsync_reConnectSocket_555__Fun
+C web.SocketAsync_installSocket_573__Fun
+C web.SocketAsync_installSocket_576__Fun
+C web.SocketAsync_installSocket_592__Fun
+C web.SocketAsync_installSocket_598__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64
@@ -1202,6 +1202,7 @@ C haxe.macro.Message
 C haxe.macro.Message_Info
 C haxe.macro.Message_Warning
 C haxe.macro.Context
+M web.TinyDrawOut
 M System.Collections.IEqualityComparer
 M web.proto.ClubEvent
 C web.proto.ClubEvent

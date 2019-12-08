@@ -11,7 +11,7 @@ namespace web {
 				global::web.SocketAsync.ExcuteArray = new global::haxe.ds.StringMap();
 				#line 48 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				global::web.SocketAsync.currentUserID = 0;
-				#line 528 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 530 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				global::web.SocketAsync.headID = -1;
 			}
 		}
@@ -365,14 +365,14 @@ namespace web {
 									global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u5145\u503c\u5217\u8868", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"convertDataToPacket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (346) )}));
 									global::haxe.root.Array r8 = ((global::haxe.root.Array) (data) );
 									#line 348 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-									global::web.SocketAsync.webD.dispatchEventWithThread(new global::web.proto.ShoppingEvent(((string) ("ShoppingEvent_get_charge_list") ), r8, null, hander, null, null, null));
+									global::web.SocketAsync.webD.dispatchEventWithThread(new global::web.proto.ShoppingEvent(((string) ("ShoppingEvent_get_charge_list") ), r8, null, null, hander, null, null, null));
 								}
 								else if (( __temp_switch1 == 1006 )) {
 									#line 339 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 									global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u8d2d\u4e70\u6e38\u620f\u5e01\u5217\u8868", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"convertDataToPacket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (339) )}));
 									#line 341 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 									global::haxe.root.Array r9 = ((global::haxe.root.Array) (data) );
-									global::web.SocketAsync.webD.dispatchEventWithThread(new global::web.proto.ShoppingEvent(((string) ("ShoppingEvent_get_buy_list") ), null, r9, hander, null, null, null));
+									global::web.SocketAsync.webD.dispatchEventWithThread(new global::web.proto.ShoppingEvent(((string) ("ShoppingEvent_get_buy_list") ), null, r9, null, hander, null, null, null));
 								}
 								
 							}
@@ -391,7 +391,7 @@ namespace web {
 		public static int headID;
 		
 		public static void sendHead() {
-			#line 531 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 533 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			return;
 		}
 		#line default
@@ -402,27 +402,27 @@ namespace web {
 		
 		public static void installSocket(string hostAndPort, global::haxe.lang.Function onOpen, global::haxe.lang.Function onClose, global::haxe.lang.Function onError, global::haxe.lang.Function onMessage) {
 			unchecked {
-				#line 564 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 566 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				if (( global::web.SocketAsync.socket != null )) {
-					#line 565 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					#line 567 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 					throw global::haxe.lang.HaxeException.wrap("\u4e0d\u80fd\u521b\u5efa2\u6b21socket");
 				}
 				
-				#line 567 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u5730\u5740\u662f=   ws://", hostAndPort), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (567) )}));
-				global::hx.ws.WebSocket[] _ws = new global::hx.ws.WebSocket[]{new global::hx.ws.WebSocket(((string) (global::haxe.lang.Runtime.concat("ws://", hostAndPort)) ))};
 				#line 569 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "xxxx----------------", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (569) )}));
-				((global::hx.ws.WebSocket) (_ws[0]) ).binaryType = ((string) ("arraybuffer") );
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u5730\u5740\u662f=   ws://", hostAndPort), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (569) )}));
+				global::hx.ws.WebSocket[] _ws = new global::hx.ws.WebSocket[]{new global::hx.ws.WebSocket(((string) (global::haxe.lang.Runtime.concat("ws://", hostAndPort)) ))};
 				#line 571 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				((global::hx.ws.WebSocket) (_ws[0]) ).onopen = new global::web.SocketAsync_installSocket_571__Fun(onOpen);
-				#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				((global::hx.ws.WebSocket) (_ws[0]) ).onmessage = ( (( global::web.SocketAsync_installSocket_574__Fun.__hx_current != null )) ? (global::web.SocketAsync_installSocket_574__Fun.__hx_current) : (global::web.SocketAsync_installSocket_574__Fun.__hx_current = ((global::web.SocketAsync_installSocket_574__Fun) (new global::web.SocketAsync_installSocket_574__Fun()) )) );
-				#line 590 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				((global::hx.ws.WebSocket) (_ws[0]) ).onclose = new global::web.SocketAsync_installSocket_590__Fun(onClose, _ws);
-				#line 596 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				((global::hx.ws.WebSocket) (_ws[0]) ).onerror = new global::web.SocketAsync_installSocket_596__Fun(onError);
-				#line 600 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "xxxx----------------", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (571) )}));
+				((global::hx.ws.WebSocket) (_ws[0]) ).binaryType = ((string) ("arraybuffer") );
+				#line 573 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				((global::hx.ws.WebSocket) (_ws[0]) ).onopen = new global::web.SocketAsync_installSocket_573__Fun(onOpen);
+				#line 576 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				((global::hx.ws.WebSocket) (_ws[0]) ).onmessage = ( (( global::web.SocketAsync_installSocket_576__Fun.__hx_current != null )) ? (global::web.SocketAsync_installSocket_576__Fun.__hx_current) : (global::web.SocketAsync_installSocket_576__Fun.__hx_current = ((global::web.SocketAsync_installSocket_576__Fun) (new global::web.SocketAsync_installSocket_576__Fun()) )) );
+				#line 592 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				((global::hx.ws.WebSocket) (_ws[0]) ).onclose = new global::web.SocketAsync_installSocket_592__Fun(onClose, _ws);
+				#line 598 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				((global::hx.ws.WebSocket) (_ws[0]) ).onerror = new global::web.SocketAsync_installSocket_598__Fun(onError);
+				#line 602 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				global::web.SocketAsync.socket = ((global::hx.ws.WebSocket) (_ws[0]) );
 			}
 			#line default
@@ -431,24 +431,24 @@ namespace web {
 		
 		public static void sendCS(int mainID, int subID, int userID, global::haxe.io.Bytes data, object callFun) {
 			unchecked {
-				#line 607 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 609 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				bool compress = false;
-				#line 615 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				global::haxe.io.Bytes data1 = global::web.proto.PacketBuilder.createPacket(((uint) (mainID) ), ((uint) (subID) ), userID, data, compress);
 				#line 617 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				global::haxe.io.Bytes data1 = global::web.proto.PacketBuilder.createPacket(((uint) (mainID) ), ((uint) (subID) ), userID, data, compress);
+				#line 619 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				if (( data1 != null )) {
-					#line 618 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-					global::web.SocketAsync.socket.binaryType = ((string) ("arraybuffer") );
 					#line 620 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					global::web.SocketAsync.socket.binaryType = ((string) ("arraybuffer") );
+					#line 622 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 					global::web.SocketAsync.socket.send(data1);
 				}
 				else {
-					#line 622 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "send data=null", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCS", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (622) )}));
+					#line 624 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "send data=null", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCS", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (624) )}));
 				}
 				
-				#line 625 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("sendcs :", global::haxe.lang.Runtime.toString(subID)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCS", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (625) )}));
+				#line 627 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("sendcs :", global::haxe.lang.Runtime.toString(subID)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"sendCS", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (627) )}));
 			}
 			#line default
 		}
@@ -460,8 +460,8 @@ namespace web {
 		
 		public virtual void reConnectSocket(string hostAndPort, global::haxe.lang.Function onOpen, global::haxe.lang.Function onClose, global::haxe.lang.Function onError, global::haxe.lang.Function onmessage) {
 			unchecked {
-				#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				global::haxe.Timer.delay(new global::web.SocketAsync_reConnectSocket_553__Fun(onmessage, onOpen, onError, onClose, hostAndPort), 5000);
+				#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				global::haxe.Timer.delay(new global::web.SocketAsync_reConnectSocket_555__Fun(onmessage, onOpen, onError, onClose, hostAndPort), 5000);
 			}
 			#line default
 		}
@@ -526,26 +526,26 @@ namespace web {
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace web {
-	public class SocketAsync_reConnectSocket_553__Fun : global::haxe.lang.Function {
+	public class SocketAsync_reConnectSocket_555__Fun : global::haxe.lang.Function {
 		
-		public SocketAsync_reConnectSocket_553__Fun(global::haxe.lang.Function onmessage, global::haxe.lang.Function onOpen, global::haxe.lang.Function onError, global::haxe.lang.Function onClose, string hostAndPort) : base(0, 0) {
-			#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+		public SocketAsync_reConnectSocket_555__Fun(global::haxe.lang.Function onmessage, global::haxe.lang.Function onOpen, global::haxe.lang.Function onError, global::haxe.lang.Function onClose, string hostAndPort) : base(0, 0) {
+			#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onmessage = onmessage;
-			#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onOpen = onOpen;
-			#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onError = onError;
-			#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onClose = onClose;
-			#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.hostAndPort = hostAndPort;
 		}
 		#line default
 		
 		public override object __hx_invoke0_o() {
-			#line 554 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 556 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			global::web.SocketAsync.installSocket(this.hostAndPort, this.onOpen, this.onClose, this.onError, this.onmessage);
-			#line 553 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 555 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			return null;
 		}
 		#line default
@@ -567,18 +567,18 @@ namespace web {
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace web {
-	public class SocketAsync_installSocket_571__Fun : global::haxe.lang.Function {
+	public class SocketAsync_installSocket_573__Fun : global::haxe.lang.Function {
 		
-		public SocketAsync_installSocket_571__Fun(global::haxe.lang.Function onOpen) : base(0, 0) {
-			#line 572 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+		public SocketAsync_installSocket_573__Fun(global::haxe.lang.Function onOpen) : base(0, 0) {
+			#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onOpen = onOpen;
 		}
 		#line default
 		
 		public override object __hx_invoke0_o() {
-			#line 572 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onOpen.__hx_invoke0_o();
-			#line 572 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			return null;
 		}
 		#line default
@@ -592,40 +592,40 @@ namespace web {
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace web {
-	public class SocketAsync_installSocket_574__Fun : global::haxe.lang.Function {
+	public class SocketAsync_installSocket_576__Fun : global::haxe.lang.Function {
 		
-		public SocketAsync_installSocket_574__Fun() : base(1, 0) {
+		public SocketAsync_installSocket_576__Fun() : base(1, 0) {
 		}
 		
 		
-		public static global::web.SocketAsync_installSocket_574__Fun __hx_current;
+		public static global::web.SocketAsync_installSocket_576__Fun __hx_current;
 		
 		public override object __hx_invoke1_o(double __fn_float1, object __fn_dyn1) {
 			unchecked {
-				#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 576 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				object msg = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (((object) (__fn_float1) )) : (((object) (__fn_dyn1) )) );
 				if (( global::haxe.root.Reflect.hasField(global::haxe.lang.Runtime.getField(msg, "data", 1113806378, true), "type") && global::haxe.lang.Runtime.eq(global::haxe.lang.Runtime.getField(global::haxe.lang.Runtime.getField(msg, "data", 1113806378, true), "type", 1292432058, false), "text") )) {
-					#line 576 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0d\u63a5\u53d7text\u683c\u5f0f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (576) )}));
+					#line 578 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0d\u63a5\u53d7text\u683c\u5f0f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (578) )}));
 					return null;
 				}
 				
-				#line 580 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 582 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				object data = global::haxe.lang.Runtime.getField(msg, "data", 1113806378, true);
 				object output = null;
-				#line 582 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 584 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				if (( data is global::hx.ws.Buffer )) {
-					#line 583 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					#line 585 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 					output = ((object) (global::haxe.lang.Runtime.callField(data, "readAllAvailableBytes", 1224228525, null)) );
 				}
 				else {
-					#line 585 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+					#line 587 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 					output = data;
 				}
 				
-				#line 588 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 590 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				global::web.proto.PacketBuilder.addBytes(((global::haxe.io.Bytes) (output) ), null, ((global::haxe.lang.Function) (new global::haxe.lang.Closure(typeof(global::web.SocketAsync), "convertDataToPacket", 1424504384)) ));
-				#line 574 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 576 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				return null;
 			}
 			#line default
@@ -639,25 +639,25 @@ namespace web {
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace web {
-	public class SocketAsync_installSocket_590__Fun : global::haxe.lang.Function {
+	public class SocketAsync_installSocket_592__Fun : global::haxe.lang.Function {
 		
-		public SocketAsync_installSocket_590__Fun(global::haxe.lang.Function onClose, global::hx.ws.WebSocket[] _ws) : base(0, 0) {
-			#line 590 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+		public SocketAsync_installSocket_592__Fun(global::haxe.lang.Function onClose, global::hx.ws.WebSocket[] _ws) : base(0, 0) {
+			#line 592 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onClose = onClose;
-			#line 590 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 592 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this._ws = _ws;
 		}
 		#line default
 		
 		public override object __hx_invoke0_o() {
 			unchecked {
-				#line 591 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-				this._ws[0] = null;
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "disconnected", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (592) )}));
 				#line 593 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				this._ws[0] = null;
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "disconnected", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installSocket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (594) )}));
+				#line 595 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				global::web.SocketAsync.stop();
 				this.onClose.__hx_invoke0_o();
-				#line 590 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+				#line 592 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 				return null;
 			}
 			#line default
@@ -675,21 +675,21 @@ namespace web {
 
 #pragma warning disable 109, 114, 219, 429, 168, 162
 namespace web {
-	public class SocketAsync_installSocket_596__Fun : global::haxe.lang.Function {
+	public class SocketAsync_installSocket_598__Fun : global::haxe.lang.Function {
 		
-		public SocketAsync_installSocket_596__Fun(global::haxe.lang.Function onError) : base(1, 0) {
-			#line 596 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+		public SocketAsync_installSocket_598__Fun(global::haxe.lang.Function onError) : base(1, 0) {
+			#line 598 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onError = onError;
 		}
 		#line default
 		
 		public override object __hx_invoke1_o(double __fn_float1, object __fn_dyn1) {
-			#line 596 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 598 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			string err = ( (( __fn_dyn1 == global::haxe.lang.Runtime.undefined )) ? (global::haxe.lang.Runtime.toString(__fn_float1)) : (global::haxe.lang.Runtime.toString(__fn_dyn1)) );
 			global::web.SocketAsync.stop();
-			#line 598 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 600 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			this.onError.__hx_invoke1_o(default(double), err);
-			#line 596 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
+			#line 598 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
 			return null;
 		}
 		#line default

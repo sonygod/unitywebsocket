@@ -66,7 +66,9 @@ namespace client {
 				wd.addEventListener(((string) ("ShoppingEvent_get_buy_list") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetBuyList", 950423245)) ), default(object), default(object), default(object));
 				wd.addEventListener(((string) ("ShoppingEvent_get_charge_list") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetBuyList", 950423245)) ), default(object), default(object), default(object));
 				#line 74 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				wd.addEventListener(((string) ("ShoppingEvent_get_draw_out_list") ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "onGetBuyList", 950423245)) ), default(object), default(object), default(object));
 				this.wasAdd = true;
+				#line 76 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				this.wasAdd = true;
 			}
 			#line default
@@ -75,18 +77,18 @@ namespace client {
 		
 		public virtual void onGetIncome(global::web.proto.PlayerEvent e) {
 			unchecked {
-				#line 79 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 80 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (( this.data != null )) {
-					#line 80 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u6536\u76ca", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGetIncome", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (80) )}));
+					#line 81 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u6536\u76ca", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGetIncome", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (81) )}));
 					if (((bool) (global::haxe.lang.Runtime.eq(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true), global::haxe.lang.Runtime.getField(e.player, "id", 23515, true))) )) {
-						#line 83 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u8f6c\u53d1", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGetIncome", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (83) )}));
+						#line 84 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u8f6c\u53d1", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGetIncome", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (84) )}));
 						this.transEvent(e);
 					}
 					else {
-						#line 86 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6ca1\u6709id?", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGetIncome", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (86) )}));
+						#line 87 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+						global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6ca1\u6709id?", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGetIncome", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (87) )}));
 					}
 					
 				}
@@ -97,23 +99,23 @@ namespace client {
 		
 		
 		public virtual void onGetChargeList2(global::web.proto.ShoppingEvent e) {
-			#line 94 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 95 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			this.transEvent(e);
 		}
 		#line default
 		
 		public virtual void onGetBuyList(global::web.proto.ShoppingEvent e) {
-			#line 99 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 100 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			this.transEvent(e);
 		}
 		#line default
 		
 		public virtual void onGetInfo(global::web.proto.PlayerEvent e) {
-			#line 104 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 105 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			if (( this.data != null )) {
-				#line 105 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 106 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (((bool) (global::haxe.lang.Runtime.eq(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true), global::haxe.lang.Runtime.getField(e.player, "id", 23515, true))) )) {
-					#line 106 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 107 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					this.transEvent(e);
 				}
 				
@@ -123,11 +125,11 @@ namespace client {
 		#line default
 		
 		public virtual void onAddBet(global::web.proto.PlayerEvent e) {
-			#line 112 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 113 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			if (( this.data != null )) {
-				#line 113 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 114 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (((bool) (global::haxe.lang.Runtime.eq(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true), ((uint) (global::haxe.lang.Runtime.getField_f(e.bling, "playerID", 1213433212, true)) ))) )) {
-					#line 114 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 115 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					this.transEvent(e);
 				}
 				
@@ -137,9 +139,9 @@ namespace client {
 		#line default
 		
 		public virtual void onLogin(global::web.proto.HallEvent e) {
-			#line 120 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 121 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			if (( this.data == null )) {
-				#line 121 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 122 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				this.transEvent(e);
 			}
 			
@@ -147,9 +149,9 @@ namespace client {
 		#line default
 		
 		public virtual void onReg(global::web.proto.HallEvent e) {
-			#line 125 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 126 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			if (( this.data == null )) {
-				#line 126 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 127 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				this.transEvent(e);
 			}
 			
@@ -157,32 +159,32 @@ namespace client {
 		#line default
 		
 		public virtual void off() {
-			#line 133 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 134 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			global::web.proto.WebEventDispatch wd = global::web.proto.WebEventDispatch.getInstance();
 			global::haxe.root.Array events = new global::haxe.root.Array(new object[]{((string) ("getuserInfo") ), ((string) ("login") ), ((string) ("hall_Reg") ), ((string) ("add_bet") )});
-			#line 136 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 137 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			{
-				#line 136 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 137 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int _g = 0;
-				#line 136 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 137 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				while (( _g < events.length )) {
-					#line 136 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 137 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					string e = global::haxe.lang.Runtime.toString(events.__get(_g));
-					#line 136 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 137 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					 ++ _g;
 					wd.removeEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object));
 				}
 				
 			}
 			
-			#line 139 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 140 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			this.wasAdd = false;
 		}
 		#line default
 		
 		public virtual void LoginWithOpenID(string openid) {
 			unchecked {
-				#line 143 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 144 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tp = new global::haxe.lang.DynamicObject(new int[]{23515, 563366437}, new object[]{((object) (-1) ), openid}, new int[]{}, new double[]{});
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (8) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
 			}
@@ -192,17 +194,17 @@ namespace client {
 		
 		public virtual void Login(string mobile, string password) {
 			unchecked {
-				#line 153 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 154 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tp = null;
-				#line 153 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 154 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 153 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 154 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					string __temp_odecl1 = global::haxe.crypto.Md5.encode(password);
-					#line 153 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 154 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027}, new object[]{mobile, __temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 154 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 155 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (8) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
 			}
 			#line default
@@ -211,32 +213,32 @@ namespace client {
 		
 		public virtual bool forgotpassWord(string mobile, string password, string verificationCode) {
 			unchecked {
-				#line 165 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 166 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (( verificationCode != this.code )) {
-					#line 166 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u8bf7\u586b\u9a8c\u8bc1\u7801!", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"forgotpassWord", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (166) )}));
+					#line 167 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u8bf7\u586b\u9a8c\u8bc1\u7801!", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"forgotpassWord", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (167) )}));
 					return false;
 				}
 				
-				#line 170 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 171 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (global::utils.SQLRex.checkSQL(password)) {
-					#line 171 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 172 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					return false;
 				}
 				
-				#line 174 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 175 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tp = null;
-				#line 174 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 175 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 174 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 175 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					string __temp_odecl1 = global::haxe.crypto.Md5.encode(password);
-					#line 174 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 175 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027}, new object[]{mobile, __temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 176 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 177 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (30) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
-				#line 178 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 179 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return true;
 			}
 			#line default
@@ -244,30 +246,30 @@ namespace client {
 		
 		
 		public virtual bool regist(string mobile, string ps) {
-			#line 188 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 189 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			return this.regist(mobile, ps, 0);
 		}
 		#line default
 		
 		public virtual bool regist(string mobile, string ps, object refID) {
 			unchecked {
-				#line 188 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 189 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int refID1 = ( (( refID == default(object) )) ? (0) : (((int) (global::haxe.lang.Runtime.toInt(refID)) )) );
 				global::haxe.root.EReg r = new global::haxe.root.EReg("1\\d{10}", "");
-				#line 191 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 192 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				bool b = r.match(mobile);
 				if (( ( ( ( ( ps == null ) || ( mobile == null ) ) || ( mobile.Length != 11 ) ) || ( ps.Length < 6 ) ) ||  ! (b)  )) {
-					#line 193 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6ce8\u518c\u8d26\u53f7\u6216\u8005\u5bc6\u7801\u4e0d\u7b26\u5408\u6761\u4ef6", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"regist", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (193) )}));
+					#line 194 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u6ce8\u518c\u8d26\u53f7\u6216\u8005\u5bc6\u7801\u4e0d\u7b26\u5408\u6761\u4ef6", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"regist", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (194) )}));
 					return false;
 				}
 				
-				#line 197 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 198 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				string password = global::haxe.crypto.Md5.encode(ps);
 				object tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027, 1542393958}, new object[]{mobile, password, ((object) (refID1) )}, new int[]{}, new double[]{});
-				#line 200 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 201 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (9) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
-				#line 202 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 203 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return true;
 			}
 			#line default
@@ -276,39 +278,39 @@ namespace client {
 		
 		public virtual bool changeUserInfo(string avatar) {
 			unchecked {
-				#line 210 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 211 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (global::utils.SQLRex.checkSQL(avatar)) {
-					#line 211 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0d\u5408\u6cd5", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeUserInfo", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (211) )}));
+					#line 212 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4e0d\u5408\u6cd5", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeUserInfo", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (212) )}));
 					return false;
 				}
 				
-				#line 214 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 215 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if (( this.data == null )) {
-					#line 215 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u767b\u9646\u540e\u8bf7\u8d4b\u503c\u7ed9data", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeUserInfo", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (215) )}));
+					#line 216 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u767b\u9646\u540e\u8bf7\u8d4b\u503c\u7ed9data", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeUserInfo", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (216) )}));
 					return false;
 				}
 				
-				#line 219 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 220 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tp = null;
-				#line 219 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 220 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 219 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 220 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 219 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 220 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					tp = new global::haxe.lang.DynamicObject(new int[]{23515, 2052882457}, new object[]{__temp_odecl1, avatar}, new int[]{}, new double[]{});
 				}
 				
-				#line 221 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 222 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::haxe.lang.Function replacer = null;
-				#line 221 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 222 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				string space = null;
-				#line 221 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u4f20\u8f93", global::haxe.format.JsonPrinter.print(((object) (tp) ), replacer, space)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeUserInfo", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (221) )}));
-				#line 223 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 222 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u4f20\u8f93", global::haxe.format.JsonPrinter.print(((object) (tp) ), replacer, space)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeUserInfo", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (222) )}));
+				#line 224 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (31) ), -1, global::org.msgpack.MsgPack.encode(tp), null);
-				#line 225 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 226 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return true;
 			}
 			#line default
@@ -317,26 +319,26 @@ namespace client {
 		
 		public virtual bool createRoom(object data) {
 			unchecked {
-				#line 231 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 232 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::haxe.lang.Function replacer = null;
-				#line 231 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 232 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				string space = null;
-				#line 231 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u521b\u5efa\u623f\u95f4", global::haxe.format.JsonPrinter.print(((object) (data) ), replacer, space)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createRoom", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (231) )}));
-				#line 233 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("ownerid=", global::haxe.root.Std.@string(global::haxe.lang.Runtime.getField(data, "owerID", 694510256, true))), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createRoom", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (233) )}));
-				#line 235 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 232 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("\u521b\u5efa\u623f\u95f4", global::haxe.format.JsonPrinter.print(((object) (data) ), replacer, space)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createRoom", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (232) )}));
+				#line 234 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("ownerid=", global::haxe.root.Std.@string(global::haxe.lang.Runtime.getField(data, "owerID", 694510256, true))), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createRoom", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (234) )}));
+				#line 236 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::haxe.root.ValueType t = global::haxe.root.Type.@typeof(global::haxe.lang.Runtime.getField(data, "owerID", 694510256, true));
-				#line 237 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("type", global::haxe.root.Std.@string(t)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createRoom", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (237) )}));
+				#line 238 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("type", global::haxe.root.Std.@string(t)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createRoom", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (238) )}));
 				if ( ! (global::haxe.root.Reflect.hasField(data, "gameID")) ) {
-					#line 239 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 240 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					return false;
 				}
 				
-				#line 241 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 242 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (1) ), -1, global::org.msgpack.MsgPack.encode(data), null);
-				#line 243 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 244 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				return true;
 			}
 			#line default
@@ -357,8 +359,8 @@ namespace client {
 		
 		public virtual void changeStatus() {
 			unchecked {
-				#line 257 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeStatus", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (257) )}));
+				#line 258 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"changeStatus", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (258) )}));
 			}
 			#line default
 		}
@@ -366,17 +368,17 @@ namespace client {
 		
 		public virtual void gameAddBetCS(uint times) {
 			unchecked {
-				#line 262 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 263 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tb = null;
-				#line 262 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 263 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 262 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 263 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 262 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 263 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					tb = new global::haxe.lang.DynamicObject(new int[]{1213433212}, new object[]{__temp_odecl1}, new int[]{888664408}, new double[]{((double) (times) )});
 				}
 				
-				#line 264 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 265 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (4) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) ), global::org.msgpack.MsgPack.encode(tb), null);
 			}
 			#line default
@@ -385,17 +387,17 @@ namespace client {
 		
 		public virtual void tryToBeBanker() {
 			unchecked {
-				#line 269 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 270 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tb = null;
-				#line 269 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 270 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 269 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 270 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 269 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 270 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					tb = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 270 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 271 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (5) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) ), global::org.msgpack.MsgPack.encode(tb), null);
 			}
 			#line default
@@ -404,7 +406,7 @@ namespace client {
 		
 		public virtual void leaveRoom(uint roomID) {
 			unchecked {
-				#line 275 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 276 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object tb = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{((object) (roomID) )}, new int[]{}, new double[]{});
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (20) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) ), global::org.msgpack.MsgPack.encode(tb), null);
 			}
@@ -413,17 +415,17 @@ namespace client {
 		
 		
 		public virtual void installData(object data) {
-			#line 280 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 281 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			this.data = data;
 		}
 		#line default
 		
 		public virtual void installDataCS(string data) {
 			unchecked {
-				#line 286 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 287 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				this.data = ((object) (new global::haxe.format.JsonParser(((string) (data) )).doParse()) );
-				#line 288 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("<color=#9400D3> install tinycs id=", global::haxe.root.Std.@string(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))), "</color>"), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installDataCS", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (288) )}));
+				#line 289 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("<color=#9400D3> install tinycs id=", global::haxe.root.Std.@string(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))), "</color>"), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"installDataCS", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (289) )}));
 			}
 			#line default
 		}
@@ -431,8 +433,8 @@ namespace client {
 		
 		public virtual void toChat() {
 			unchecked {
-				#line 294 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"toChat", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (294) )}));
+				#line 295 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"toChat", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (295) )}));
 			}
 			#line default
 		}
@@ -440,8 +442,8 @@ namespace client {
 		
 		public virtual void createClub() {
 			unchecked {
-				#line 300 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (300) )}));
+				#line 301 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"createClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (301) )}));
 			}
 			#line default
 		}
@@ -449,8 +451,8 @@ namespace client {
 		
 		public virtual void applyClub() {
 			unchecked {
-				#line 305 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"applyClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (305) )}));
+				#line 306 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"applyClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (306) )}));
 			}
 			#line default
 		}
@@ -458,8 +460,8 @@ namespace client {
 		
 		public virtual void agreeJoinClub() {
 			unchecked {
-				#line 310 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"agreeJoinClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (310) )}));
+				#line 311 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"agreeJoinClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (311) )}));
 			}
 			#line default
 		}
@@ -467,8 +469,8 @@ namespace client {
 		
 		public virtual void leaveClub() {
 			unchecked {
-				#line 315 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"leaveClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (315) )}));
+				#line 316 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"leaveClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (316) )}));
 			}
 			#line default
 		}
@@ -476,8 +478,8 @@ namespace client {
 		
 		public virtual void refuseJoinClub() {
 			unchecked {
-				#line 319 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"refuseJoinClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (319) )}));
+				#line 320 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"refuseJoinClub", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (320) )}));
 			}
 			#line default
 		}
@@ -485,8 +487,8 @@ namespace client {
 		
 		public virtual void searchPlayerScore() {
 			unchecked {
-				#line 325 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"searchPlayerScore", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (325) )}));
+				#line 326 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u4ec0\u4e48\u90fd\u4e0d\u505a\u4e0d\u8981\u8c03\u7528\u3002", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"searchPlayerScore", "client.PlayerCS", "src/client/PlayerCS.hx"}, new int[]{1981972957}, new double[]{((double) (326) )}));
 			}
 			#line default
 		}
@@ -494,7 +496,7 @@ namespace client {
 		
 		public virtual void getUserInfo() {
 			unchecked {
-				#line 333 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 334 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (18) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) ), global::org.msgpack.MsgPack.encode(this.data), null);
 			}
 			#line default
@@ -503,23 +505,23 @@ namespace client {
 		
 		public virtual void getUserIncomeAndSize() {
 			unchecked {
-				#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt2 = ((int) (((uint) (1) )) );
-				#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt3 = ((int) (1004) );
-				#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt4 = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) );
-				#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object __temp_stmt5 = null;
-				#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					__temp_stmt5 = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 340 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 341 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(__temp_stmt2, __temp_stmt3, __temp_stmt4, global::org.msgpack.MsgPack.encode(__temp_stmt5), null);
 			}
 			#line default
@@ -528,23 +530,23 @@ namespace client {
 		
 		public virtual void getBuyList() {
 			unchecked {
-				#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt2 = ((int) (((uint) (1) )) );
-				#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt3 = ((int) (1006) );
-				#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt4 = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) );
-				#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object __temp_stmt5 = null;
-				#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					__temp_stmt5 = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 347 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 348 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(__temp_stmt2, __temp_stmt3, __temp_stmt4, global::org.msgpack.MsgPack.encode(__temp_stmt5), null);
 			}
 			#line default
@@ -553,23 +555,48 @@ namespace client {
 		
 		public virtual void getChargeList() {
 			unchecked {
-				#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt2 = ((int) (((uint) (1) )) );
-				#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt3 = ((int) (1005) );
-				#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				int __temp_stmt4 = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) );
-				#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				object __temp_stmt5 = null;
-				#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				{
-					#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 					__temp_stmt5 = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 354 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				#line 355 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				global::web.SocketAsync.sendCS(__temp_stmt2, __temp_stmt3, __temp_stmt4, global::org.msgpack.MsgPack.encode(__temp_stmt5), null);
+			}
+			#line default
+		}
+		
+		
+		public virtual void getDrawOutist() {
+			unchecked {
+				#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				int __temp_stmt2 = ((int) (((uint) (1) )) );
+				#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				int __temp_stmt3 = ((int) (1007) );
+				#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				int __temp_stmt4 = ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true))) );
+				#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				object __temp_stmt5 = null;
+				#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+				{
+					#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
+					#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+					__temp_stmt5 = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
+				}
+				
+				#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				global::web.SocketAsync.sendCS(__temp_stmt2, __temp_stmt3, __temp_stmt4, global::org.msgpack.MsgPack.encode(__temp_stmt5), null);
 			}
 			#line default
@@ -581,7 +608,7 @@ namespace client {
 		
 		
 		public virtual void dispose() {
-			#line 362 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
+			#line 370 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 			this.off();
 		}
 		#line default

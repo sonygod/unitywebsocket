@@ -61,16 +61,16 @@ namespace gameRoom {
 			unchecked {
 				#line 86 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 				//  客户端收到创建房间成功，暂时没有时间限制释放？是否要时间释放？请解析这个data.json                                     ;
-				#line 1112 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1120 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object data = e.room;
-				#line 1114 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1122 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				global::haxe.lang.Function replacer = null;
-				#line 1114 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1122 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				string space = null;
-				#line 1114 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1122 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				string data1 = global::haxe.format.JsonPrinter.print(((object) (data) ), replacer, space);
-				#line 1116 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("onCreateRoomC", data1), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCreateRoomC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1116) )}));
+				#line 1124 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("onCreateRoomC", data1), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCreateRoomC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1124) )}));
 			}
 			#line default
 		}
@@ -86,22 +86,22 @@ namespace gameRoom {
 			unchecked {
 				#line 86 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 				//  用户登录成功，如果检测到player.roomid有值，跳对应的游戏房间。                                             ;
-				#line 1125 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1133 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object player = e.player;
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u767b\u9646\u6210\u529f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onLoginC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1126) )}));
-				#line 1127 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u767b\u9646\u6210\u529f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onLoginC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1134) )}));
+				#line 1135 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				global::haxe.lang.Function replacer = null;
-				#line 1127 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1135 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				string space = null;
-				#line 1127 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.format.JsonPrinter.print(((object) (player) ), replacer, space), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onLoginC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1127) )}));
-				#line 1129 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1135 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.format.JsonPrinter.print(((object) (player) ), replacer, space), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onLoginC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1135) )}));
+				#line 1137 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tiny_pay = ((object) (2) );
-				#line 1129 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1137 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tiny_owerID = global::haxe.lang.Runtime.getField(player, "id", 23515, true);
-				#line 1129 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1137 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tiny_playType = ((object) (0) );
-				#line 1129 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1137 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tiny_gameID = ((object) (1001) );
 			}
 			#line default
@@ -112,9 +112,9 @@ namespace gameRoom {
 			unchecked {
 				#line 86 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 				//  用户创建游戏房间 data 类型是 TinyData, 具体查看 TinyRoom.hx                                      ;
-				#line 1145 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1153 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object tr = data;
-				#line 1147 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1155 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (1) ), userid, global::org.msgpack.MsgPack.encode(tr), null);
 			}
 			#line default
@@ -125,42 +125,42 @@ namespace gameRoom {
 			unchecked {
 				#line 86 "D:\\project\\sangong\\sangong\\src\\Comments.hx"
 				//  调用系统命令回调                                                                          ;
-				#line 1153 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1161 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object cmd = e.cmd;
-				#line 1155 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1163 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				switch (((int) (global::haxe.lang.Runtime.toInt((global::haxe.lang.Runtime.getField(cmd, "id", 23515, true)))) )) {
 					case 4000:
 					{
-						#line 1160 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "update fk bool", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1160) )}));
-						#line 1160 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						#line 1168 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						global::haxe.Log.trace.__hx_invoke2_o(default(double), "update fk bool", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1168) )}));
+						#line 1168 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 						break;
 					}
 					
 					
 					case 4001:
 					{
-						#line 1163 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "update gm bool", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1163) )}));
-						#line 1163 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						#line 1171 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						global::haxe.Log.trace.__hx_invoke2_o(default(double), "update gm bool", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1171) )}));
+						#line 1171 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 						break;
 					}
 					
 					
 					case 4002:
 					{
-						#line 1157 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "getuserinfo", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1157) )}));
-						#line 1157 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						#line 1165 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						global::haxe.Log.trace.__hx_invoke2_o(default(double), "getuserinfo", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1165) )}));
+						#line 1165 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 						break;
 					}
 					
 					
 					case 4003:
 					{
-						#line 1166 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-						global::haxe.Log.trace.__hx_invoke2_o(default(double), "update gailv bool", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1166) )}));
-						#line 1166 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						#line 1174 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+						global::haxe.Log.trace.__hx_invoke2_o(default(double), "update gailv bool", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onCMDResultC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1174) )}));
+						#line 1174 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 						break;
 					}
 					
@@ -174,9 +174,9 @@ namespace gameRoom {
 		
 		public virtual void onGET_ROOM_INFOC(global::web.proto.RoomEvent e) {
 			unchecked {
-				#line 1171 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u623f\u95f4\u4fe1\u606f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGET_ROOM_INFOC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1171) )}));
-				#line 1173 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				#line 1179 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u623f\u95f4\u4fe1\u606f", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onGET_ROOM_INFOC", "gameRoom.Hall", "src/gameRoom/Hall.hx"}, new int[]{1981972957}, new double[]{((double) (1179) )}));
+				#line 1181 "D:\\project\\sangong\\sangong\\src\\gameRoom\\Hall.hx"
 				object info = e.room;
 			}
 			#line default

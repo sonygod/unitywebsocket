@@ -39,6 +39,8 @@ namespace web.proto {
 			global::web.proto.PlayerEvent.GET_CHARGE_LIST = ((string) ("player_GET_CHARGE_LIST") );
 			#line 58 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.GET_BUY_LIST = ((string) ("player_BUY_LIST") );
+			#line 60 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			global::web.proto.PlayerEvent.GET_DRAW_OUT_LIST = ((string) ("player_get_draw_LIST") );
 		}
 		#line default
 		
@@ -47,24 +49,24 @@ namespace web.proto {
 		
 		
 		public PlayerEvent(string type, object player, object bling, global::server.IHander hander, object key, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 73 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 76 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent.__hx_ctor_web_proto_PlayerEvent(this, type, player, bling, hander, key, bubbles, cancelable);
 		}
 		#line default
 		
 		private static void __hx_ctor_web_proto_PlayerEvent(global::web.proto.PlayerEvent __hx_this, string type, object player, object bling, global::server.IHander hander, object key, object bubbles, object cancelable) {
 			unchecked {
-				#line 72 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 75 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-				#line 72 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 75 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
-				#line 72 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 75 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				int key1 = ( (( key == default(object) )) ? (-1) : (((int) (global::haxe.lang.Runtime.toInt(key)) )) );
 				global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-				#line 75 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 78 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				__hx_this.player = player;
 				__hx_this.bling = bling;
-				#line 77 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+				#line 80 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 				__hx_this.hander = hander;
 				__hx_this.key = key1;
 			}
@@ -106,6 +108,8 @@ namespace web.proto {
 		
 		public static string GET_BUY_LIST;
 		
+		public static string GET_DRAW_OUT_LIST;
+		
 		public object player;
 		
 		public object bling;
@@ -115,13 +119,13 @@ namespace web.proto {
 		public int key;
 		
 		public override global::openfl.events.Event clone() {
-			#line 82 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 85 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			global::web.proto.PlayerEvent @event = new global::web.proto.PlayerEvent(this.type, this.player, this.bling, this.hander, null, this.bubbles, this.cancelable);
 			@event.target = this.target;
-			#line 84 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 87 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			@event.currentTarget = this.currentTarget;
 			@event.eventPhase = this.eventPhase;
-			#line 86 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
+			#line 89 "D:\\project\\sangong\\sangong\\src\\web\\proto\\PlayerEvent.hx"
 			@event.hander = this.hander;
 			return @event;
 		}
