@@ -379,7 +379,7 @@ namespace web {
 									global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u83b7\u53d6\u63d0\u5e01\u5217\u8868", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"convertDataToPacket", "web.SocketAsync", "src/web/SocketAsync.hx"}, new int[]{1981972957}, new double[]{((double) (349) )}));
 									global::haxe.root.Array r10 = ((global::haxe.root.Array) (data) );
 									#line 351 "D:\\project\\sangong\\sangong\\src\\web\\SocketAsync.hx"
-									global::web.SocketAsync.webD.dispatchEventWithThread(new global::web.proto.ShoppingEvent(((string) ("ShoppingEvent_get_draw_out_list") ), r10, null, null, hander, null, null, null));
+									global::web.SocketAsync.webD.dispatchEventWithThread(new global::web.proto.ShoppingEvent(((string) ("ShoppingEvent_get_draw_out_list") ), null, null, r10, hander, null, null, null));
 								}
 								
 							}
