@@ -841,6 +841,7 @@ M System.ComponentModel.Win32Exception
 M System.Security.AccessControl.AuthorizationRuleCollection
 M I32
 M CEventDispatcher
+M gameRoom.bjl.BYLCards
 M haxe.io.BytesData
 M cs.system.Action
 M cs.system.reflection.CallingConventions
@@ -1172,6 +1173,7 @@ C haxe.lang.IHxObject
 C haxe.lang.HxObject
 C haxe.lang.DynamicObject
 C haxe.lang.Enum
+M gameRoom.bjl.BJL_BlingType
 M cs.internal.Exceptions
 C haxe.lang.Exceptions
 C haxe.lang.HaxeException

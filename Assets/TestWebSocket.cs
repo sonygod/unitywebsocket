@@ -56,8 +56,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        // client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
-        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+        client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
+        //client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -623,7 +623,7 @@ public class TestWebSocket : MonoBehaviour
 
             player["openID"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //填入真实的openid.
             player["referenceID"] = 0; //推荐人ID.//注册。
-
+            player["thirdPartID"] = 10086;//第三方ID.
             player["avatar"] = "1.jpg";
             player["nick_name"] = "新用户"; //插入用户昵称
 

@@ -5,12 +5,18 @@ using haxe.root;
 namespace web {
 	public class GameSetting : global::haxe.lang.HxObject {
 		
+		static GameSetting() {
+			#line 12 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
+			global::web.GameSetting.map = new global::haxe.ds.IntMap();
+		}
+		#line default
+		
 		public GameSetting(global::haxe.lang.EmptyObject empty) {
 		}
 		
 		
 		public GameSetting() {
-			#line 7 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
+			#line 9 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
 			global::web.GameSetting.__hx_ctor_web_GameSetting(this);
 		}
 		#line default
@@ -19,15 +25,19 @@ namespace web {
 		}
 		
 		
-		public static bool getInstallGame(uint id) {
-			#line 14 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
-			return true;
+		public static global::haxe.ds.IntMap map;
+		
+		public static bool getInstallGame(int id) {
+			#line 17 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
+			return ((global::haxe.ds.IntMap) (((global::haxe.IMap) (global::web.GameSetting.map) )) ).exists(((int) (id) ));
 		}
 		#line default
 		
-		public static void InstallGame(uint id, string name) {
+		public static void InstallGame(int id, string name) {
+			#line 21 "D:\\project\\sangong\\sangong\\src\\web\\GameSetting.hx"
+			((global::haxe.ds.IntMap) (((global::haxe.IMap) (global::web.GameSetting.map) )) ).@set(((int) (id) ), ((object) (name) ));
 		}
-		
+		#line default
 		
 	}
 }
