@@ -714,11 +714,11 @@ M cs.Boot
 C cs.Boot
 M web.SocketAsync
 C web.SocketAsync
-C web.SocketAsync_reConnectSocket_559__Fun
-C web.SocketAsync_installSocket_577__Fun
-C web.SocketAsync_installSocket_580__Fun
-C web.SocketAsync_installSocket_596__Fun
-C web.SocketAsync_installSocket_602__Fun
+C web.SocketAsync_reConnectSocket_567__Fun
+C web.SocketAsync_installSocket_585__Fun
+C web.SocketAsync_installSocket_588__Fun
+C web.SocketAsync_installSocket_604__Fun
+C web.SocketAsync_installSocket_610__Fun
 M System.Security.Principal.IdentityReference
 M System.Runtime.InteropServices._AssemblyName
 M I64

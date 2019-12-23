@@ -75,6 +75,7 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(ShoppingEvent.GET_BUY_LIST, onGetBuyList);
         self.addEventListener(ShoppingEvent.GET_CHARGE_LIST, onGetChargeList);
         self.addEventListener(ShoppingEvent.GET_DRAW_OUT_LIST, onGetDrawOutList);
+        self.addEventListener(PlayerEvent.GET_LAST_CHARGER_TIME,onGetLastChargeTime);
         TestEventDispathFromHaxe();
 
 
@@ -84,6 +85,34 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
+    }
+
+    private void onGetLastChargeTime(CEvent evt)
+    {
+        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+
+        var data = e.chargeList;
+
+
+
+        //  TinyDrawOutCS[] pp = ConvertTool.ConvertData<TinyDrawOutCS[]>(e.chargeList);
+
+
+        //   Debug.Log(JsonConvert.SerializeObject(pp));
+
+        TinyChargeCS[] pp = ConvertTool.ConvertData<TinyChargeCS[]>(e.chargeList);
+
+
+        if (pp.Length > 0)
+        {
+            Debug.Log("上次挖矿充值时间"+pp[0].op_time);
+        }
+
+
+
+
+
+
     }
 
     //获取提币记录，未测试
@@ -743,6 +772,14 @@ public class TestWebSocket : MonoBehaviour
 
 
             self.getDrawOutist();
+        }
+
+        if (GUI.Button(new Rect(160, 360, 50, 50), "getLastCharge"))
+        {
+            //获取购买游戏币历史
+
+
+            self.getLastChargeTime();
         }
     }
 }

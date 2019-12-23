@@ -12,6 +12,8 @@ namespace web.proto {
 			global::web.proto.ShoppingEvent.GET_CHARGE_LIST = ((string) ("ShoppingEvent_get_charge_list") );
 			#line 16 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			global::web.proto.ShoppingEvent.GET_DRAW_OUT_LIST = ((string) ("ShoppingEvent_get_draw_out_list") );
+			#line 18 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			global::web.proto.ShoppingEvent.GET_LAST_CHARGE_TIME = ((string) ("ShoppingEvent_get_last_charge_time") );
 		}
 		#line default
 		
@@ -20,21 +22,21 @@ namespace web.proto {
 		
 		
 		public ShoppingEvent(string type, global::haxe.root.Array chargeList, global::haxe.root.Array buyList, global::haxe.root.Array drawOutList, global::server.IHander hander, object result, object bubbles, object cancelable) : base(global::haxe.lang.EmptyObject.EMPTY) {
-			#line 29 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 34 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			global::web.proto.ShoppingEvent.__hx_ctor_web_proto_ShoppingEvent(this, type, chargeList, buyList, drawOutList, hander, result, bubbles, cancelable);
 		}
 		#line default
 		
 		protected static void __hx_ctor_web_proto_ShoppingEvent(global::web.proto.ShoppingEvent __hx_this, string type, global::haxe.root.Array chargeList, global::haxe.root.Array buyList, global::haxe.root.Array drawOutList, global::server.IHander hander, object result, object bubbles, object cancelable) {
-			#line 28 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 33 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			bool cancelable1 = ( (( cancelable == default(object) )) ? (false) : (global::haxe.lang.Runtime.toBool(cancelable)) );
-			#line 28 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 33 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			bool bubbles1 = ( (( bubbles == default(object) )) ? (true) : (global::haxe.lang.Runtime.toBool(bubbles)) );
 			global::openfl.events.Event.__hx_ctor_openfl_events_Event(__hx_this, type, bubbles1, cancelable1);
-			#line 31 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 36 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			__hx_this.hander = hander;
 			__hx_this.chargeList = chargeList;
-			#line 33 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
+			#line 38 "D:\\project\\sangong\\sangong\\src\\web\\proto\\ShoppingEvent.hx"
 			__hx_this.buyList = buyList;
 			__hx_this.drawOutList = drawOutList;
 		}
@@ -45,6 +47,8 @@ namespace web.proto {
 		public static string GET_CHARGE_LIST;
 		
 		public static string GET_DRAW_OUT_LIST;
+		
+		public static string GET_LAST_CHARGE_TIME;
 		
 		public global::haxe.root.Array chargeList;
 		
