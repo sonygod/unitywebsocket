@@ -56,8 +56,8 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-        client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
-        //client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
+      //  client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
+        client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
         // client.testPlayer.dispatchEvent(new CEvent("onOpen"),this );
@@ -75,7 +75,7 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(ShoppingEvent.GET_BUY_LIST, onGetBuyList);
         self.addEventListener(ShoppingEvent.GET_CHARGE_LIST, onGetChargeList);
         self.addEventListener(ShoppingEvent.GET_DRAW_OUT_LIST, onGetDrawOutList);
-        self.addEventListener(PlayerEvent.GET_LAST_CHARGER_TIME,onGetLastChargeTime);
+        self.addEventListener(ShoppingEvent.GET_LAST_CHARGE_TIME,onGetLastChargeTime);
         TestEventDispathFromHaxe();
 
 
@@ -109,7 +109,7 @@ public class TestWebSocket : MonoBehaviour
         }
 
 
-
+        
 
 
 
@@ -664,7 +664,8 @@ public class TestWebSocket : MonoBehaviour
         if (GUI.Button(new Rect(360, 60, 50, 50), "login"))
         {
             //先查找是否存在，后插入。
-            self.Login("13060669337", "123456");
+            //self.Login("13060669337", "123456");
+            self.LoginWithOpenID("233f1ad58da76ef962af1b74979e40da");
         }
 
         //充值，从交易所充入来
