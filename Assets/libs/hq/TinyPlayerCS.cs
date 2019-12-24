@@ -109,8 +109,13 @@ namespace web
 
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-
         public int? level;//等级
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public float? contributionIncome;//贡献值
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+        public int? thirdPartID;//第三方ID
 
 
     }
