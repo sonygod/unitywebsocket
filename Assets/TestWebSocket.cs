@@ -56,7 +56,7 @@ public class TestWebSocket : MonoBehaviour
         client.onSocketCloseCS = onSocketClose;
         client.onSocketOpenCS = onSocketOpen;
         client.onSocketErrorCS = onSocketError;
-      //  client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
+        //  client.connectWithIP("27.102.127.81", 9003); //这里改成你自己的ip
         client.connectWithIP("127.0.0.1", 9003); //这里改成你自己的ip
         //  client.connectWithIP("144.48.4.186", 9003); //这里改成你自己的ip
         client.onGlobalError = onGlobalError;
@@ -75,7 +75,9 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(ShoppingEvent.GET_BUY_LIST, onGetBuyList);
         self.addEventListener(ShoppingEvent.GET_CHARGE_LIST, onGetChargeList);
         self.addEventListener(ShoppingEvent.GET_DRAW_OUT_LIST, onGetDrawOutList);
-        self.addEventListener(ShoppingEvent.GET_LAST_CHARGE_TIME,onGetLastChargeTime);
+        self.addEventListener(ShoppingEvent.GET_LAST_CHARGE_TIME, onGetLastChargeTime);
+        self.addEventListener(PlayerEvent.STATIC_CHANGE, onStatusChange);
+        self.addEventListener(PlayerEvent.ADD_BET, onPlayerAddBet);
         TestEventDispathFromHaxe();
 
 
@@ -87,12 +89,41 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
     }
 
+    //玩家下注，实时
+    private void onPlayerAddBet(CEvent evt)
+    {
+        var playerEvent = (PlayerEvent) evt.eventParams;
+
+
+        TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
+
+        var b = playerEvent.bling; //这里是下注具体。要转换成TinyBling 
+
+
+        TinyBilingCS data = ConvertTool.ConvertPlayer<TinyBilingCS>(playerEvent.bling); //其他用户下注？或者自己下注？
+
+
+        var json = JsonConvert.SerializeObject(data); //打印下注信息
+
+        Debug.Log(json);
+    }
+
+    private void onStatusChange(CEvent evt)
+    {
+        //玩家状态改变，比如说 准备。
+        var playerEvent = (PlayerEvent) evt.eventParams;
+
+
+        TinyPlayerCS pp = ConvertTool.ConvertPlayer<TinyPlayerCS>(playerEvent.player);
+
+        var sts = pp.status; //这里是状态，在头像旁边显示准备。
+    }
+
     private void onGetLastChargeTime(CEvent evt)
     {
-        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+        ShoppingEvent e = (ShoppingEvent) evt.eventParams;
 
         var data = e.chargeList;
-
 
 
         //  TinyDrawOutCS[] pp = ConvertTool.ConvertData<TinyDrawOutCS[]>(e.chargeList);
@@ -105,14 +136,8 @@ public class TestWebSocket : MonoBehaviour
 
         if (pp.Length > 0)
         {
-            Debug.Log("上次挖矿充值时间"+pp[0].op_time);
+            Debug.Log("上次挖矿充值时间" + pp[0].op_time);
         }
-
-
-        
-
-
-
     }
 
     //获取提币记录，未测试
@@ -219,7 +244,7 @@ public class TestWebSocket : MonoBehaviour
             room.addEvent(); //这里是内部倾听，不能删除，否则所有事件无效。
             room.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
             room.addEventListener(RoomEvent.DESTORY, onDestoryRoom); //删除和退出一样。
-            room.addEventListener(RoomEvent.LEAVE_ROOM, onDestoryRoom);
+            room.addEventListener(RoomEvent.LEAVE_ROOM, onLeaveRoom);
             room.addEventListener(RoomEvent.GET_ROOM_INFO, onGetRoomInfo);
             room.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
             hall.removeEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
@@ -232,6 +257,26 @@ public class TestWebSocket : MonoBehaviour
 
         //room.addEventListener(RoomEvent, onDispath);
         //room.addEventListener(RoomEvent.);
+    }
+
+    //有玩家离开了房间。
+
+    private void onLeaveRoom(CEvent evt)
+    {
+        UnityThreadHelper.Dispatcher.Dispatch(() =>
+        {
+            RoomEvent parms = (RoomEvent) evt.eventParams;
+
+            var room = parms.room; //这里判断房间的ID和当前的房间是否吻合，如果是，继续操作。
+
+            var playerData = parms.player; //这个玩家离开了房间。
+
+
+            TinyRoomCS ts = ConvertTool.ConvertRoom(room);
+
+
+            Debug.Log("加入房间" + JsonConvert.SerializeObject(ts));
+        });
     }
 
     private void onGetResult(CEvent evt)
@@ -407,6 +452,8 @@ public class TestWebSocket : MonoBehaviour
             RoomEvent parms = (RoomEvent) evt.eventParams;
 
             var room = parms.room;
+
+            var playerData = parms.player; //这里是新玩家加入。你要构造new playercs 然后加倾听方法。
 
 
             TinyRoomCS ts = ConvertTool.ConvertRoom(room);
@@ -652,7 +699,7 @@ public class TestWebSocket : MonoBehaviour
 
             player["openID"] = haxe.root.Random.@string(32, "123456789abcdefghijklnmopqrstuvwxyz"); //填入真实的openid.
             player["referenceID"] = 0; //推荐人ID.//注册。
-            player["thirdPartID"] = 10086;//第三方ID.
+            player["thirdPartID"] = 10086; //第三方ID.
             player["avatar"] = "1.jpg";
             player["nick_name"] = "新用户"; //插入用户昵称
 
@@ -781,6 +828,45 @@ public class TestWebSocket : MonoBehaviour
 
 
             self.getLastChargeTime();
+        }
+
+
+        if (GUI.Button(new Rect(260, 410, 50, 50), "joinRoom"))//加入专区房间
+        {
+            //获取购买游戏币历史
+
+            
+
+          
+          
+            self.joinRoom(1000);//房间ID.
+        }
+
+        if (GUI.Button(new Rect(310, 410, 50, 50), "DestoryRoom"))//加入专区房间
+        {
+            //获取购买游戏币历史
+
+
+
+
+
+            self.destryRoom(1000);//删除房间
+        }
+
+        if (GUI.Button(new Rect(310, 410, 50, 50), "changeStatus"))//改变状态
+        {
+            //获取购买游戏币历史
+
+
+//            var UP = 0; // 站起//主动
+//            var SIT = 1; // 游戏没有安装。//被动
+//            var READY = 2; // 准备。//主动
+//            var QUIT = -2; // 用户退出
+//            var Wipeout = -1; // 没钱。//被动
+
+
+
+            self.changeStatus(2);
         }
     }
 }
