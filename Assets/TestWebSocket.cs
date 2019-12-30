@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Net;
 using System.Reflection;
 using client;
@@ -78,6 +79,7 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(ShoppingEvent.GET_LAST_CHARGE_TIME, onGetLastChargeTime);
         self.addEventListener(PlayerEvent.STATIC_CHANGE, onStatusChange);
         self.addEventListener(PlayerEvent.ADD_BET, onPlayerAddBet);
+        self.addEventListener(RoomEvent.JOIN_ROOM,onJoinRoom);
         TestEventDispathFromHaxe();
 
 

@@ -110,39 +110,53 @@ namespace client {
 		
 		
 		public virtual void onJoinRoom(global::web.proto.RoomEvent e) {
-			#line 96 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
+			unchecked {
+				#line 96 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				if (( this.data != null )) {
+					#line 97 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					global::haxe.Log.trace.__hx_invoke2_o(default(double), "error \u8bf7\u8bbe\u7f6eroom data", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"onJoinRoom", "client.RoomCS", "src/client/RoomCS.hx"}, new int[]{1981972957}, new double[]{((double) (97) )}));
+					return;
+				}
+				
+				#line 101 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				if (( ( this.data != null ) && ((bool) (global::haxe.lang.Runtime.eq(global::haxe.lang.Runtime.getField(this.data, "id", 23515, true), global::haxe.lang.Runtime.getField(e.room, "id", 23515, true))) ) )) {
+					#line 102 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
+				}
+				
+			}
+			#line default
 		}
-		#line default
+		
 		
 		public virtual void onDispath(global::web.proto.RoomEvent e) {
-			#line 100 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 107 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 		}
 		#line default
 		
 		public virtual void onRoomDestory(global::web.proto.RoomEvent e) {
-			#line 104 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 111 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 		}
 		#line default
 		
 		public virtual void onLeaveRoom(global::web.proto.RoomEvent e) {
-			#line 108 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 115 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 		}
 		#line default
 		
 		public virtual void onUpdateRoomUsers(global::web.proto.RoomEvent e) {
-			#line 112 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+			#line 119 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 			( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(e.type, e)) ), ((object) (this) ));
 		}
 		#line default
 		
 		public virtual void transEvent(object e) {
 			unchecked {
-				#line 117 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("cs:\u6536\u5230\u56de\u8c03\uff0c\u5e76\u53d1\u9001", global::haxe.root.Std.@string(((object) (global::haxe.lang.Runtime.callField(e, "field", 9671866, new object[]{"type"})) ))), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.RoomCS", "src/client/RoomCS.hx"}, new int[]{1981972957}, new double[]{((double) (117) )}));
+				#line 124 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("cs:\u6536\u5230\u56de\u8c03\uff0c\u5e76\u53d1\u9001", global::haxe.root.Std.@string(((object) (global::haxe.lang.Runtime.callField(e, "field", 9671866, new object[]{"type"})) ))), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"transEvent", "client.RoomCS", "src/client/RoomCS.hx"}, new int[]{1981972957}, new double[]{((double) (124) )}));
 				( this as global::CEventDispatcher ).dispatchEvent(((global::CEvent) (new global::CEvent(global::haxe.lang.Runtime.toString(((object) (global::haxe.lang.Runtime.callField(e, "field", 9671866, new object[]{"type"})) )), e)) ), ((object) (this) ));
 			}
 			#line default
@@ -151,18 +165,18 @@ namespace client {
 		
 		public virtual void removeEvent() {
 			unchecked {
-				#line 123 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
-				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u5220\u9664\u623f\u95f4\u7a83\u542c\u5668", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"removeEvent", "client.RoomCS", "src/client/RoomCS.hx"}, new int[]{1981972957}, new double[]{((double) (123) )}));
+				#line 130 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), "\u5220\u9664\u623f\u95f4\u7a83\u542c\u5668", default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"removeEvent", "client.RoomCS", "src/client/RoomCS.hx"}, new int[]{1981972957}, new double[]{((double) (130) )}));
 				{
-					#line 124 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 131 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					int _g = 0;
-					#line 124 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 131 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					global::haxe.root.Array _g1 = this.events;
-					#line 124 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 131 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					while (( _g < _g1.length )) {
-						#line 124 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 131 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						string e = global::haxe.lang.Runtime.toString(_g1.__get(_g));
-						#line 124 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+						#line 131 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 						 ++ _g;
 						this.wd.removeEventListener(((string) (e) ), ((global::haxe.lang.Function) (new global::haxe.lang.Closure(this, "transEvent", 529665746)) ), default(object));
 					}
@@ -176,17 +190,17 @@ namespace client {
 		
 		public virtual void start() {
 			unchecked {
-				#line 132 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 139 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				object r = null;
-				#line 132 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 139 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				{
-					#line 132 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 139 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 132 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 139 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					r = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 134 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 141 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (32) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "owerID", 694510256, true))) ), global::org.msgpack.MsgPack.encode(r), null);
 			}
 			#line default
@@ -195,17 +209,17 @@ namespace client {
 		
 		public virtual void getInfo() {
 			unchecked {
-				#line 138 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 145 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				object r = null;
-				#line 138 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 145 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				{
-					#line 138 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 145 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					object __temp_odecl1 = global::haxe.lang.Runtime.getField(this.data, "id", 23515, true);
-					#line 138 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+					#line 145 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 					r = new global::haxe.lang.DynamicObject(new int[]{23515}, new object[]{__temp_odecl1}, new int[]{}, new double[]{});
 				}
 				
-				#line 140 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
+				#line 147 "D:\\project\\sangong\\sangong\\src\\client\\RoomCS.hx"
 				global::web.SocketAsync.sendCS(((int) (((uint) (1) )) ), ((int) (16) ), ((int) (global::haxe.lang.Runtime.toInt(global::haxe.lang.Runtime.getField(this.data, "owerID", 694510256, true))) ), global::org.msgpack.MsgPack.encode(r), null);
 			}
 			#line default
