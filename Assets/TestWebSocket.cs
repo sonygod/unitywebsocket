@@ -835,7 +835,7 @@ public class TestWebSocket : MonoBehaviour
 
         if (GUI.Button(new Rect(260, 410, 50, 50), "joinRoom"))//加入专区房间
         {
-            //获取购买游戏币历史
+          
 
             
 
@@ -846,7 +846,7 @@ public class TestWebSocket : MonoBehaviour
 
         if (GUI.Button(new Rect(310, 410, 50, 50), "DestoryRoom"))//加入专区房间
         {
-            //获取购买游戏币历史
+           
 
 
 
@@ -857,7 +857,7 @@ public class TestWebSocket : MonoBehaviour
 
         if (GUI.Button(new Rect(310, 410, 50, 50), "changeStatus"))//改变状态
         {
-            //获取购买游戏币历史
+          
 
 
 //            var UP = 0; // 站起//主动
@@ -868,7 +868,7 @@ public class TestWebSocket : MonoBehaviour
 
 
 
-            self.changeStatus(2);
+            self.changeStatus(2,1001);//1001是你加入房间或者创建房间的id.
         }
     }
 }
