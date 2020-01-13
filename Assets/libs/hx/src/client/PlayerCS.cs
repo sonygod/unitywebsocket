@@ -255,13 +255,7 @@ namespace client {
 				#line 189 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
 				if ( ! (needMD51) ) {
 					#line 190 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-					{
-						#line 190 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-						string __temp_odecl2 = global::haxe.crypto.Md5.encode(password);
-						#line 190 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
-						tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027}, new object[]{mobile, __temp_odecl2}, new int[]{}, new double[]{});
-					}
-					
+					tp = new global::haxe.lang.DynamicObject(new int[]{1064807522, 1221600027}, new object[]{mobile, password}, new int[]{}, new double[]{});
 				}
 				
 				#line 192 "D:\\project\\sangong\\sangong\\src\\client\\PlayerCS.hx"
