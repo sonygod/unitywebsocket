@@ -80,6 +80,7 @@ public class TestWebSocket : MonoBehaviour
         self.addEventListener(PlayerEvent.STATIC_CHANGE, onStatusChange);
         self.addEventListener(PlayerEvent.ADD_BET, onPlayerAddBet);
         self.addEventListener(RoomEvent.JOIN_ROOM,onJoinRoom);
+        self.addEventListener(ShoppingEvent.GET_REATE,onGetRate);
         TestEventDispathFromHaxe();
 
 
@@ -89,6 +90,19 @@ public class TestWebSocket : MonoBehaviour
         hall.addEventListener(RoomEvent.CREATE_ROOM, onCreateRoom);
         hall.addEventListener(RoomEvent.JOIN_ROOM, onJoinRoom);
         hall.addEventListener(CMDEvent.RESULT, onCMDResult);
+    }
+
+    private void onGetRate(CEvent evt)
+    {
+        ShoppingEvent e = (ShoppingEvent)evt.eventParams;
+
+      //>(e.buyList);
+
+        var rate = e.rate;
+
+        Debug.Log("获取汇率"+rate);
+
+       // Debug.Log(JsonConvert.SerializeObject(pp));
     }
 
     //玩家下注，实时
@@ -869,6 +883,18 @@ public class TestWebSocket : MonoBehaviour
 
 
             self.changeStatus(2,1001);//1001是你加入房间或者创建房间的id.
+        }
+
+
+        if (GUI.Button(new Rect(310, 450, 50, 50), "getRate"))//
+        {
+
+
+
+            //获取BCCM汇率
+
+
+            self.getRate();
         }
     }
 }
