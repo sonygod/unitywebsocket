@@ -727,8 +727,8 @@ public class TestWebSocket : MonoBehaviour
         if (GUI.Button(new Rect(360, 60, 50, 50), "login"))
         {
             //先查找是否存在，后插入。
-            //self.Login("13060669337", "123456");
-            self.LoginWithOpenID("233f1ad58da76ef962af1b74979e40da");
+           self.Login("0002", "111111",false);
+            //self.LoginWithOpenID("233f1ad58da76ef962af1b74979e40da");
         }
 
         //充值，从交易所充入来
@@ -886,7 +886,7 @@ public class TestWebSocket : MonoBehaviour
         }
 
 
-        if (GUI.Button(new Rect(310, 450, 50, 50), "getRate"))//
+        if (GUI.Button(new Rect(310, 470, 50, 50), "getRate"))//
         {
 
 
@@ -895,6 +895,38 @@ public class TestWebSocket : MonoBehaviour
 
 
             self.getRate();
+        }
+
+        if (GUI.Button(new Rect(350, 470, 50, 50), "getRate"))//
+        {
+
+
+
+            //获取BCCM汇率
+
+
+         
+            //txt_log.text = "开始插入账号操作";
+            JsonData cmd = new JsonData();
+            cmd["cmd"] = 4005;
+            JsonData player = new JsonData();
+            cmd["player"] = player;
+
+            player["referenceID"] = 5001;//推荐人ID
+
+          
+                player["openID"] = "233f1ad58da76ef962af1b74979e40da";
+           
+
+           
+                player["nick_name"] = "1";//插入用户昵称
+         
+
+            
+                player["avatar"] = "2";
+
+                hall.excuteCMD(cmd.ToJson());
+
         }
     }
 }
